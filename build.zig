@@ -277,7 +277,7 @@ pub fn build(builder: *std.Build) !void {
 
     const path = try Paths.init(builder);
 
-    const dependencies = try toolbox.Dependencies.init(builder, "spirv.zig", &.{
+    const dependencies = try toolbox.Dependencies.init(builder, .spirv_zig, "0xc01cda876afcbb", &.{
         "spirv",
         "spirv-tools",
     }, .{
