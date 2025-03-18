@@ -4,7 +4,7 @@ This is a fork of [hexops/spirv-tools][1] which itself is a fork of [KhronosGrou
 
 ## Why this forkception ?
 
-The intention under this fork is the same as [hexops][11] had when they forked [KhronosGroup/SPIRV-Tools][2]: package the headers for [Zig][4]. So:
+The intention under this fork is the same as [hexops][7] had when they forked [KhronosGroup/SPIRV-Tools][2]: package the headers for [Zig][4]. So:
 * Unnecessary files have been deleted,
 * The build system has been replaced with `build.zig`.
 
@@ -33,10 +33,6 @@ This repository is automatically updated when a new release is available from th
 * [KhronosGroup/SPIRV-Tools][2]
 * [KhronosGroup/SPIRV-Headers][3]
 * [tiawl/toolbox][6]
-* [tiawl/spaceporn-action-bot][7]
-* [tiawl/spaceporn-action-ci][8]
-* [tiawl/spaceporn-action-cd-ping][9]
-* [tiawl/spaceporn-action-cd-pong][10]
 
 ## `zig build` options
 
@@ -60,8 +56,4 @@ The parts of this repository originated from this repository are dedicated to th
 [4]:https://github.com/ziglang/zig
 [5]:https://github.com/tiawl/shaderc.zig
 [6]:https://github.com/tiawl/toolbox
-[7]:https://github.com/tiawl/spaceporn-action-bot
-[8]:https://github.com/tiawl/spaceporn-action-ci
-[9]:https://github.com/tiawl/spaceporn-action-cd-ping
-[10]:https://github.com/tiawl/spaceporn-action-cd-pong
-[11]:https://github.com/hexops
+[7]:https://github.com/hexops
