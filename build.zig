@@ -66,13 +66,13 @@ fn update_headers(builder: *std.Build, path: *const Paths, dependencies: *const 
 
     const tmp_include_path =
         try std.fs.path.join(builder.allocator, &.{
-        path.getTmp(),
-        "include",
-    });
+            path.getTmp(),
+            "include",
+        });
     var tmp_include_dir =
         try std.fs.openDirAbsolute(tmp_include_path, .{
-        .iterate = true,
-    });
+            .iterate = true,
+        });
     defer tmp_include_dir.close();
 
     var walker = try tmp_include_dir.walk(builder.allocator);
@@ -81,8 +81,8 @@ fn update_headers(builder: *std.Build, path: *const Paths, dependencies: *const 
     while (try walker.next()) |*entry| {
         const dest =
             try builder.build_root.join(builder.allocator, &.{
-            entry.path,
-        });
+                entry.path,
+            });
         switch (entry.kind) {
             .file => {
                 if (toolbox.isHeader(entry.basename)) try toolbox.copy(try std.fs.path.join(builder.allocator, &.{
@@ -119,9 +119,9 @@ fn update_sources(builder: *std.Build, path: *const Paths) !void {
     }) |dir_name| {
         src_path =
             try std.fs.path.join(builder.allocator, &.{
-            path.getTmp(),
-            dir_name.src,
-        });
+                path.getTmp(),
+                dir_name.src,
+            });
         dest_path = try std.fs.path.join(builder.allocator, &.{
             path.getSpirvTools(),
             dir_name.dest,
@@ -161,8 +161,8 @@ fn wait_20_secs() void {
 fn update_generated(builder: *std.Build, path: *const Paths) !void {
     var build_dir =
         try std.fs.openDirAbsolute(path.getBuild(), .{
-        .iterate = true,
-    });
+            .iterate = true,
+        });
     defer build_dir.close();
 
     var it = build_dir.iterate();
@@ -187,11 +187,11 @@ fn update_generated(builder: *std.Build, path: *const Paths) !void {
 fn update(builder: *std.Build, path: *const Paths, dependencies: *const toolbox.Dependencies) !void {
     std.fs.deleteTreeAbsolute(path.getTmp()) catch |err|
         {
-        switch (err) {
-            error.FileNotFound => {},
-            else => return err,
-        }
-    };
+            switch (err) {
+                error.FileNotFound => {},
+                else => return err,
+            }
+        };
 
     for ([_][]const u8{
         path.getSpirv(),
@@ -239,8 +239,8 @@ fn update(builder: *std.Build, path: *const Paths, dependencies: *const toolbox.
 
     var source_dir =
         try std.fs.openDirAbsolute(path.getSource(), .{
-        .iterate = true,
-    });
+            .iterate = true,
+        });
     defer source_dir.close();
 
     var walker = try source_dir.walk(builder.allocator);
@@ -336,8 +336,8 @@ pub fn build(builder: *std.Build) !void {
 
     var source_dir =
         try std.fs.openDirAbsolute(path.getSource(), .{
-        .iterate = true,
-    });
+            .iterate = true,
+        });
     defer source_dir.close();
 
     var walker = try source_dir.walk(builder.allocator);
