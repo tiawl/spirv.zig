@@ -34,27 +34,27 @@ const Paths = struct {
     }
 
     fn init() !@This() {
-        const tmp_path = try toolbox.instance().getBuilder().build_root.join(toolbox.instance().getBuilder().allocator, &.{
+        const tmp_path = try toolbox.instance().buildRootJoin(&.{
             "tmp",
         });
 
-        const spirvtools_path = try toolbox.instance().getBuilder().build_root.join(toolbox.instance().getBuilder().allocator, &.{
+        const spirvtools_path = try toolbox.instance().buildRootJoin(&.{
             "spirv-tools",
         });
 
         return .{
             .__tmp = tmp_path,
             .__spirv_tools = spirvtools_path,
-            .__spirv = try toolbox.instance().getBuilder().build_root.join(toolbox.instance().getBuilder().allocator, &.{
+            .__spirv = try toolbox.instance().buildRootJoin(&.{
                 "spirv",
             }),
-            .__spirv_tools_in = toolbox.instance().ptrBuilder().pathJoin(&.{
+            .__spirv_tools_in = toolbox.instance().pathJoin(&.{
                 spirvtools_path, "spirv-tools",
             }),
-            .__source = toolbox.instance().ptrBuilder().pathJoin(&.{
+            .__source = toolbox.instance().pathJoin(&.{
                 spirvtools_path, "source",
             }),
-            .__build = toolbox.instance().ptrBuilder().pathJoin(&.{
+            .__build = toolbox.instance().pathJoin(&.{
                 tmp_path, "build",
             }),
         };
@@ -62,9 +62,9 @@ const Paths = struct {
 };
 
 fn update_headers(path: *const Paths) !void {
-    try toolbox.instance().clone("spirv", path.getTmp());
+    try toolbox.instance().clone(.spirv, path.getTmp());
 
-    const tmp_include_path = toolbox.instance().ptrBuilder().pathJoin(&.{
+    const tmp_include_path = toolbox.instance().pathJoin(&.{
         path.getTmp(), "include",
     });
     var tmp_include_dir = try std.fs.openDirAbsolute(tmp_include_path, .{
@@ -76,13 +76,13 @@ fn update_headers(path: *const Paths) !void {
     defer walker.deinit();
 
     while (try walker.next()) |*entry| {
-        const dest = try toolbox.instance().getBuilder().build_root.join(toolbox.instance().getBuilder().allocator, &.{
+        const dest = try toolbox.instance().buildRootJoin(&.{
             entry.path,
         });
         switch (entry.kind) {
             .file => {
                 if (toolbox.isHeader(entry.basename)) {
-                    try toolbox.instance().copy(toolbox.instance().ptrBuilder().pathJoin(&.{
+                    try toolbox.instance().copy(toolbox.instance().pathJoin(&.{
                         tmp_include_path, entry.path,
                     }), dest);
                 }
@@ -105,7 +105,7 @@ fn update_sources(path: *const Paths) !void {
         src: []const u8,
         dest: []const u8,
     }{
-        .{ .src = toolbox.instance().ptrBuilder().pathJoin(&.{
+        .{ .src = toolbox.instance().pathJoin(&.{
             "include", "spirv-tools",
         }), .dest = "spirv-tools" },
         .{
@@ -113,10 +113,10 @@ fn update_sources(path: *const Paths) !void {
             .dest = "source",
         },
     }) |dir_name| {
-        src_path = toolbox.instance().ptrBuilder().pathJoin(&.{
+        src_path = toolbox.instance().pathJoin(&.{
             path.getTmp(), dir_name.src,
         });
-        dest_path = toolbox.instance().ptrBuilder().pathJoin(&.{
+        dest_path = toolbox.instance().pathJoin(&.{
             path.getSpirvTools(), dir_name.dest,
         });
 
@@ -131,11 +131,11 @@ fn update_sources(path: *const Paths) !void {
         defer walker.deinit();
 
         while (try walker.next()) |*entry| {
-            const dest = toolbox.instance().ptrBuilder().pathJoin(&.{
+            const dest = toolbox.instance().pathJoin(&.{
                 dest_path, entry.path,
             });
             switch (entry.kind) {
-                .file => try toolbox.instance().copy(toolbox.instance().ptrBuilder().pathJoin(&.{
+                .file => try toolbox.instance().copy(toolbox.instance().pathJoin(&.{
                     src_path, entry.path,
                 }), dest),
                 .directory => try toolbox.instance().make(dest),
@@ -160,9 +160,9 @@ fn update_generated(path: *const Paths) !void {
         switch (entry.kind) {
             .file => {
                 if (std.mem.endsWith(u8, entry.name, ".inc")) {
-                    try toolbox.instance().copy(toolbox.instance().ptrBuilder().pathJoin(&.{
+                    try toolbox.instance().copy(toolbox.instance().pathJoin(&.{
                         path.getBuild(), entry.name,
-                    }), toolbox.instance().ptrBuilder().pathJoin(&.{
+                    }), toolbox.instance().pathJoin(&.{
                         path.getSpirvToolsIn(), entry.name,
                     }));
                 }
@@ -189,10 +189,10 @@ fn update(path: *const Paths) !void {
 
     try update_headers(path);
 
-    try toolbox.instance().clone("spirv-tools", path.getTmp());
+    try toolbox.instance().clone(.@"spirv-tools", path.getTmp());
     try toolbox.instance().run(.{
         .argv = &[_][]const u8{
-            "python3", toolbox.instance().ptrBuilder().pathJoin(&.{
+            "python3", toolbox.instance().pathJoin(&.{
                 "utils", "git-sync-deps",
             }),
         },
@@ -233,7 +233,7 @@ fn update(path: *const Paths) !void {
             .file => {
                 if (std.fs.path.dirname(entry.path)) |dirname| {
                     if (!std.mem.eql(u8, "opt", dirname) and !std.mem.eql(u8, "val", dirname) and !std.mem.eql(u8, "util", dirname)) {
-                        try std.fs.deleteFileAbsolute(toolbox.instance().ptrBuilder().pathJoin(&.{
+                        try std.fs.deleteFileAbsolute(toolbox.instance().pathJoin(&.{
                             path.getSource(), entry.path,
                         }));
                     }
@@ -288,19 +288,19 @@ pub fn build(builder: *std.Build) !void {
 
     if (toolbox.instance().getUpdate()) try update(&path);
 
-    const lib = toolbox.instance().ptrBuilder().addStaticLibrary(.{
+    const lib = builder.addStaticLibrary(.{
         .name = "spirv",
-        .root_source_file = toolbox.instance().ptrBuilder().addWriteFiles().add("empty.c", ""),
+        .root_source_file = builder.addWriteFiles().add("empty.c", ""),
         .target = target,
         .optimize = optimize,
     });
 
     for ([_][]const u8{
         ".", "spirv", "spirv-tools",
-        toolbox.instance().ptrBuilder().pathJoin(&.{
+        builder.pathJoin(&.{
             "spirv-tools", "spirv-tools",
         }),
-        toolbox.instance().ptrBuilder().pathJoin(&.{
+        builder.pathJoin(&.{
             "spirv", "unified1",
         }),
     }) |include| {
@@ -321,7 +321,7 @@ pub fn build(builder: *std.Build) !void {
     });
     defer source_dir.close();
 
-    var walker = try source_dir.walk(toolbox.instance().getBuilder().allocator);
+    var walker = try source_dir.walk(builder.allocator);
     defer walker.deinit();
 
     while (try walker.next()) |*entry| {
@@ -335,5 +335,5 @@ pub fn build(builder: *std.Build) !void {
         }
     }
 
-    toolbox.instance().ptrBuilder().installArtifact(lib);
+    builder.installArtifact(lib);
 }
