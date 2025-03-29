@@ -319,6 +319,7 @@ static const spvtools::Extension pygen_variable_exts_SPV_INTEL_subgroup_matrix_m
 static const spvtools::Extension pygen_variable_exts_SPV_INTEL_subgroups[] = {spvtools::Extension::kSPV_INTEL_subgroups};
 static const spvtools::Extension pygen_variable_exts_SPV_INTEL_task_sequence[] = {spvtools::Extension::kSPV_INTEL_task_sequence};
 static const spvtools::Extension pygen_variable_exts_SPV_INTEL_tensor_float32_conversion[] = {spvtools::Extension::kSPV_INTEL_tensor_float32_conversion};
+static const spvtools::Extension pygen_variable_exts_SPV_INTEL_ternary_bitwise_function[] = {spvtools::Extension::kSPV_INTEL_ternary_bitwise_function};
 static const spvtools::Extension pygen_variable_exts_SPV_INTEL_unstructured_loop_controls[] = {spvtools::Extension::kSPV_INTEL_unstructured_loop_controls};
 static const spvtools::Extension pygen_variable_exts_SPV_INTEL_usm_storage_classes[] = {spvtools::Extension::kSPV_INTEL_usm_storage_classes};
 static const spvtools::Extension pygen_variable_exts_SPV_INTEL_variable_length_array[] = {spvtools::Extension::kSPV_INTEL_variable_length_array};
@@ -1432,6 +1433,7 @@ static const spv_operand_desc_t pygen_variable_CapabilityEntries[] = {
   {"Subgroup2DBlockTransformINTEL", 6229, 0, nullptr, 1, pygen_variable_caps_Subgroup2DBlockIOINTEL, 1, pygen_variable_exts_SPV_INTEL_2d_block_io, {}, 0xffffffffu, 0xffffffffu},
   {"Subgroup2DBlockTransposeINTEL", 6230, 0, nullptr, 1, pygen_variable_caps_Subgroup2DBlockIOINTEL, 1, pygen_variable_exts_SPV_INTEL_2d_block_io, {}, 0xffffffffu, 0xffffffffu},
   {"SubgroupMatrixMultiplyAccumulateINTEL", 6236, 0, nullptr, 0, nullptr, 1, pygen_variable_exts_SPV_INTEL_subgroup_matrix_multiply_accumulate, {}, 0xffffffffu, 0xffffffffu},
+  {"TernaryBitwiseFunctionINTEL", 6241, 0, nullptr, 0, nullptr, 1, pygen_variable_exts_SPV_INTEL_ternary_bitwise_function, {}, 0xffffffffu, 0xffffffffu},
   {"GroupUniformArithmeticKHR", 6400, 0, nullptr, 0, nullptr, 1, pygen_variable_exts_SPV_KHR_uniform_group_instructions, {}, 0xffffffffu, 0xffffffffu},
   {"TensorFloat32RoundingINTEL", 6425, 0, nullptr, 0, nullptr, 1, pygen_variable_exts_SPV_INTEL_tensor_float32_conversion, {}, 0xffffffffu, 0xffffffffu},
   {"MaskedGatherScatterINTEL", 6427, 0, nullptr, 0, nullptr, 1, pygen_variable_exts_SPV_INTEL_masked_gather_scatter, {}, 0xffffffffu, 0xffffffffu},
