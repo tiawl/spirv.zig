@@ -810,9 +810,15 @@ static const spv_operand_desc_t pygen_variable_ImageChannelDataTypeEntries[] = {
   {"Float", 14, 0, nullptr, 0, nullptr, 0, nullptr, {}, SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu},
   {"UnormInt24", 15, 0, nullptr, 0, nullptr, 0, nullptr, {}, SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu},
   {"UnormInt101010_2", 16, 0, nullptr, 0, nullptr, 0, nullptr, {}, SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu},
+  {"UnormInt10X6EXT", 17, 0, nullptr, 0, nullptr, 0, nullptr, {}, SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu},
   {"UnsignedIntRaw10EXT", 19, 0, nullptr, 0, nullptr, 0, nullptr, {}, SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu},
   {"UnsignedIntRaw12EXT", 20, 0, nullptr, 0, nullptr, 0, nullptr, {}, SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu},
-  {"UnormInt2_101010EXT", 21, 0, nullptr, 0, nullptr, 0, nullptr, {}, SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu}
+  {"UnormInt2_101010EXT", 21, 0, nullptr, 0, nullptr, 0, nullptr, {}, SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu},
+  {"UnsignedInt10X6EXT", 22, 0, nullptr, 0, nullptr, 0, nullptr, {}, SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu},
+  {"UnsignedInt12X4EXT", 23, 0, nullptr, 0, nullptr, 0, nullptr, {}, SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu},
+  {"UnsignedInt14X2EXT", 24, 0, nullptr, 0, nullptr, 0, nullptr, {}, SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu},
+  {"UnormInt12X4EXT", 25, 0, nullptr, 0, nullptr, 0, nullptr, {}, SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu},
+  {"UnormInt14X2EXT", 26, 0, nullptr, 0, nullptr, 0, nullptr, {}, SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu}
 };
 
 static const spv_operand_desc_t pygen_variable_FPRoundingModeEntries[] = {
