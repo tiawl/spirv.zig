@@ -149,4 +149,5 @@ kSPV_NV_tensor_addressing,
 kSPV_NV_viewport_array2,
 kSPV_QCOM_image_processing,
 kSPV_QCOM_image_processing2,
+kSPV_QCOM_tile_shading,
 kSPV_VALIDATOR_ignore_type_decl_unique
