@@ -1,6 +1,6 @@
 
 
-static const spv_ext_inst_desc_t opencl_entries[] = {
+static const spv_ext_inst_desc_t opencl_std_100_entries[] = {
   {"acos", 0, 0, nullptr, {SPV_OPERAND_TYPE_ID, SPV_OPERAND_TYPE_NONE}},
   {"acosh", 1, 0, nullptr, {SPV_OPERAND_TYPE_ID, SPV_OPERAND_TYPE_NONE}},
   {"acospi", 2, 0, nullptr, {SPV_OPERAND_TYPE_ID, SPV_OPERAND_TYPE_NONE}},
