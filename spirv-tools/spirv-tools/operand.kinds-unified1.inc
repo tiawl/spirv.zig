@@ -960,7 +960,7 @@ static const spv_operand_desc_t pygen_variable_DecorationEntries[] = {
   {"SecondaryViewportRelativeNV", 5256, 0, nullptr, 1, pygen_variable_caps_ShaderStereoViewNV, 1, pygen_variable_exts_SPV_NV_stereo_view_rendering, {SPV_OPERAND_TYPE_LITERAL_INTEGER}, 0xffffffffu, 0xffffffffu},
   {"PerPrimitiveEXT", 5271, 1, pygen_variable_aliases_PerPrimitiveNV, 2, pygen_variable_caps_MeshShadingNVMeshShadingEXT, 2, pygen_variable_exts_SPV_EXT_mesh_shaderSPV_NV_mesh_shader, {}, 0xffffffffu, 0xffffffffu},
   {"PerViewNV", 5272, 0, nullptr, 1, pygen_variable_caps_MeshShadingNV, 1, pygen_variable_exts_SPV_NV_mesh_shader, {}, 0xffffffffu, 0xffffffffu},
-  {"PerTaskNV", 5273, 0, nullptr, 2, pygen_variable_caps_MeshShadingNVMeshShadingEXT, 2, pygen_variable_exts_SPV_EXT_mesh_shaderSPV_NV_mesh_shader, {}, 0xffffffffu, 0xffffffffu},
+  {"PerTaskNV", 5273, 0, nullptr, 1, pygen_variable_caps_MeshShadingNV, 1, pygen_variable_exts_SPV_NV_mesh_shader, {}, 0xffffffffu, 0xffffffffu},
   {"PerVertexKHR", 5285, 1, pygen_variable_aliases_PerVertexNV, 1, pygen_variable_caps_FragmentBarycentricKHR, 2, pygen_variable_exts_SPV_KHR_fragment_shader_barycentricSPV_NV_fragment_shader_barycentric, {}, 0xffffffffu, 0xffffffffu},
   {"NonUniform", 5300, 1, pygen_variable_aliases_NonUniformEXT, 1, pygen_variable_caps_ShaderNonUniform, 1, pygen_variable_exts_SPV_EXT_descriptor_indexing, {}, SPV_SPIRV_VERSION_WORD(1,5), 0xffffffffu},
   {"RestrictPointer", 5355, 1, pygen_variable_aliases_RestrictPointerEXT, 1, pygen_variable_caps_PhysicalStorageBufferAddresses, 2, pygen_variable_exts_SPV_EXT_physical_storage_bufferSPV_KHR_physical_storage_buffer, {}, SPV_SPIRV_VERSION_WORD(1,5), 0xffffffffu},
