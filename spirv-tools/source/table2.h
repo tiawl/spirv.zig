@@ -58,6 +58,7 @@
 //      -  a spv::Op opcode
 //      -  a bool hasResult
 //      -  a bool hasType
+//      -  a printing class
 //
 // The arrays are represented by spans into a global static array, with one
 // array for each of:
@@ -82,6 +83,8 @@
 
 namespace spvtools {
 
+#include "core_tables_header.inc"
+
 using IndexRange = utils::IndexRange<uint32_t, uint32_t>;
 
 // Describes a SPIR-V operand.
@@ -100,13 +103,26 @@ struct OperandDesc {
   // Minimal core SPIR-V version required for this feature, if without
   // extensions. ~0u means reserved for future use. ~0u and non-empty
   // extension lists means only available in extensions.
-  const uint32_t minVersion;
-  const uint32_t lastVersion;
+  const uint32_t minVersion = 0xFFFFFFFFu;
+  const uint32_t lastVersion = 0xFFFFFFFFu;
   utils::Span<const spv_operand_type_t> operands() const;
   utils::Span<const char> name() const;
   utils::Span<const IndexRange> aliases() const;
   utils::Span<const spv::Capability> capabilities() const;
   utils::Span<const spvtools::Extension> extensions() const;
+
+  OperandDesc(uint32_t v, IndexRange o, IndexRange n, IndexRange a,
+              IndexRange c, IndexRange e, uint32_t mv, uint32_t lv)
+      : value(v),
+        operands_range(o),
+        name_range(n),
+        aliases_range(a),
+        capabilities_range(c),
+        extensions_range(e),
+        minVersion(mv),
+        lastVersion(lv) {}
+
+  OperandDesc(uint32_t v) : value(v) {}
 
   OperandDesc(const OperandDesc&) = delete;
   OperandDesc(OperandDesc&&) = delete;
@@ -115,8 +131,8 @@ struct OperandDesc {
 // Describes an Instruction
 struct InstructionDesc {
   const spv::Op opcode;
-  const bool hasResult;
-  const bool hasType;
+  const bool hasResult = false;
+  const bool hasType = false;
 
   const IndexRange operands_range;      // Indexes kOperandSpans
   const IndexRange name_range;          // Indexes kStrings
@@ -130,8 +146,11 @@ struct InstructionDesc {
   // Minimal core SPIR-V version required for this feature, if without
   // extensions. ~0u means reserved for future use. ~0u and non-empty
   // extension lists means only available in extensions.
-  const uint32_t minVersion;
-  const uint32_t lastVersion;
+  const uint32_t minVersion = 0xFFFFFFFFu;
+  const uint32_t lastVersion = 0xFFFFFFFFu;
+  // The printing class specifies what kind of instruction it is, e.g. what
+  // section of the SPIR-V spec. E.g. kImage, kComposite
+  const PrintingClass printingClass = PrintingClass::kReserved;
   // Returns the span of elements in the global grammar tables corresponding
   // to the privately-stored index ranges
   utils::Span<const spv_operand_type_t> operands() const;
@@ -139,6 +158,23 @@ struct InstructionDesc {
   utils::Span<const IndexRange> aliases() const;
   utils::Span<const spv::Capability> capabilities() const;
   utils::Span<const spvtools::Extension> extensions() const;
+
+  InstructionDesc(spv::Op oc, bool hr, bool ht, IndexRange o, IndexRange n,
+                  IndexRange a, IndexRange c, IndexRange e, uint32_t mv,
+                  uint32_t lv, PrintingClass pc)
+      : opcode(oc),
+        hasResult(hr),
+        hasType(ht),
+        operands_range(o),
+        name_range(n),
+        aliases_range(a),
+        capabilities_range(c),
+        extensions_range(e),
+        minVersion(mv),
+        lastVersion(lv),
+        printingClass(pc) {}
+
+  InstructionDesc(spv::Op oc) : opcode(oc) {}
 
   InstructionDesc(const InstructionDesc&) = delete;
   InstructionDesc(InstructionDesc&&) = delete;
