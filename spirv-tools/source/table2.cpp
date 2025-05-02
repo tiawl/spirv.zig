@@ -94,7 +94,7 @@ IndexRange OperandByValueRangeForKind(spv_operand_type_t type);
 // Returns the name of an extension, as an index into kStrings
 IndexRange ExtensionToIndexRange(Extension extension);
 
-#include "core_tables.inc"
+#include "core_tables_body.inc"
 
 // Returns a pointer to the null-terminated C-style string in the global
 // strings table, as referenced by 'ir'.  Assumes the given range is valid.
@@ -139,8 +139,7 @@ utils::Span<const spvtools::Extension> InstructionDesc::extensions() const {
 
 spv_result_t LookupOpcode(spv::Op opcode, InstructionDesc** desc) {
   // Metaphor: Look for the needle in the haystack.
-  // The operand value is the first member.
-  const InstructionDesc needle{opcode};
+  const InstructionDesc needle(opcode);
   auto where = std::lower_bound(
       kInstructionDesc.begin(), kInstructionDesc.end(), needle,
       [&](const InstructionDesc& lhs, const InstructionDesc& rhs) {
