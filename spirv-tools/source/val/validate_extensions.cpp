@@ -21,7 +21,6 @@
 #include "NonSemanticShaderDebugInfo100.h"
 #include "OpenCLDebugInfo100.h"
 #include "source/common_debug_info.h"
-#include "source/enum_string_mapping.h"
 #include "source/extensions.h"
 #include "source/latest_version_glsl_std_450_header.h"
 #include "source/latest_version_opencl_std_header.h"
@@ -94,7 +93,7 @@ spv_result_t ValidateOperandForDebugInfo(
     const std::function<std::string()>& ext_inst_name) {
   auto* operand = _.FindDef(inst->word(word_index));
   if (operand->opcode() != expected_opcode) {
-    spvtools::InstructionDesc* desc = nullptr;
+    const spvtools::InstructionDesc* desc = nullptr;
     if (spvtools::LookupOpcodeForEnv(_.context()->target_env, expected_opcode,
                                      &desc) != SPV_SUCCESS ||
         !desc) {
