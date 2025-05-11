@@ -90,6 +90,7 @@ enum Extension : uint32_t {
   kSPV_INTEL_global_variable_fpga_decorations,
   kSPV_INTEL_global_variable_host_access,
   kSPV_INTEL_inline_assembly,
+  kSPV_INTEL_int4,
   kSPV_INTEL_io_pipes,
   kSPV_INTEL_kernel_attributes,
   kSPV_INTEL_long_composites,
