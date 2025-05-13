@@ -3434,14 +3434,14 @@ static const std::array<InstructionDesc, 794> kInstructionDesc{{
   {spv::Op::OpFetchMicroTriangleVertexBarycentricNV, true, true, IR(325, 7), IR(33891, 38), IR(0, 0), IR(248, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpCooperativeVectorLoadNV, true, true, IR(545, 5), IR(33929, 24), IR(0, 0), IR(245, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
   {spv::Op::OpCooperativeVectorStoreNV, false, false, IR(550, 4), IR(33953, 25), IR(0, 0), IR(245, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
-  {spv::Op::OpReportIntersectionKHR, true, true, IR(172, 4), IR(33978, 22), IR(99, 1), IR(54, 2), IR(165, 2), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpReportIntersectionKHR, true, true, IR(172, 4), IR(33978, 22), IR(99, 1), IR(54, 2), IR(24, 2), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpIgnoreIntersectionNV, false, false, IR(0, 0), IR(34021, 21), IR(0, 0), IR(56, 1), IR(26, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpTerminateRayNV, false, false, IR(0, 0), IR(34042, 15), IR(0, 0), IR(56, 1), IR(26, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpTraceNV, false, false, IR(390, 11), IR(34057, 8), IR(0, 0), IR(56, 1), IR(26, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpTraceMotionNV, false, false, IR(477, 12), IR(34065, 14), IR(0, 0), IR(57, 1), IR(27, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpTraceRayMotionNV, false, false, IR(477, 12), IR(34079, 17), IR(0, 0), IR(57, 1), IR(27, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpRayQueryGetIntersectionTriangleVertexPositionsKHR, true, true, IR(172, 4), IR(34096, 50), IR(0, 0), IR(249, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTypeAccelerationStructureKHR, true, false, IR(68, 1), IR(34146, 29), IR(100, 1), IR(250, 4), IR(167, 4), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
+  {spv::Op::OpTypeAccelerationStructureKHR, true, false, IR(68, 1), IR(34146, 29), IR(100, 1), IR(250, 4), IR(165, 4), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
   {spv::Op::OpExecuteCallableNV, false, false, IR(36, 2), IR(34203, 18), IR(0, 0), IR(56, 1), IR(26, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpRayQueryGetClusterIdNV, true, true, IR(172, 4), IR(34221, 23), IR(0, 0), IR(64, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpHitObjectGetClusterIdNV, true, true, IR(160, 3), IR(34244, 24), IR(0, 0), IR(64, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
@@ -3525,8 +3525,8 @@ static const std::array<InstructionDesc, 794> kInstructionDesc{{
   {spv::Op::OpAtomicFMaxEXT, true, true, IR(235, 6), IR(36171, 14), IR(0, 0), IR(267, 4), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kAtomic},
   {spv::Op::OpAssumeTrueKHR, false, false, IR(10, 1), IR(36185, 14), IR(0, 0), IR(271, 1), IR(95, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kMiscellaneous},
   {spv::Op::OpExpectKHR, true, true, IR(172, 4), IR(36199, 10), IR(0, 0), IR(271, 1), IR(95, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kMiscellaneous},
-  {spv::Op::OpDecorateString, false, false, IR(163, 2), IR(36209, 15), IR(101, 1), IR(1, 0), IR(171, 2), SPV_SPIRV_VERSION_WORD(1,4), 0xffffffffu, PrintingClass::kAnnotation},
-  {spv::Op::OpMemberDecorateString, false, false, IR(165, 3), IR(36245, 21), IR(102, 1), IR(1, 0), IR(171, 2), SPV_SPIRV_VERSION_WORD(1,4), 0xffffffffu, PrintingClass::kAnnotation},
+  {spv::Op::OpDecorateString, false, false, IR(163, 2), IR(36209, 15), IR(101, 1), IR(1, 0), IR(169, 2), SPV_SPIRV_VERSION_WORD(1,4), 0xffffffffu, PrintingClass::kAnnotation},
+  {spv::Op::OpMemberDecorateString, false, false, IR(165, 3), IR(36245, 21), IR(102, 1), IR(1, 0), IR(169, 2), SPV_SPIRV_VERSION_WORD(1,4), 0xffffffffu, PrintingClass::kAnnotation},
   {spv::Op::OpVmeImageINTEL, true, true, IR(172, 4), IR(36293, 14), IR(0, 0), IR(272, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
   {spv::Op::OpTypeVmeImageINTEL, true, false, IR(87, 2), IR(36307, 18), IR(0, 0), IR(272, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
   {spv::Op::OpTypeAvcImePayloadINTEL, true, false, IR(68, 1), IR(36325, 23), IR(0, 0), IR(272, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
@@ -8402,28 +8402,28 @@ static const spvtools::Extension kExtensionSpans[] = {
   spvtools::Extension::kSPV_KHR_physical_storage_buffer, // 1
   spvtools::Extension::kSPV_KHR_shader_ballot, // 2
   spvtools::Extension::kSPV_KHR_shader_draw_parameters, // 3
-  spvtools::Extension::kSPV_EXT_mesh_shader, // 4
-  spvtools::Extension::kSPV_KHR_shader_draw_parameters, // 5
-  spvtools::Extension::kSPV_NV_mesh_shader, // 6
+  spvtools::Extension::kSPV_KHR_shader_draw_parameters, // 4
+  spvtools::Extension::kSPV_NV_mesh_shader, // 5
+  spvtools::Extension::kSPV_EXT_mesh_shader, // 6
   spvtools::Extension::kSPV_KHR_fragment_shading_rate, // 7
   spvtools::Extension::kSPV_KHR_device_group, // 8
   spvtools::Extension::kSPV_KHR_multiview, // 9
   spvtools::Extension::kSPV_AMD_shader_explicit_vertex_parameter, // 10
   spvtools::Extension::kSPV_EXT_shader_stencil_export, // 11
-  spvtools::Extension::kSPV_NV_mesh_shader, // 12
-  spvtools::Extension::kSPV_NV_viewport_array2, // 13
+  spvtools::Extension::kSPV_NV_viewport_array2, // 12
+  spvtools::Extension::kSPV_NV_mesh_shader, // 13
   spvtools::Extension::kSPV_NV_stereo_view_rendering, // 14
   spvtools::Extension::kSPV_NVX_multiview_per_view_attributes, // 15
   spvtools::Extension::kSPV_NV_mesh_shader, // 16
   spvtools::Extension::kSPV_EXT_fragment_fully_covered, // 17
   spvtools::Extension::kSPV_NV_mesh_shader, // 18
-  spvtools::Extension::kSPV_KHR_fragment_shader_barycentric, // 19
-  spvtools::Extension::kSPV_NV_fragment_shader_barycentric, // 20
+  spvtools::Extension::kSPV_NV_fragment_shader_barycentric, // 19
+  spvtools::Extension::kSPV_KHR_fragment_shader_barycentric, // 20
   spvtools::Extension::kSPV_EXT_fragment_invocation_density, // 21
   spvtools::Extension::kSPV_NV_shading_rate, // 22
   spvtools::Extension::kSPV_EXT_mesh_shader, // 23
-  spvtools::Extension::kSPV_KHR_ray_tracing, // 24
-  spvtools::Extension::kSPV_NV_ray_tracing, // 25
+  spvtools::Extension::kSPV_NV_ray_tracing, // 24
+  spvtools::Extension::kSPV_KHR_ray_tracing, // 25
   spvtools::Extension::kSPV_NV_ray_tracing, // 26
   spvtools::Extension::kSPV_NV_ray_tracing_motion_blur, // 27
   spvtools::Extension::kSPV_KHR_ray_tracing, // 28
@@ -8467,8 +8467,8 @@ static const spvtools::Extension kExtensionSpans[] = {
   spvtools::Extension::kSPV_NV_viewport_array2, // 66
   spvtools::Extension::kSPV_NVX_multiview_per_view_attributes, // 67
   spvtools::Extension::kSPV_NV_shader_image_footprint, // 68
-  spvtools::Extension::kSPV_KHR_compute_shader_derivatives, // 69
-  spvtools::Extension::kSPV_NV_compute_shader_derivatives, // 70
+  spvtools::Extension::kSPV_NV_compute_shader_derivatives, // 69
+  spvtools::Extension::kSPV_KHR_compute_shader_derivatives, // 70
   spvtools::Extension::kSPV_NV_shader_subgroup_partitioned, // 71
   spvtools::Extension::kSPV_EXT_descriptor_indexing, // 72
   spvtools::Extension::kSPV_KHR_ray_tracing_position_fetch, // 73
@@ -8547,8 +8547,8 @@ static const spvtools::Extension kExtensionSpans[] = {
   spvtools::Extension::kSPV_INTEL_cache_controls, // 146
   spvtools::Extension::kSPV_INTEL_maximum_registers, // 147
   spvtools::Extension::kSPV_KHR_no_integer_wrap_decoration, // 148
-  spvtools::Extension::kSPV_EXT_mesh_shader, // 149
-  spvtools::Extension::kSPV_NV_mesh_shader, // 150
+  spvtools::Extension::kSPV_NV_mesh_shader, // 149
+  spvtools::Extension::kSPV_EXT_mesh_shader, // 150
   spvtools::Extension::kSPV_GOOGLE_hlsl_functionality1, // 151
   spvtools::Extension::kSPV_GOOGLE_user_type, // 152
   spvtools::Extension::kSPV_KHR_subgroup_uniform_control_flow, // 153
@@ -8565,12 +8565,10 @@ static const spvtools::Extension kExtensionSpans[] = {
   spvtools::Extension::kSPV_KHR_ray_query, // 164
   spvtools::Extension::kSPV_NV_ray_tracing, // 165
   spvtools::Extension::kSPV_KHR_ray_tracing, // 166
-  spvtools::Extension::kSPV_NV_ray_tracing, // 167
-  spvtools::Extension::kSPV_KHR_ray_tracing, // 168
-  spvtools::Extension::kSPV_KHR_ray_query, // 169
-  spvtools::Extension::kSPV_NV_displacement_micromap, // 170
-  spvtools::Extension::kSPV_GOOGLE_decorate_string, // 171
-  spvtools::Extension::kSPV_GOOGLE_hlsl_functionality1, // 172
+  spvtools::Extension::kSPV_KHR_ray_query, // 167
+  spvtools::Extension::kSPV_NV_displacement_micromap, // 168
+  spvtools::Extension::kSPV_GOOGLE_decorate_string, // 169
+  spvtools::Extension::kSPV_GOOGLE_hlsl_functionality1, // 170
 };
 
 // Array of operand types, referenced by IndexRanges elsewhere.
