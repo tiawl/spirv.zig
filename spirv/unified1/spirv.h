@@ -1,27 +1,11 @@
 /*
-** Copyright (c) 2014-2024 The Khronos Group Inc.
+** Copyright: 2014-2024 The Khronos Group Inc.
+** License: MIT
 ** 
-** Permission is hereby granted, free of charge, to any person obtaining a copy
-** of this software and/or associated documentation files (the "Materials"),
-** to deal in the Materials without restriction, including without limitation
-** the rights to use, copy, modify, merge, publish, distribute, sublicense,
-** and/or sell copies of the Materials, and to permit persons to whom the
-** Materials are furnished to do so, subject to the following conditions:
-** 
-** The above copyright notice and this permission notice shall be included in
-** all copies or substantial portions of the Materials.
-** 
-** MODIFICATIONS TO THIS FILE MAY MEAN IT NO LONGER ACCURATELY REFLECTS KHRONOS
-** STANDARDS. THE UNMODIFIED, NORMATIVE VERSIONS OF KHRONOS SPECIFICATIONS AND
-** HEADER INFORMATION ARE LOCATED AT https://www.khronos.org/registry/
-** 
-** THE MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-** OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-** FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
-** THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-** LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-** FROM,OUT OF OR IN CONNECTION WITH THE MATERIALS OR THE USE OR OTHER DEALINGS
-** IN THE MATERIALS.
+** MODIFICATIONS TO THIS FILE MAY MEAN IT NO LONGER ACCURATELY REFLECTS
+** KHRONOS STANDARDS. THE UNMODIFIED, NORMATIVE VERSIONS OF KHRONOS
+** SPECIFICATIONS AND HEADER INFORMATION ARE LOCATED AT
+** https://www.khronos.org/registry/
 */
 
 /*
@@ -1299,6 +1283,7 @@ typedef enum SpvCapability_ {
     SpvCapabilityMaskedGatherScatterINTEL = 6427,
     SpvCapabilityCacheControlsINTEL = 6441,
     SpvCapabilityRegisterLimitsINTEL = 6460,
+    SpvCapabilityBindlessImagesINTEL = 6528,
     SpvCapabilityMax = 0x7fffffff,
 } SpvCapability;
 
@@ -2419,6 +2404,9 @@ typedef enum SpvOp_ {
     SpvOpRoundFToTF32INTEL = 6426,
     SpvOpMaskedGatherINTEL = 6428,
     SpvOpMaskedScatterINTEL = 6429,
+    SpvOpConvertHandleToImageINTEL = 6529,
+    SpvOpConvertHandleToSamplerINTEL = 6530,
+    SpvOpConvertHandleToSampledImageINTEL = 6531,
     SpvOpMax = 0x7fffffff,
 } SpvOp;
 
@@ -3228,6 +3216,9 @@ inline void SpvHasResultAndType(SpvOp opcode, bool *hasResult, bool *hasResultTy
     case SpvOpRoundFToTF32INTEL: *hasResult = true; *hasResultType = true; break;
     case SpvOpMaskedGatherINTEL: *hasResult = true; *hasResultType = true; break;
     case SpvOpMaskedScatterINTEL: *hasResult = false; *hasResultType = false; break;
+    case SpvOpConvertHandleToImageINTEL: *hasResult = true; *hasResultType = true; break;
+    case SpvOpConvertHandleToSamplerINTEL: *hasResult = true; *hasResultType = true; break;
+    case SpvOpConvertHandleToSampledImageINTEL: *hasResult = true; *hasResultType = true; break;
     }
 }
 inline const char* SpvSourceLanguageToString(SpvSourceLanguage value) {
@@ -4194,6 +4185,7 @@ inline const char* SpvCapabilityToString(SpvCapability value) {
     case SpvCapabilityMaskedGatherScatterINTEL: return "MaskedGatherScatterINTEL";
     case SpvCapabilityCacheControlsINTEL: return "CacheControlsINTEL";
     case SpvCapabilityRegisterLimitsINTEL: return "RegisterLimitsINTEL";
+    case SpvCapabilityBindlessImagesINTEL: return "BindlessImagesINTEL";
     default: return "Unknown";
     }
 }
@@ -5184,6 +5176,9 @@ inline const char* SpvOpToString(SpvOp value) {
     case SpvOpRoundFToTF32INTEL: return "OpRoundFToTF32INTEL";
     case SpvOpMaskedGatherINTEL: return "OpMaskedGatherINTEL";
     case SpvOpMaskedScatterINTEL: return "OpMaskedScatterINTEL";
+    case SpvOpConvertHandleToImageINTEL: return "OpConvertHandleToImageINTEL";
+    case SpvOpConvertHandleToSamplerINTEL: return "OpConvertHandleToSamplerINTEL";
+    case SpvOpConvertHandleToSampledImageINTEL: return "OpConvertHandleToSampledImageINTEL";
     default: return "Unknown";
     }
 }
