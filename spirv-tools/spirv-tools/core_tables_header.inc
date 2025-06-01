@@ -71,6 +71,7 @@ enum Extension : uint32_t {
   kSPV_INTEL_arbitrary_precision_floating_point,
   kSPV_INTEL_arbitrary_precision_integers,
   kSPV_INTEL_bfloat16_conversion,
+  kSPV_INTEL_bindless_images,
   kSPV_INTEL_blocking_pipes,
   kSPV_INTEL_cache_controls,
   kSPV_INTEL_debug_module,
