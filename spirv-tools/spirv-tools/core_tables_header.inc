@@ -47,6 +47,7 @@ enum Extension : uint32_t {
   kSPV_EXT_arithmetic_fence,
   kSPV_EXT_demote_to_helper_invocation,
   kSPV_EXT_descriptor_indexing,
+  kSPV_EXT_float8,
   kSPV_EXT_fragment_fully_covered,
   kSPV_EXT_fragment_invocation_density,
   kSPV_EXT_fragment_shader_interlock,
