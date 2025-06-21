@@ -6,6 +6,7 @@ const Paths = struct {
     __tmp: []const u8,
     __spirv: []const u8,
     __spirv_tools: []const u8,
+    __mimalloc: []const u8,
     __spirv_tools_in: []const u8,
     __source: []const u8,
     __build: []const u8,
@@ -20,6 +21,10 @@ const Paths = struct {
 
     fn getSpirvTools(self: @This()) []const u8 {
         return self.__spirv_tools;
+    }
+
+    fn getMimalloc(self: @This()) []const u8 {
+        return self.__mimalloc;
     }
 
     fn getSpirvToolsIn(self: @This()) []const u8 {
@@ -43,9 +48,14 @@ const Paths = struct {
             "spirv-tools",
         });
 
+        const mimalloc_path = try toolbox.buildRootJoin(&.{
+            "mimalloc",
+        });
+
         return .{
             .__tmp = tmp_path,
             .__spirv_tools = spirvtools_path,
+            .__mimalloc = mimalloc_path,
             .__spirv = try toolbox.buildRootJoin(&.{
                 "spirv",
             }),
@@ -79,6 +89,40 @@ fn update_headers(toolbox: *Toolbox, path: *const Paths) !void {
     while (try walker.next()) |*entry| {
         const dest = try toolbox.buildRootJoin(&.{
             entry.path,
+        });
+        switch (entry.kind) {
+            .file => {
+                if (toolbox_pkg.isHeader(entry.basename)) {
+                    try toolbox.copy(toolbox.pathJoin(&.{
+                        tmp_include_path, entry.path,
+                    }), dest);
+                }
+            },
+            .directory => try toolbox.make(dest),
+            else => return error.UnexpectedEntryKind,
+        }
+    }
+
+    try std.fs.deleteTreeAbsolute(path.getTmp());
+}
+
+fn update_mimalloc(toolbox: *Toolbox, path: *const Paths) !void {
+    try toolbox.clone(.mimalloc, path.getTmp());
+
+    const tmp_include_path = toolbox.pathJoin(&.{
+        path.getTmp(), "include",
+    });
+    var tmp_include_dir = try std.fs.openDirAbsolute(tmp_include_path, .{
+        .iterate = true,
+    });
+    defer tmp_include_dir.close();
+
+    var walker = try tmp_include_dir.walk(toolbox.getAllocator());
+    defer walker.deinit();
+
+    while (try walker.next()) |*entry| {
+        const dest = try toolbox.buildRootJoin(&.{
+            "mimalloc", entry.path,
         });
         switch (entry.kind) {
             .file => {
@@ -182,13 +226,14 @@ fn update(toolbox: *Toolbox, path: *const Paths) !void {
     };
 
     for ([_][]const u8{
-        path.getSpirv(), path.getSpirvTools(),
+        path.getSpirv(), path.getSpirvTools(), path.getMimalloc(),
     }) |dest_path| {
         try std.fs.deleteTreeAbsolute(dest_path);
         try toolbox.make(dest_path);
     }
 
     try update_headers(toolbox, path);
+    try update_mimalloc(toolbox, path);
 
     try toolbox.clone(.@"spirv-tools", path.getTmp());
     try toolbox.run(.{
@@ -256,7 +301,7 @@ const FromZon = toolbox_pkg.Repositories(.{
 });
 
 const DuringExec = toolbox_pkg.Repositories(.{
-    .spirv, .@"spirv-tools",
+    .spirv, .@"spirv-tools", .mimalloc,
 });
 
 pub fn build(builder: *std.Build) !void {
@@ -282,6 +327,11 @@ pub fn build(builder: *std.Build) !void {
             .host = .github,
             .ref = .commit,
         },
+        .mimalloc = .{
+            .name = "microsoft/mimalloc",
+            .host = .github,
+            .ref = .commit,
+        },
     });
     defer toolbox.deinit();
 
@@ -297,7 +347,7 @@ pub fn build(builder: *std.Build) !void {
     });
 
     for ([_][]const u8{
-        ".", "spirv", "spirv-tools",
+        ".", "spirv", "spirv-tools", "mimalloc",
         builder.pathJoin(&.{
             "spirv-tools", "spirv-tools",
         }),
@@ -313,6 +363,9 @@ pub fn build(builder: *std.Build) !void {
     });
     toolbox.addHeader(lib, path.getSpirvToolsIn(), "spirv-tools", &.{
         ".h", ".hpp", ".hpp11",
+    });
+    toolbox.addHeader(lib, path.getMimalloc(), ".", &.{
+        ".h",
     });
 
     lib.linkLibCpp();
