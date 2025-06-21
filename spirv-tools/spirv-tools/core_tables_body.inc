@@ -4653,7 +4653,7 @@ static const std::array<NameIndex, 819> kInstructionNames{{
 //   operands, an IndexRange into kOperandSpans
 //   name, a character-counting IndexRange into kStrings
 //   capabilities, an IndexRange into kCapabilitySpans
-static const std::array<ExtInstDesc, 425> kExtInstByValue{{
+static const std::array<ExtInstDesc, 491> kExtInstByValue{{
     {0,IR(0, 0),IR(45010, 14),IR(1, 0)}, // DebugInfoNone in debuginfo
     {1,IR(52, 3),IR(45024, 21),IR(1, 0)}, // DebugCompilationUnit in debuginfo
     {2,IR(739, 3),IR(45097, 15),IR(1, 0)}, // DebugTypeBasic in debuginfo
@@ -5079,6 +5079,72 @@ static const std::array<ExtInstDesc, 425> kExtInstByValue{{
     {7,IR(33, 3),IR(49730, 9),IR(1, 0)}, // FMid3AMD in spv_amd_shader_trinary_minmax
     {8,IR(33, 3),IR(49739, 9),IR(1, 0)}, // UMid3AMD in spv_amd_shader_trinary_minmax
     {9,IR(33, 3),IR(49748, 9),IR(1, 0)}, // SMid3AMD in spv_amd_shader_trinary_minmax
+    {0,IR(33, 3),IR(49757, 7),IR(1, 0)}, // ARGMAX in tosa_001000_1
+    {1,IR(495, 7),IR(49764, 11),IR(1, 0)}, // AVG_POOL2D in tosa_001000_1
+    {2,IR(703, 10),IR(49775, 7),IR(1, 0)}, // CONV2D in tosa_001000_1
+    {3,IR(703, 10),IR(49782, 7),IR(1, 0)}, // CONV3D in tosa_001000_1
+    {4,IR(703, 10),IR(49789, 17),IR(1, 0)}, // DEPTHWISE_CONV2D in tosa_001000_1
+    {5,IR(296, 4),IR(49806, 6),IR(1, 0)}, // FFT2D in tosa_001000_1
+    {6,IR(296, 4),IR(49812, 7),IR(1, 0)}, // MATMUL in tosa_001000_1
+    {7,IR(623, 5),IR(49819, 11),IR(1, 0)}, // MAX_POOL2D in tosa_001000_1
+    {8,IR(36, 2),IR(49830, 7),IR(1, 0)}, // RFFT2D in tosa_001000_1
+    {9,IR(713, 9),IR(49837, 17),IR(1, 0)}, // TRANSPOSE_CONV2D in tosa_001000_1
+    {10,IR(296, 4),IR(49854, 6),IR(1, 0)}, // CLAMP in tosa_001000_1
+    {11,IR(10, 1),IR(49860, 4),IR(1, 0)}, // ERF in tosa_001000_1
+    {12,IR(10, 1),IR(49864, 8),IR(1, 0)}, // SIGMOID in tosa_001000_1
+    {13,IR(10, 1),IR(49872, 5),IR(1, 0)}, // TANH in tosa_001000_1
+    {14,IR(36, 2),IR(49877, 4),IR(1, 0)}, // ADD in tosa_001000_1
+    {15,IR(33, 3),IR(49881, 23),IR(1, 0)}, // ARITHMETIC_RIGHT_SHIFT in tosa_001000_1
+    {16,IR(36, 2),IR(49904, 12),IR(1, 0)}, // BITWISE_AND in tosa_001000_1
+    {17,IR(36, 2),IR(49916, 11),IR(1, 0)}, // BITWISE_OR in tosa_001000_1
+    {18,IR(36, 2),IR(49927, 12),IR(1, 0)}, // BITWISE_XOR in tosa_001000_1
+    {19,IR(36, 2),IR(49939, 7),IR(1, 0)}, // INTDIV in tosa_001000_1
+    {20,IR(36, 2),IR(49946, 12),IR(1, 0)}, // LOGICAL_AND in tosa_001000_1
+    {21,IR(36, 2),IR(49958, 19),IR(1, 0)}, // LOGICAL_LEFT_SHIFT in tosa_001000_1
+    {22,IR(36, 2),IR(49977, 20),IR(1, 0)}, // LOGICAL_RIGHT_SHIFT in tosa_001000_1
+    {23,IR(36, 2),IR(49997, 11),IR(1, 0)}, // LOGICAL_OR in tosa_001000_1
+    {24,IR(36, 2),IR(50008, 12),IR(1, 0)}, // LOGICAL_XOR in tosa_001000_1
+    {25,IR(33, 3),IR(50020, 8),IR(1, 0)}, // MAXIMUM in tosa_001000_1
+    {26,IR(33, 3),IR(50028, 8),IR(1, 0)}, // MINIMUM in tosa_001000_1
+    {27,IR(33, 3),IR(50036, 4),IR(1, 0)}, // MUL in tosa_001000_1
+    {28,IR(36, 2),IR(50040, 4),IR(1, 0)}, // POW in tosa_001000_1
+    {29,IR(36, 2),IR(50044, 4),IR(1, 0)}, // SUB in tosa_001000_1
+    {30,IR(36, 2),IR(50048, 6),IR(1, 0)}, // TABLE in tosa_001000_1
+    {31,IR(10, 1),IR(50054, 4),IR(1, 0)}, // ABS in tosa_001000_1
+    {32,IR(10, 1),IR(50058, 12),IR(1, 0)}, // BITWISE_NOT in tosa_001000_1
+    {33,IR(10, 1),IR(50070, 5),IR(1, 0)}, // CEIL in tosa_001000_1
+    {34,IR(10, 1),IR(50075, 4),IR(1, 0)}, // CLZ in tosa_001000_1
+    {35,IR(10, 1),IR(50079, 4),IR(1, 0)}, // COS in tosa_001000_1
+    {36,IR(10, 1),IR(50083, 4),IR(1, 0)}, // EXP in tosa_001000_1
+    {37,IR(10, 1),IR(50087, 6),IR(1, 0)}, // FLOOR in tosa_001000_1
+    {38,IR(10, 1),IR(50093, 4),IR(1, 0)}, // LOG in tosa_001000_1
+    {39,IR(10, 1),IR(50097, 12),IR(1, 0)}, // LOGICAL_NOT in tosa_001000_1
+    {40,IR(33, 3),IR(50109, 7),IR(1, 0)}, // NEGATE in tosa_001000_1
+    {41,IR(10, 1),IR(50116, 11),IR(1, 0)}, // RECIPROCAL in tosa_001000_1
+    {42,IR(10, 1),IR(50127, 6),IR(1, 0)}, // RSQRT in tosa_001000_1
+    {43,IR(10, 1),IR(50133, 4),IR(1, 0)}, // SIN in tosa_001000_1
+    {44,IR(33, 3),IR(50137, 7),IR(1, 0)}, // SELECT in tosa_001000_1
+    {45,IR(36, 2),IR(50144, 6),IR(1, 0)}, // EQUAL in tosa_001000_1
+    {46,IR(36, 2),IR(50150, 8),IR(1, 0)}, // GREATER in tosa_001000_1
+    {47,IR(36, 2),IR(50158, 14),IR(1, 0)}, // GREATER_EQUAL in tosa_001000_1
+    {48,IR(36, 2),IR(50172, 11),IR(1, 0)}, // REDUCE_ALL in tosa_001000_1
+    {49,IR(36, 2),IR(50183, 11),IR(1, 0)}, // REDUCE_ANY in tosa_001000_1
+    {50,IR(33, 3),IR(50194, 11),IR(1, 0)}, // REDUCE_MAX in tosa_001000_1
+    {51,IR(33, 3),IR(50205, 11),IR(1, 0)}, // REDUCE_MIN in tosa_001000_1
+    {52,IR(36, 2),IR(50216, 15),IR(1, 0)}, // REDUCE_PRODUCT in tosa_001000_1
+    {53,IR(36, 2),IR(50231, 11),IR(1, 0)}, // REDUCE_SUM in tosa_001000_1
+    {54,IR(168, 2),IR(50242, 7),IR(1, 0)}, // CONCAT in tosa_001000_1
+    {55,IR(33, 3),IR(50249, 4),IR(1, 0)}, // PAD in tosa_001000_1
+    {56,IR(36, 2),IR(50253, 8),IR(1, 0)}, // RESHAPE in tosa_001000_1
+    {57,IR(36, 2),IR(50261, 8),IR(1, 0)}, // REVERSE in tosa_001000_1
+    {58,IR(33, 3),IR(50269, 6),IR(1, 0)}, // SLICE in tosa_001000_1
+    {59,IR(36, 2),IR(50275, 5),IR(1, 0)}, // TILE in tosa_001000_1
+    {60,IR(36, 2),IR(50280, 10),IR(1, 0)}, // TRANSPOSE in tosa_001000_1
+    {61,IR(36, 2),IR(50290, 7),IR(1, 0)}, // GATHER in tosa_001000_1
+    {62,IR(33, 3),IR(50297, 8),IR(1, 0)}, // SCATTER in tosa_001000_1
+    {63,IR(623, 5),IR(50305, 7),IR(1, 0)}, // RESIZE in tosa_001000_1
+    {64,IR(10, 1),IR(50312, 5),IR(1, 0)}, // CAST in tosa_001000_1
+    {65,IR(703, 10),IR(50317, 8),IR(1, 0)}, // RESCALE in tosa_001000_1
 }};
 
 IndexRange ExtInstByValueRangeForKind(spv_ext_inst_type_t type) {
@@ -5094,6 +5160,7 @@ IndexRange ExtInstByValueRangeForKind(spv_ext_inst_type_t type) {
     case SPV_EXT_INST_TYPE_SPV_AMD_SHADER_BALLOT: return IR(411, 4);
     case SPV_EXT_INST_TYPE_SPV_AMD_SHADER_EXPLICIT_VERTEX_PARAMETER: return IR(415, 1);
     case SPV_EXT_INST_TYPE_SPV_AMD_SHADER_TRINARY_MINMAX: return IR(416, 9);
+    case SPV_EXT_INST_TYPE_TOSA_001000_1: return IR(425, 66);
     default: break;
   }
   return IR(0,0);
@@ -5103,7 +5170,7 @@ IndexRange ExtInstByValueRangeForKind(spv_ext_inst_type_t type) {
 // The fields in order are:
 //   name
 //   index into kExtInstByValue
-static const std::array<NameIndex, 425> kExtInstNames{{
+static const std::array<NameIndex, 491> kExtInstNames{{
     {IR(45024, 21), 1}, // DebugCompilationUnit in debuginfo
     {IR(45751, 13), 28}, // DebugDeclare in debuginfo
     {IR(45823, 16), 31}, // DebugExpression in debuginfo
@@ -5529,6 +5596,72 @@ static const std::array<NameIndex, 425> kExtInstNames{{
     {IR(49712, 9), 420}, // UMax3AMD in spv_amd_shader_trinary_minmax
     {IR(49739, 9), 423}, // UMid3AMD in spv_amd_shader_trinary_minmax
     {IR(49685, 9), 417}, // UMin3AMD in spv_amd_shader_trinary_minmax
+    {IR(50054, 4), 456}, // ABS in tosa_001000_1
+    {IR(49877, 4), 439}, // ADD in tosa_001000_1
+    {IR(49757, 7), 425}, // ARGMAX in tosa_001000_1
+    {IR(49881, 23), 440}, // ARITHMETIC_RIGHT_SHIFT in tosa_001000_1
+    {IR(49764, 11), 426}, // AVG_POOL2D in tosa_001000_1
+    {IR(49904, 12), 441}, // BITWISE_AND in tosa_001000_1
+    {IR(50058, 12), 457}, // BITWISE_NOT in tosa_001000_1
+    {IR(49916, 11), 442}, // BITWISE_OR in tosa_001000_1
+    {IR(49927, 12), 443}, // BITWISE_XOR in tosa_001000_1
+    {IR(50312, 5), 489}, // CAST in tosa_001000_1
+    {IR(50070, 5), 458}, // CEIL in tosa_001000_1
+    {IR(49854, 6), 435}, // CLAMP in tosa_001000_1
+    {IR(50075, 4), 459}, // CLZ in tosa_001000_1
+    {IR(50242, 7), 479}, // CONCAT in tosa_001000_1
+    {IR(49775, 7), 427}, // CONV2D in tosa_001000_1
+    {IR(49782, 7), 428}, // CONV3D in tosa_001000_1
+    {IR(50079, 4), 460}, // COS in tosa_001000_1
+    {IR(49789, 17), 429}, // DEPTHWISE_CONV2D in tosa_001000_1
+    {IR(50144, 6), 470}, // EQUAL in tosa_001000_1
+    {IR(49860, 4), 436}, // ERF in tosa_001000_1
+    {IR(50083, 4), 461}, // EXP in tosa_001000_1
+    {IR(49806, 6), 430}, // FFT2D in tosa_001000_1
+    {IR(50087, 6), 462}, // FLOOR in tosa_001000_1
+    {IR(50290, 7), 486}, // GATHER in tosa_001000_1
+    {IR(50150, 8), 471}, // GREATER in tosa_001000_1
+    {IR(50158, 14), 472}, // GREATER_EQUAL in tosa_001000_1
+    {IR(49939, 7), 444}, // INTDIV in tosa_001000_1
+    {IR(50093, 4), 463}, // LOG in tosa_001000_1
+    {IR(49946, 12), 445}, // LOGICAL_AND in tosa_001000_1
+    {IR(49958, 19), 446}, // LOGICAL_LEFT_SHIFT in tosa_001000_1
+    {IR(50097, 12), 464}, // LOGICAL_NOT in tosa_001000_1
+    {IR(49997, 11), 448}, // LOGICAL_OR in tosa_001000_1
+    {IR(49977, 20), 447}, // LOGICAL_RIGHT_SHIFT in tosa_001000_1
+    {IR(50008, 12), 449}, // LOGICAL_XOR in tosa_001000_1
+    {IR(49812, 7), 431}, // MATMUL in tosa_001000_1
+    {IR(50020, 8), 450}, // MAXIMUM in tosa_001000_1
+    {IR(49819, 11), 432}, // MAX_POOL2D in tosa_001000_1
+    {IR(50028, 8), 451}, // MINIMUM in tosa_001000_1
+    {IR(50036, 4), 452}, // MUL in tosa_001000_1
+    {IR(50109, 7), 465}, // NEGATE in tosa_001000_1
+    {IR(50249, 4), 480}, // PAD in tosa_001000_1
+    {IR(50040, 4), 453}, // POW in tosa_001000_1
+    {IR(50116, 11), 466}, // RECIPROCAL in tosa_001000_1
+    {IR(50172, 11), 473}, // REDUCE_ALL in tosa_001000_1
+    {IR(50183, 11), 474}, // REDUCE_ANY in tosa_001000_1
+    {IR(50194, 11), 475}, // REDUCE_MAX in tosa_001000_1
+    {IR(50205, 11), 476}, // REDUCE_MIN in tosa_001000_1
+    {IR(50216, 15), 477}, // REDUCE_PRODUCT in tosa_001000_1
+    {IR(50231, 11), 478}, // REDUCE_SUM in tosa_001000_1
+    {IR(50317, 8), 490}, // RESCALE in tosa_001000_1
+    {IR(50253, 8), 481}, // RESHAPE in tosa_001000_1
+    {IR(50305, 7), 488}, // RESIZE in tosa_001000_1
+    {IR(50261, 8), 482}, // REVERSE in tosa_001000_1
+    {IR(49830, 7), 433}, // RFFT2D in tosa_001000_1
+    {IR(50127, 6), 467}, // RSQRT in tosa_001000_1
+    {IR(50297, 8), 487}, // SCATTER in tosa_001000_1
+    {IR(50137, 7), 469}, // SELECT in tosa_001000_1
+    {IR(49864, 8), 437}, // SIGMOID in tosa_001000_1
+    {IR(50133, 4), 468}, // SIN in tosa_001000_1
+    {IR(50269, 6), 483}, // SLICE in tosa_001000_1
+    {IR(50044, 4), 454}, // SUB in tosa_001000_1
+    {IR(50048, 6), 455}, // TABLE in tosa_001000_1
+    {IR(49872, 5), 438}, // TANH in tosa_001000_1
+    {IR(50275, 5), 484}, // TILE in tosa_001000_1
+    {IR(50280, 10), 485}, // TRANSPOSE in tosa_001000_1
+    {IR(49837, 17), 434}, // TRANSPOSE_CONV2D in tosa_001000_1
 }};
 
 IndexRange ExtInstNameRangeForKind(spv_ext_inst_type_t type) {
@@ -5544,6 +5677,7 @@ IndexRange ExtInstNameRangeForKind(spv_ext_inst_type_t type) {
     case SPV_EXT_INST_TYPE_SPV_AMD_SHADER_BALLOT: return IR(411, 4);
     case SPV_EXT_INST_TYPE_SPV_AMD_SHADER_EXPLICIT_VERTEX_PARAMETER: return IR(415, 1);
     case SPV_EXT_INST_TYPE_SPV_AMD_SHADER_TRINARY_MINMAX: return IR(416, 9);
+    case SPV_EXT_INST_TYPE_TOSA_001000_1: return IR(425, 66);
     default: break;
   }
   return IR(0,0);
@@ -8082,6 +8216,72 @@ static const char kStrings[] =
   "FMid3AMD\0" // IR(49730, 9)
   "UMid3AMD\0" // IR(49739, 9)
   "SMid3AMD\0" // IR(49748, 9)
+  "ARGMAX\0" // IR(49757, 7)
+  "AVG_POOL2D\0" // IR(49764, 11)
+  "CONV2D\0" // IR(49775, 7)
+  "CONV3D\0" // IR(49782, 7)
+  "DEPTHWISE_CONV2D\0" // IR(49789, 17)
+  "FFT2D\0" // IR(49806, 6)
+  "MATMUL\0" // IR(49812, 7)
+  "MAX_POOL2D\0" // IR(49819, 11)
+  "RFFT2D\0" // IR(49830, 7)
+  "TRANSPOSE_CONV2D\0" // IR(49837, 17)
+  "CLAMP\0" // IR(49854, 6)
+  "ERF\0" // IR(49860, 4)
+  "SIGMOID\0" // IR(49864, 8)
+  "TANH\0" // IR(49872, 5)
+  "ADD\0" // IR(49877, 4)
+  "ARITHMETIC_RIGHT_SHIFT\0" // IR(49881, 23)
+  "BITWISE_AND\0" // IR(49904, 12)
+  "BITWISE_OR\0" // IR(49916, 11)
+  "BITWISE_XOR\0" // IR(49927, 12)
+  "INTDIV\0" // IR(49939, 7)
+  "LOGICAL_AND\0" // IR(49946, 12)
+  "LOGICAL_LEFT_SHIFT\0" // IR(49958, 19)
+  "LOGICAL_RIGHT_SHIFT\0" // IR(49977, 20)
+  "LOGICAL_OR\0" // IR(49997, 11)
+  "LOGICAL_XOR\0" // IR(50008, 12)
+  "MAXIMUM\0" // IR(50020, 8)
+  "MINIMUM\0" // IR(50028, 8)
+  "MUL\0" // IR(50036, 4)
+  "POW\0" // IR(50040, 4)
+  "SUB\0" // IR(50044, 4)
+  "TABLE\0" // IR(50048, 6)
+  "ABS\0" // IR(50054, 4)
+  "BITWISE_NOT\0" // IR(50058, 12)
+  "CEIL\0" // IR(50070, 5)
+  "CLZ\0" // IR(50075, 4)
+  "COS\0" // IR(50079, 4)
+  "EXP\0" // IR(50083, 4)
+  "FLOOR\0" // IR(50087, 6)
+  "LOG\0" // IR(50093, 4)
+  "LOGICAL_NOT\0" // IR(50097, 12)
+  "NEGATE\0" // IR(50109, 7)
+  "RECIPROCAL\0" // IR(50116, 11)
+  "RSQRT\0" // IR(50127, 6)
+  "SIN\0" // IR(50133, 4)
+  "SELECT\0" // IR(50137, 7)
+  "EQUAL\0" // IR(50144, 6)
+  "GREATER\0" // IR(50150, 8)
+  "GREATER_EQUAL\0" // IR(50158, 14)
+  "REDUCE_ALL\0" // IR(50172, 11)
+  "REDUCE_ANY\0" // IR(50183, 11)
+  "REDUCE_MAX\0" // IR(50194, 11)
+  "REDUCE_MIN\0" // IR(50205, 11)
+  "REDUCE_PRODUCT\0" // IR(50216, 15)
+  "REDUCE_SUM\0" // IR(50231, 11)
+  "CONCAT\0" // IR(50242, 7)
+  "PAD\0" // IR(50249, 4)
+  "RESHAPE\0" // IR(50253, 8)
+  "REVERSE\0" // IR(50261, 8)
+  "SLICE\0" // IR(50269, 6)
+  "TILE\0" // IR(50275, 5)
+  "TRANSPOSE\0" // IR(50280, 10)
+  "GATHER\0" // IR(50290, 7)
+  "SCATTER\0" // IR(50297, 8)
+  "RESIZE\0" // IR(50305, 7)
+  "CAST\0" // IR(50312, 5)
+  "RESCALE\0" // IR(50317, 8)
 ;
 
 // Array of IndexRanges, where each represents a string by referencing
