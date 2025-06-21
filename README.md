@@ -32,6 +32,7 @@ These repositories are automatically updated when a new release is available:
 This repository is automatically updated when a new release is available from these repositories:
 * [KhronosGroup/SPIRV-Tools][2]
 * [KhronosGroup/SPIRV-Headers][3]
+* [microsoft/mimalloc][8]
 * [tiawl/toolbox][6]
 
 ## `zig build` options
@@ -57,3 +58,4 @@ The parts of this repository originated from this repository are dedicated to th
 [5]:https://github.com/tiawl/shaderc.zig
 [6]:https://github.com/tiawl/toolbox
 [7]:https://github.com/hexops
+[8]:https://github.com/microsoft/mimalloc
