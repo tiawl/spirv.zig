@@ -309,7 +309,7 @@ pub fn build(builder: *std.Build) !void {
     const optimize = builder.standardOptimizeOption(.{});
 
     var toolbox = try Toolbox.init(FromZon, DuringExec, builder, optimize, .spirv_zig, "0xc01cda876afcbb", &.{
-        "spirv", "spirv-tools",
+        "spirv", "spirv-tools", "mimalloc",
     }, .{
         .toolbox = .{
             .name = "tiawl/toolbox",
