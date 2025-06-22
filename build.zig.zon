@@ -14,6 +14,5 @@
         "build.zig.zon",
         "spirv",
         "spirv-tools",
-        "mimalloc",
     },
 }
