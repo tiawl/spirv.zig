@@ -7,8 +7,10 @@ const Paths = struct {
     __spirv: []const u8,
     __spirv_tools: []const u8,
     __mimalloc: []const u8,
+    __mimalloc_src: []const u8,
+    __mimalloc_include: []const u8,
     __spirv_tools_in: []const u8,
-    __source: []const u8,
+    __spirv_tools_source: []const u8,
     __build: []const u8,
 
     fn getTmp(self: @This()) []const u8 {
@@ -27,12 +29,20 @@ const Paths = struct {
         return self.__mimalloc;
     }
 
+    fn getMimallocSrc(self: @This()) []const u8 {
+        return self.__mimalloc_src;
+    }
+
+    fn getMimallocInclude(self: @This()) []const u8 {
+        return self.__mimalloc_include;
+    }
+
     fn getSpirvToolsIn(self: @This()) []const u8 {
         return self.__spirv_tools_in;
     }
 
-    fn getSource(self: @This()) []const u8 {
-        return self.__source;
+    fn getSpirvToolsSource(self: @This()) []const u8 {
+        return self.__spirv_tools_source;
     }
 
     fn getBuild(self: @This()) []const u8 {
@@ -56,13 +66,19 @@ const Paths = struct {
             .__tmp = tmp_path,
             .__spirv_tools = spirvtools_path,
             .__mimalloc = mimalloc_path,
+            .__mimalloc_src = toolbox.pathJoin(&.{
+                mimalloc_path, "src",
+            }),
+            .__mimalloc_include = toolbox.pathJoin(&.{
+                mimalloc_path, "include",
+            }),
             .__spirv = try toolbox.buildRootJoin(&.{
                 "spirv",
             }),
             .__spirv_tools_in = toolbox.pathJoin(&.{
                 spirvtools_path, "spirv-tools",
             }),
-            .__source = toolbox.pathJoin(&.{
+            .__spirv_tools_source = toolbox.pathJoin(&.{
                 spirvtools_path, "source",
             }),
             .__build = toolbox.pathJoin(&.{
@@ -117,18 +133,50 @@ fn update_mimalloc(toolbox: *Toolbox, path: *const Paths) !void {
     });
     defer tmp_include_dir.close();
 
+    try toolbox.make(path.getMimallocInclude());
+
     var walker = try tmp_include_dir.walk(toolbox.getAllocator());
     defer walker.deinit();
 
     while (try walker.next()) |*entry| {
-        const dest = try toolbox.buildRootJoin(&.{
-            "mimalloc", entry.path,
+        const dest = toolbox.pathJoin(&.{
+            path.getMimallocInclude(), entry.path,
         });
         switch (entry.kind) {
             .file => {
                 if (toolbox_pkg.isHeader(entry.basename)) {
                     try toolbox.copy(toolbox.pathJoin(&.{
                         tmp_include_path, entry.path,
+                    }), dest);
+                }
+            },
+            .directory => try toolbox.make(dest),
+            else => return error.UnexpectedEntryKind,
+        }
+    }
+
+    const tmp_src_path = toolbox.pathJoin(&.{
+        path.getTmp(), "src",
+    });
+    var tmp_src_dir = try std.fs.openDirAbsolute(tmp_src_path, .{
+        .iterate = true,
+    });
+    defer tmp_src_dir.close();
+
+    try toolbox.make(path.getMimallocSrc());
+
+    walker.deinit();
+    walker = try tmp_src_dir.walk(toolbox.getAllocator());
+
+    while (try walker.next()) |*entry| {
+        const dest = toolbox.pathJoin(&.{
+            path.getMimallocSrc(), entry.path,
+        });
+        switch (entry.kind) {
+            .file => {
+                if (toolbox_pkg.isCHeader(entry.basename) or toolbox_pkg.isCSource(entry.basename)) {
+                    try toolbox.copy(toolbox.pathJoin(&.{
+                        tmp_src_path, entry.path,
                     }), dest);
                 }
             },
@@ -266,7 +314,7 @@ fn update(toolbox: *Toolbox, path: *const Paths) !void {
 
     try std.fs.deleteTreeAbsolute(path.getTmp());
 
-    var source_dir = try std.fs.openDirAbsolute(path.getSource(), .{
+    var source_dir = try std.fs.openDirAbsolute(path.getSpirvToolsSource(), .{
         .iterate = true,
     });
     defer source_dir.close();
@@ -280,7 +328,7 @@ fn update(toolbox: *Toolbox, path: *const Paths) !void {
                 if (std.fs.path.dirname(entry.path)) |dirname| {
                     if (!std.mem.eql(u8, "opt", dirname) and !std.mem.eql(u8, "val", dirname) and !std.mem.eql(u8, "util", dirname)) {
                         try std.fs.deleteFileAbsolute(toolbox.pathJoin(&.{
-                            path.getSource(), entry.path,
+                            path.getSpirvToolsSource(), entry.path,
                         }));
                     }
                 }
@@ -354,6 +402,12 @@ pub fn build(builder: *std.Build) !void {
         builder.pathJoin(&.{
             "spirv", "unified1",
         }),
+        builder.pathJoin(&.{
+            "mimalloc", "src",
+        }),
+        builder.pathJoin(&.{
+            "mimalloc", "include",
+        }),
     }) |include| {
         toolbox.addInclude(lib, include);
     }
@@ -364,13 +418,13 @@ pub fn build(builder: *std.Build) !void {
     toolbox.addHeader(lib, path.getSpirvToolsIn(), "spirv-tools", &.{
         ".h", ".hpp", ".hpp11",
     });
-    toolbox.addHeader(lib, path.getMimalloc(), ".", &.{
+    toolbox.addHeader(lib, path.getMimallocInclude(), ".", &.{
         ".h",
     });
 
     lib.linkLibCpp();
 
-    var source_dir = try std.fs.openDirAbsolute(path.getSource(), .{
+    var source_dir = try std.fs.openDirAbsolute(path.getSpirvToolsSource(), .{
         .iterate = true,
     });
     defer source_dir.close();
@@ -382,7 +436,35 @@ pub fn build(builder: *std.Build) !void {
         switch (entry.kind) {
             .file => {
                 if (toolbox_pkg.isCppSource(entry.basename)) {
-                    try toolbox.addSource(lib, path.getSource(), entry.path, &.{});
+                    try toolbox.addSource(lib, path.getSpirvToolsSource(), entry.path, &.{});
+                }
+            },
+            else => {},
+        }
+    }
+
+    var mimalloc_src_dir = try std.fs.openDirAbsolute(path.getMimallocSrc(), .{
+        .iterate = true,
+    });
+    defer mimalloc_src_dir.close();
+
+    walker.deinit();
+    walker = try mimalloc_src_dir.walk(builder.allocator);
+
+    while (try walker.next()) |*entry| {
+        switch (entry.kind) {
+            .file => {
+                if (toolbox_pkg.isCSource(entry.basename) and (!std.mem.eql(u8, entry.basename, "free.c")) and (std.mem.indexOfScalar(u8, entry.basename, '-') == null)) {
+                    if (!std.mem.eql(u8, entry.path, entry.basename) and (!std.mem.eql(u8, "prim", std.fs.path.basename(std.fs.path.dirname(entry.path).?)))) {
+                        switch (target.result.os.tag) {
+                            .windows => if (!std.mem.eql(u8, "windows", std.fs.path.basename(std.fs.path.dirname(entry.path).?))) continue,
+                            .macos => if (!std.mem.eql(u8, "macos", std.fs.path.basename(std.fs.path.dirname(entry.path).?))) continue,
+                            .emscripten => if (!std.mem.eql(u8, "emscripten", std.fs.path.basename(std.fs.path.dirname(entry.path).?))) continue,
+                            .wasi => if (!std.mem.eql(u8, "wasi", std.fs.path.basename(std.fs.path.dirname(entry.path).?))) continue,
+                            else => if (!std.mem.eql(u8, "unix", std.fs.path.basename(std.fs.path.dirname(entry.path).?))) continue,
+                        }
+                    }
+                    try toolbox.addSource(lib, path.getMimallocSrc(), entry.path, &.{});
                 }
             },
             else => {},
