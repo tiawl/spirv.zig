@@ -443,33 +443,9 @@ pub fn build(builder: *std.Build) !void {
         }
     }
 
-    var mimalloc_src_dir = try std.fs.openDirAbsolute(path.getMimallocSrc(), .{
-        .iterate = true,
+    try toolbox.addSource(lib, path.getMimallocSrc(), "static.c", &.{
+        "-Wno-date-time",
     });
-    defer mimalloc_src_dir.close();
-
-    walker.deinit();
-    walker = try mimalloc_src_dir.walk(builder.allocator);
-
-    while (try walker.next()) |*entry| {
-        switch (entry.kind) {
-            .file => {
-                if (toolbox_pkg.isCSource(entry.basename) and (!std.mem.eql(u8, entry.basename, "free.c")) and (std.mem.indexOfScalar(u8, entry.basename, '-') == null)) {
-                    if (!std.mem.eql(u8, entry.path, entry.basename) and (!std.mem.eql(u8, "prim", std.fs.path.basename(std.fs.path.dirname(entry.path).?)))) {
-                        switch (target.result.os.tag) {
-                            .windows => if (!std.mem.eql(u8, "windows", std.fs.path.basename(std.fs.path.dirname(entry.path).?))) continue,
-                            .macos => if (!std.mem.eql(u8, "macos", std.fs.path.basename(std.fs.path.dirname(entry.path).?))) continue,
-                            .emscripten => if (!std.mem.eql(u8, "emscripten", std.fs.path.basename(std.fs.path.dirname(entry.path).?))) continue,
-                            .wasi => if (!std.mem.eql(u8, "wasi", std.fs.path.basename(std.fs.path.dirname(entry.path).?))) continue,
-                            else => if (!std.mem.eql(u8, "unix", std.fs.path.basename(std.fs.path.dirname(entry.path).?))) continue,
-                        }
-                    }
-                    try toolbox.addSource(lib, path.getMimallocSrc(), entry.path, &.{});
-                }
-            },
-            else => {},
-        }
-    }
 
     builder.installArtifact(lib);
 }
