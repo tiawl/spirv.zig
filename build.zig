@@ -443,7 +443,9 @@ pub fn build(builder: *std.Build) !void {
         }
     }
 
-    try toolbox.addSource(lib, path.getMimallocSrc(), "static.c", &.{});
+    try toolbox.addSource(lib, path.getMimallocSrc(), "static.c", &.{
+        "-Wno-date-time",
+    });
 
     builder.installArtifact(lib);
 }
