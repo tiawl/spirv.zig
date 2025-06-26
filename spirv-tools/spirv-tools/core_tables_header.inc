@@ -93,6 +93,7 @@ enum Extension : uint32_t {
   kSPV_INTEL_fpga_memory_attributes,
   kSPV_INTEL_fpga_reg,
   kSPV_INTEL_function_pointers,
+  kSPV_INTEL_function_variants,
   kSPV_INTEL_global_variable_fpga_decorations,
   kSPV_INTEL_global_variable_host_access,
   kSPV_INTEL_inline_assembly,
