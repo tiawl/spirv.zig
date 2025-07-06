@@ -185,6 +185,7 @@ enum Extension : uint32_t {
   kSPV_NV_stereo_view_rendering,
   kSPV_NV_tensor_addressing,
   kSPV_NV_viewport_array2,
+  kSPV_QCOM_cooperative_matrix_conversion,
   kSPV_QCOM_image_processing,
   kSPV_QCOM_image_processing2,
   kSPV_QCOM_tile_shading,
