@@ -3024,7 +3024,7 @@ IndexRange OperandNameRangeForKind(spv_operand_type_t type) {
 //   extensions, as an IndexRange into kExtensionSpans
 //   version, first version of SPIR-V that has it
 //   lastVersion, last version of SPIR-V that has it
-static const std::array<InstructionDesc, 819> kInstructionDesc{{
+static const std::array<InstructionDesc, 820> kInstructionDesc{{
   {spv::Op::OpNop, false, false, IR(0, 0), IR(25163, 4), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kMiscellaneous},
   {spv::Op::OpUndef, true, true, IR(39, 2), IR(25219, 6), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kMiscellaneous},
   {spv::Op::OpSourceContinued, false, false, IR(11, 1), IR(25225, 16), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kDebug},
@@ -3400,520 +3400,521 @@ static const std::array<InstructionDesc, 819> kInstructionDesc{{
   {spv::Op::OpGroupNonUniformRotateKHR, true, true, IR(404, 6), IR(13250, 25), IR(0, 0), IR(237, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
   {spv::Op::OpSubgroupReadInvocationKHR, true, true, IR(172, 4), IR(31972, 26), IR(0, 0), IR(235, 1), IR(2, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
   {spv::Op::OpExtInstWithForwardRefsKHR, true, true, IR(410, 5), IR(31998, 26), IR(0, 0), IR(1, 0), IR(168, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kExtension},
-  {spv::Op::OpTraceRayKHR, false, false, IR(415, 11), IR(32024, 12), IR(0, 0), IR(60, 1), IR(28, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpExecuteCallableKHR, false, false, IR(36, 2), IR(32036, 19), IR(0, 0), IR(60, 1), IR(28, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpConvertUToAccelerationStructureKHR, true, true, IR(160, 3), IR(32055, 35), IR(0, 0), IR(238, 2), IR(169, 2), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpIgnoreIntersectionKHR, false, false, IR(0, 0), IR(32090, 22), IR(0, 0), IR(60, 1), IR(28, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTerminateRayKHR, false, false, IR(0, 0), IR(32112, 16), IR(0, 0), IR(60, 1), IR(28, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpSDot, true, true, IR(426, 5), IR(32175, 5), IR(93, 1), IR(240, 1), IR(122, 1), SPV_SPIRV_VERSION_WORD(1,6), 0xffffffffu, PrintingClass::kArithmetic},
-  {spv::Op::OpUDot, true, true, IR(426, 5), IR(32188, 5), IR(94, 1), IR(240, 1), IR(122, 1), SPV_SPIRV_VERSION_WORD(1,6), 0xffffffffu, PrintingClass::kArithmetic},
-  {spv::Op::OpSUDot, true, true, IR(426, 5), IR(32201, 6), IR(95, 1), IR(240, 1), IR(122, 1), SPV_SPIRV_VERSION_WORD(1,6), 0xffffffffu, PrintingClass::kArithmetic},
-  {spv::Op::OpSDotAccSat, true, true, IR(431, 6), IR(32216, 11), IR(96, 1), IR(240, 1), IR(122, 1), SPV_SPIRV_VERSION_WORD(1,6), 0xffffffffu, PrintingClass::kArithmetic},
-  {spv::Op::OpUDotAccSat, true, true, IR(431, 6), IR(32241, 11), IR(97, 1), IR(240, 1), IR(122, 1), SPV_SPIRV_VERSION_WORD(1,6), 0xffffffffu, PrintingClass::kArithmetic},
-  {spv::Op::OpSUDotAccSat, true, true, IR(431, 6), IR(32266, 12), IR(98, 1), IR(240, 1), IR(122, 1), SPV_SPIRV_VERSION_WORD(1,6), 0xffffffffu, PrintingClass::kArithmetic},
-  {spv::Op::OpTypeCooperativeMatrixKHR, true, false, IR(437, 6), IR(32293, 25), IR(0, 0), IR(86, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
-  {spv::Op::OpCooperativeMatrixLoadKHR, true, true, IR(443, 6), IR(32318, 25), IR(0, 0), IR(86, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
-  {spv::Op::OpCooperativeMatrixStoreKHR, false, false, IR(449, 5), IR(32343, 26), IR(0, 0), IR(86, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
-  {spv::Op::OpCooperativeMatrixMulAddKHR, true, true, IR(454, 6), IR(32423, 27), IR(0, 0), IR(86, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kArithmetic},
-  {spv::Op::OpCooperativeMatrixLengthKHR, true, true, IR(160, 3), IR(32450, 27), IR(0, 0), IR(86, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMiscellaneous},
-  {spv::Op::OpConstantCompositeReplicateEXT, true, true, IR(160, 3), IR(32477, 30), IR(0, 0), IR(241, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
-  {spv::Op::OpSpecConstantCompositeReplicateEXT, true, true, IR(160, 3), IR(32507, 34), IR(0, 0), IR(241, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
-  {spv::Op::OpCompositeConstructReplicateEXT, true, true, IR(160, 3), IR(32541, 31), IR(0, 0), IR(241, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kComposite},
-  {spv::Op::OpTypeRayQueryKHR, true, false, IR(68, 1), IR(32572, 16), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
-  {spv::Op::OpRayQueryInitializeKHR, false, false, IR(460, 8), IR(32588, 22), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryTerminateKHR, false, false, IR(10, 1), IR(32610, 21), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGenerateIntersectionKHR, false, false, IR(36, 2), IR(32631, 32), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryConfirmIntersectionKHR, false, false, IR(10, 1), IR(32663, 31), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryProceedKHR, true, true, IR(160, 3), IR(32694, 19), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionTypeKHR, true, true, IR(172, 4), IR(32713, 31), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpImageSampleWeightedQCOM, true, true, IR(130, 5), IR(32744, 24), IR(0, 0), IR(242, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpImageBoxFilterQCOM, true, true, IR(130, 5), IR(32768, 19), IR(0, 0), IR(243, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpImageBlockMatchSSDQCOM, true, true, IR(325, 7), IR(32787, 23), IR(0, 0), IR(244, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpImageBlockMatchSADQCOM, true, true, IR(325, 7), IR(32810, 23), IR(0, 0), IR(244, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpBitCastArrayQCOM, true, true, IR(160, 3), IR(32833, 17), IR(0, 0), IR(245, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConversion},
-  {spv::Op::OpImageBlockMatchWindowSSDQCOM, true, true, IR(325, 7), IR(32850, 29), IR(0, 0), IR(246, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpImageBlockMatchWindowSADQCOM, true, true, IR(325, 7), IR(32879, 29), IR(0, 0), IR(246, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpImageBlockMatchGatherSSDQCOM, true, true, IR(325, 7), IR(32908, 29), IR(0, 0), IR(246, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpImageBlockMatchGatherSADQCOM, true, true, IR(325, 7), IR(32937, 29), IR(0, 0), IR(246, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpCompositeConstructCoopMatQCOM, true, true, IR(160, 3), IR(32966, 30), IR(0, 0), IR(245, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kComposite},
-  {spv::Op::OpCompositeExtractCoopMatQCOM, true, true, IR(160, 3), IR(32996, 28), IR(0, 0), IR(245, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kComposite},
-  {spv::Op::OpExtractSubArrayQCOM, true, true, IR(172, 4), IR(33024, 20), IR(0, 0), IR(245, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kComposite},
-  {spv::Op::OpGroupIAddNonUniformAMD, true, true, IR(283, 5), IR(33044, 23), IR(0, 0), IR(218, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupFAddNonUniformAMD, true, true, IR(283, 5), IR(33067, 23), IR(0, 0), IR(218, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupFMinNonUniformAMD, true, true, IR(283, 5), IR(33090, 23), IR(0, 0), IR(218, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupUMinNonUniformAMD, true, true, IR(283, 5), IR(33113, 23), IR(0, 0), IR(218, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupSMinNonUniformAMD, true, true, IR(283, 5), IR(33136, 23), IR(0, 0), IR(218, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupFMaxNonUniformAMD, true, true, IR(283, 5), IR(33159, 23), IR(0, 0), IR(218, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupUMaxNonUniformAMD, true, true, IR(283, 5), IR(33182, 23), IR(0, 0), IR(218, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupSMaxNonUniformAMD, true, true, IR(283, 5), IR(33205, 23), IR(0, 0), IR(218, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpFragmentMaskFetchAMD, true, true, IR(172, 4), IR(33228, 21), IR(0, 0), IR(247, 1), IR(58, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpFragmentFetchAMD, true, true, IR(130, 5), IR(33249, 17), IR(0, 0), IR(247, 1), IR(58, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpReadClockKHR, true, true, IR(340, 3), IR(33266, 13), IR(0, 0), IR(248, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpAllocateNodePayloadsAMDX, true, true, IR(278, 5), IR(33279, 25), IR(0, 0), IR(43, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpEnqueueNodePayloadsAMDX, false, false, IR(10, 1), IR(33304, 24), IR(0, 0), IR(43, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTypeNodePayloadArrayAMDX, true, false, IR(87, 2), IR(33328, 25), IR(0, 0), IR(43, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpFinishWritingNodePayloadAMDX, true, true, IR(160, 3), IR(33353, 29), IR(0, 0), IR(43, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpNodePayloadArrayLengthAMDX, true, true, IR(160, 3), IR(33382, 27), IR(0, 0), IR(43, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpIsNodePayloadValidAMDX, true, true, IR(172, 4), IR(33409, 23), IR(0, 0), IR(43, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpConstantStringAMDX, true, false, IR(50, 2), IR(33432, 19), IR(0, 0), IR(43, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpSpecConstantStringAMDX, true, false, IR(50, 2), IR(33451, 23), IR(0, 0), IR(43, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpGroupNonUniformQuadAllKHR, true, true, IR(160, 3), IR(33474, 26), IR(0, 0), IR(162, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformQuadAnyKHR, true, true, IR(160, 3), IR(33500, 26), IR(0, 0), IR(162, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpHitObjectRecordHitMotionNV, false, false, IR(468, 14), IR(33526, 27), IR(0, 0), IR(249, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectRecordHitWithIndexMotionNV, false, false, IR(482, 13), IR(33553, 36), IR(0, 0), IR(249, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectRecordMissMotionNV, false, false, IR(495, 7), IR(33589, 28), IR(0, 0), IR(249, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectGetWorldToObjectNV, true, true, IR(160, 3), IR(33617, 28), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectGetObjectToWorldNV, true, true, IR(160, 3), IR(33645, 28), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectGetObjectRayDirectionNV, true, true, IR(160, 3), IR(33673, 33), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectGetObjectRayOriginNV, true, true, IR(160, 3), IR(33706, 30), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectTraceRayMotionNV, false, false, IR(482, 13), IR(33736, 26), IR(0, 0), IR(249, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectGetShaderRecordBufferHandleNV, true, true, IR(160, 3), IR(33762, 39), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectGetShaderBindingTableRecordIndexNV, true, true, IR(160, 3), IR(33801, 44), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectRecordEmptyNV, false, false, IR(10, 1), IR(33845, 23), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectTraceRayNV, false, false, IR(502, 12), IR(33868, 20), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectRecordHitNV, false, false, IR(482, 13), IR(33888, 21), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectRecordHitWithIndexNV, false, false, IR(502, 12), IR(33909, 30), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectRecordMissNV, false, false, IR(514, 6), IR(33939, 22), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectExecuteShaderNV, false, false, IR(36, 2), IR(33961, 25), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectGetCurrentTimeNV, true, true, IR(160, 3), IR(33986, 26), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectGetAttributesNV, false, false, IR(36, 2), IR(34012, 25), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectGetHitKindNV, true, true, IR(160, 3), IR(34037, 22), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectGetPrimitiveIndexNV, true, true, IR(160, 3), IR(34059, 29), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectGetGeometryIndexNV, true, true, IR(160, 3), IR(34088, 28), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectGetInstanceIdNV, true, true, IR(160, 3), IR(34116, 25), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectGetInstanceCustomIndexNV, true, true, IR(160, 3), IR(34141, 34), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectGetWorldRayDirectionNV, true, true, IR(160, 3), IR(34175, 32), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectGetWorldRayOriginNV, true, true, IR(160, 3), IR(34207, 29), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectGetRayTMaxNV, true, true, IR(160, 3), IR(34236, 22), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectGetRayTMinNV, true, true, IR(160, 3), IR(34258, 22), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectIsEmptyNV, true, true, IR(160, 3), IR(34280, 19), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectIsHitNV, true, true, IR(160, 3), IR(34299, 17), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectIsMissNV, true, true, IR(160, 3), IR(34316, 18), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpReorderThreadWithHitObjectNV, false, false, IR(520, 3), IR(34334, 29), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpReorderThreadWithHintNV, false, false, IR(36, 2), IR(34363, 24), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTypeHitObjectNV, true, false, IR(68, 1), IR(34387, 16), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
-  {spv::Op::OpImageSampleFootprintNV, true, true, IR(523, 7), IR(34403, 23), IR(0, 0), IR(251, 1), IR(72, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpTypeCooperativeVectorNV, true, false, IR(89, 3), IR(34426, 24), IR(0, 0), IR(252, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
-  {spv::Op::OpCooperativeVectorMatrixMulNV, true, true, IR(530, 13), IR(34450, 29), IR(0, 0), IR(252, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpCooperativeVectorOuterProductAccumulateNV, false, false, IR(543, 7), IR(34479, 42), IR(0, 0), IR(253, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpCooperativeVectorReduceSumAccumulateNV, false, false, IR(33, 3), IR(34521, 39), IR(0, 0), IR(253, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpCooperativeVectorMatrixMulAddNV, true, true, IR(550, 16), IR(34560, 32), IR(0, 0), IR(252, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpCooperativeMatrixConvertNV, true, true, IR(160, 3), IR(34592, 27), IR(0, 0), IR(254, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConversion},
-  {spv::Op::OpEmitMeshTasksEXT, false, false, IR(566, 4), IR(34619, 17), IR(0, 0), IR(53, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpSetMeshOutputsEXT, false, false, IR(36, 2), IR(34636, 18), IR(0, 0), IR(53, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpGroupNonUniformPartitionNV, true, true, IR(160, 3), IR(34654, 27), IR(0, 0), IR(183, 1), IR(75, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpWritePackedPrimitiveIndices4x8NV, false, false, IR(36, 2), IR(34681, 33), IR(0, 0), IR(50, 1), IR(18, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpFetchMicroTriangleVertexPositionNV, true, true, IR(325, 7), IR(34714, 35), IR(0, 0), IR(255, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpFetchMicroTriangleVertexBarycentricNV, true, true, IR(325, 7), IR(34749, 38), IR(0, 0), IR(255, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpCooperativeVectorLoadNV, true, true, IR(570, 5), IR(34787, 24), IR(0, 0), IR(252, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
-  {spv::Op::OpCooperativeVectorStoreNV, false, false, IR(575, 4), IR(34811, 25), IR(0, 0), IR(252, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
-  {spv::Op::OpReportIntersectionKHR, true, true, IR(172, 4), IR(34836, 22), IR(99, 1), IR(54, 2), IR(24, 2), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpIgnoreIntersectionNV, false, false, IR(0, 0), IR(34879, 21), IR(0, 0), IR(56, 1), IR(26, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTerminateRayNV, false, false, IR(0, 0), IR(34900, 15), IR(0, 0), IR(56, 1), IR(26, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTraceNV, false, false, IR(415, 11), IR(34915, 8), IR(0, 0), IR(56, 1), IR(26, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTraceMotionNV, false, false, IR(502, 12), IR(34923, 14), IR(0, 0), IR(57, 1), IR(27, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTraceRayMotionNV, false, false, IR(502, 12), IR(34937, 17), IR(0, 0), IR(57, 1), IR(27, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionTriangleVertexPositionsKHR, true, true, IR(172, 4), IR(34954, 50), IR(0, 0), IR(256, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTypeAccelerationStructureKHR, true, false, IR(68, 1), IR(35004, 29), IR(100, 1), IR(257, 4), IR(171, 4), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
-  {spv::Op::OpExecuteCallableNV, false, false, IR(36, 2), IR(35061, 18), IR(0, 0), IR(56, 1), IR(26, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetClusterIdNV, true, true, IR(172, 4), IR(35079, 23), IR(0, 0), IR(64, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectGetClusterIdNV, true, true, IR(160, 3), IR(35102, 24), IR(0, 0), IR(64, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTypeCooperativeMatrixNV, true, false, IR(579, 5), IR(35126, 24), IR(0, 0), IR(261, 1), IR(79, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
-  {spv::Op::OpCooperativeMatrixLoadNV, true, true, IR(584, 6), IR(35150, 24), IR(0, 0), IR(261, 1), IR(79, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpCooperativeMatrixStoreNV, false, false, IR(590, 5), IR(35174, 25), IR(0, 0), IR(261, 1), IR(79, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpCooperativeMatrixMulAddNV, true, true, IR(130, 5), IR(35199, 26), IR(0, 0), IR(261, 1), IR(79, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpCooperativeMatrixLengthNV, true, true, IR(160, 3), IR(35225, 26), IR(0, 0), IR(261, 1), IR(79, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpBeginInvocationInterlockEXT, false, false, IR(0, 0), IR(35251, 28), IR(0, 0), IR(262, 3), IR(80, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpEndInvocationInterlockEXT, false, false, IR(0, 0), IR(35279, 26), IR(0, 0), IR(262, 3), IR(80, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpCooperativeMatrixReduceNV, true, true, IR(595, 5), IR(35348, 26), IR(0, 0), IR(265, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kArithmetic},
-  {spv::Op::OpCooperativeMatrixLoadTensorNV, true, true, IR(600, 7), IR(35449, 30), IR(0, 0), IR(200, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
-  {spv::Op::OpCooperativeMatrixStoreTensorNV, false, false, IR(607, 5), IR(35479, 31), IR(0, 0), IR(200, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
-  {spv::Op::OpCooperativeMatrixPerElementOpNV, true, true, IR(151, 5), IR(35510, 32), IR(0, 0), IR(266, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kFunction},
-  {spv::Op::OpTypeTensorLayoutNV, true, false, IR(89, 3), IR(35542, 19), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
-  {spv::Op::OpTypeTensorViewNV, true, false, IR(612, 4), IR(35561, 17), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
-  {spv::Op::OpCreateTensorLayoutNV, true, true, IR(39, 2), IR(35578, 21), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTensorLayoutSetDimensionNV, true, true, IR(122, 4), IR(35599, 27), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTensorLayoutSetStrideNV, true, true, IR(122, 4), IR(35626, 24), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTensorLayoutSliceNV, true, true, IR(122, 4), IR(35650, 20), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTensorLayoutSetClampValueNV, true, true, IR(172, 4), IR(35670, 28), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpCreateTensorViewNV, true, true, IR(39, 2), IR(35698, 19), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTensorViewSetDimensionNV, true, true, IR(122, 4), IR(35717, 25), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTensorViewSetStrideNV, true, true, IR(122, 4), IR(35742, 22), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpUntypedGroupAsyncCopyKHR, true, true, IR(415, 11), IR(32024, 25), IR(0, 0), IR(234, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpTraceRayKHR, false, false, IR(426, 11), IR(32049, 12), IR(0, 0), IR(60, 1), IR(28, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpExecuteCallableKHR, false, false, IR(36, 2), IR(32061, 19), IR(0, 0), IR(60, 1), IR(28, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpConvertUToAccelerationStructureKHR, true, true, IR(160, 3), IR(32080, 35), IR(0, 0), IR(238, 2), IR(169, 2), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpIgnoreIntersectionKHR, false, false, IR(0, 0), IR(32115, 22), IR(0, 0), IR(60, 1), IR(28, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTerminateRayKHR, false, false, IR(0, 0), IR(32137, 16), IR(0, 0), IR(60, 1), IR(28, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpSDot, true, true, IR(437, 5), IR(32200, 5), IR(93, 1), IR(240, 1), IR(122, 1), SPV_SPIRV_VERSION_WORD(1,6), 0xffffffffu, PrintingClass::kArithmetic},
+  {spv::Op::OpUDot, true, true, IR(437, 5), IR(32213, 5), IR(94, 1), IR(240, 1), IR(122, 1), SPV_SPIRV_VERSION_WORD(1,6), 0xffffffffu, PrintingClass::kArithmetic},
+  {spv::Op::OpSUDot, true, true, IR(437, 5), IR(32226, 6), IR(95, 1), IR(240, 1), IR(122, 1), SPV_SPIRV_VERSION_WORD(1,6), 0xffffffffu, PrintingClass::kArithmetic},
+  {spv::Op::OpSDotAccSat, true, true, IR(442, 6), IR(32241, 11), IR(96, 1), IR(240, 1), IR(122, 1), SPV_SPIRV_VERSION_WORD(1,6), 0xffffffffu, PrintingClass::kArithmetic},
+  {spv::Op::OpUDotAccSat, true, true, IR(442, 6), IR(32266, 11), IR(97, 1), IR(240, 1), IR(122, 1), SPV_SPIRV_VERSION_WORD(1,6), 0xffffffffu, PrintingClass::kArithmetic},
+  {spv::Op::OpSUDotAccSat, true, true, IR(442, 6), IR(32291, 12), IR(98, 1), IR(240, 1), IR(122, 1), SPV_SPIRV_VERSION_WORD(1,6), 0xffffffffu, PrintingClass::kArithmetic},
+  {spv::Op::OpTypeCooperativeMatrixKHR, true, false, IR(448, 6), IR(32318, 25), IR(0, 0), IR(86, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
+  {spv::Op::OpCooperativeMatrixLoadKHR, true, true, IR(454, 6), IR(32343, 25), IR(0, 0), IR(86, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
+  {spv::Op::OpCooperativeMatrixStoreKHR, false, false, IR(460, 5), IR(32368, 26), IR(0, 0), IR(86, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
+  {spv::Op::OpCooperativeMatrixMulAddKHR, true, true, IR(465, 6), IR(32448, 27), IR(0, 0), IR(86, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kArithmetic},
+  {spv::Op::OpCooperativeMatrixLengthKHR, true, true, IR(160, 3), IR(32475, 27), IR(0, 0), IR(86, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMiscellaneous},
+  {spv::Op::OpConstantCompositeReplicateEXT, true, true, IR(160, 3), IR(32502, 30), IR(0, 0), IR(241, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
+  {spv::Op::OpSpecConstantCompositeReplicateEXT, true, true, IR(160, 3), IR(32532, 34), IR(0, 0), IR(241, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
+  {spv::Op::OpCompositeConstructReplicateEXT, true, true, IR(160, 3), IR(32566, 31), IR(0, 0), IR(241, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kComposite},
+  {spv::Op::OpTypeRayQueryKHR, true, false, IR(68, 1), IR(32597, 16), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
+  {spv::Op::OpRayQueryInitializeKHR, false, false, IR(471, 8), IR(32613, 22), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryTerminateKHR, false, false, IR(10, 1), IR(32635, 21), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGenerateIntersectionKHR, false, false, IR(36, 2), IR(32656, 32), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryConfirmIntersectionKHR, false, false, IR(10, 1), IR(32688, 31), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryProceedKHR, true, true, IR(160, 3), IR(32719, 19), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionTypeKHR, true, true, IR(172, 4), IR(32738, 31), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpImageSampleWeightedQCOM, true, true, IR(130, 5), IR(32769, 24), IR(0, 0), IR(242, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageBoxFilterQCOM, true, true, IR(130, 5), IR(32793, 19), IR(0, 0), IR(243, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageBlockMatchSSDQCOM, true, true, IR(325, 7), IR(32812, 23), IR(0, 0), IR(244, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageBlockMatchSADQCOM, true, true, IR(325, 7), IR(32835, 23), IR(0, 0), IR(244, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpBitCastArrayQCOM, true, true, IR(160, 3), IR(32858, 17), IR(0, 0), IR(245, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConversion},
+  {spv::Op::OpImageBlockMatchWindowSSDQCOM, true, true, IR(325, 7), IR(32875, 29), IR(0, 0), IR(246, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageBlockMatchWindowSADQCOM, true, true, IR(325, 7), IR(32904, 29), IR(0, 0), IR(246, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageBlockMatchGatherSSDQCOM, true, true, IR(325, 7), IR(32933, 29), IR(0, 0), IR(246, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageBlockMatchGatherSADQCOM, true, true, IR(325, 7), IR(32962, 29), IR(0, 0), IR(246, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpCompositeConstructCoopMatQCOM, true, true, IR(160, 3), IR(32991, 30), IR(0, 0), IR(245, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kComposite},
+  {spv::Op::OpCompositeExtractCoopMatQCOM, true, true, IR(160, 3), IR(33021, 28), IR(0, 0), IR(245, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kComposite},
+  {spv::Op::OpExtractSubArrayQCOM, true, true, IR(172, 4), IR(33049, 20), IR(0, 0), IR(245, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kComposite},
+  {spv::Op::OpGroupIAddNonUniformAMD, true, true, IR(283, 5), IR(33069, 23), IR(0, 0), IR(218, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupFAddNonUniformAMD, true, true, IR(283, 5), IR(33092, 23), IR(0, 0), IR(218, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupFMinNonUniformAMD, true, true, IR(283, 5), IR(33115, 23), IR(0, 0), IR(218, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupUMinNonUniformAMD, true, true, IR(283, 5), IR(33138, 23), IR(0, 0), IR(218, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupSMinNonUniformAMD, true, true, IR(283, 5), IR(33161, 23), IR(0, 0), IR(218, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupFMaxNonUniformAMD, true, true, IR(283, 5), IR(33184, 23), IR(0, 0), IR(218, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupUMaxNonUniformAMD, true, true, IR(283, 5), IR(33207, 23), IR(0, 0), IR(218, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupSMaxNonUniformAMD, true, true, IR(283, 5), IR(33230, 23), IR(0, 0), IR(218, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpFragmentMaskFetchAMD, true, true, IR(172, 4), IR(33253, 21), IR(0, 0), IR(247, 1), IR(58, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpFragmentFetchAMD, true, true, IR(130, 5), IR(33274, 17), IR(0, 0), IR(247, 1), IR(58, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpReadClockKHR, true, true, IR(340, 3), IR(33291, 13), IR(0, 0), IR(248, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpAllocateNodePayloadsAMDX, true, true, IR(278, 5), IR(33304, 25), IR(0, 0), IR(43, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpEnqueueNodePayloadsAMDX, false, false, IR(10, 1), IR(33329, 24), IR(0, 0), IR(43, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTypeNodePayloadArrayAMDX, true, false, IR(87, 2), IR(33353, 25), IR(0, 0), IR(43, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpFinishWritingNodePayloadAMDX, true, true, IR(160, 3), IR(33378, 29), IR(0, 0), IR(43, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpNodePayloadArrayLengthAMDX, true, true, IR(160, 3), IR(33407, 27), IR(0, 0), IR(43, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpIsNodePayloadValidAMDX, true, true, IR(172, 4), IR(33434, 23), IR(0, 0), IR(43, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpConstantStringAMDX, true, false, IR(50, 2), IR(33457, 19), IR(0, 0), IR(43, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpSpecConstantStringAMDX, true, false, IR(50, 2), IR(33476, 23), IR(0, 0), IR(43, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpGroupNonUniformQuadAllKHR, true, true, IR(160, 3), IR(33499, 26), IR(0, 0), IR(162, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformQuadAnyKHR, true, true, IR(160, 3), IR(33525, 26), IR(0, 0), IR(162, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpHitObjectRecordHitMotionNV, false, false, IR(479, 14), IR(33551, 27), IR(0, 0), IR(249, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectRecordHitWithIndexMotionNV, false, false, IR(493, 13), IR(33578, 36), IR(0, 0), IR(249, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectRecordMissMotionNV, false, false, IR(506, 7), IR(33614, 28), IR(0, 0), IR(249, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectGetWorldToObjectNV, true, true, IR(160, 3), IR(33642, 28), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectGetObjectToWorldNV, true, true, IR(160, 3), IR(33670, 28), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectGetObjectRayDirectionNV, true, true, IR(160, 3), IR(33698, 33), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectGetObjectRayOriginNV, true, true, IR(160, 3), IR(33731, 30), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectTraceRayMotionNV, false, false, IR(493, 13), IR(33761, 26), IR(0, 0), IR(249, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectGetShaderRecordBufferHandleNV, true, true, IR(160, 3), IR(33787, 39), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectGetShaderBindingTableRecordIndexNV, true, true, IR(160, 3), IR(33826, 44), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectRecordEmptyNV, false, false, IR(10, 1), IR(33870, 23), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectTraceRayNV, false, false, IR(513, 12), IR(33893, 20), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectRecordHitNV, false, false, IR(493, 13), IR(33913, 21), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectRecordHitWithIndexNV, false, false, IR(513, 12), IR(33934, 30), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectRecordMissNV, false, false, IR(525, 6), IR(33964, 22), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectExecuteShaderNV, false, false, IR(36, 2), IR(33986, 25), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectGetCurrentTimeNV, true, true, IR(160, 3), IR(34011, 26), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectGetAttributesNV, false, false, IR(36, 2), IR(34037, 25), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectGetHitKindNV, true, true, IR(160, 3), IR(34062, 22), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectGetPrimitiveIndexNV, true, true, IR(160, 3), IR(34084, 29), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectGetGeometryIndexNV, true, true, IR(160, 3), IR(34113, 28), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectGetInstanceIdNV, true, true, IR(160, 3), IR(34141, 25), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectGetInstanceCustomIndexNV, true, true, IR(160, 3), IR(34166, 34), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectGetWorldRayDirectionNV, true, true, IR(160, 3), IR(34200, 32), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectGetWorldRayOriginNV, true, true, IR(160, 3), IR(34232, 29), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectGetRayTMaxNV, true, true, IR(160, 3), IR(34261, 22), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectGetRayTMinNV, true, true, IR(160, 3), IR(34283, 22), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectIsEmptyNV, true, true, IR(160, 3), IR(34305, 19), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectIsHitNV, true, true, IR(160, 3), IR(34324, 17), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectIsMissNV, true, true, IR(160, 3), IR(34341, 18), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpReorderThreadWithHitObjectNV, false, false, IR(531, 3), IR(34359, 29), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpReorderThreadWithHintNV, false, false, IR(36, 2), IR(34388, 24), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTypeHitObjectNV, true, false, IR(68, 1), IR(34412, 16), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
+  {spv::Op::OpImageSampleFootprintNV, true, true, IR(534, 7), IR(34428, 23), IR(0, 0), IR(251, 1), IR(72, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpTypeCooperativeVectorNV, true, false, IR(89, 3), IR(34451, 24), IR(0, 0), IR(252, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
+  {spv::Op::OpCooperativeVectorMatrixMulNV, true, true, IR(541, 13), IR(34475, 29), IR(0, 0), IR(252, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpCooperativeVectorOuterProductAccumulateNV, false, false, IR(554, 7), IR(34504, 42), IR(0, 0), IR(253, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpCooperativeVectorReduceSumAccumulateNV, false, false, IR(33, 3), IR(34546, 39), IR(0, 0), IR(253, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpCooperativeVectorMatrixMulAddNV, true, true, IR(561, 16), IR(34585, 32), IR(0, 0), IR(252, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpCooperativeMatrixConvertNV, true, true, IR(160, 3), IR(34617, 27), IR(0, 0), IR(254, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConversion},
+  {spv::Op::OpEmitMeshTasksEXT, false, false, IR(577, 4), IR(34644, 17), IR(0, 0), IR(53, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpSetMeshOutputsEXT, false, false, IR(36, 2), IR(34661, 18), IR(0, 0), IR(53, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpGroupNonUniformPartitionNV, true, true, IR(160, 3), IR(34679, 27), IR(0, 0), IR(183, 1), IR(75, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpWritePackedPrimitiveIndices4x8NV, false, false, IR(36, 2), IR(34706, 33), IR(0, 0), IR(50, 1), IR(18, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpFetchMicroTriangleVertexPositionNV, true, true, IR(325, 7), IR(34739, 35), IR(0, 0), IR(255, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpFetchMicroTriangleVertexBarycentricNV, true, true, IR(325, 7), IR(34774, 38), IR(0, 0), IR(255, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpCooperativeVectorLoadNV, true, true, IR(581, 5), IR(34812, 24), IR(0, 0), IR(252, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
+  {spv::Op::OpCooperativeVectorStoreNV, false, false, IR(586, 4), IR(34836, 25), IR(0, 0), IR(252, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
+  {spv::Op::OpReportIntersectionKHR, true, true, IR(172, 4), IR(34861, 22), IR(99, 1), IR(54, 2), IR(24, 2), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpIgnoreIntersectionNV, false, false, IR(0, 0), IR(34904, 21), IR(0, 0), IR(56, 1), IR(26, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTerminateRayNV, false, false, IR(0, 0), IR(34925, 15), IR(0, 0), IR(56, 1), IR(26, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTraceNV, false, false, IR(426, 11), IR(34940, 8), IR(0, 0), IR(56, 1), IR(26, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTraceMotionNV, false, false, IR(513, 12), IR(34948, 14), IR(0, 0), IR(57, 1), IR(27, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTraceRayMotionNV, false, false, IR(513, 12), IR(34962, 17), IR(0, 0), IR(57, 1), IR(27, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionTriangleVertexPositionsKHR, true, true, IR(172, 4), IR(34979, 50), IR(0, 0), IR(256, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTypeAccelerationStructureKHR, true, false, IR(68, 1), IR(35029, 29), IR(100, 1), IR(257, 4), IR(171, 4), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
+  {spv::Op::OpExecuteCallableNV, false, false, IR(36, 2), IR(35086, 18), IR(0, 0), IR(56, 1), IR(26, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetClusterIdNV, true, true, IR(172, 4), IR(35104, 23), IR(0, 0), IR(64, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectGetClusterIdNV, true, true, IR(160, 3), IR(35127, 24), IR(0, 0), IR(64, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTypeCooperativeMatrixNV, true, false, IR(590, 5), IR(35151, 24), IR(0, 0), IR(261, 1), IR(79, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
+  {spv::Op::OpCooperativeMatrixLoadNV, true, true, IR(595, 6), IR(35175, 24), IR(0, 0), IR(261, 1), IR(79, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpCooperativeMatrixStoreNV, false, false, IR(601, 5), IR(35199, 25), IR(0, 0), IR(261, 1), IR(79, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpCooperativeMatrixMulAddNV, true, true, IR(130, 5), IR(35224, 26), IR(0, 0), IR(261, 1), IR(79, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpCooperativeMatrixLengthNV, true, true, IR(160, 3), IR(35250, 26), IR(0, 0), IR(261, 1), IR(79, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpBeginInvocationInterlockEXT, false, false, IR(0, 0), IR(35276, 28), IR(0, 0), IR(262, 3), IR(80, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpEndInvocationInterlockEXT, false, false, IR(0, 0), IR(35304, 26), IR(0, 0), IR(262, 3), IR(80, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpCooperativeMatrixReduceNV, true, true, IR(606, 5), IR(35373, 26), IR(0, 0), IR(265, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kArithmetic},
+  {spv::Op::OpCooperativeMatrixLoadTensorNV, true, true, IR(611, 7), IR(35474, 30), IR(0, 0), IR(200, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
+  {spv::Op::OpCooperativeMatrixStoreTensorNV, false, false, IR(618, 5), IR(35504, 31), IR(0, 0), IR(200, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
+  {spv::Op::OpCooperativeMatrixPerElementOpNV, true, true, IR(151, 5), IR(35535, 32), IR(0, 0), IR(266, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kFunction},
+  {spv::Op::OpTypeTensorLayoutNV, true, false, IR(89, 3), IR(35567, 19), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
+  {spv::Op::OpTypeTensorViewNV, true, false, IR(623, 4), IR(35586, 17), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
+  {spv::Op::OpCreateTensorLayoutNV, true, true, IR(39, 2), IR(35603, 21), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTensorLayoutSetDimensionNV, true, true, IR(122, 4), IR(35624, 27), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTensorLayoutSetStrideNV, true, true, IR(122, 4), IR(35651, 24), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTensorLayoutSliceNV, true, true, IR(122, 4), IR(35675, 20), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTensorLayoutSetClampValueNV, true, true, IR(172, 4), IR(35695, 28), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpCreateTensorViewNV, true, true, IR(39, 2), IR(35723, 19), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTensorViewSetDimensionNV, true, true, IR(122, 4), IR(35742, 25), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTensorViewSetStrideNV, true, true, IR(122, 4), IR(35767, 22), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpDemoteToHelperInvocation, false, false, IR(0, 0), IR(11562, 25), IR(45, 1), IR(268, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,6), 0xffffffffu, PrintingClass::kControl_Flow},
-  {spv::Op::OpIsHelperInvocationEXT, true, true, IR(39, 2), IR(35764, 22), IR(0, 0), IR(268, 1), IR(81, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTensorViewSetClipNV, true, true, IR(325, 7), IR(35786, 20), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTensorLayoutSetBlockSizeNV, true, true, IR(122, 4), IR(35806, 27), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpCooperativeMatrixTransposeNV, true, true, IR(160, 3), IR(35833, 29), IR(0, 0), IR(254, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConversion},
-  {spv::Op::OpConvertUToImageNV, true, true, IR(160, 3), IR(35862, 18), IR(0, 0), IR(125, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpConvertUToSamplerNV, true, true, IR(160, 3), IR(35880, 20), IR(0, 0), IR(125, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpConvertImageToUNV, true, true, IR(160, 3), IR(35900, 18), IR(0, 0), IR(125, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpConvertSamplerToUNV, true, true, IR(160, 3), IR(35918, 20), IR(0, 0), IR(125, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpConvertUToSampledImageNV, true, true, IR(160, 3), IR(35938, 25), IR(0, 0), IR(125, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpConvertSampledImageToUNV, true, true, IR(160, 3), IR(35963, 25), IR(0, 0), IR(125, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpSamplerImageAddressingModeNV, false, false, IR(0, 1), IR(35988, 29), IR(0, 0), IR(125, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRawAccessChainNV, true, true, IR(616, 7), IR(36069, 17), IR(0, 0), IR(189, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
-  {spv::Op::OpRayQueryGetIntersectionSpherePositionNV, true, true, IR(172, 4), IR(36086, 40), IR(0, 0), IR(61, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionSphereRadiusNV, true, true, IR(172, 4), IR(36126, 38), IR(0, 0), IR(61, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionLSSPositionsNV, true, true, IR(172, 4), IR(36164, 38), IR(0, 0), IR(62, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionLSSRadiiNV, true, true, IR(172, 4), IR(36202, 34), IR(0, 0), IR(62, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionLSSHitValueNV, true, true, IR(172, 4), IR(36236, 37), IR(0, 0), IR(62, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectGetSpherePositionNV, true, true, IR(160, 3), IR(36273, 29), IR(0, 0), IR(61, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectGetSphereRadiusNV, true, true, IR(160, 3), IR(36302, 27), IR(0, 0), IR(61, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectGetLSSPositionsNV, true, true, IR(160, 3), IR(36329, 27), IR(0, 0), IR(62, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectGetLSSRadiiNV, true, true, IR(160, 3), IR(36356, 23), IR(0, 0), IR(62, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectIsSphereHitNV, true, true, IR(160, 3), IR(36379, 23), IR(0, 0), IR(61, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectIsLSSHitNV, true, true, IR(160, 3), IR(36402, 20), IR(0, 0), IR(62, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryIsSphereHitNV, true, true, IR(172, 4), IR(36422, 22), IR(0, 0), IR(61, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryIsLSSHitNV, true, true, IR(172, 4), IR(36444, 19), IR(0, 0), IR(62, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpIsHelperInvocationEXT, true, true, IR(39, 2), IR(35789, 22), IR(0, 0), IR(268, 1), IR(81, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTensorViewSetClipNV, true, true, IR(325, 7), IR(35811, 20), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTensorLayoutSetBlockSizeNV, true, true, IR(122, 4), IR(35831, 27), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpCooperativeMatrixTransposeNV, true, true, IR(160, 3), IR(35858, 29), IR(0, 0), IR(254, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConversion},
+  {spv::Op::OpConvertUToImageNV, true, true, IR(160, 3), IR(35887, 18), IR(0, 0), IR(125, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpConvertUToSamplerNV, true, true, IR(160, 3), IR(35905, 20), IR(0, 0), IR(125, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpConvertImageToUNV, true, true, IR(160, 3), IR(35925, 18), IR(0, 0), IR(125, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpConvertSamplerToUNV, true, true, IR(160, 3), IR(35943, 20), IR(0, 0), IR(125, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpConvertUToSampledImageNV, true, true, IR(160, 3), IR(35963, 25), IR(0, 0), IR(125, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpConvertSampledImageToUNV, true, true, IR(160, 3), IR(35988, 25), IR(0, 0), IR(125, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpSamplerImageAddressingModeNV, false, false, IR(0, 1), IR(36013, 29), IR(0, 0), IR(125, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRawAccessChainNV, true, true, IR(627, 7), IR(36094, 17), IR(0, 0), IR(189, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
+  {spv::Op::OpRayQueryGetIntersectionSpherePositionNV, true, true, IR(172, 4), IR(36111, 40), IR(0, 0), IR(61, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionSphereRadiusNV, true, true, IR(172, 4), IR(36151, 38), IR(0, 0), IR(61, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionLSSPositionsNV, true, true, IR(172, 4), IR(36189, 38), IR(0, 0), IR(62, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionLSSRadiiNV, true, true, IR(172, 4), IR(36227, 34), IR(0, 0), IR(62, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionLSSHitValueNV, true, true, IR(172, 4), IR(36261, 37), IR(0, 0), IR(62, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectGetSpherePositionNV, true, true, IR(160, 3), IR(36298, 29), IR(0, 0), IR(61, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectGetSphereRadiusNV, true, true, IR(160, 3), IR(36327, 27), IR(0, 0), IR(61, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectGetLSSPositionsNV, true, true, IR(160, 3), IR(36354, 27), IR(0, 0), IR(62, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectGetLSSRadiiNV, true, true, IR(160, 3), IR(36381, 23), IR(0, 0), IR(62, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectIsSphereHitNV, true, true, IR(160, 3), IR(36404, 23), IR(0, 0), IR(61, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectIsLSSHitNV, true, true, IR(160, 3), IR(36427, 20), IR(0, 0), IR(62, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryIsSphereHitNV, true, true, IR(172, 4), IR(36447, 22), IR(0, 0), IR(61, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryIsLSSHitNV, true, true, IR(172, 4), IR(36469, 19), IR(0, 0), IR(62, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpSubgroupShuffleINTEL, true, true, IR(172, 4), IR(12010, 21), IR(0, 0), IR(269, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroupShuffleDownINTEL, true, true, IR(130, 5), IR(36463, 25), IR(0, 0), IR(269, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroupShuffleUpINTEL, true, true, IR(130, 5), IR(36488, 23), IR(0, 0), IR(269, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroupShuffleXorINTEL, true, true, IR(172, 4), IR(36511, 24), IR(0, 0), IR(269, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroupBlockReadINTEL, true, true, IR(160, 3), IR(36535, 23), IR(0, 0), IR(270, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroupBlockWriteINTEL, false, false, IR(36, 2), IR(36558, 24), IR(0, 0), IR(270, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroupImageBlockReadINTEL, true, true, IR(172, 4), IR(36582, 28), IR(0, 0), IR(271, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroupImageBlockWriteINTEL, false, false, IR(33, 3), IR(36610, 29), IR(0, 0), IR(271, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroupImageMediaBlockReadINTEL, true, true, IR(215, 6), IR(36639, 33), IR(0, 0), IR(272, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroupImageMediaBlockWriteINTEL, false, false, IR(623, 5), IR(36672, 34), IR(0, 0), IR(272, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpUCountLeadingZerosINTEL, true, true, IR(160, 3), IR(36706, 24), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpUCountTrailingZerosINTEL, true, true, IR(160, 3), IR(36730, 25), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpAbsISubINTEL, true, true, IR(172, 4), IR(36755, 13), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpAbsUSubINTEL, true, true, IR(172, 4), IR(36768, 13), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpIAddSatINTEL, true, true, IR(172, 4), IR(36781, 13), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpUAddSatINTEL, true, true, IR(172, 4), IR(36794, 13), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpIAverageINTEL, true, true, IR(172, 4), IR(36807, 14), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpUAverageINTEL, true, true, IR(172, 4), IR(36821, 14), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpIAverageRoundedINTEL, true, true, IR(172, 4), IR(36835, 21), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpUAverageRoundedINTEL, true, true, IR(172, 4), IR(36856, 21), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpISubSatINTEL, true, true, IR(172, 4), IR(36877, 13), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpUSubSatINTEL, true, true, IR(172, 4), IR(36890, 13), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpIMul32x16INTEL, true, true, IR(172, 4), IR(36903, 15), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpUMul32x16INTEL, true, true, IR(172, 4), IR(36918, 15), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpConstantFunctionPointerINTEL, true, true, IR(160, 3), IR(36933, 29), IR(0, 0), IR(198, 1), IR(95, 1), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpFunctionPointerCallINTEL, true, true, IR(107, 3), IR(36962, 25), IR(0, 0), IR(198, 1), IR(95, 1), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpAsmTargetINTEL, true, false, IR(50, 2), IR(36987, 15), IR(0, 0), IR(128, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpAsmINTEL, true, true, IR(628, 6), IR(12228, 9), IR(0, 0), IR(128, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpAsmCallINTEL, true, true, IR(122, 4), IR(37002, 13), IR(0, 0), IR(128, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpAtomicFMinEXT, true, true, IR(235, 6), IR(37015, 14), IR(0, 0), IR(274, 4), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kAtomic},
-  {spv::Op::OpAtomicFMaxEXT, true, true, IR(235, 6), IR(37029, 14), IR(0, 0), IR(274, 4), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kAtomic},
-  {spv::Op::OpAssumeTrueKHR, false, false, IR(10, 1), IR(37043, 14), IR(0, 0), IR(278, 1), IR(99, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kMiscellaneous},
-  {spv::Op::OpExpectKHR, true, true, IR(172, 4), IR(37057, 10), IR(0, 0), IR(278, 1), IR(99, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kMiscellaneous},
-  {spv::Op::OpDecorateString, false, false, IR(163, 2), IR(37067, 15), IR(101, 1), IR(1, 0), IR(175, 2), SPV_SPIRV_VERSION_WORD(1,4), 0xffffffffu, PrintingClass::kAnnotation},
-  {spv::Op::OpMemberDecorateString, false, false, IR(165, 3), IR(37103, 21), IR(102, 1), IR(1, 0), IR(175, 2), SPV_SPIRV_VERSION_WORD(1,4), 0xffffffffu, PrintingClass::kAnnotation},
-  {spv::Op::OpVmeImageINTEL, true, true, IR(172, 4), IR(37151, 14), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpTypeVmeImageINTEL, true, false, IR(87, 2), IR(37165, 18), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpTypeAvcImePayloadINTEL, true, false, IR(68, 1), IR(37183, 23), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpTypeAvcRefPayloadINTEL, true, false, IR(68, 1), IR(37206, 23), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpTypeAvcSicPayloadINTEL, true, false, IR(68, 1), IR(37229, 23), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpTypeAvcMcePayloadINTEL, true, false, IR(68, 1), IR(37252, 23), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpTypeAvcMceResultINTEL, true, false, IR(68, 1), IR(37275, 22), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpTypeAvcImeResultINTEL, true, false, IR(68, 1), IR(37297, 22), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpTypeAvcImeResultSingleReferenceStreamoutINTEL, true, false, IR(68, 1), IR(37319, 46), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpTypeAvcImeResultDualReferenceStreamoutINTEL, true, false, IR(68, 1), IR(37365, 44), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpTypeAvcImeSingleReferenceStreaminINTEL, true, false, IR(68, 1), IR(37409, 39), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpTypeAvcImeDualReferenceStreaminINTEL, true, false, IR(68, 1), IR(37448, 37), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpTypeAvcRefResultINTEL, true, false, IR(68, 1), IR(37485, 22), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpTypeAvcSicResultINTEL, true, false, IR(68, 1), IR(37507, 22), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetDefaultInterBaseMultiReferencePenaltyINTEL, true, true, IR(172, 4), IR(37529, 60), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceSetInterBaseMultiReferencePenaltyINTEL, true, true, IR(172, 4), IR(37589, 53), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetDefaultInterShapePenaltyINTEL, true, true, IR(172, 4), IR(37642, 47), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceSetInterShapePenaltyINTEL, true, true, IR(172, 4), IR(37689, 40), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetDefaultInterDirectionPenaltyINTEL, true, true, IR(172, 4), IR(37729, 51), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceSetInterDirectionPenaltyINTEL, true, true, IR(172, 4), IR(37780, 44), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetDefaultIntraLumaShapePenaltyINTEL, true, true, IR(172, 4), IR(37824, 51), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetDefaultInterMotionVectorCostTableINTEL, true, true, IR(172, 4), IR(37875, 56), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetDefaultHighPenaltyCostTableINTEL, true, true, IR(39, 2), IR(37931, 50), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetDefaultMediumPenaltyCostTableINTEL, true, true, IR(39, 2), IR(37981, 52), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetDefaultLowPenaltyCostTableINTEL, true, true, IR(39, 2), IR(38033, 49), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceSetMotionVectorCostFunctionINTEL, true, true, IR(215, 6), IR(38082, 47), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetDefaultIntraLumaModePenaltyINTEL, true, true, IR(172, 4), IR(38129, 50), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetDefaultNonDcLumaIntraPenaltyINTEL, true, true, IR(39, 2), IR(38179, 51), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetDefaultIntraChromaModeBasePenaltyINTEL, true, true, IR(39, 2), IR(38230, 56), IR(0, 0), IR(282, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceSetAcOnlyHaarINTEL, true, true, IR(160, 3), IR(38286, 33), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceSetSourceInterlacedFieldPolarityINTEL, true, true, IR(172, 4), IR(38319, 52), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceSetSingleReferenceInterlacedFieldPolarityINTEL, true, true, IR(172, 4), IR(38371, 61), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceSetDualReferenceInterlacedFieldPolaritiesINTEL, true, true, IR(130, 5), IR(38432, 61), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceConvertToImePayloadINTEL, true, true, IR(160, 3), IR(38493, 39), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceConvertToImeResultINTEL, true, true, IR(160, 3), IR(38532, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceConvertToRefPayloadINTEL, true, true, IR(160, 3), IR(38570, 39), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceConvertToRefResultINTEL, true, true, IR(160, 3), IR(38609, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceConvertToSicPayloadINTEL, true, true, IR(160, 3), IR(38647, 39), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceConvertToSicResultINTEL, true, true, IR(160, 3), IR(38686, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetMotionVectorsINTEL, true, true, IR(160, 3), IR(38724, 36), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetInterDistortionsINTEL, true, true, IR(160, 3), IR(38760, 39), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetBestInterDistortionsINTEL, true, true, IR(160, 3), IR(38799, 43), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetInterMajorShapeINTEL, true, true, IR(160, 3), IR(38842, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetInterMinorShapeINTEL, true, true, IR(160, 3), IR(38880, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetInterDirectionsINTEL, true, true, IR(160, 3), IR(38918, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetInterMotionVectorCountINTEL, true, true, IR(160, 3), IR(38956, 45), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetInterReferenceIdsINTEL, true, true, IR(160, 3), IR(39001, 40), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetInterReferenceInterlacedFieldPolaritiesINTEL, true, true, IR(130, 5), IR(39041, 62), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeInitializeINTEL, true, true, IR(130, 5), IR(39103, 30), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeSetSingleReferenceINTEL, true, true, IR(130, 5), IR(39133, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeSetDualReferenceINTEL, true, true, IR(215, 6), IR(39171, 36), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeRefWindowSizeINTEL, true, true, IR(172, 4), IR(39207, 33), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeAdjustRefOffsetINTEL, true, true, IR(215, 6), IR(39240, 35), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeConvertToMcePayloadINTEL, true, true, IR(160, 3), IR(39275, 39), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeSetMaxMotionVectorCountINTEL, true, true, IR(172, 4), IR(39314, 43), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeSetUnidirectionalMixDisableINTEL, true, true, IR(160, 3), IR(39357, 47), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeSetEarlySearchTerminationThresholdINTEL, true, true, IR(172, 4), IR(39404, 54), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeSetWeightedSadINTEL, true, true, IR(172, 4), IR(39458, 34), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeEvaluateWithSingleReferenceINTEL, true, true, IR(130, 5), IR(39492, 47), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeEvaluateWithDualReferenceINTEL, true, true, IR(215, 6), IR(39539, 45), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeEvaluateWithSingleReferenceStreaminINTEL, true, true, IR(215, 6), IR(39584, 55), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeEvaluateWithDualReferenceStreaminINTEL, true, true, IR(325, 7), IR(39639, 53), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeEvaluateWithSingleReferenceStreamoutINTEL, true, true, IR(130, 5), IR(39692, 56), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeEvaluateWithDualReferenceStreamoutINTEL, true, true, IR(215, 6), IR(39748, 54), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeEvaluateWithSingleReferenceStreaminoutINTEL, true, true, IR(215, 6), IR(39802, 58), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeEvaluateWithDualReferenceStreaminoutINTEL, true, true, IR(325, 7), IR(39860, 56), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeConvertToMceResultINTEL, true, true, IR(160, 3), IR(39916, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeGetSingleReferenceStreaminINTEL, true, true, IR(160, 3), IR(39954, 46), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeGetDualReferenceStreaminINTEL, true, true, IR(160, 3), IR(40000, 44), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeStripSingleReferenceStreamoutINTEL, true, true, IR(160, 3), IR(40044, 49), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeStripDualReferenceStreamoutINTEL, true, true, IR(160, 3), IR(40093, 47), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeGetStreamoutSingleReferenceMajorShapeMotionVectorsINTEL, true, true, IR(172, 4), IR(40140, 70), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeGetStreamoutSingleReferenceMajorShapeDistortionsINTEL, true, true, IR(172, 4), IR(40210, 68), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeGetStreamoutSingleReferenceMajorShapeReferenceIdsINTEL, true, true, IR(172, 4), IR(40278, 69), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeGetStreamoutDualReferenceMajorShapeMotionVectorsINTEL, true, true, IR(130, 5), IR(40347, 68), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeGetStreamoutDualReferenceMajorShapeDistortionsINTEL, true, true, IR(130, 5), IR(40415, 66), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeGetStreamoutDualReferenceMajorShapeReferenceIdsINTEL, true, true, IR(130, 5), IR(40481, 67), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeGetBorderReachedINTEL, true, true, IR(172, 4), IR(40548, 36), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeGetTruncatedSearchIndicationINTEL, true, true, IR(160, 3), IR(40584, 48), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeGetUnidirectionalEarlySearchTerminationINTEL, true, true, IR(160, 3), IR(40632, 59), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeGetWeightingPatternMinimumMotionVectorINTEL, true, true, IR(160, 3), IR(40691, 58), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeGetWeightingPatternMinimumDistortionINTEL, true, true, IR(160, 3), IR(40749, 56), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcFmeInitializeINTEL, true, true, IR(634, 9), IR(40805, 30), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcBmeInitializeINTEL, true, true, IR(643, 10), IR(40835, 30), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcRefConvertToMcePayloadINTEL, true, true, IR(160, 3), IR(40865, 39), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcRefSetBidirectionalMixDisableINTEL, true, true, IR(160, 3), IR(40904, 46), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcRefSetBilinearFilterEnableINTEL, true, true, IR(160, 3), IR(40950, 43), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcRefEvaluateWithSingleReferenceINTEL, true, true, IR(130, 5), IR(40993, 47), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcRefEvaluateWithDualReferenceINTEL, true, true, IR(215, 6), IR(41040, 45), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcRefEvaluateWithMultiReferenceINTEL, true, true, IR(130, 5), IR(41085, 46), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcRefEvaluateWithMultiReferenceInterlacedINTEL, true, true, IR(215, 6), IR(41131, 56), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcRefConvertToMceResultINTEL, true, true, IR(160, 3), IR(41187, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicInitializeINTEL, true, true, IR(160, 3), IR(41225, 30), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicConfigureSkcINTEL, true, true, IR(288, 8), IR(41255, 32), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicConfigureIpeLumaINTEL, true, true, IR(643, 10), IR(41287, 36), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicConfigureIpeLumaChromaINTEL, true, true, IR(653, 13), IR(41323, 42), IR(0, 0), IR(282, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicGetMotionVectorMaskINTEL, true, true, IR(172, 4), IR(41365, 39), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicConvertToMcePayloadINTEL, true, true, IR(160, 3), IR(41404, 39), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicSetIntraLumaShapePenaltyINTEL, true, true, IR(172, 4), IR(41443, 44), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicSetIntraLumaModeCostFunctionINTEL, true, true, IR(215, 6), IR(41487, 48), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicSetIntraChromaModeCostFunctionINTEL, true, true, IR(172, 4), IR(41535, 50), IR(0, 0), IR(282, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicSetBilinearFilterEnableINTEL, true, true, IR(160, 3), IR(41585, 43), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicSetSkcForwardTransformEnableINTEL, true, true, IR(172, 4), IR(41628, 48), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicSetBlockBasedRawSkipSadINTEL, true, true, IR(172, 4), IR(41676, 43), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicEvaluateIpeINTEL, true, true, IR(172, 4), IR(41719, 31), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicEvaluateWithSingleReferenceINTEL, true, true, IR(130, 5), IR(41750, 47), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicEvaluateWithDualReferenceINTEL, true, true, IR(215, 6), IR(41797, 45), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicEvaluateWithMultiReferenceINTEL, true, true, IR(130, 5), IR(41842, 46), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicEvaluateWithMultiReferenceInterlacedINTEL, true, true, IR(215, 6), IR(41888, 56), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicConvertToMceResultINTEL, true, true, IR(160, 3), IR(41944, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicGetIpeLumaShapeINTEL, true, true, IR(160, 3), IR(41982, 35), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicGetBestIpeLumaDistortionINTEL, true, true, IR(160, 3), IR(42017, 44), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicGetBestIpeChromaDistortionINTEL, true, true, IR(160, 3), IR(42061, 46), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicGetPackedIpeLumaModesINTEL, true, true, IR(160, 3), IR(42107, 41), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicGetIpeChromaModeINTEL, true, true, IR(160, 3), IR(42148, 36), IR(0, 0), IR(282, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicGetPackedSkcLumaCountThresholdINTEL, true, true, IR(160, 3), IR(42184, 50), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicGetPackedSkcLumaSumThresholdINTEL, true, true, IR(160, 3), IR(42234, 48), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicGetInterRawSadsINTEL, true, true, IR(160, 3), IR(42282, 35), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupShuffleDownINTEL, true, true, IR(130, 5), IR(36488, 25), IR(0, 0), IR(269, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroupShuffleUpINTEL, true, true, IR(130, 5), IR(36513, 23), IR(0, 0), IR(269, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroupShuffleXorINTEL, true, true, IR(172, 4), IR(36536, 24), IR(0, 0), IR(269, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroupBlockReadINTEL, true, true, IR(160, 3), IR(36560, 23), IR(0, 0), IR(270, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroupBlockWriteINTEL, false, false, IR(36, 2), IR(36583, 24), IR(0, 0), IR(270, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroupImageBlockReadINTEL, true, true, IR(172, 4), IR(36607, 28), IR(0, 0), IR(271, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroupImageBlockWriteINTEL, false, false, IR(33, 3), IR(36635, 29), IR(0, 0), IR(271, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroupImageMediaBlockReadINTEL, true, true, IR(215, 6), IR(36664, 33), IR(0, 0), IR(272, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroupImageMediaBlockWriteINTEL, false, false, IR(634, 5), IR(36697, 34), IR(0, 0), IR(272, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpUCountLeadingZerosINTEL, true, true, IR(160, 3), IR(36731, 24), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpUCountTrailingZerosINTEL, true, true, IR(160, 3), IR(36755, 25), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpAbsISubINTEL, true, true, IR(172, 4), IR(36780, 13), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpAbsUSubINTEL, true, true, IR(172, 4), IR(36793, 13), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpIAddSatINTEL, true, true, IR(172, 4), IR(36806, 13), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpUAddSatINTEL, true, true, IR(172, 4), IR(36819, 13), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpIAverageINTEL, true, true, IR(172, 4), IR(36832, 14), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpUAverageINTEL, true, true, IR(172, 4), IR(36846, 14), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpIAverageRoundedINTEL, true, true, IR(172, 4), IR(36860, 21), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpUAverageRoundedINTEL, true, true, IR(172, 4), IR(36881, 21), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpISubSatINTEL, true, true, IR(172, 4), IR(36902, 13), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpUSubSatINTEL, true, true, IR(172, 4), IR(36915, 13), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpIMul32x16INTEL, true, true, IR(172, 4), IR(36928, 15), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpUMul32x16INTEL, true, true, IR(172, 4), IR(36943, 15), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpConstantFunctionPointerINTEL, true, true, IR(160, 3), IR(36958, 29), IR(0, 0), IR(198, 1), IR(95, 1), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpFunctionPointerCallINTEL, true, true, IR(107, 3), IR(36987, 25), IR(0, 0), IR(198, 1), IR(95, 1), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpAsmTargetINTEL, true, false, IR(50, 2), IR(37012, 15), IR(0, 0), IR(128, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpAsmINTEL, true, true, IR(639, 6), IR(12228, 9), IR(0, 0), IR(128, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpAsmCallINTEL, true, true, IR(122, 4), IR(37027, 13), IR(0, 0), IR(128, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpAtomicFMinEXT, true, true, IR(235, 6), IR(37040, 14), IR(0, 0), IR(274, 4), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kAtomic},
+  {spv::Op::OpAtomicFMaxEXT, true, true, IR(235, 6), IR(37054, 14), IR(0, 0), IR(274, 4), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kAtomic},
+  {spv::Op::OpAssumeTrueKHR, false, false, IR(10, 1), IR(37068, 14), IR(0, 0), IR(278, 1), IR(99, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kMiscellaneous},
+  {spv::Op::OpExpectKHR, true, true, IR(172, 4), IR(37082, 10), IR(0, 0), IR(278, 1), IR(99, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kMiscellaneous},
+  {spv::Op::OpDecorateString, false, false, IR(163, 2), IR(37092, 15), IR(101, 1), IR(1, 0), IR(175, 2), SPV_SPIRV_VERSION_WORD(1,4), 0xffffffffu, PrintingClass::kAnnotation},
+  {spv::Op::OpMemberDecorateString, false, false, IR(165, 3), IR(37128, 21), IR(102, 1), IR(1, 0), IR(175, 2), SPV_SPIRV_VERSION_WORD(1,4), 0xffffffffu, PrintingClass::kAnnotation},
+  {spv::Op::OpVmeImageINTEL, true, true, IR(172, 4), IR(37176, 14), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpTypeVmeImageINTEL, true, false, IR(87, 2), IR(37190, 18), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpTypeAvcImePayloadINTEL, true, false, IR(68, 1), IR(37208, 23), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpTypeAvcRefPayloadINTEL, true, false, IR(68, 1), IR(37231, 23), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpTypeAvcSicPayloadINTEL, true, false, IR(68, 1), IR(37254, 23), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpTypeAvcMcePayloadINTEL, true, false, IR(68, 1), IR(37277, 23), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpTypeAvcMceResultINTEL, true, false, IR(68, 1), IR(37300, 22), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpTypeAvcImeResultINTEL, true, false, IR(68, 1), IR(37322, 22), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpTypeAvcImeResultSingleReferenceStreamoutINTEL, true, false, IR(68, 1), IR(37344, 46), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpTypeAvcImeResultDualReferenceStreamoutINTEL, true, false, IR(68, 1), IR(37390, 44), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpTypeAvcImeSingleReferenceStreaminINTEL, true, false, IR(68, 1), IR(37434, 39), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpTypeAvcImeDualReferenceStreaminINTEL, true, false, IR(68, 1), IR(37473, 37), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpTypeAvcRefResultINTEL, true, false, IR(68, 1), IR(37510, 22), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpTypeAvcSicResultINTEL, true, false, IR(68, 1), IR(37532, 22), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetDefaultInterBaseMultiReferencePenaltyINTEL, true, true, IR(172, 4), IR(37554, 60), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceSetInterBaseMultiReferencePenaltyINTEL, true, true, IR(172, 4), IR(37614, 53), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetDefaultInterShapePenaltyINTEL, true, true, IR(172, 4), IR(37667, 47), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceSetInterShapePenaltyINTEL, true, true, IR(172, 4), IR(37714, 40), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetDefaultInterDirectionPenaltyINTEL, true, true, IR(172, 4), IR(37754, 51), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceSetInterDirectionPenaltyINTEL, true, true, IR(172, 4), IR(37805, 44), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetDefaultIntraLumaShapePenaltyINTEL, true, true, IR(172, 4), IR(37849, 51), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetDefaultInterMotionVectorCostTableINTEL, true, true, IR(172, 4), IR(37900, 56), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetDefaultHighPenaltyCostTableINTEL, true, true, IR(39, 2), IR(37956, 50), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetDefaultMediumPenaltyCostTableINTEL, true, true, IR(39, 2), IR(38006, 52), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetDefaultLowPenaltyCostTableINTEL, true, true, IR(39, 2), IR(38058, 49), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceSetMotionVectorCostFunctionINTEL, true, true, IR(215, 6), IR(38107, 47), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetDefaultIntraLumaModePenaltyINTEL, true, true, IR(172, 4), IR(38154, 50), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetDefaultNonDcLumaIntraPenaltyINTEL, true, true, IR(39, 2), IR(38204, 51), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetDefaultIntraChromaModeBasePenaltyINTEL, true, true, IR(39, 2), IR(38255, 56), IR(0, 0), IR(282, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceSetAcOnlyHaarINTEL, true, true, IR(160, 3), IR(38311, 33), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceSetSourceInterlacedFieldPolarityINTEL, true, true, IR(172, 4), IR(38344, 52), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceSetSingleReferenceInterlacedFieldPolarityINTEL, true, true, IR(172, 4), IR(38396, 61), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceSetDualReferenceInterlacedFieldPolaritiesINTEL, true, true, IR(130, 5), IR(38457, 61), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceConvertToImePayloadINTEL, true, true, IR(160, 3), IR(38518, 39), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceConvertToImeResultINTEL, true, true, IR(160, 3), IR(38557, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceConvertToRefPayloadINTEL, true, true, IR(160, 3), IR(38595, 39), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceConvertToRefResultINTEL, true, true, IR(160, 3), IR(38634, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceConvertToSicPayloadINTEL, true, true, IR(160, 3), IR(38672, 39), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceConvertToSicResultINTEL, true, true, IR(160, 3), IR(38711, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetMotionVectorsINTEL, true, true, IR(160, 3), IR(38749, 36), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetInterDistortionsINTEL, true, true, IR(160, 3), IR(38785, 39), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetBestInterDistortionsINTEL, true, true, IR(160, 3), IR(38824, 43), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetInterMajorShapeINTEL, true, true, IR(160, 3), IR(38867, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetInterMinorShapeINTEL, true, true, IR(160, 3), IR(38905, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetInterDirectionsINTEL, true, true, IR(160, 3), IR(38943, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetInterMotionVectorCountINTEL, true, true, IR(160, 3), IR(38981, 45), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetInterReferenceIdsINTEL, true, true, IR(160, 3), IR(39026, 40), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetInterReferenceInterlacedFieldPolaritiesINTEL, true, true, IR(130, 5), IR(39066, 62), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeInitializeINTEL, true, true, IR(130, 5), IR(39128, 30), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeSetSingleReferenceINTEL, true, true, IR(130, 5), IR(39158, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeSetDualReferenceINTEL, true, true, IR(215, 6), IR(39196, 36), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeRefWindowSizeINTEL, true, true, IR(172, 4), IR(39232, 33), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeAdjustRefOffsetINTEL, true, true, IR(215, 6), IR(39265, 35), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeConvertToMcePayloadINTEL, true, true, IR(160, 3), IR(39300, 39), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeSetMaxMotionVectorCountINTEL, true, true, IR(172, 4), IR(39339, 43), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeSetUnidirectionalMixDisableINTEL, true, true, IR(160, 3), IR(39382, 47), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeSetEarlySearchTerminationThresholdINTEL, true, true, IR(172, 4), IR(39429, 54), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeSetWeightedSadINTEL, true, true, IR(172, 4), IR(39483, 34), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeEvaluateWithSingleReferenceINTEL, true, true, IR(130, 5), IR(39517, 47), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeEvaluateWithDualReferenceINTEL, true, true, IR(215, 6), IR(39564, 45), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeEvaluateWithSingleReferenceStreaminINTEL, true, true, IR(215, 6), IR(39609, 55), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeEvaluateWithDualReferenceStreaminINTEL, true, true, IR(325, 7), IR(39664, 53), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeEvaluateWithSingleReferenceStreamoutINTEL, true, true, IR(130, 5), IR(39717, 56), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeEvaluateWithDualReferenceStreamoutINTEL, true, true, IR(215, 6), IR(39773, 54), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeEvaluateWithSingleReferenceStreaminoutINTEL, true, true, IR(215, 6), IR(39827, 58), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeEvaluateWithDualReferenceStreaminoutINTEL, true, true, IR(325, 7), IR(39885, 56), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeConvertToMceResultINTEL, true, true, IR(160, 3), IR(39941, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeGetSingleReferenceStreaminINTEL, true, true, IR(160, 3), IR(39979, 46), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeGetDualReferenceStreaminINTEL, true, true, IR(160, 3), IR(40025, 44), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeStripSingleReferenceStreamoutINTEL, true, true, IR(160, 3), IR(40069, 49), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeStripDualReferenceStreamoutINTEL, true, true, IR(160, 3), IR(40118, 47), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeGetStreamoutSingleReferenceMajorShapeMotionVectorsINTEL, true, true, IR(172, 4), IR(40165, 70), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeGetStreamoutSingleReferenceMajorShapeDistortionsINTEL, true, true, IR(172, 4), IR(40235, 68), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeGetStreamoutSingleReferenceMajorShapeReferenceIdsINTEL, true, true, IR(172, 4), IR(40303, 69), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeGetStreamoutDualReferenceMajorShapeMotionVectorsINTEL, true, true, IR(130, 5), IR(40372, 68), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeGetStreamoutDualReferenceMajorShapeDistortionsINTEL, true, true, IR(130, 5), IR(40440, 66), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeGetStreamoutDualReferenceMajorShapeReferenceIdsINTEL, true, true, IR(130, 5), IR(40506, 67), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeGetBorderReachedINTEL, true, true, IR(172, 4), IR(40573, 36), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeGetTruncatedSearchIndicationINTEL, true, true, IR(160, 3), IR(40609, 48), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeGetUnidirectionalEarlySearchTerminationINTEL, true, true, IR(160, 3), IR(40657, 59), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeGetWeightingPatternMinimumMotionVectorINTEL, true, true, IR(160, 3), IR(40716, 58), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeGetWeightingPatternMinimumDistortionINTEL, true, true, IR(160, 3), IR(40774, 56), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcFmeInitializeINTEL, true, true, IR(645, 9), IR(40830, 30), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcBmeInitializeINTEL, true, true, IR(654, 10), IR(40860, 30), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcRefConvertToMcePayloadINTEL, true, true, IR(160, 3), IR(40890, 39), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcRefSetBidirectionalMixDisableINTEL, true, true, IR(160, 3), IR(40929, 46), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcRefSetBilinearFilterEnableINTEL, true, true, IR(160, 3), IR(40975, 43), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcRefEvaluateWithSingleReferenceINTEL, true, true, IR(130, 5), IR(41018, 47), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcRefEvaluateWithDualReferenceINTEL, true, true, IR(215, 6), IR(41065, 45), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcRefEvaluateWithMultiReferenceINTEL, true, true, IR(130, 5), IR(41110, 46), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcRefEvaluateWithMultiReferenceInterlacedINTEL, true, true, IR(215, 6), IR(41156, 56), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcRefConvertToMceResultINTEL, true, true, IR(160, 3), IR(41212, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicInitializeINTEL, true, true, IR(160, 3), IR(41250, 30), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicConfigureSkcINTEL, true, true, IR(288, 8), IR(41280, 32), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicConfigureIpeLumaINTEL, true, true, IR(654, 10), IR(41312, 36), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicConfigureIpeLumaChromaINTEL, true, true, IR(664, 13), IR(41348, 42), IR(0, 0), IR(282, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicGetMotionVectorMaskINTEL, true, true, IR(172, 4), IR(41390, 39), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicConvertToMcePayloadINTEL, true, true, IR(160, 3), IR(41429, 39), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicSetIntraLumaShapePenaltyINTEL, true, true, IR(172, 4), IR(41468, 44), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicSetIntraLumaModeCostFunctionINTEL, true, true, IR(215, 6), IR(41512, 48), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicSetIntraChromaModeCostFunctionINTEL, true, true, IR(172, 4), IR(41560, 50), IR(0, 0), IR(282, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicSetBilinearFilterEnableINTEL, true, true, IR(160, 3), IR(41610, 43), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicSetSkcForwardTransformEnableINTEL, true, true, IR(172, 4), IR(41653, 48), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicSetBlockBasedRawSkipSadINTEL, true, true, IR(172, 4), IR(41701, 43), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicEvaluateIpeINTEL, true, true, IR(172, 4), IR(41744, 31), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicEvaluateWithSingleReferenceINTEL, true, true, IR(130, 5), IR(41775, 47), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicEvaluateWithDualReferenceINTEL, true, true, IR(215, 6), IR(41822, 45), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicEvaluateWithMultiReferenceINTEL, true, true, IR(130, 5), IR(41867, 46), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicEvaluateWithMultiReferenceInterlacedINTEL, true, true, IR(215, 6), IR(41913, 56), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicConvertToMceResultINTEL, true, true, IR(160, 3), IR(41969, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicGetIpeLumaShapeINTEL, true, true, IR(160, 3), IR(42007, 35), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicGetBestIpeLumaDistortionINTEL, true, true, IR(160, 3), IR(42042, 44), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicGetBestIpeChromaDistortionINTEL, true, true, IR(160, 3), IR(42086, 46), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicGetPackedIpeLumaModesINTEL, true, true, IR(160, 3), IR(42132, 41), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicGetIpeChromaModeINTEL, true, true, IR(160, 3), IR(42173, 36), IR(0, 0), IR(282, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicGetPackedSkcLumaCountThresholdINTEL, true, true, IR(160, 3), IR(42209, 50), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicGetPackedSkcLumaSumThresholdINTEL, true, true, IR(160, 3), IR(42259, 48), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicGetInterRawSadsINTEL, true, true, IR(160, 3), IR(42307, 35), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
   {spv::Op::OpVariableLengthArrayINTEL, true, true, IR(160, 3), IR(12466, 25), IR(0, 0), IR(284, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSaveMemoryINTEL, true, true, IR(39, 2), IR(42317, 16), IR(0, 0), IR(284, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpRestoreMemoryINTEL, false, false, IR(10, 1), IR(42333, 19), IR(0, 0), IR(284, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatSinCosPiINTEL, true, true, IR(666, 8), IR(42352, 28), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatCastINTEL, true, true, IR(666, 8), IR(42380, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatCastFromIntINTEL, true, true, IR(666, 8), IR(42404, 31), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatCastToIntINTEL, true, true, IR(666, 8), IR(42435, 29), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatAddINTEL, true, true, IR(674, 10), IR(42464, 23), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatSubINTEL, true, true, IR(674, 10), IR(42487, 23), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatMulINTEL, true, true, IR(674, 10), IR(42510, 23), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatDivINTEL, true, true, IR(674, 10), IR(42533, 23), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatGTINTEL, true, true, IR(684, 6), IR(42556, 22), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatGEINTEL, true, true, IR(684, 6), IR(42578, 22), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatLTINTEL, true, true, IR(684, 6), IR(42600, 22), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatLEINTEL, true, true, IR(684, 6), IR(42622, 22), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatEQINTEL, true, true, IR(684, 6), IR(42644, 22), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatRecipINTEL, true, true, IR(666, 8), IR(42666, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatRSqrtINTEL, true, true, IR(666, 8), IR(42691, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatCbrtINTEL, true, true, IR(666, 8), IR(42716, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatHypotINTEL, true, true, IR(674, 10), IR(42740, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatSqrtINTEL, true, true, IR(666, 8), IR(42765, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatLogINTEL, true, true, IR(666, 8), IR(42789, 23), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatLog2INTEL, true, true, IR(666, 8), IR(42812, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatLog10INTEL, true, true, IR(666, 8), IR(42836, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatLog1pINTEL, true, true, IR(666, 8), IR(42861, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatExpINTEL, true, true, IR(666, 8), IR(42886, 23), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatExp2INTEL, true, true, IR(666, 8), IR(42909, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatExp10INTEL, true, true, IR(666, 8), IR(42933, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatExpm1INTEL, true, true, IR(666, 8), IR(42958, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatSinINTEL, true, true, IR(666, 8), IR(42983, 23), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatCosINTEL, true, true, IR(666, 8), IR(43006, 23), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatSinCosINTEL, true, true, IR(666, 8), IR(43029, 26), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatSinPiINTEL, true, true, IR(666, 8), IR(43055, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatCosPiINTEL, true, true, IR(666, 8), IR(43080, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatASinINTEL, true, true, IR(666, 8), IR(43105, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatASinPiINTEL, true, true, IR(666, 8), IR(43129, 26), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatACosINTEL, true, true, IR(666, 8), IR(43155, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatACosPiINTEL, true, true, IR(666, 8), IR(43179, 26), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatATanINTEL, true, true, IR(666, 8), IR(43205, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatATanPiINTEL, true, true, IR(666, 8), IR(43229, 26), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatATan2INTEL, true, true, IR(674, 10), IR(43255, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatPowINTEL, true, true, IR(674, 10), IR(43280, 23), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatPowRINTEL, true, true, IR(674, 10), IR(43303, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatPowNINTEL, true, true, IR(674, 10), IR(43327, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpLoopControlINTEL, false, false, IR(18, 1), IR(43351, 17), IR(0, 0), IR(286, 1), IR(106, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpAliasDomainDeclINTEL, true, false, IR(690, 2), IR(43368, 21), IR(0, 0), IR(134, 1), IR(113, 1), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpAliasScopeDeclINTEL, true, false, IR(692, 3), IR(43389, 20), IR(0, 0), IR(134, 1), IR(113, 1), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpAliasScopeListDeclINTEL, true, false, IR(92, 2), IR(43409, 24), IR(0, 0), IR(134, 1), IR(113, 1), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpFixedSqrtINTEL, true, true, IR(666, 8), IR(43433, 15), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpFixedRecipINTEL, true, true, IR(666, 8), IR(43448, 16), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpFixedRsqrtINTEL, true, true, IR(666, 8), IR(43464, 16), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpFixedSinINTEL, true, true, IR(666, 8), IR(43480, 14), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpFixedCosINTEL, true, true, IR(666, 8), IR(43494, 14), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpFixedSinCosINTEL, true, true, IR(666, 8), IR(43508, 17), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpFixedSinPiINTEL, true, true, IR(666, 8), IR(43525, 16), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpFixedCosPiINTEL, true, true, IR(666, 8), IR(43541, 16), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpFixedSinCosPiINTEL, true, true, IR(666, 8), IR(43557, 19), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpFixedLogINTEL, true, true, IR(666, 8), IR(43576, 14), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpFixedExpINTEL, true, true, IR(666, 8), IR(43590, 14), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpPtrCastToCrossWorkgroupINTEL, true, true, IR(160, 3), IR(43604, 29), IR(0, 0), IR(199, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpCrossWorkgroupCastToPtrINTEL, true, true, IR(160, 3), IR(43633, 29), IR(0, 0), IR(199, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpReadPipeBlockingINTEL, true, true, IR(172, 4), IR(43662, 22), IR(0, 0), IR(287, 1), IR(120, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kPipe},
-  {spv::Op::OpWritePipeBlockingINTEL, true, true, IR(172, 4), IR(43684, 23), IR(0, 0), IR(287, 1), IR(120, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kPipe},
+  {spv::Op::OpSaveMemoryINTEL, true, true, IR(39, 2), IR(42342, 16), IR(0, 0), IR(284, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpRestoreMemoryINTEL, false, false, IR(10, 1), IR(42358, 19), IR(0, 0), IR(284, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatSinCosPiINTEL, true, true, IR(677, 8), IR(42377, 28), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatCastINTEL, true, true, IR(677, 8), IR(42405, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatCastFromIntINTEL, true, true, IR(677, 8), IR(42429, 31), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatCastToIntINTEL, true, true, IR(677, 8), IR(42460, 29), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatAddINTEL, true, true, IR(685, 10), IR(42489, 23), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatSubINTEL, true, true, IR(685, 10), IR(42512, 23), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatMulINTEL, true, true, IR(685, 10), IR(42535, 23), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatDivINTEL, true, true, IR(685, 10), IR(42558, 23), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatGTINTEL, true, true, IR(695, 6), IR(42581, 22), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatGEINTEL, true, true, IR(695, 6), IR(42603, 22), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatLTINTEL, true, true, IR(695, 6), IR(42625, 22), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatLEINTEL, true, true, IR(695, 6), IR(42647, 22), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatEQINTEL, true, true, IR(695, 6), IR(42669, 22), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatRecipINTEL, true, true, IR(677, 8), IR(42691, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatRSqrtINTEL, true, true, IR(677, 8), IR(42716, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatCbrtINTEL, true, true, IR(677, 8), IR(42741, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatHypotINTEL, true, true, IR(685, 10), IR(42765, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatSqrtINTEL, true, true, IR(677, 8), IR(42790, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatLogINTEL, true, true, IR(677, 8), IR(42814, 23), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatLog2INTEL, true, true, IR(677, 8), IR(42837, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatLog10INTEL, true, true, IR(677, 8), IR(42861, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatLog1pINTEL, true, true, IR(677, 8), IR(42886, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatExpINTEL, true, true, IR(677, 8), IR(42911, 23), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatExp2INTEL, true, true, IR(677, 8), IR(42934, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatExp10INTEL, true, true, IR(677, 8), IR(42958, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatExpm1INTEL, true, true, IR(677, 8), IR(42983, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatSinINTEL, true, true, IR(677, 8), IR(43008, 23), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatCosINTEL, true, true, IR(677, 8), IR(43031, 23), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatSinCosINTEL, true, true, IR(677, 8), IR(43054, 26), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatSinPiINTEL, true, true, IR(677, 8), IR(43080, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatCosPiINTEL, true, true, IR(677, 8), IR(43105, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatASinINTEL, true, true, IR(677, 8), IR(43130, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatASinPiINTEL, true, true, IR(677, 8), IR(43154, 26), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatACosINTEL, true, true, IR(677, 8), IR(43180, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatACosPiINTEL, true, true, IR(677, 8), IR(43204, 26), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatATanINTEL, true, true, IR(677, 8), IR(43230, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatATanPiINTEL, true, true, IR(677, 8), IR(43254, 26), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatATan2INTEL, true, true, IR(685, 10), IR(43280, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatPowINTEL, true, true, IR(685, 10), IR(43305, 23), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatPowRINTEL, true, true, IR(685, 10), IR(43328, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatPowNINTEL, true, true, IR(685, 10), IR(43352, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpLoopControlINTEL, false, false, IR(18, 1), IR(43376, 17), IR(0, 0), IR(286, 1), IR(106, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpAliasDomainDeclINTEL, true, false, IR(701, 2), IR(43393, 21), IR(0, 0), IR(134, 1), IR(113, 1), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpAliasScopeDeclINTEL, true, false, IR(703, 3), IR(43414, 20), IR(0, 0), IR(134, 1), IR(113, 1), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpAliasScopeListDeclINTEL, true, false, IR(92, 2), IR(43434, 24), IR(0, 0), IR(134, 1), IR(113, 1), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpFixedSqrtINTEL, true, true, IR(677, 8), IR(43458, 15), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpFixedRecipINTEL, true, true, IR(677, 8), IR(43473, 16), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpFixedRsqrtINTEL, true, true, IR(677, 8), IR(43489, 16), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpFixedSinINTEL, true, true, IR(677, 8), IR(43505, 14), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpFixedCosINTEL, true, true, IR(677, 8), IR(43519, 14), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpFixedSinCosINTEL, true, true, IR(677, 8), IR(43533, 17), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpFixedSinPiINTEL, true, true, IR(677, 8), IR(43550, 16), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpFixedCosPiINTEL, true, true, IR(677, 8), IR(43566, 16), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpFixedSinCosPiINTEL, true, true, IR(677, 8), IR(43582, 19), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpFixedLogINTEL, true, true, IR(677, 8), IR(43601, 14), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpFixedExpINTEL, true, true, IR(677, 8), IR(43615, 14), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpPtrCastToCrossWorkgroupINTEL, true, true, IR(160, 3), IR(43629, 29), IR(0, 0), IR(199, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpCrossWorkgroupCastToPtrINTEL, true, true, IR(160, 3), IR(43658, 29), IR(0, 0), IR(199, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpReadPipeBlockingINTEL, true, true, IR(172, 4), IR(43687, 22), IR(0, 0), IR(287, 1), IR(120, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kPipe},
+  {spv::Op::OpWritePipeBlockingINTEL, true, true, IR(172, 4), IR(43709, 23), IR(0, 0), IR(287, 1), IR(120, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kPipe},
   {spv::Op::OpFPGARegINTEL, true, true, IR(160, 3), IR(13025, 13), IR(0, 0), IR(288, 1), IR(121, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetRayTMinKHR, true, true, IR(160, 3), IR(43707, 22), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetRayFlagsKHR, true, true, IR(160, 3), IR(43729, 23), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionTKHR, true, true, IR(172, 4), IR(43752, 28), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionInstanceCustomIndexKHR, true, true, IR(172, 4), IR(43780, 46), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionInstanceIdKHR, true, true, IR(172, 4), IR(43826, 37), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionInstanceShaderBindingTableRecordOffsetKHR, true, true, IR(172, 4), IR(43863, 65), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionGeometryIndexKHR, true, true, IR(172, 4), IR(43928, 40), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionPrimitiveIndexKHR, true, true, IR(172, 4), IR(43968, 41), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionBarycentricsKHR, true, true, IR(172, 4), IR(44009, 39), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionFrontFaceKHR, true, true, IR(172, 4), IR(44048, 36), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionCandidateAABBOpaqueKHR, true, true, IR(160, 3), IR(44084, 46), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionObjectRayDirectionKHR, true, true, IR(172, 4), IR(44130, 45), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionObjectRayOriginKHR, true, true, IR(172, 4), IR(44175, 42), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetWorldRayDirectionKHR, true, true, IR(160, 3), IR(44217, 32), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetWorldRayOriginKHR, true, true, IR(160, 3), IR(44249, 29), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionObjectToWorldKHR, true, true, IR(172, 4), IR(44278, 40), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionWorldToObjectKHR, true, true, IR(172, 4), IR(44318, 40), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpAtomicFAddEXT, true, true, IR(235, 6), IR(44358, 14), IR(0, 0), IR(289, 4), IR(128, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kAtomic},
-  {spv::Op::OpTypeBufferSurfaceINTEL, true, false, IR(100, 2), IR(44372, 23), IR(0, 0), IR(126, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
-  {spv::Op::OpTypeStructContinuedINTEL, false, false, IR(695, 1), IR(44395, 25), IR(0, 0), IR(293, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
-  {spv::Op::OpConstantCompositeContinuedINTEL, false, false, IR(695, 1), IR(44420, 32), IR(0, 0), IR(293, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
-  {spv::Op::OpSpecConstantCompositeContinuedINTEL, false, false, IR(695, 1), IR(44452, 36), IR(0, 0), IR(293, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
-  {spv::Op::OpCompositeConstructContinuedINTEL, true, true, IR(107, 3), IR(44488, 33), IR(0, 0), IR(293, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kComposite},
-  {spv::Op::OpConvertFToBF16INTEL, true, true, IR(160, 3), IR(44521, 20), IR(0, 0), IR(294, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConversion},
-  {spv::Op::OpConvertBF16ToFINTEL, true, true, IR(160, 3), IR(44541, 20), IR(0, 0), IR(294, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConversion},
-  {spv::Op::OpControlBarrierArriveINTEL, false, false, IR(221, 3), IR(44561, 26), IR(0, 0), IR(295, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kBarrier},
-  {spv::Op::OpControlBarrierWaitINTEL, false, false, IR(221, 3), IR(44587, 24), IR(0, 0), IR(295, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kBarrier},
+  {spv::Op::OpRayQueryGetRayTMinKHR, true, true, IR(160, 3), IR(43732, 22), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetRayFlagsKHR, true, true, IR(160, 3), IR(43754, 23), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionTKHR, true, true, IR(172, 4), IR(43777, 28), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionInstanceCustomIndexKHR, true, true, IR(172, 4), IR(43805, 46), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionInstanceIdKHR, true, true, IR(172, 4), IR(43851, 37), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionInstanceShaderBindingTableRecordOffsetKHR, true, true, IR(172, 4), IR(43888, 65), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionGeometryIndexKHR, true, true, IR(172, 4), IR(43953, 40), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionPrimitiveIndexKHR, true, true, IR(172, 4), IR(43993, 41), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionBarycentricsKHR, true, true, IR(172, 4), IR(44034, 39), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionFrontFaceKHR, true, true, IR(172, 4), IR(44073, 36), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionCandidateAABBOpaqueKHR, true, true, IR(160, 3), IR(44109, 46), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionObjectRayDirectionKHR, true, true, IR(172, 4), IR(44155, 45), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionObjectRayOriginKHR, true, true, IR(172, 4), IR(44200, 42), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetWorldRayDirectionKHR, true, true, IR(160, 3), IR(44242, 32), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetWorldRayOriginKHR, true, true, IR(160, 3), IR(44274, 29), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionObjectToWorldKHR, true, true, IR(172, 4), IR(44303, 40), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionWorldToObjectKHR, true, true, IR(172, 4), IR(44343, 40), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpAtomicFAddEXT, true, true, IR(235, 6), IR(44383, 14), IR(0, 0), IR(289, 4), IR(128, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kAtomic},
+  {spv::Op::OpTypeBufferSurfaceINTEL, true, false, IR(100, 2), IR(44397, 23), IR(0, 0), IR(126, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
+  {spv::Op::OpTypeStructContinuedINTEL, false, false, IR(706, 1), IR(44420, 25), IR(0, 0), IR(293, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
+  {spv::Op::OpConstantCompositeContinuedINTEL, false, false, IR(706, 1), IR(44445, 32), IR(0, 0), IR(293, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
+  {spv::Op::OpSpecConstantCompositeContinuedINTEL, false, false, IR(706, 1), IR(44477, 36), IR(0, 0), IR(293, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
+  {spv::Op::OpCompositeConstructContinuedINTEL, true, true, IR(107, 3), IR(44513, 33), IR(0, 0), IR(293, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kComposite},
+  {spv::Op::OpConvertFToBF16INTEL, true, true, IR(160, 3), IR(44546, 20), IR(0, 0), IR(294, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConversion},
+  {spv::Op::OpConvertBF16ToFINTEL, true, true, IR(160, 3), IR(44566, 20), IR(0, 0), IR(294, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConversion},
+  {spv::Op::OpControlBarrierArriveINTEL, false, false, IR(221, 3), IR(44586, 26), IR(0, 0), IR(295, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kBarrier},
+  {spv::Op::OpControlBarrierWaitINTEL, false, false, IR(221, 3), IR(44612, 24), IR(0, 0), IR(295, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kBarrier},
   {spv::Op::OpArithmeticFenceEXT, true, true, IR(160, 3), IR(13457, 19), IR(0, 0), IR(296, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMiscellaneous},
-  {spv::Op::OpTaskSequenceCreateINTEL, true, true, IR(696, 7), IR(44611, 24), IR(0, 0), IR(297, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTaskSequenceAsyncINTEL, false, false, IR(168, 2), IR(44635, 23), IR(0, 0), IR(297, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTaskSequenceGetINTEL, true, true, IR(160, 3), IR(44658, 21), IR(0, 0), IR(297, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTaskSequenceReleaseINTEL, false, false, IR(10, 1), IR(44679, 25), IR(0, 0), IR(297, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTypeTaskSequenceINTEL, true, false, IR(68, 1), IR(44704, 22), IR(0, 0), IR(297, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
-  {spv::Op::OpSubgroupBlockPrefetchINTEL, false, false, IR(139, 3), IR(44726, 27), IR(0, 0), IR(298, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroup2DBlockLoadINTEL, false, false, IR(703, 10), IR(44753, 25), IR(0, 0), IR(108, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroup2DBlockLoadTransformINTEL, false, false, IR(703, 10), IR(44778, 34), IR(0, 0), IR(299, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroup2DBlockLoadTransposeINTEL, false, false, IR(703, 10), IR(44812, 34), IR(0, 0), IR(300, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroup2DBlockPrefetchINTEL, false, false, IR(713, 9), IR(44846, 29), IR(0, 0), IR(108, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroup2DBlockStoreINTEL, false, false, IR(703, 10), IR(44875, 26), IR(0, 0), IR(108, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroupMatrixMultiplyAccumulateINTEL, true, true, IR(722, 7), IR(13795, 38), IR(0, 0), IR(301, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpBitwiseFunctionINTEL, true, true, IR(215, 6), IR(44963, 21), IR(0, 0), IR(302, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kBit},
-  {spv::Op::OpConditionalExtensionINTEL, false, false, IR(45, 2), IR(44984, 26), IR(0, 0), IR(109, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kExtension},
-  {spv::Op::OpConditionalEntryPointINTEL, false, false, IR(729, 5), IR(45010, 27), IR(0, 0), IR(109, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMode_Setting},
-  {spv::Op::OpConditionalCapabilityINTEL, false, false, IR(734, 2), IR(45037, 27), IR(0, 0), IR(109, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMode_Setting},
-  {spv::Op::OpSpecConstantTargetINTEL, true, true, IR(736, 4), IR(45064, 24), IR(0, 0), IR(303, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
-  {spv::Op::OpSpecConstantArchitectureINTEL, true, true, IR(740, 6), IR(45088, 30), IR(0, 0), IR(303, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
-  {spv::Op::OpSpecConstantCapabilitiesINTEL, true, true, IR(746, 3), IR(45155, 30), IR(0, 0), IR(303, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
-  {spv::Op::OpConditionalCopyObjectINTEL, true, true, IR(107, 3), IR(45185, 27), IR(0, 0), IR(109, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kComposite},
-  {spv::Op::OpGroupIMulKHR, true, true, IR(283, 5), IR(45212, 13), IR(0, 0), IR(304, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupFMulKHR, true, true, IR(283, 5), IR(45225, 13), IR(0, 0), IR(304, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupBitwiseAndKHR, true, true, IR(283, 5), IR(45238, 19), IR(0, 0), IR(304, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupBitwiseOrKHR, true, true, IR(283, 5), IR(45257, 18), IR(0, 0), IR(304, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupBitwiseXorKHR, true, true, IR(283, 5), IR(45275, 19), IR(0, 0), IR(304, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupLogicalAndKHR, true, true, IR(283, 5), IR(45294, 19), IR(0, 0), IR(304, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupLogicalOrKHR, true, true, IR(283, 5), IR(45313, 18), IR(0, 0), IR(304, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupLogicalXorKHR, true, true, IR(283, 5), IR(45331, 19), IR(0, 0), IR(304, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpRoundFToTF32INTEL, true, true, IR(160, 3), IR(45350, 18), IR(0, 0), IR(305, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConversion},
-  {spv::Op::OpMaskedGatherINTEL, true, true, IR(749, 6), IR(45368, 18), IR(0, 0), IR(306, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
-  {spv::Op::OpMaskedScatterINTEL, false, false, IR(755, 4), IR(45386, 19), IR(0, 0), IR(306, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
-  {spv::Op::OpConvertHandleToImageINTEL, true, true, IR(160, 3), IR(45405, 26), IR(0, 0), IR(307, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpConvertHandleToSamplerINTEL, true, true, IR(160, 3), IR(45431, 28), IR(0, 0), IR(307, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpConvertHandleToSampledImageINTEL, true, true, IR(160, 3), IR(45459, 33), IR(0, 0), IR(307, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpTaskSequenceCreateINTEL, true, true, IR(707, 7), IR(44636, 24), IR(0, 0), IR(297, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTaskSequenceAsyncINTEL, false, false, IR(168, 2), IR(44660, 23), IR(0, 0), IR(297, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTaskSequenceGetINTEL, true, true, IR(160, 3), IR(44683, 21), IR(0, 0), IR(297, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTaskSequenceReleaseINTEL, false, false, IR(10, 1), IR(44704, 25), IR(0, 0), IR(297, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTypeTaskSequenceINTEL, true, false, IR(68, 1), IR(44729, 22), IR(0, 0), IR(297, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
+  {spv::Op::OpSubgroupBlockPrefetchINTEL, false, false, IR(139, 3), IR(44751, 27), IR(0, 0), IR(298, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroup2DBlockLoadINTEL, false, false, IR(714, 10), IR(44778, 25), IR(0, 0), IR(108, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroup2DBlockLoadTransformINTEL, false, false, IR(714, 10), IR(44803, 34), IR(0, 0), IR(299, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroup2DBlockLoadTransposeINTEL, false, false, IR(714, 10), IR(44837, 34), IR(0, 0), IR(300, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroup2DBlockPrefetchINTEL, false, false, IR(724, 9), IR(44871, 29), IR(0, 0), IR(108, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroup2DBlockStoreINTEL, false, false, IR(714, 10), IR(44900, 26), IR(0, 0), IR(108, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroupMatrixMultiplyAccumulateINTEL, true, true, IR(733, 7), IR(13795, 38), IR(0, 0), IR(301, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpBitwiseFunctionINTEL, true, true, IR(215, 6), IR(44988, 21), IR(0, 0), IR(302, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kBit},
+  {spv::Op::OpConditionalExtensionINTEL, false, false, IR(45, 2), IR(45009, 26), IR(0, 0), IR(109, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kExtension},
+  {spv::Op::OpConditionalEntryPointINTEL, false, false, IR(740, 5), IR(45035, 27), IR(0, 0), IR(109, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMode_Setting},
+  {spv::Op::OpConditionalCapabilityINTEL, false, false, IR(745, 2), IR(45062, 27), IR(0, 0), IR(109, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMode_Setting},
+  {spv::Op::OpSpecConstantTargetINTEL, true, true, IR(747, 4), IR(45089, 24), IR(0, 0), IR(303, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
+  {spv::Op::OpSpecConstantArchitectureINTEL, true, true, IR(751, 6), IR(45113, 30), IR(0, 0), IR(303, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
+  {spv::Op::OpSpecConstantCapabilitiesINTEL, true, true, IR(757, 3), IR(45180, 30), IR(0, 0), IR(303, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
+  {spv::Op::OpConditionalCopyObjectINTEL, true, true, IR(107, 3), IR(45210, 27), IR(0, 0), IR(109, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kComposite},
+  {spv::Op::OpGroupIMulKHR, true, true, IR(283, 5), IR(45237, 13), IR(0, 0), IR(304, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupFMulKHR, true, true, IR(283, 5), IR(45250, 13), IR(0, 0), IR(304, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupBitwiseAndKHR, true, true, IR(283, 5), IR(45263, 19), IR(0, 0), IR(304, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupBitwiseOrKHR, true, true, IR(283, 5), IR(45282, 18), IR(0, 0), IR(304, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupBitwiseXorKHR, true, true, IR(283, 5), IR(45300, 19), IR(0, 0), IR(304, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupLogicalAndKHR, true, true, IR(283, 5), IR(45319, 19), IR(0, 0), IR(304, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupLogicalOrKHR, true, true, IR(283, 5), IR(45338, 18), IR(0, 0), IR(304, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupLogicalXorKHR, true, true, IR(283, 5), IR(45356, 19), IR(0, 0), IR(304, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpRoundFToTF32INTEL, true, true, IR(160, 3), IR(45375, 18), IR(0, 0), IR(305, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConversion},
+  {spv::Op::OpMaskedGatherINTEL, true, true, IR(760, 6), IR(45393, 18), IR(0, 0), IR(306, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
+  {spv::Op::OpMaskedScatterINTEL, false, false, IR(766, 4), IR(45411, 19), IR(0, 0), IR(306, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
+  {spv::Op::OpConvertHandleToImageINTEL, true, true, IR(160, 3), IR(45430, 26), IR(0, 0), IR(307, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpConvertHandleToSamplerINTEL, true, true, IR(160, 3), IR(45456, 28), IR(0, 0), IR(307, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpConvertHandleToSampledImageINTEL, true, true, IR(160, 3), IR(45484, 33), IR(0, 0), IR(307, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
 }};
 
 // Opcode strings (without the 'Op' prefix) and opcode values, ordered by name.
 // The fields in order are:
 //   name, either the primary name or an alias, indexing into kStrings
 //   index into kInstructionDesc
-static const std::array<NameIndex, 830> kInstructionNames{{
-  {IR(36755, 13), 552}, // 0 AbsISubINTEL
-  {IR(36768, 13), 553}, // 1 AbsUSubINTEL
+static const std::array<NameIndex, 831> kInstructionNames{{
+  {IR(36780, 13), 553}, // 0 AbsISubINTEL
+  {IR(36793, 13), 554}, // 1 AbsUSubINTEL
   {IR(26635, 12), 58}, // 2 AccessChain
-  {IR(43368, 21), 738}, // 3 AliasDomainDeclINTEL
-  {IR(43389, 20), 739}, // 4 AliasScopeDeclINTEL
-  {IR(43409, 24), 740}, // 5 AliasScopeListDeclINTEL
+  {IR(43393, 21), 739}, // 3 AliasDomainDeclINTEL
+  {IR(43414, 20), 740}, // 4 AliasScopeDeclINTEL
+  {IR(43434, 24), 741}, // 5 AliasScopeListDeclINTEL
   {IR(27932, 4), 143}, // 6 All
-  {IR(33279, 25), 424}, // 7 AllocateNodePayloadsAMDX
+  {IR(33304, 25), 425}, // 7 AllocateNodePayloadsAMDX
   {IR(27928, 4), 142}, // 8 Any
-  {IR(43155, 24), 729}, // 9 ArbitraryFloatACosINTEL
-  {IR(43179, 26), 730}, // 10 ArbitraryFloatACosPiINTEL
-  {IR(43105, 24), 727}, // 11 ArbitraryFloatASinINTEL
-  {IR(43129, 26), 728}, // 12 ArbitraryFloatASinPiINTEL
-  {IR(43255, 25), 733}, // 13 ArbitraryFloatATan2INTEL
-  {IR(43205, 24), 731}, // 14 ArbitraryFloatATanINTEL
-  {IR(43229, 26), 732}, // 15 ArbitraryFloatATanPiINTEL
-  {IR(42464, 23), 700}, // 16 ArbitraryFloatAddINTEL
-  {IR(42404, 31), 698}, // 17 ArbitraryFloatCastFromIntINTEL
-  {IR(42380, 24), 697}, // 18 ArbitraryFloatCastINTEL
-  {IR(42435, 29), 699}, // 19 ArbitraryFloatCastToIntINTEL
-  {IR(42716, 24), 711}, // 20 ArbitraryFloatCbrtINTEL
-  {IR(43006, 23), 723}, // 21 ArbitraryFloatCosINTEL
-  {IR(43080, 25), 726}, // 22 ArbitraryFloatCosPiINTEL
-  {IR(42533, 23), 703}, // 23 ArbitraryFloatDivINTEL
-  {IR(42644, 22), 708}, // 24 ArbitraryFloatEQINTEL
-  {IR(42933, 25), 720}, // 25 ArbitraryFloatExp10INTEL
-  {IR(42909, 24), 719}, // 26 ArbitraryFloatExp2INTEL
-  {IR(42886, 23), 718}, // 27 ArbitraryFloatExpINTEL
-  {IR(42958, 25), 721}, // 28 ArbitraryFloatExpm1INTEL
-  {IR(42578, 22), 705}, // 29 ArbitraryFloatGEINTEL
-  {IR(42556, 22), 704}, // 30 ArbitraryFloatGTINTEL
-  {IR(42740, 25), 712}, // 31 ArbitraryFloatHypotINTEL
-  {IR(42622, 22), 707}, // 32 ArbitraryFloatLEINTEL
-  {IR(42600, 22), 706}, // 33 ArbitraryFloatLTINTEL
-  {IR(42836, 25), 716}, // 34 ArbitraryFloatLog10INTEL
-  {IR(42861, 25), 717}, // 35 ArbitraryFloatLog1pINTEL
-  {IR(42812, 24), 715}, // 36 ArbitraryFloatLog2INTEL
-  {IR(42789, 23), 714}, // 37 ArbitraryFloatLogINTEL
-  {IR(42510, 23), 702}, // 38 ArbitraryFloatMulINTEL
-  {IR(43280, 23), 734}, // 39 ArbitraryFloatPowINTEL
-  {IR(43327, 24), 736}, // 40 ArbitraryFloatPowNINTEL
-  {IR(43303, 24), 735}, // 41 ArbitraryFloatPowRINTEL
-  {IR(42691, 25), 710}, // 42 ArbitraryFloatRSqrtINTEL
-  {IR(42666, 25), 709}, // 43 ArbitraryFloatRecipINTEL
-  {IR(43029, 26), 724}, // 44 ArbitraryFloatSinCosINTEL
-  {IR(42352, 28), 696}, // 45 ArbitraryFloatSinCosPiINTEL
-  {IR(42983, 23), 722}, // 46 ArbitraryFloatSinINTEL
-  {IR(43055, 25), 725}, // 47 ArbitraryFloatSinPiINTEL
-  {IR(42765, 24), 713}, // 48 ArbitraryFloatSqrtINTEL
-  {IR(42487, 23), 701}, // 49 ArbitraryFloatSubINTEL
-  {IR(13457, 19), 784}, // 50 ArithmeticFenceEXT
+  {IR(43180, 24), 730}, // 9 ArbitraryFloatACosINTEL
+  {IR(43204, 26), 731}, // 10 ArbitraryFloatACosPiINTEL
+  {IR(43130, 24), 728}, // 11 ArbitraryFloatASinINTEL
+  {IR(43154, 26), 729}, // 12 ArbitraryFloatASinPiINTEL
+  {IR(43280, 25), 734}, // 13 ArbitraryFloatATan2INTEL
+  {IR(43230, 24), 732}, // 14 ArbitraryFloatATanINTEL
+  {IR(43254, 26), 733}, // 15 ArbitraryFloatATanPiINTEL
+  {IR(42489, 23), 701}, // 16 ArbitraryFloatAddINTEL
+  {IR(42429, 31), 699}, // 17 ArbitraryFloatCastFromIntINTEL
+  {IR(42405, 24), 698}, // 18 ArbitraryFloatCastINTEL
+  {IR(42460, 29), 700}, // 19 ArbitraryFloatCastToIntINTEL
+  {IR(42741, 24), 712}, // 20 ArbitraryFloatCbrtINTEL
+  {IR(43031, 23), 724}, // 21 ArbitraryFloatCosINTEL
+  {IR(43105, 25), 727}, // 22 ArbitraryFloatCosPiINTEL
+  {IR(42558, 23), 704}, // 23 ArbitraryFloatDivINTEL
+  {IR(42669, 22), 709}, // 24 ArbitraryFloatEQINTEL
+  {IR(42958, 25), 721}, // 25 ArbitraryFloatExp10INTEL
+  {IR(42934, 24), 720}, // 26 ArbitraryFloatExp2INTEL
+  {IR(42911, 23), 719}, // 27 ArbitraryFloatExpINTEL
+  {IR(42983, 25), 722}, // 28 ArbitraryFloatExpm1INTEL
+  {IR(42603, 22), 706}, // 29 ArbitraryFloatGEINTEL
+  {IR(42581, 22), 705}, // 30 ArbitraryFloatGTINTEL
+  {IR(42765, 25), 713}, // 31 ArbitraryFloatHypotINTEL
+  {IR(42647, 22), 708}, // 32 ArbitraryFloatLEINTEL
+  {IR(42625, 22), 707}, // 33 ArbitraryFloatLTINTEL
+  {IR(42861, 25), 717}, // 34 ArbitraryFloatLog10INTEL
+  {IR(42886, 25), 718}, // 35 ArbitraryFloatLog1pINTEL
+  {IR(42837, 24), 716}, // 36 ArbitraryFloatLog2INTEL
+  {IR(42814, 23), 715}, // 37 ArbitraryFloatLogINTEL
+  {IR(42535, 23), 703}, // 38 ArbitraryFloatMulINTEL
+  {IR(43305, 23), 735}, // 39 ArbitraryFloatPowINTEL
+  {IR(43352, 24), 737}, // 40 ArbitraryFloatPowNINTEL
+  {IR(43328, 24), 736}, // 41 ArbitraryFloatPowRINTEL
+  {IR(42716, 25), 711}, // 42 ArbitraryFloatRSqrtINTEL
+  {IR(42691, 25), 710}, // 43 ArbitraryFloatRecipINTEL
+  {IR(43054, 26), 725}, // 44 ArbitraryFloatSinCosINTEL
+  {IR(42377, 28), 697}, // 45 ArbitraryFloatSinCosPiINTEL
+  {IR(43008, 23), 723}, // 46 ArbitraryFloatSinINTEL
+  {IR(43080, 25), 726}, // 47 ArbitraryFloatSinPiINTEL
+  {IR(42790, 24), 714}, // 48 ArbitraryFloatSqrtINTEL
+  {IR(42512, 23), 702}, // 49 ArbitraryFloatSubINTEL
+  {IR(13457, 19), 785}, // 50 ArithmeticFenceEXT
   {IR(26682, 12), 61}, // 51 ArrayLength
-  {IR(37002, 13), 568}, // 52 AsmCallINTEL
-  {IR(12228, 9), 567}, // 53 AsmINTEL
-  {IR(36987, 15), 566}, // 54 AsmTargetINTEL
-  {IR(37043, 14), 571}, // 55 AssumeTrueKHR
+  {IR(37027, 13), 569}, // 52 AsmCallINTEL
+  {IR(12228, 9), 568}, // 53 AsmINTEL
+  {IR(37012, 15), 567}, // 54 AsmTargetINTEL
+  {IR(37068, 14), 572}, // 55 AssumeTrueKHR
   {IR(28954, 10), 220}, // 56 AtomicAnd
   {IR(28806, 22), 210}, // 57 AtomicCompareExchange
   {IR(28828, 26), 211}, // 58 AtomicCompareExchangeWeak
   {IR(28791, 15), 209}, // 59 AtomicExchange
-  {IR(44358, 14), 774}, // 60 AtomicFAddEXT
-  {IR(37029, 14), 570}, // 61 AtomicFMaxEXT
-  {IR(37015, 14), 569}, // 62 AtomicFMinEXT
+  {IR(44383, 14), 775}, // 60 AtomicFAddEXT
+  {IR(37054, 14), 571}, // 61 AtomicFMaxEXT
+  {IR(37040, 14), 570}, // 62 AtomicFMinEXT
   {IR(30339, 16), 292}, // 63 AtomicFlagClear
   {IR(30318, 21), 291}, // 64 AtomicFlagTestAndSet
   {IR(28888, 11), 214}, // 65 AtomicIAdd
@@ -3928,8 +3929,8 @@ static const std::array<NameIndex, 830> kInstructionNames{{
   {IR(28943, 11), 219}, // 74 AtomicUMax
   {IR(28921, 11), 217}, // 75 AtomicUMin
   {IR(28973, 10), 222}, // 76 AtomicXor
-  {IR(35251, 28), 498}, // 77 BeginInvocationInterlockEXT
-  {IR(32833, 17), 405}, // 78 BitCastArrayQCOM
+  {IR(35276, 28), 499}, // 77 BeginInvocationInterlockEXT
+  {IR(32858, 17), 406}, // 78 BitCastArrayQCOM
   {IR(28552, 9), 191}, // 79 BitCount
   {IR(28492, 15), 187}, // 80 BitFieldInsert
   {IR(28507, 17), 188}, // 81 BitFieldSExtract
@@ -3937,7 +3938,7 @@ static const std::array<NameIndex, 830> kInstructionNames{{
   {IR(28541, 11), 190}, // 83 BitReverse
   {IR(27680, 8), 114}, // 84 Bitcast
   {IR(28477, 11), 185}, // 85 BitwiseAnd
-  {IR(44963, 21), 797}, // 86 BitwiseFunctionINTEL
+  {IR(44988, 21), 798}, // 86 BitwiseFunctionINTEL
   {IR(28456, 10), 183}, // 87 BitwiseOr
   {IR(28466, 11), 184}, // 88 BitwiseXor
   {IR(29083, 7), 227}, // 89 Branch
@@ -3949,77 +3950,77 @@ static const std::array<NameIndex, 830> kInstructionNames{{
   {IR(29501, 15), 255}, // 95 CommitReadPipe
   {IR(29516, 16), 256}, // 96 CommitWritePipe
   {IR(26942, 19), 72}, // 97 CompositeConstruct
-  {IR(44488, 33), 779}, // 98 CompositeConstructContinuedINTEL
-  {IR(32966, 30), 410}, // 99 CompositeConstructCoopMatQCOM
-  {IR(32541, 31), 393}, // 100 CompositeConstructReplicateEXT
+  {IR(44513, 33), 780}, // 98 CompositeConstructContinuedINTEL
+  {IR(32991, 30), 411}, // 99 CompositeConstructCoopMatQCOM
+  {IR(32566, 31), 394}, // 100 CompositeConstructReplicateEXT
   {IR(26961, 17), 73}, // 101 CompositeExtract
-  {IR(32996, 28), 411}, // 102 CompositeExtractCoopMatQCOM
+  {IR(33021, 28), 412}, // 102 CompositeExtractCoopMatQCOM
   {IR(26978, 16), 74}, // 103 CompositeInsert
-  {IR(45037, 27), 800}, // 104 ConditionalCapabilityINTEL
-  {IR(45185, 27), 804}, // 105 ConditionalCopyObjectINTEL
-  {IR(45010, 27), 799}, // 106 ConditionalEntryPointINTEL
-  {IR(44984, 26), 798}, // 107 ConditionalExtensionINTEL
+  {IR(45062, 27), 801}, // 104 ConditionalCapabilityINTEL
+  {IR(45210, 27), 805}, // 105 ConditionalCopyObjectINTEL
+  {IR(45035, 27), 800}, // 106 ConditionalEntryPointINTEL
+  {IR(45009, 26), 799}, // 107 ConditionalExtensionINTEL
   {IR(15419, 9), 39}, // 108 Constant
   {IR(26202, 18), 40}, // 109 ConstantComposite
-  {IR(44420, 32), 777}, // 110 ConstantCompositeContinuedINTEL
-  {IR(32477, 30), 391}, // 111 ConstantCompositeReplicateEXT
+  {IR(44445, 32), 778}, // 110 ConstantCompositeContinuedINTEL
+  {IR(32502, 30), 392}, // 111 ConstantCompositeReplicateEXT
   {IR(26150, 14), 38}, // 112 ConstantFalse
-  {IR(36933, 29), 564}, // 113 ConstantFunctionPointerINTEL
+  {IR(36958, 29), 565}, // 113 ConstantFunctionPointerINTEL
   {IR(26314, 13), 42}, // 114 ConstantNull
   {IR(30394, 20), 296}, // 115 ConstantPipeStorage
   {IR(26298, 16), 41}, // 116 ConstantSampler
-  {IR(33432, 19), 430}, // 117 ConstantStringAMDX
+  {IR(33457, 19), 431}, // 117 ConstantStringAMDX
   {IR(26137, 13), 37}, // 118 ConstantTrue
   {IR(28739, 15), 205}, // 119 ControlBarrier
-  {IR(44561, 26), 782}, // 120 ControlBarrierArriveINTEL
-  {IR(44587, 24), 783}, // 121 ControlBarrierWaitINTEL
-  {IR(44541, 20), 781}, // 122 ConvertBF16ToFINTEL
-  {IR(44521, 20), 780}, // 123 ConvertFToBF16INTEL
+  {IR(44586, 26), 783}, // 120 ControlBarrierArriveINTEL
+  {IR(44612, 24), 784}, // 121 ControlBarrierWaitINTEL
+  {IR(44566, 20), 782}, // 122 ConvertBF16ToFINTEL
+  {IR(44546, 20), 781}, // 123 ConvertFToBF16INTEL
   {IR(27486, 12), 100}, // 124 ConvertFToS
   {IR(27474, 12), 99}, // 125 ConvertFToU
-  {IR(45405, 26), 816}, // 126 ConvertHandleToImageINTEL
-  {IR(45459, 33), 818}, // 127 ConvertHandleToSampledImageINTEL
-  {IR(45431, 28), 817}, // 128 ConvertHandleToSamplerINTEL
-  {IR(35900, 18), 521}, // 129 ConvertImageToUNV
+  {IR(45430, 26), 817}, // 126 ConvertHandleToImageINTEL
+  {IR(45484, 33), 819}, // 127 ConvertHandleToSampledImageINTEL
+  {IR(45456, 28), 818}, // 128 ConvertHandleToSamplerINTEL
+  {IR(35925, 18), 522}, // 129 ConvertImageToUNV
   {IR(27563, 14), 107}, // 130 ConvertPtrToU
   {IR(27498, 12), 101}, // 131 ConvertSToF
-  {IR(35963, 25), 524}, // 132 ConvertSampledImageToUNV
-  {IR(35918, 20), 522}, // 133 ConvertSamplerToUNV
-  {IR(32055, 35), 377}, // 134 ConvertUToAccelerationStructureKHR
+  {IR(35988, 25), 525}, // 132 ConvertSampledImageToUNV
+  {IR(35943, 20), 523}, // 133 ConvertSamplerToUNV
+  {IR(32080, 35), 378}, // 134 ConvertUToAccelerationStructureKHR
   {IR(27510, 12), 102}, // 135 ConvertUToF
-  {IR(35862, 18), 519}, // 136 ConvertUToImageNV
+  {IR(35887, 18), 520}, // 136 ConvertUToImageNV
   {IR(27607, 14), 110}, // 137 ConvertUToPtr
-  {IR(35938, 25), 523}, // 138 ConvertUToSampledImageNV
-  {IR(35880, 20), 520}, // 139 ConvertUToSamplerNV
-  {IR(34592, 27), 473}, // 140 CooperativeMatrixConvertNV
-  {IR(32450, 27), 390}, // 141 CooperativeMatrixLengthKHR
-  {IR(35225, 26), 497}, // 142 CooperativeMatrixLengthNV
-  {IR(32318, 25), 387}, // 143 CooperativeMatrixLoadKHR
-  {IR(35150, 24), 494}, // 144 CooperativeMatrixLoadNV
-  {IR(35449, 30), 501}, // 145 CooperativeMatrixLoadTensorNV
-  {IR(32423, 27), 389}, // 146 CooperativeMatrixMulAddKHR
-  {IR(35199, 26), 496}, // 147 CooperativeMatrixMulAddNV
-  {IR(35510, 32), 503}, // 148 CooperativeMatrixPerElementOpNV
-  {IR(35348, 26), 500}, // 149 CooperativeMatrixReduceNV
-  {IR(32343, 26), 388}, // 150 CooperativeMatrixStoreKHR
-  {IR(35174, 25), 495}, // 151 CooperativeMatrixStoreNV
-  {IR(35479, 31), 502}, // 152 CooperativeMatrixStoreTensorNV
-  {IR(35833, 29), 518}, // 153 CooperativeMatrixTransposeNV
-  {IR(34787, 24), 480}, // 154 CooperativeVectorLoadNV
-  {IR(34560, 32), 472}, // 155 CooperativeVectorMatrixMulAddNV
-  {IR(34450, 29), 469}, // 156 CooperativeVectorMatrixMulNV
-  {IR(34479, 42), 470}, // 157 CooperativeVectorOuterProductAccumulateNV
-  {IR(34521, 39), 471}, // 158 CooperativeVectorReduceSumAccumulateNV
-  {IR(34811, 25), 481}, // 159 CooperativeVectorStoreNV
+  {IR(35963, 25), 524}, // 138 ConvertUToSampledImageNV
+  {IR(35905, 20), 521}, // 139 ConvertUToSamplerNV
+  {IR(34617, 27), 474}, // 140 CooperativeMatrixConvertNV
+  {IR(32475, 27), 391}, // 141 CooperativeMatrixLengthKHR
+  {IR(35250, 26), 498}, // 142 CooperativeMatrixLengthNV
+  {IR(32343, 25), 388}, // 143 CooperativeMatrixLoadKHR
+  {IR(35175, 24), 495}, // 144 CooperativeMatrixLoadNV
+  {IR(35474, 30), 502}, // 145 CooperativeMatrixLoadTensorNV
+  {IR(32448, 27), 390}, // 146 CooperativeMatrixMulAddKHR
+  {IR(35224, 26), 497}, // 147 CooperativeMatrixMulAddNV
+  {IR(35535, 32), 504}, // 148 CooperativeMatrixPerElementOpNV
+  {IR(35373, 26), 501}, // 149 CooperativeMatrixReduceNV
+  {IR(32368, 26), 389}, // 150 CooperativeMatrixStoreKHR
+  {IR(35199, 25), 496}, // 151 CooperativeMatrixStoreNV
+  {IR(35504, 31), 503}, // 152 CooperativeMatrixStoreTensorNV
+  {IR(35858, 29), 519}, // 153 CooperativeMatrixTransposeNV
+  {IR(34812, 24), 481}, // 154 CooperativeVectorLoadNV
+  {IR(34585, 32), 473}, // 155 CooperativeVectorMatrixMulAddNV
+  {IR(34475, 29), 470}, // 156 CooperativeVectorMatrixMulNV
+  {IR(34504, 42), 471}, // 157 CooperativeVectorOuterProductAccumulateNV
+  {IR(34546, 39), 472}, // 158 CooperativeVectorReduceSumAccumulateNV
+  {IR(34836, 25), 482}, // 159 CooperativeVectorStoreNV
   {IR(31374, 12), 340}, // 160 CopyLogical
   {IR(26608, 11), 56}, // 161 CopyMemory
   {IR(26619, 16), 57}, // 162 CopyMemorySized
   {IR(26994, 11), 75}, // 163 CopyObject
   {IR(30414, 26), 297}, // 164 CreatePipeFromPipeStorage
-  {IR(35578, 21), 506}, // 165 CreateTensorLayoutNV
-  {IR(35698, 19), 511}, // 166 CreateTensorViewNV
+  {IR(35603, 21), 507}, // 165 CreateTensorLayoutNV
+  {IR(35723, 19), 512}, // 166 CreateTensorViewNV
   {IR(29861, 16), 272}, // 167 CreateUserEvent
-  {IR(43633, 29), 753}, // 168 CrossWorkgroupCastToPtrINTEL
+  {IR(43658, 29), 754}, // 168 CrossWorkgroupCastToPtrINTEL
   {IR(28561, 5), 192}, // 169 DPdx
   {IR(28607, 11), 198}, // 170 DPdxCoarse
   {IR(28578, 9), 195}, // 171 DPdxFine
@@ -4028,33 +4029,33 @@ static const std::array<NameIndex, 830> kInstructionNames{{
   {IR(28587, 9), 196}, // 174 DPdyFine
   {IR(26768, 9), 64}, // 175 Decorate
   {IR(30591, 11), 305}, // 176 DecorateId
-  {IR(37067, 15), 573}, // 177 DecorateString
-  {IR(37082, 21), 573}, // 178 DecorateStringGOOGLE
+  {IR(37092, 15), 574}, // 177 DecorateString
+  {IR(37107, 21), 574}, // 178 DecorateStringGOOGLE
   {IR(26792, 16), 66}, // 179 DecorationGroup
-  {IR(11562, 25), 514}, // 180 DemoteToHelperInvocation
-  {IR(11587, 28), 514}, // 181 DemoteToHelperInvocationEXT
+  {IR(11562, 25), 515}, // 180 DemoteToHelperInvocation
+  {IR(11587, 28), 515}, // 181 DemoteToHelperInvocationEXT
   {IR(31438, 23), 345}, // 182 DepthAttachmentReadEXT
   {IR(27877, 4), 137}, // 183 Dot
-  {IR(34619, 17), 474}, // 184 EmitMeshTasksEXT
+  {IR(34644, 17), 475}, // 184 EmitMeshTasksEXT
   {IR(28666, 17), 203}, // 185 EmitStreamVertex
   {IR(28642, 11), 201}, // 186 EmitVertex
-  {IR(35279, 26), 499}, // 187 EndInvocationInterlockEXT
+  {IR(35304, 26), 500}, // 187 EndInvocationInterlockEXT
   {IR(28653, 13), 202}, // 188 EndPrimitive
   {IR(28683, 19), 204}, // 189 EndStreamPrimitive
   {IR(29697, 14), 265}, // 190 EnqueueKernel
   {IR(29683, 14), 264}, // 191 EnqueueMarker
-  {IR(33304, 24), 425}, // 192 EnqueueNodePayloadsAMDX
+  {IR(33329, 24), 426}, // 192 EnqueueNodePayloadsAMDX
   {IR(25611, 11), 13}, // 193 EntryPoint
-  {IR(32036, 19), 376}, // 194 ExecuteCallableKHR
-  {IR(35061, 18), 490}, // 195 ExecuteCallableNV
+  {IR(32061, 19), 377}, // 194 ExecuteCallableKHR
+  {IR(35086, 18), 491}, // 195 ExecuteCallableNV
   {IR(25654, 14), 14}, // 196 ExecutionMode
   {IR(30575, 16), 304}, // 197 ExecutionModeId
-  {IR(37057, 10), 572}, // 198 ExpectKHR
+  {IR(37082, 10), 573}, // 198 ExpectKHR
   {IR(25465, 8), 11}, // 199 ExtInst
   {IR(25405, 14), 10}, // 200 ExtInstImport
   {IR(31998, 26), 374}, // 201 ExtInstWithForwardRefsKHR
   {IR(25395, 10), 9}, // 202 Extension
-  {IR(33024, 20), 412}, // 203 ExtractSubArrayQCOM
+  {IR(33049, 20), 413}, // 203 ExtractSubArrayQCOM
   {IR(27709, 5), 118}, // 204 FAdd
   {IR(27540, 9), 105}, // 205 FConvert
   {IR(27744, 5), 125}, // 206 FDiv
@@ -4067,7 +4068,7 @@ static const std::array<NameIndex, 830> kInstructionNames{{
   {IR(28256, 13), 172}, // 213 FOrdLessThan
   {IR(28318, 18), 176}, // 214 FOrdLessThanEqual
   {IR(28228, 13), 170}, // 215 FOrdNotEqual
-  {IR(13025, 13), 756}, // 216 FPGARegINTEL
+  {IR(13025, 13), 757}, // 216 FPGARegINTEL
   {IR(27764, 5), 129}, // 217 FRem
   {IR(27719, 5), 120}, // 218 FSub
   {IR(28216, 12), 169}, // 219 FUnordEqual
@@ -4076,27 +4077,27 @@ static const std::array<NameIndex, 830> kInstructionNames{{
   {IR(28269, 15), 173}, // 222 FUnordLessThan
   {IR(28336, 20), 177}, // 223 FUnordLessThanEqual
   {IR(28241, 15), 171}, // 224 FUnordNotEqual
-  {IR(34749, 38), 479}, // 225 FetchMicroTriangleVertexBarycentricNV
-  {IR(34714, 35), 478}, // 226 FetchMicroTriangleVertexPositionNV
-  {IR(33353, 29), 427}, // 227 FinishWritingNodePayloadAMDX
-  {IR(43494, 14), 745}, // 228 FixedCosINTEL
-  {IR(43541, 16), 748}, // 229 FixedCosPiINTEL
-  {IR(43590, 14), 751}, // 230 FixedExpINTEL
-  {IR(43576, 14), 750}, // 231 FixedLogINTEL
-  {IR(43448, 16), 742}, // 232 FixedRecipINTEL
-  {IR(43464, 16), 743}, // 233 FixedRsqrtINTEL
-  {IR(43508, 17), 746}, // 234 FixedSinCosINTEL
-  {IR(43557, 19), 749}, // 235 FixedSinCosPiINTEL
-  {IR(43480, 14), 744}, // 236 FixedSinINTEL
-  {IR(43525, 16), 747}, // 237 FixedSinPiINTEL
-  {IR(43433, 15), 741}, // 238 FixedSqrtINTEL
-  {IR(33249, 17), 422}, // 239 FragmentFetchAMD
-  {IR(33228, 21), 421}, // 240 FragmentMaskFetchAMD
+  {IR(34774, 38), 480}, // 225 FetchMicroTriangleVertexBarycentricNV
+  {IR(34739, 35), 479}, // 226 FetchMicroTriangleVertexPositionNV
+  {IR(33378, 29), 428}, // 227 FinishWritingNodePayloadAMDX
+  {IR(43519, 14), 746}, // 228 FixedCosINTEL
+  {IR(43566, 16), 749}, // 229 FixedCosPiINTEL
+  {IR(43615, 14), 752}, // 230 FixedExpINTEL
+  {IR(43601, 14), 751}, // 231 FixedLogINTEL
+  {IR(43473, 16), 743}, // 232 FixedRecipINTEL
+  {IR(43489, 16), 744}, // 233 FixedRsqrtINTEL
+  {IR(43533, 17), 747}, // 234 FixedSinCosINTEL
+  {IR(43582, 19), 750}, // 235 FixedSinCosPiINTEL
+  {IR(43505, 14), 745}, // 236 FixedSinINTEL
+  {IR(43550, 16), 748}, // 237 FixedSinPiINTEL
+  {IR(43458, 15), 742}, // 238 FixedSqrtINTEL
+  {IR(33274, 17), 423}, // 239 FragmentFetchAMD
+  {IR(33253, 21), 422}, // 240 FragmentMaskFetchAMD
   {IR(24515, 9), 48}, // 241 Function
   {IR(26517, 13), 51}, // 242 FunctionCall
   {IR(26505, 12), 50}, // 243 FunctionEnd
   {IR(26487, 18), 49}, // 244 FunctionParameter
-  {IR(36962, 25), 565}, // 245 FunctionPointerCallINTEL
+  {IR(36987, 25), 566}, // 245 FunctionPointerCallINTEL
   {IR(28571, 7), 194}, // 246 Fwidth
   {IR(28629, 13), 200}, // 247 FwidthCoarse
   {IR(28596, 11), 197}, // 248 FwidthFine
@@ -4121,26 +4122,26 @@ static const std::array<NameIndex, 830> kInstructionNames{{
   {IR(29254, 9), 238}, // 267 GroupAll
   {IR(29263, 9), 239}, // 268 GroupAny
   {IR(29223, 15), 236}, // 269 GroupAsyncCopy
-  {IR(45238, 19), 807}, // 270 GroupBitwiseAndKHR
-  {IR(45257, 18), 808}, // 271 GroupBitwiseOrKHR
-  {IR(45275, 19), 809}, // 272 GroupBitwiseXorKHR
+  {IR(45263, 19), 808}, // 270 GroupBitwiseAndKHR
+  {IR(45282, 18), 809}, // 271 GroupBitwiseOrKHR
+  {IR(45300, 19), 810}, // 272 GroupBitwiseXorKHR
   {IR(29272, 15), 240}, // 273 GroupBroadcast
   {IR(29642, 20), 262}, // 274 GroupCommitReadPipe
   {IR(29662, 21), 263}, // 275 GroupCommitWritePipe
   {IR(26808, 14), 67}, // 276 GroupDecorate
   {IR(29330, 10), 242}, // 277 GroupFAdd
-  {IR(33067, 23), 414}, // 278 GroupFAddNonUniformAMD
+  {IR(33092, 23), 415}, // 278 GroupFAddNonUniformAMD
   {IR(29370, 10), 246}, // 279 GroupFMax
-  {IR(33159, 23), 418}, // 280 GroupFMaxNonUniformAMD
+  {IR(33184, 23), 419}, // 280 GroupFMaxNonUniformAMD
   {IR(29340, 10), 243}, // 281 GroupFMin
-  {IR(33090, 23), 415}, // 282 GroupFMinNonUniformAMD
-  {IR(45225, 13), 806}, // 283 GroupFMulKHR
+  {IR(33115, 23), 416}, // 282 GroupFMinNonUniformAMD
+  {IR(45250, 13), 807}, // 283 GroupFMulKHR
   {IR(29320, 10), 241}, // 284 GroupIAdd
-  {IR(33044, 23), 413}, // 285 GroupIAddNonUniformAMD
-  {IR(45212, 13), 805}, // 286 GroupIMulKHR
-  {IR(45294, 19), 810}, // 287 GroupLogicalAndKHR
-  {IR(45313, 18), 811}, // 288 GroupLogicalOrKHR
-  {IR(45331, 19), 812}, // 289 GroupLogicalXorKHR
+  {IR(33069, 23), 414}, // 285 GroupIAddNonUniformAMD
+  {IR(45237, 13), 806}, // 286 GroupIMulKHR
+  {IR(45319, 19), 811}, // 287 GroupLogicalAndKHR
+  {IR(45338, 18), 812}, // 288 GroupLogicalOrKHR
+  {IR(45356, 19), 813}, // 289 GroupLogicalXorKHR
   {IR(26867, 20), 68}, // 290 GroupMemberDecorate
   {IR(30623, 19), 307}, // 291 GroupNonUniformAll
   {IR(30661, 24), 309}, // 292 GroupNonUniformAllEqual
@@ -4166,9 +4167,9 @@ static const std::array<NameIndex, 830> kInstructionNames{{
   {IR(31244, 26), 335}, // 312 GroupNonUniformLogicalAnd
   {IR(31270, 25), 336}, // 313 GroupNonUniformLogicalOr
   {IR(31295, 26), 337}, // 314 GroupNonUniformLogicalXor
-  {IR(34654, 27), 476}, // 315 GroupNonUniformPartitionNV
-  {IR(33474, 26), 432}, // 316 GroupNonUniformQuadAllKHR
-  {IR(33500, 26), 433}, // 317 GroupNonUniformQuadAnyKHR
+  {IR(34679, 27), 477}, // 315 GroupNonUniformPartitionNV
+  {IR(33499, 26), 433}, // 316 GroupNonUniformQuadAllKHR
+  {IR(33525, 26), 434}, // 317 GroupNonUniformQuadAnyKHR
   {IR(31321, 29), 338}, // 318 GroupNonUniformQuadBroadcast
   {IR(31350, 24), 339}, // 319 GroupNonUniformQuadSwap
   {IR(13250, 25), 372}, // 320 GroupNonUniformRotateKHR
@@ -4183,73 +4184,73 @@ static const std::array<NameIndex, 830> kInstructionNames{{
   {IR(29585, 28), 260}, // 329 GroupReserveReadPipePackets
   {IR(29613, 29), 261}, // 330 GroupReserveWritePipePackets
   {IR(29390, 10), 248}, // 331 GroupSMax
-  {IR(33205, 23), 420}, // 332 GroupSMaxNonUniformAMD
+  {IR(33230, 23), 421}, // 332 GroupSMaxNonUniformAMD
   {IR(29360, 10), 245}, // 333 GroupSMin
-  {IR(33136, 23), 417}, // 334 GroupSMinNonUniformAMD
+  {IR(33161, 23), 418}, // 334 GroupSMinNonUniformAMD
   {IR(29380, 10), 247}, // 335 GroupUMax
-  {IR(33182, 23), 419}, // 336 GroupUMaxNonUniformAMD
+  {IR(33207, 23), 420}, // 336 GroupUMaxNonUniformAMD
   {IR(29350, 10), 244}, // 337 GroupUMin
-  {IR(33113, 23), 416}, // 338 GroupUMinNonUniformAMD
+  {IR(33138, 23), 417}, // 338 GroupUMinNonUniformAMD
   {IR(29238, 16), 237}, // 339 GroupWaitEvents
-  {IR(33961, 25), 449}, // 340 HitObjectExecuteShaderNV
-  {IR(34012, 25), 451}, // 341 HitObjectGetAttributesNV
-  {IR(35102, 24), 492}, // 342 HitObjectGetClusterIdNV
-  {IR(33986, 26), 450}, // 343 HitObjectGetCurrentTimeNV
-  {IR(34088, 28), 454}, // 344 HitObjectGetGeometryIndexNV
-  {IR(34037, 22), 452}, // 345 HitObjectGetHitKindNV
-  {IR(34141, 34), 456}, // 346 HitObjectGetInstanceCustomIndexNV
-  {IR(34116, 25), 455}, // 347 HitObjectGetInstanceIdNV
-  {IR(36329, 27), 534}, // 348 HitObjectGetLSSPositionsNV
-  {IR(36356, 23), 535}, // 349 HitObjectGetLSSRadiiNV
-  {IR(33673, 33), 439}, // 350 HitObjectGetObjectRayDirectionNV
-  {IR(33706, 30), 440}, // 351 HitObjectGetObjectRayOriginNV
-  {IR(33645, 28), 438}, // 352 HitObjectGetObjectToWorldNV
-  {IR(34059, 29), 453}, // 353 HitObjectGetPrimitiveIndexNV
-  {IR(34236, 22), 459}, // 354 HitObjectGetRayTMaxNV
-  {IR(34258, 22), 460}, // 355 HitObjectGetRayTMinNV
-  {IR(33801, 44), 443}, // 356 HitObjectGetShaderBindingTableRecordIndexNV
-  {IR(33762, 39), 442}, // 357 HitObjectGetShaderRecordBufferHandleNV
-  {IR(36273, 29), 532}, // 358 HitObjectGetSpherePositionNV
-  {IR(36302, 27), 533}, // 359 HitObjectGetSphereRadiusNV
-  {IR(34175, 32), 457}, // 360 HitObjectGetWorldRayDirectionNV
-  {IR(34207, 29), 458}, // 361 HitObjectGetWorldRayOriginNV
-  {IR(33617, 28), 437}, // 362 HitObjectGetWorldToObjectNV
-  {IR(34280, 19), 461}, // 363 HitObjectIsEmptyNV
-  {IR(34299, 17), 462}, // 364 HitObjectIsHitNV
-  {IR(36402, 20), 537}, // 365 HitObjectIsLSSHitNV
-  {IR(34316, 18), 463}, // 366 HitObjectIsMissNV
-  {IR(36379, 23), 536}, // 367 HitObjectIsSphereHitNV
-  {IR(33845, 23), 444}, // 368 HitObjectRecordEmptyNV
-  {IR(33526, 27), 434}, // 369 HitObjectRecordHitMotionNV
-  {IR(33888, 21), 446}, // 370 HitObjectRecordHitNV
-  {IR(33553, 36), 435}, // 371 HitObjectRecordHitWithIndexMotionNV
-  {IR(33909, 30), 447}, // 372 HitObjectRecordHitWithIndexNV
-  {IR(33589, 28), 436}, // 373 HitObjectRecordMissMotionNV
-  {IR(33939, 22), 448}, // 374 HitObjectRecordMissNV
-  {IR(33736, 26), 441}, // 375 HitObjectTraceRayMotionNV
-  {IR(33868, 20), 445}, // 376 HitObjectTraceRayNV
+  {IR(33986, 25), 450}, // 340 HitObjectExecuteShaderNV
+  {IR(34037, 25), 452}, // 341 HitObjectGetAttributesNV
+  {IR(35127, 24), 493}, // 342 HitObjectGetClusterIdNV
+  {IR(34011, 26), 451}, // 343 HitObjectGetCurrentTimeNV
+  {IR(34113, 28), 455}, // 344 HitObjectGetGeometryIndexNV
+  {IR(34062, 22), 453}, // 345 HitObjectGetHitKindNV
+  {IR(34166, 34), 457}, // 346 HitObjectGetInstanceCustomIndexNV
+  {IR(34141, 25), 456}, // 347 HitObjectGetInstanceIdNV
+  {IR(36354, 27), 535}, // 348 HitObjectGetLSSPositionsNV
+  {IR(36381, 23), 536}, // 349 HitObjectGetLSSRadiiNV
+  {IR(33698, 33), 440}, // 350 HitObjectGetObjectRayDirectionNV
+  {IR(33731, 30), 441}, // 351 HitObjectGetObjectRayOriginNV
+  {IR(33670, 28), 439}, // 352 HitObjectGetObjectToWorldNV
+  {IR(34084, 29), 454}, // 353 HitObjectGetPrimitiveIndexNV
+  {IR(34261, 22), 460}, // 354 HitObjectGetRayTMaxNV
+  {IR(34283, 22), 461}, // 355 HitObjectGetRayTMinNV
+  {IR(33826, 44), 444}, // 356 HitObjectGetShaderBindingTableRecordIndexNV
+  {IR(33787, 39), 443}, // 357 HitObjectGetShaderRecordBufferHandleNV
+  {IR(36298, 29), 533}, // 358 HitObjectGetSpherePositionNV
+  {IR(36327, 27), 534}, // 359 HitObjectGetSphereRadiusNV
+  {IR(34200, 32), 458}, // 360 HitObjectGetWorldRayDirectionNV
+  {IR(34232, 29), 459}, // 361 HitObjectGetWorldRayOriginNV
+  {IR(33642, 28), 438}, // 362 HitObjectGetWorldToObjectNV
+  {IR(34305, 19), 462}, // 363 HitObjectIsEmptyNV
+  {IR(34324, 17), 463}, // 364 HitObjectIsHitNV
+  {IR(36427, 20), 538}, // 365 HitObjectIsLSSHitNV
+  {IR(34341, 18), 464}, // 366 HitObjectIsMissNV
+  {IR(36404, 23), 537}, // 367 HitObjectIsSphereHitNV
+  {IR(33870, 23), 445}, // 368 HitObjectRecordEmptyNV
+  {IR(33551, 27), 435}, // 369 HitObjectRecordHitMotionNV
+  {IR(33913, 21), 447}, // 370 HitObjectRecordHitNV
+  {IR(33578, 36), 436}, // 371 HitObjectRecordHitWithIndexMotionNV
+  {IR(33934, 30), 448}, // 372 HitObjectRecordHitWithIndexNV
+  {IR(33614, 28), 437}, // 373 HitObjectRecordMissMotionNV
+  {IR(33964, 22), 449}, // 374 HitObjectRecordMissNV
+  {IR(33761, 26), 442}, // 375 HitObjectTraceRayMotionNV
+  {IR(33893, 20), 446}, // 376 HitObjectTraceRayNV
   {IR(27704, 5), 117}, // 377 IAdd
   {IR(27881, 10), 138}, // 378 IAddCarry
-  {IR(36781, 13), 554}, // 379 IAddSatINTEL
-  {IR(36807, 14), 556}, // 380 IAverageINTEL
-  {IR(36835, 21), 558}, // 381 IAverageRoundedINTEL
+  {IR(36806, 13), 555}, // 379 IAddSatINTEL
+  {IR(36832, 14), 557}, // 380 IAverageINTEL
+  {IR(36860, 21), 559}, // 381 IAverageRoundedINTEL
   {IR(28077, 7), 158}, // 382 IEqual
   {IR(27724, 5), 121}, // 383 IMul
-  {IR(36903, 15), 562}, // 384 IMul32x16INTEL
+  {IR(36928, 15), 563}, // 384 IMul32x16INTEL
   {IR(28084, 10), 159}, // 385 INotEqual
   {IR(27714, 5), 119}, // 386 ISub
   {IR(27891, 11), 139}, // 387 ISubBorrow
-  {IR(36877, 13), 560}, // 388 ISubSatINTEL
-  {IR(32090, 22), 378}, // 389 IgnoreIntersectionKHR
-  {IR(34879, 21), 483}, // 390 IgnoreIntersectionNV
+  {IR(36902, 13), 561}, // 388 ISubSatINTEL
+  {IR(32115, 22), 379}, // 389 IgnoreIntersectionKHR
+  {IR(34904, 21), 484}, // 390 IgnoreIntersectionNV
   {IR(24559, 6), 91}, // 391 Image
-  {IR(32937, 29), 409}, // 392 ImageBlockMatchGatherSADQCOM
-  {IR(32908, 29), 408}, // 393 ImageBlockMatchGatherSSDQCOM
-  {IR(32810, 23), 404}, // 394 ImageBlockMatchSADQCOM
-  {IR(32787, 23), 403}, // 395 ImageBlockMatchSSDQCOM
-  {IR(32879, 29), 407}, // 396 ImageBlockMatchWindowSADQCOM
-  {IR(32850, 29), 406}, // 397 ImageBlockMatchWindowSSDQCOM
-  {IR(32768, 19), 402}, // 398 ImageBoxFilterQCOM
+  {IR(32962, 29), 410}, // 392 ImageBlockMatchGatherSADQCOM
+  {IR(32933, 29), 409}, // 393 ImageBlockMatchGatherSSDQCOM
+  {IR(32835, 23), 405}, // 394 ImageBlockMatchSADQCOM
+  {IR(32812, 23), 404}, // 395 ImageBlockMatchSSDQCOM
+  {IR(32904, 29), 408}, // 396 ImageBlockMatchWindowSADQCOM
+  {IR(32875, 29), 407}, // 397 ImageBlockMatchWindowSSDQCOM
+  {IR(32793, 19), 403}, // 398 ImageBoxFilterQCOM
   {IR(27322, 16), 88}, // 399 ImageDrefGather
   {IR(27299, 11), 86}, // 400 ImageFetch
   {IR(27310, 12), 87}, // 401 ImageGather
@@ -4264,13 +4265,13 @@ static const std::array<NameIndex, 830> kInstructionNames{{
   {IR(27156, 27), 81}, // 410 ImageSampleDrefExplicitLod
   {IR(27129, 27), 80}, // 411 ImageSampleDrefImplicitLod
   {IR(27106, 23), 79}, // 412 ImageSampleExplicitLod
-  {IR(34403, 23), 467}, // 413 ImageSampleFootprintNV
+  {IR(34428, 23), 468}, // 413 ImageSampleFootprintNV
   {IR(27060, 23), 78}, // 414 ImageSampleImplicitLod
   {IR(27268, 31), 85}, // 415 ImageSampleProjDrefExplicitLod
   {IR(27237, 31), 84}, // 416 ImageSampleProjDrefImplicitLod
   {IR(27210, 27), 83}, // 417 ImageSampleProjExplicitLod
   {IR(27183, 27), 82}, // 418 ImageSampleProjImplicitLod
-  {IR(32744, 24), 401}, // 419 ImageSampleWeightedQCOM
+  {IR(32769, 24), 402}, // 419 ImageSampleWeightedQCOM
   {IR(30263, 22), 288}, // 420 ImageSparseDrefGather
   {IR(30228, 17), 286}, // 421 ImageSparseFetch
   {IR(30245, 18), 287}, // 422 ImageSparseGather
@@ -4289,10 +4290,10 @@ static const std::array<NameIndex, 830> kInstructionNames{{
   {IR(26647, 20), 59}, // 435 InBoundsAccessChain
   {IR(26717, 23), 63}, // 436 InBoundsPtrAccessChain
   {IR(27948, 9), 146}, // 437 IsFinite
-  {IR(35764, 22), 515}, // 438 IsHelperInvocationEXT
+  {IR(35789, 22), 516}, // 438 IsHelperInvocationEXT
   {IR(27942, 6), 145}, // 439 IsInf
   {IR(27936, 6), 144}, // 440 IsNan
-  {IR(33409, 23), 429}, // 441 IsNodePayloadValidAMDX
+  {IR(33434, 23), 430}, // 441 IsNodePayloadValidAMDX
   {IR(27957, 9), 147}, // 442 IsNormal
   {IR(29877, 13), 273}, // 443 IsValidEvent
   {IR(29532, 17), 257}, // 444 IsValidReserveId
@@ -4308,16 +4309,16 @@ static const std::array<NameIndex, 830> kInstructionNames{{
   {IR(28059, 11), 156}, // 454 LogicalNot
   {IR(28022, 16), 153}, // 455 LogicalNotEqual
   {IR(28038, 10), 154}, // 456 LogicalOr
-  {IR(43351, 17), 737}, // 457 LoopControlINTEL
+  {IR(43376, 17), 738}, // 457 LoopControlINTEL
   {IR(29017, 10), 224}, // 458 LoopMerge
-  {IR(45368, 18), 814}, // 459 MaskedGatherINTEL
-  {IR(45386, 19), 815}, // 460 MaskedScatterINTEL
+  {IR(45393, 18), 815}, // 459 MaskedGatherINTEL
+  {IR(45411, 19), 816}, // 460 MaskedScatterINTEL
   {IR(27846, 18), 135}, // 461 MatrixTimesMatrix
   {IR(27792, 18), 132}, // 462 MatrixTimesScalar
   {IR(27828, 18), 134}, // 463 MatrixTimesVector
   {IR(26777, 15), 65}, // 464 MemberDecorate
-  {IR(37103, 21), 574}, // 465 MemberDecorateString
-  {IR(37124, 27), 574}, // 466 MemberDecorateStringGOOGLE
+  {IR(37128, 21), 575}, // 465 MemberDecorateString
+  {IR(37149, 27), 575}, // 466 MemberDecorateStringGOOGLE
   {IR(25372, 11), 6}, // 467 MemberName
   {IR(28754, 14), 206}, // 468 MemoryBarrier
   {IR(25537, 12), 12}, // 469 MemoryModel
@@ -4326,75 +4327,75 @@ static const std::array<NameIndex, 830> kInstructionNames{{
   {IR(25367, 5), 5}, // 472 Name
   {IR(30517, 23), 301}, // 473 NamedBarrierInitialize
   {IR(30311, 7), 290}, // 474 NoLine
-  {IR(33382, 27), 428}, // 475 NodePayloadArrayLengthAMDX
+  {IR(33407, 27), 429}, // 475 NodePayloadArrayLengthAMDX
   {IR(25163, 4), 0}, // 476 Nop
   {IR(28488, 4), 186}, // 477 Not
   {IR(27991, 8), 150}, // 478 Ordered
   {IR(27864, 13), 136}, // 479 OuterProduct
   {IR(28983, 4), 223}, // 480 Phi
   {IR(26667, 15), 60}, // 481 PtrAccessChain
-  {IR(43604, 29), 752}, // 482 PtrCastToCrossWorkgroupINTEL
+  {IR(43629, 29), 753}, // 482 PtrCastToCrossWorkgroupINTEL
   {IR(27621, 17), 111}, // 483 PtrCastToGeneric
   {IR(31407, 8), 343}, // 484 PtrDiff
   {IR(31386, 9), 341}, // 485 PtrEqual
   {IR(31395, 12), 342}, // 486 PtrNotEqual
   {IR(27549, 14), 106}, // 487 QuantizeToF16
-  {IR(36069, 17), 526}, // 488 RawAccessChainNV
-  {IR(32663, 31), 398}, // 489 RayQueryConfirmIntersectionKHR
-  {IR(32631, 32), 397}, // 490 RayQueryGenerateIntersectionKHR
-  {IR(35079, 23), 491}, // 491 RayQueryGetClusterIdNV
-  {IR(44009, 39), 765}, // 492 RayQueryGetIntersectionBarycentricsKHR
-  {IR(44084, 46), 767}, // 493 RayQueryGetIntersectionCandidateAABBOpaqueKHR
-  {IR(44048, 36), 766}, // 494 RayQueryGetIntersectionFrontFaceKHR
-  {IR(43928, 40), 763}, // 495 RayQueryGetIntersectionGeometryIndexKHR
-  {IR(43780, 46), 760}, // 496 RayQueryGetIntersectionInstanceCustomIndexKHR
-  {IR(43826, 37), 761}, // 497 RayQueryGetIntersectionInstanceIdKHR
-  {IR(43863, 65), 762}, // 498 RayQueryGetIntersectionInstanceShaderBindingTableRecordOffsetKHR
-  {IR(36236, 37), 531}, // 499 RayQueryGetIntersectionLSSHitValueNV
-  {IR(36164, 38), 529}, // 500 RayQueryGetIntersectionLSSPositionsNV
-  {IR(36202, 34), 530}, // 501 RayQueryGetIntersectionLSSRadiiNV
-  {IR(44130, 45), 768}, // 502 RayQueryGetIntersectionObjectRayDirectionKHR
-  {IR(44175, 42), 769}, // 503 RayQueryGetIntersectionObjectRayOriginKHR
-  {IR(44278, 40), 772}, // 504 RayQueryGetIntersectionObjectToWorldKHR
-  {IR(43968, 41), 764}, // 505 RayQueryGetIntersectionPrimitiveIndexKHR
-  {IR(36086, 40), 527}, // 506 RayQueryGetIntersectionSpherePositionNV
-  {IR(36126, 38), 528}, // 507 RayQueryGetIntersectionSphereRadiusNV
-  {IR(43752, 28), 759}, // 508 RayQueryGetIntersectionTKHR
-  {IR(34954, 50), 488}, // 509 RayQueryGetIntersectionTriangleVertexPositionsKHR
-  {IR(32713, 31), 400}, // 510 RayQueryGetIntersectionTypeKHR
-  {IR(44318, 40), 773}, // 511 RayQueryGetIntersectionWorldToObjectKHR
-  {IR(43729, 23), 758}, // 512 RayQueryGetRayFlagsKHR
-  {IR(43707, 22), 757}, // 513 RayQueryGetRayTMinKHR
-  {IR(44217, 32), 770}, // 514 RayQueryGetWorldRayDirectionKHR
-  {IR(44249, 29), 771}, // 515 RayQueryGetWorldRayOriginKHR
-  {IR(32588, 22), 395}, // 516 RayQueryInitializeKHR
-  {IR(36444, 19), 539}, // 517 RayQueryIsLSSHitNV
-  {IR(36422, 22), 538}, // 518 RayQueryIsSphereHitNV
-  {IR(32694, 19), 399}, // 519 RayQueryProceedKHR
-  {IR(32610, 21), 396}, // 520 RayQueryTerminateKHR
-  {IR(33266, 13), 423}, // 521 ReadClockKHR
+  {IR(36094, 17), 527}, // 488 RawAccessChainNV
+  {IR(32688, 31), 399}, // 489 RayQueryConfirmIntersectionKHR
+  {IR(32656, 32), 398}, // 490 RayQueryGenerateIntersectionKHR
+  {IR(35104, 23), 492}, // 491 RayQueryGetClusterIdNV
+  {IR(44034, 39), 766}, // 492 RayQueryGetIntersectionBarycentricsKHR
+  {IR(44109, 46), 768}, // 493 RayQueryGetIntersectionCandidateAABBOpaqueKHR
+  {IR(44073, 36), 767}, // 494 RayQueryGetIntersectionFrontFaceKHR
+  {IR(43953, 40), 764}, // 495 RayQueryGetIntersectionGeometryIndexKHR
+  {IR(43805, 46), 761}, // 496 RayQueryGetIntersectionInstanceCustomIndexKHR
+  {IR(43851, 37), 762}, // 497 RayQueryGetIntersectionInstanceIdKHR
+  {IR(43888, 65), 763}, // 498 RayQueryGetIntersectionInstanceShaderBindingTableRecordOffsetKHR
+  {IR(36261, 37), 532}, // 499 RayQueryGetIntersectionLSSHitValueNV
+  {IR(36189, 38), 530}, // 500 RayQueryGetIntersectionLSSPositionsNV
+  {IR(36227, 34), 531}, // 501 RayQueryGetIntersectionLSSRadiiNV
+  {IR(44155, 45), 769}, // 502 RayQueryGetIntersectionObjectRayDirectionKHR
+  {IR(44200, 42), 770}, // 503 RayQueryGetIntersectionObjectRayOriginKHR
+  {IR(44303, 40), 773}, // 504 RayQueryGetIntersectionObjectToWorldKHR
+  {IR(43993, 41), 765}, // 505 RayQueryGetIntersectionPrimitiveIndexKHR
+  {IR(36111, 40), 528}, // 506 RayQueryGetIntersectionSpherePositionNV
+  {IR(36151, 38), 529}, // 507 RayQueryGetIntersectionSphereRadiusNV
+  {IR(43777, 28), 760}, // 508 RayQueryGetIntersectionTKHR
+  {IR(34979, 50), 489}, // 509 RayQueryGetIntersectionTriangleVertexPositionsKHR
+  {IR(32738, 31), 401}, // 510 RayQueryGetIntersectionTypeKHR
+  {IR(44343, 40), 774}, // 511 RayQueryGetIntersectionWorldToObjectKHR
+  {IR(43754, 23), 759}, // 512 RayQueryGetRayFlagsKHR
+  {IR(43732, 22), 758}, // 513 RayQueryGetRayTMinKHR
+  {IR(44242, 32), 771}, // 514 RayQueryGetWorldRayDirectionKHR
+  {IR(44274, 29), 772}, // 515 RayQueryGetWorldRayOriginKHR
+  {IR(32613, 22), 396}, // 516 RayQueryInitializeKHR
+  {IR(36469, 19), 540}, // 517 RayQueryIsLSSHitNV
+  {IR(36447, 22), 539}, // 518 RayQueryIsSphereHitNV
+  {IR(32719, 19), 400}, // 519 RayQueryProceedKHR
+  {IR(32635, 21), 397}, // 520 RayQueryTerminateKHR
+  {IR(33291, 13), 424}, // 521 ReadClockKHR
   {IR(29400, 9), 249}, // 522 ReadPipe
-  {IR(43662, 22), 754}, // 523 ReadPipeBlockingINTEL
+  {IR(43687, 22), 755}, // 523 ReadPipeBlockingINTEL
   {IR(29848, 13), 271}, // 524 ReleaseEvent
-  {IR(34363, 24), 465}, // 525 ReorderThreadWithHintNV
-  {IR(34334, 29), 464}, // 526 ReorderThreadWithHitObjectNV
-  {IR(34836, 22), 482}, // 527 ReportIntersectionKHR
-  {IR(34858, 21), 482}, // 528 ReportIntersectionNV
+  {IR(34388, 24), 466}, // 525 ReorderThreadWithHintNV
+  {IR(34359, 29), 465}, // 526 ReorderThreadWithHitObjectNV
+  {IR(34861, 22), 483}, // 527 ReportIntersectionKHR
+  {IR(34883, 21), 483}, // 528 ReportIntersectionNV
   {IR(29454, 23), 253}, // 529 ReserveReadPipePackets
   {IR(29477, 24), 254}, // 530 ReserveWritePipePackets
   {IR(29419, 17), 251}, // 531 ReservedReadPipe
   {IR(29436, 18), 252}, // 532 ReservedWritePipe
-  {IR(42333, 19), 695}, // 533 RestoreMemoryINTEL
+  {IR(42358, 19), 696}, // 533 RestoreMemoryINTEL
   {IR(29836, 12), 270}, // 534 RetainEvent
   {IR(29165, 7), 231}, // 535 Return
   {IR(29172, 12), 232}, // 536 ReturnValue
-  {IR(45350, 18), 813}, // 537 RoundFToTF32INTEL
+  {IR(45375, 18), 814}, // 537 RoundFToTF32INTEL
   {IR(27531, 9), 104}, // 538 SConvert
   {IR(27739, 5), 124}, // 539 SDiv
-  {IR(32175, 5), 380}, // 540 SDot
-  {IR(32216, 11), 383}, // 541 SDotAccSat
-  {IR(32227, 14), 383}, // 542 SDotAccSatKHR
-  {IR(32180, 8), 380}, // 543 SDotKHR
+  {IR(32200, 5), 381}, // 540 SDot
+  {IR(32241, 11), 384}, // 541 SDotAccSat
+  {IR(32252, 14), 384}, // 542 SDotAccSatKHR
+  {IR(32205, 8), 381}, // 543 SDotKHR
   {IR(28107, 13), 161}, // 544 SGreaterThan
   {IR(28138, 18), 163}, // 545 SGreaterThanEqual
   {IR(28166, 10), 165}, // 546 SLessThan
@@ -4403,18 +4404,18 @@ static const std::array<NameIndex, 830> kInstructionNames{{
   {IR(27915, 13), 141}, // 549 SMulExtended
   {IR(27688, 8), 115}, // 550 SNegate
   {IR(27754, 5), 127}, // 551 SRem
-  {IR(32201, 6), 382}, // 552 SUDot
-  {IR(32266, 12), 385}, // 553 SUDotAccSat
-  {IR(32278, 15), 385}, // 554 SUDotAccSatKHR
-  {IR(32207, 9), 382}, // 555 SUDotKHR
+  {IR(32226, 6), 383}, // 552 SUDot
+  {IR(32291, 12), 386}, // 553 SUDotAccSat
+  {IR(32303, 15), 386}, // 554 SUDotAccSatKHR
+  {IR(32232, 9), 383}, // 555 SUDotKHR
   {IR(27015, 13), 77}, // 556 SampledImage
-  {IR(35988, 29), 525}, // 557 SamplerImageAddressingModeNV
+  {IR(36013, 29), 526}, // 557 SamplerImageAddressingModeNV
   {IR(27577, 15), 108}, // 558 SatConvertSToU
   {IR(27592, 15), 109}, // 559 SatConvertUToS
-  {IR(42317, 16), 694}, // 560 SaveMemoryINTEL
+  {IR(42342, 16), 695}, // 560 SaveMemoryINTEL
   {IR(28070, 7), 157}, // 561 Select
   {IR(29062, 15), 225}, // 562 SelectionMerge
-  {IR(34636, 18), 475}, // 563 SetMeshOutputsEXT
+  {IR(34661, 18), 476}, // 563 SetMeshOutputsEXT
   {IR(29890, 19), 274}, // 564 SetUserEventStatus
   {IR(28439, 17), 182}, // 565 ShiftLeftLogical
   {IR(28418, 21), 181}, // 566 ShiftRightArithmetic
@@ -4425,262 +4426,263 @@ static const std::array<NameIndex, 830> kInstructionNames{{
   {IR(25225, 16), 2}, // 571 SourceContinued
   {IR(25351, 16), 4}, // 572 SourceExtension
   {IR(26362, 13), 45}, // 573 SpecConstant
-  {IR(45088, 30), 802}, // 574 SpecConstantArchitectureINTEL
-  {IR(45155, 30), 803}, // 575 SpecConstantCapabilitiesINTEL
+  {IR(45113, 30), 803}, // 574 SpecConstantArchitectureINTEL
+  {IR(45180, 30), 804}, // 575 SpecConstantCapabilitiesINTEL
   {IR(26375, 22), 46}, // 576 SpecConstantComposite
-  {IR(44452, 36), 778}, // 577 SpecConstantCompositeContinuedINTEL
-  {IR(32507, 34), 392}, // 578 SpecConstantCompositeReplicateEXT
+  {IR(44477, 36), 779}, // 577 SpecConstantCompositeContinuedINTEL
+  {IR(32532, 34), 393}, // 578 SpecConstantCompositeReplicateEXT
   {IR(26344, 18), 44}, // 579 SpecConstantFalse
   {IR(26438, 15), 47}, // 580 SpecConstantOp
-  {IR(33451, 23), 431}, // 581 SpecConstantStringAMDX
-  {IR(45064, 24), 801}, // 582 SpecConstantTargetINTEL
+  {IR(33476, 23), 432}, // 581 SpecConstantStringAMDX
+  {IR(45089, 24), 802}, // 582 SpecConstantTargetINTEL
   {IR(26327, 17), 43}, // 583 SpecConstantTrue
   {IR(31461, 25), 346}, // 584 StencilAttachmentReadEXT
   {IR(26602, 6), 55}, // 585 Store
   {IR(25383, 7), 7}, // 586 String
-  {IR(44753, 25), 791}, // 587 Subgroup2DBlockLoadINTEL
-  {IR(44778, 34), 792}, // 588 Subgroup2DBlockLoadTransformINTEL
-  {IR(44812, 34), 793}, // 589 Subgroup2DBlockLoadTransposeINTEL
-  {IR(44846, 29), 794}, // 590 Subgroup2DBlockPrefetchINTEL
-  {IR(44875, 26), 795}, // 591 Subgroup2DBlockStoreINTEL
+  {IR(44778, 25), 792}, // 587 Subgroup2DBlockLoadINTEL
+  {IR(44803, 34), 793}, // 588 Subgroup2DBlockLoadTransformINTEL
+  {IR(44837, 34), 794}, // 589 Subgroup2DBlockLoadTransposeINTEL
+  {IR(44871, 29), 795}, // 590 Subgroup2DBlockPrefetchINTEL
+  {IR(44900, 26), 796}, // 591 Subgroup2DBlockStoreINTEL
   {IR(31952, 20), 371}, // 592 SubgroupAllEqualKHR
   {IR(31922, 15), 369}, // 593 SubgroupAllKHR
   {IR(31937, 15), 370}, // 594 SubgroupAnyKHR
-  {IR(40835, 30), 658}, // 595 SubgroupAvcBmeInitializeINTEL
-  {IR(40805, 30), 657}, // 596 SubgroupAvcFmeInitializeINTEL
-  {IR(39240, 35), 627}, // 597 SubgroupAvcImeAdjustRefOffsetINTEL
-  {IR(39275, 39), 628}, // 598 SubgroupAvcImeConvertToMcePayloadINTEL
-  {IR(39916, 38), 641}, // 599 SubgroupAvcImeConvertToMceResultINTEL
-  {IR(39539, 45), 634}, // 600 SubgroupAvcImeEvaluateWithDualReferenceINTEL
-  {IR(39639, 53), 636}, // 601 SubgroupAvcImeEvaluateWithDualReferenceStreaminINTEL
-  {IR(39860, 56), 640}, // 602 SubgroupAvcImeEvaluateWithDualReferenceStreaminoutINTEL
-  {IR(39748, 54), 638}, // 603 SubgroupAvcImeEvaluateWithDualReferenceStreamoutINTEL
-  {IR(39492, 47), 633}, // 604 SubgroupAvcImeEvaluateWithSingleReferenceINTEL
-  {IR(39584, 55), 635}, // 605 SubgroupAvcImeEvaluateWithSingleReferenceStreaminINTEL
-  {IR(39802, 58), 639}, // 606 SubgroupAvcImeEvaluateWithSingleReferenceStreaminoutINTEL
-  {IR(39692, 56), 637}, // 607 SubgroupAvcImeEvaluateWithSingleReferenceStreamoutINTEL
-  {IR(40548, 36), 652}, // 608 SubgroupAvcImeGetBorderReachedINTEL
-  {IR(40000, 44), 643}, // 609 SubgroupAvcImeGetDualReferenceStreaminINTEL
-  {IR(39954, 46), 642}, // 610 SubgroupAvcImeGetSingleReferenceStreaminINTEL
-  {IR(40415, 66), 650}, // 611 SubgroupAvcImeGetStreamoutDualReferenceMajorShapeDistortionsINTEL
-  {IR(40347, 68), 649}, // 612 SubgroupAvcImeGetStreamoutDualReferenceMajorShapeMotionVectorsINTEL
-  {IR(40481, 67), 651}, // 613 SubgroupAvcImeGetStreamoutDualReferenceMajorShapeReferenceIdsINTEL
-  {IR(40210, 68), 647}, // 614 SubgroupAvcImeGetStreamoutSingleReferenceMajorShapeDistortionsINTEL
-  {IR(40140, 70), 646}, // 615 SubgroupAvcImeGetStreamoutSingleReferenceMajorShapeMotionVectorsINTEL
-  {IR(40278, 69), 648}, // 616 SubgroupAvcImeGetStreamoutSingleReferenceMajorShapeReferenceIdsINTEL
-  {IR(40584, 48), 653}, // 617 SubgroupAvcImeGetTruncatedSearchIndicationINTEL
-  {IR(40632, 59), 654}, // 618 SubgroupAvcImeGetUnidirectionalEarlySearchTerminationINTEL
-  {IR(40749, 56), 656}, // 619 SubgroupAvcImeGetWeightingPatternMinimumDistortionINTEL
-  {IR(40691, 58), 655}, // 620 SubgroupAvcImeGetWeightingPatternMinimumMotionVectorINTEL
-  {IR(39103, 30), 623}, // 621 SubgroupAvcImeInitializeINTEL
-  {IR(39207, 33), 626}, // 622 SubgroupAvcImeRefWindowSizeINTEL
-  {IR(39171, 36), 625}, // 623 SubgroupAvcImeSetDualReferenceINTEL
-  {IR(39404, 54), 631}, // 624 SubgroupAvcImeSetEarlySearchTerminationThresholdINTEL
-  {IR(39314, 43), 629}, // 625 SubgroupAvcImeSetMaxMotionVectorCountINTEL
-  {IR(39133, 38), 624}, // 626 SubgroupAvcImeSetSingleReferenceINTEL
-  {IR(39357, 47), 630}, // 627 SubgroupAvcImeSetUnidirectionalMixDisableINTEL
-  {IR(39458, 34), 632}, // 628 SubgroupAvcImeSetWeightedSadINTEL
-  {IR(40093, 47), 645}, // 629 SubgroupAvcImeStripDualReferenceStreamoutINTEL
-  {IR(40044, 49), 644}, // 630 SubgroupAvcImeStripSingleReferenceStreamoutINTEL
-  {IR(38493, 39), 608}, // 631 SubgroupAvcMceConvertToImePayloadINTEL
-  {IR(38532, 38), 609}, // 632 SubgroupAvcMceConvertToImeResultINTEL
-  {IR(38570, 39), 610}, // 633 SubgroupAvcMceConvertToRefPayloadINTEL
-  {IR(38609, 38), 611}, // 634 SubgroupAvcMceConvertToRefResultINTEL
-  {IR(38647, 39), 612}, // 635 SubgroupAvcMceConvertToSicPayloadINTEL
-  {IR(38686, 38), 613}, // 636 SubgroupAvcMceConvertToSicResultINTEL
-  {IR(38799, 43), 616}, // 637 SubgroupAvcMceGetBestInterDistortionsINTEL
-  {IR(37931, 50), 597}, // 638 SubgroupAvcMceGetDefaultHighPenaltyCostTableINTEL
-  {IR(37529, 60), 589}, // 639 SubgroupAvcMceGetDefaultInterBaseMultiReferencePenaltyINTEL
-  {IR(37729, 51), 593}, // 640 SubgroupAvcMceGetDefaultInterDirectionPenaltyINTEL
-  {IR(37875, 56), 596}, // 641 SubgroupAvcMceGetDefaultInterMotionVectorCostTableINTEL
-  {IR(37642, 47), 591}, // 642 SubgroupAvcMceGetDefaultInterShapePenaltyINTEL
-  {IR(38230, 56), 603}, // 643 SubgroupAvcMceGetDefaultIntraChromaModeBasePenaltyINTEL
-  {IR(38129, 50), 601}, // 644 SubgroupAvcMceGetDefaultIntraLumaModePenaltyINTEL
-  {IR(37824, 51), 595}, // 645 SubgroupAvcMceGetDefaultIntraLumaShapePenaltyINTEL
-  {IR(38033, 49), 599}, // 646 SubgroupAvcMceGetDefaultLowPenaltyCostTableINTEL
-  {IR(37981, 52), 598}, // 647 SubgroupAvcMceGetDefaultMediumPenaltyCostTableINTEL
-  {IR(38179, 51), 602}, // 648 SubgroupAvcMceGetDefaultNonDcLumaIntraPenaltyINTEL
-  {IR(38918, 38), 619}, // 649 SubgroupAvcMceGetInterDirectionsINTEL
-  {IR(38760, 39), 615}, // 650 SubgroupAvcMceGetInterDistortionsINTEL
-  {IR(38842, 38), 617}, // 651 SubgroupAvcMceGetInterMajorShapeINTEL
-  {IR(38880, 38), 618}, // 652 SubgroupAvcMceGetInterMinorShapeINTEL
-  {IR(38956, 45), 620}, // 653 SubgroupAvcMceGetInterMotionVectorCountINTEL
-  {IR(39001, 40), 621}, // 654 SubgroupAvcMceGetInterReferenceIdsINTEL
-  {IR(39041, 62), 622}, // 655 SubgroupAvcMceGetInterReferenceInterlacedFieldPolaritiesINTEL
-  {IR(38724, 36), 614}, // 656 SubgroupAvcMceGetMotionVectorsINTEL
-  {IR(38286, 33), 604}, // 657 SubgroupAvcMceSetAcOnlyHaarINTEL
-  {IR(38432, 61), 607}, // 658 SubgroupAvcMceSetDualReferenceInterlacedFieldPolaritiesINTEL
-  {IR(37589, 53), 590}, // 659 SubgroupAvcMceSetInterBaseMultiReferencePenaltyINTEL
-  {IR(37780, 44), 594}, // 660 SubgroupAvcMceSetInterDirectionPenaltyINTEL
-  {IR(37689, 40), 592}, // 661 SubgroupAvcMceSetInterShapePenaltyINTEL
-  {IR(38082, 47), 600}, // 662 SubgroupAvcMceSetMotionVectorCostFunctionINTEL
-  {IR(38371, 61), 606}, // 663 SubgroupAvcMceSetSingleReferenceInterlacedFieldPolarityINTEL
-  {IR(38319, 52), 605}, // 664 SubgroupAvcMceSetSourceInterlacedFieldPolarityINTEL
-  {IR(40865, 39), 659}, // 665 SubgroupAvcRefConvertToMcePayloadINTEL
-  {IR(41187, 38), 666}, // 666 SubgroupAvcRefConvertToMceResultINTEL
-  {IR(41040, 45), 663}, // 667 SubgroupAvcRefEvaluateWithDualReferenceINTEL
-  {IR(41085, 46), 664}, // 668 SubgroupAvcRefEvaluateWithMultiReferenceINTEL
-  {IR(41131, 56), 665}, // 669 SubgroupAvcRefEvaluateWithMultiReferenceInterlacedINTEL
-  {IR(40993, 47), 662}, // 670 SubgroupAvcRefEvaluateWithSingleReferenceINTEL
-  {IR(40904, 46), 660}, // 671 SubgroupAvcRefSetBidirectionalMixDisableINTEL
-  {IR(40950, 43), 661}, // 672 SubgroupAvcRefSetBilinearFilterEnableINTEL
-  {IR(41323, 42), 670}, // 673 SubgroupAvcSicConfigureIpeLumaChromaINTEL
-  {IR(41287, 36), 669}, // 674 SubgroupAvcSicConfigureIpeLumaINTEL
-  {IR(41255, 32), 668}, // 675 SubgroupAvcSicConfigureSkcINTEL
-  {IR(41404, 39), 672}, // 676 SubgroupAvcSicConvertToMcePayloadINTEL
-  {IR(41944, 38), 684}, // 677 SubgroupAvcSicConvertToMceResultINTEL
-  {IR(41719, 31), 679}, // 678 SubgroupAvcSicEvaluateIpeINTEL
-  {IR(41797, 45), 681}, // 679 SubgroupAvcSicEvaluateWithDualReferenceINTEL
-  {IR(41842, 46), 682}, // 680 SubgroupAvcSicEvaluateWithMultiReferenceINTEL
-  {IR(41888, 56), 683}, // 681 SubgroupAvcSicEvaluateWithMultiReferenceInterlacedINTEL
-  {IR(41750, 47), 680}, // 682 SubgroupAvcSicEvaluateWithSingleReferenceINTEL
-  {IR(42061, 46), 687}, // 683 SubgroupAvcSicGetBestIpeChromaDistortionINTEL
-  {IR(42017, 44), 686}, // 684 SubgroupAvcSicGetBestIpeLumaDistortionINTEL
-  {IR(42282, 35), 692}, // 685 SubgroupAvcSicGetInterRawSadsINTEL
-  {IR(42148, 36), 689}, // 686 SubgroupAvcSicGetIpeChromaModeINTEL
-  {IR(41982, 35), 685}, // 687 SubgroupAvcSicGetIpeLumaShapeINTEL
-  {IR(41365, 39), 671}, // 688 SubgroupAvcSicGetMotionVectorMaskINTEL
-  {IR(42107, 41), 688}, // 689 SubgroupAvcSicGetPackedIpeLumaModesINTEL
-  {IR(42184, 50), 690}, // 690 SubgroupAvcSicGetPackedSkcLumaCountThresholdINTEL
-  {IR(42234, 48), 691}, // 691 SubgroupAvcSicGetPackedSkcLumaSumThresholdINTEL
-  {IR(41225, 30), 667}, // 692 SubgroupAvcSicInitializeINTEL
-  {IR(41585, 43), 676}, // 693 SubgroupAvcSicSetBilinearFilterEnableINTEL
-  {IR(41676, 43), 678}, // 694 SubgroupAvcSicSetBlockBasedRawSkipSadINTEL
-  {IR(41535, 50), 675}, // 695 SubgroupAvcSicSetIntraChromaModeCostFunctionINTEL
-  {IR(41487, 48), 674}, // 696 SubgroupAvcSicSetIntraLumaModeCostFunctionINTEL
-  {IR(41443, 44), 673}, // 697 SubgroupAvcSicSetIntraLumaShapePenaltyINTEL
-  {IR(41628, 48), 677}, // 698 SubgroupAvcSicSetSkcForwardTransformEnableINTEL
+  {IR(40860, 30), 659}, // 595 SubgroupAvcBmeInitializeINTEL
+  {IR(40830, 30), 658}, // 596 SubgroupAvcFmeInitializeINTEL
+  {IR(39265, 35), 628}, // 597 SubgroupAvcImeAdjustRefOffsetINTEL
+  {IR(39300, 39), 629}, // 598 SubgroupAvcImeConvertToMcePayloadINTEL
+  {IR(39941, 38), 642}, // 599 SubgroupAvcImeConvertToMceResultINTEL
+  {IR(39564, 45), 635}, // 600 SubgroupAvcImeEvaluateWithDualReferenceINTEL
+  {IR(39664, 53), 637}, // 601 SubgroupAvcImeEvaluateWithDualReferenceStreaminINTEL
+  {IR(39885, 56), 641}, // 602 SubgroupAvcImeEvaluateWithDualReferenceStreaminoutINTEL
+  {IR(39773, 54), 639}, // 603 SubgroupAvcImeEvaluateWithDualReferenceStreamoutINTEL
+  {IR(39517, 47), 634}, // 604 SubgroupAvcImeEvaluateWithSingleReferenceINTEL
+  {IR(39609, 55), 636}, // 605 SubgroupAvcImeEvaluateWithSingleReferenceStreaminINTEL
+  {IR(39827, 58), 640}, // 606 SubgroupAvcImeEvaluateWithSingleReferenceStreaminoutINTEL
+  {IR(39717, 56), 638}, // 607 SubgroupAvcImeEvaluateWithSingleReferenceStreamoutINTEL
+  {IR(40573, 36), 653}, // 608 SubgroupAvcImeGetBorderReachedINTEL
+  {IR(40025, 44), 644}, // 609 SubgroupAvcImeGetDualReferenceStreaminINTEL
+  {IR(39979, 46), 643}, // 610 SubgroupAvcImeGetSingleReferenceStreaminINTEL
+  {IR(40440, 66), 651}, // 611 SubgroupAvcImeGetStreamoutDualReferenceMajorShapeDistortionsINTEL
+  {IR(40372, 68), 650}, // 612 SubgroupAvcImeGetStreamoutDualReferenceMajorShapeMotionVectorsINTEL
+  {IR(40506, 67), 652}, // 613 SubgroupAvcImeGetStreamoutDualReferenceMajorShapeReferenceIdsINTEL
+  {IR(40235, 68), 648}, // 614 SubgroupAvcImeGetStreamoutSingleReferenceMajorShapeDistortionsINTEL
+  {IR(40165, 70), 647}, // 615 SubgroupAvcImeGetStreamoutSingleReferenceMajorShapeMotionVectorsINTEL
+  {IR(40303, 69), 649}, // 616 SubgroupAvcImeGetStreamoutSingleReferenceMajorShapeReferenceIdsINTEL
+  {IR(40609, 48), 654}, // 617 SubgroupAvcImeGetTruncatedSearchIndicationINTEL
+  {IR(40657, 59), 655}, // 618 SubgroupAvcImeGetUnidirectionalEarlySearchTerminationINTEL
+  {IR(40774, 56), 657}, // 619 SubgroupAvcImeGetWeightingPatternMinimumDistortionINTEL
+  {IR(40716, 58), 656}, // 620 SubgroupAvcImeGetWeightingPatternMinimumMotionVectorINTEL
+  {IR(39128, 30), 624}, // 621 SubgroupAvcImeInitializeINTEL
+  {IR(39232, 33), 627}, // 622 SubgroupAvcImeRefWindowSizeINTEL
+  {IR(39196, 36), 626}, // 623 SubgroupAvcImeSetDualReferenceINTEL
+  {IR(39429, 54), 632}, // 624 SubgroupAvcImeSetEarlySearchTerminationThresholdINTEL
+  {IR(39339, 43), 630}, // 625 SubgroupAvcImeSetMaxMotionVectorCountINTEL
+  {IR(39158, 38), 625}, // 626 SubgroupAvcImeSetSingleReferenceINTEL
+  {IR(39382, 47), 631}, // 627 SubgroupAvcImeSetUnidirectionalMixDisableINTEL
+  {IR(39483, 34), 633}, // 628 SubgroupAvcImeSetWeightedSadINTEL
+  {IR(40118, 47), 646}, // 629 SubgroupAvcImeStripDualReferenceStreamoutINTEL
+  {IR(40069, 49), 645}, // 630 SubgroupAvcImeStripSingleReferenceStreamoutINTEL
+  {IR(38518, 39), 609}, // 631 SubgroupAvcMceConvertToImePayloadINTEL
+  {IR(38557, 38), 610}, // 632 SubgroupAvcMceConvertToImeResultINTEL
+  {IR(38595, 39), 611}, // 633 SubgroupAvcMceConvertToRefPayloadINTEL
+  {IR(38634, 38), 612}, // 634 SubgroupAvcMceConvertToRefResultINTEL
+  {IR(38672, 39), 613}, // 635 SubgroupAvcMceConvertToSicPayloadINTEL
+  {IR(38711, 38), 614}, // 636 SubgroupAvcMceConvertToSicResultINTEL
+  {IR(38824, 43), 617}, // 637 SubgroupAvcMceGetBestInterDistortionsINTEL
+  {IR(37956, 50), 598}, // 638 SubgroupAvcMceGetDefaultHighPenaltyCostTableINTEL
+  {IR(37554, 60), 590}, // 639 SubgroupAvcMceGetDefaultInterBaseMultiReferencePenaltyINTEL
+  {IR(37754, 51), 594}, // 640 SubgroupAvcMceGetDefaultInterDirectionPenaltyINTEL
+  {IR(37900, 56), 597}, // 641 SubgroupAvcMceGetDefaultInterMotionVectorCostTableINTEL
+  {IR(37667, 47), 592}, // 642 SubgroupAvcMceGetDefaultInterShapePenaltyINTEL
+  {IR(38255, 56), 604}, // 643 SubgroupAvcMceGetDefaultIntraChromaModeBasePenaltyINTEL
+  {IR(38154, 50), 602}, // 644 SubgroupAvcMceGetDefaultIntraLumaModePenaltyINTEL
+  {IR(37849, 51), 596}, // 645 SubgroupAvcMceGetDefaultIntraLumaShapePenaltyINTEL
+  {IR(38058, 49), 600}, // 646 SubgroupAvcMceGetDefaultLowPenaltyCostTableINTEL
+  {IR(38006, 52), 599}, // 647 SubgroupAvcMceGetDefaultMediumPenaltyCostTableINTEL
+  {IR(38204, 51), 603}, // 648 SubgroupAvcMceGetDefaultNonDcLumaIntraPenaltyINTEL
+  {IR(38943, 38), 620}, // 649 SubgroupAvcMceGetInterDirectionsINTEL
+  {IR(38785, 39), 616}, // 650 SubgroupAvcMceGetInterDistortionsINTEL
+  {IR(38867, 38), 618}, // 651 SubgroupAvcMceGetInterMajorShapeINTEL
+  {IR(38905, 38), 619}, // 652 SubgroupAvcMceGetInterMinorShapeINTEL
+  {IR(38981, 45), 621}, // 653 SubgroupAvcMceGetInterMotionVectorCountINTEL
+  {IR(39026, 40), 622}, // 654 SubgroupAvcMceGetInterReferenceIdsINTEL
+  {IR(39066, 62), 623}, // 655 SubgroupAvcMceGetInterReferenceInterlacedFieldPolaritiesINTEL
+  {IR(38749, 36), 615}, // 656 SubgroupAvcMceGetMotionVectorsINTEL
+  {IR(38311, 33), 605}, // 657 SubgroupAvcMceSetAcOnlyHaarINTEL
+  {IR(38457, 61), 608}, // 658 SubgroupAvcMceSetDualReferenceInterlacedFieldPolaritiesINTEL
+  {IR(37614, 53), 591}, // 659 SubgroupAvcMceSetInterBaseMultiReferencePenaltyINTEL
+  {IR(37805, 44), 595}, // 660 SubgroupAvcMceSetInterDirectionPenaltyINTEL
+  {IR(37714, 40), 593}, // 661 SubgroupAvcMceSetInterShapePenaltyINTEL
+  {IR(38107, 47), 601}, // 662 SubgroupAvcMceSetMotionVectorCostFunctionINTEL
+  {IR(38396, 61), 607}, // 663 SubgroupAvcMceSetSingleReferenceInterlacedFieldPolarityINTEL
+  {IR(38344, 52), 606}, // 664 SubgroupAvcMceSetSourceInterlacedFieldPolarityINTEL
+  {IR(40890, 39), 660}, // 665 SubgroupAvcRefConvertToMcePayloadINTEL
+  {IR(41212, 38), 667}, // 666 SubgroupAvcRefConvertToMceResultINTEL
+  {IR(41065, 45), 664}, // 667 SubgroupAvcRefEvaluateWithDualReferenceINTEL
+  {IR(41110, 46), 665}, // 668 SubgroupAvcRefEvaluateWithMultiReferenceINTEL
+  {IR(41156, 56), 666}, // 669 SubgroupAvcRefEvaluateWithMultiReferenceInterlacedINTEL
+  {IR(41018, 47), 663}, // 670 SubgroupAvcRefEvaluateWithSingleReferenceINTEL
+  {IR(40929, 46), 661}, // 671 SubgroupAvcRefSetBidirectionalMixDisableINTEL
+  {IR(40975, 43), 662}, // 672 SubgroupAvcRefSetBilinearFilterEnableINTEL
+  {IR(41348, 42), 671}, // 673 SubgroupAvcSicConfigureIpeLumaChromaINTEL
+  {IR(41312, 36), 670}, // 674 SubgroupAvcSicConfigureIpeLumaINTEL
+  {IR(41280, 32), 669}, // 675 SubgroupAvcSicConfigureSkcINTEL
+  {IR(41429, 39), 673}, // 676 SubgroupAvcSicConvertToMcePayloadINTEL
+  {IR(41969, 38), 685}, // 677 SubgroupAvcSicConvertToMceResultINTEL
+  {IR(41744, 31), 680}, // 678 SubgroupAvcSicEvaluateIpeINTEL
+  {IR(41822, 45), 682}, // 679 SubgroupAvcSicEvaluateWithDualReferenceINTEL
+  {IR(41867, 46), 683}, // 680 SubgroupAvcSicEvaluateWithMultiReferenceINTEL
+  {IR(41913, 56), 684}, // 681 SubgroupAvcSicEvaluateWithMultiReferenceInterlacedINTEL
+  {IR(41775, 47), 681}, // 682 SubgroupAvcSicEvaluateWithSingleReferenceINTEL
+  {IR(42086, 46), 688}, // 683 SubgroupAvcSicGetBestIpeChromaDistortionINTEL
+  {IR(42042, 44), 687}, // 684 SubgroupAvcSicGetBestIpeLumaDistortionINTEL
+  {IR(42307, 35), 693}, // 685 SubgroupAvcSicGetInterRawSadsINTEL
+  {IR(42173, 36), 690}, // 686 SubgroupAvcSicGetIpeChromaModeINTEL
+  {IR(42007, 35), 686}, // 687 SubgroupAvcSicGetIpeLumaShapeINTEL
+  {IR(41390, 39), 672}, // 688 SubgroupAvcSicGetMotionVectorMaskINTEL
+  {IR(42132, 41), 689}, // 689 SubgroupAvcSicGetPackedIpeLumaModesINTEL
+  {IR(42209, 50), 691}, // 690 SubgroupAvcSicGetPackedSkcLumaCountThresholdINTEL
+  {IR(42259, 48), 692}, // 691 SubgroupAvcSicGetPackedSkcLumaSumThresholdINTEL
+  {IR(41250, 30), 668}, // 692 SubgroupAvcSicInitializeINTEL
+  {IR(41610, 43), 677}, // 693 SubgroupAvcSicSetBilinearFilterEnableINTEL
+  {IR(41701, 43), 679}, // 694 SubgroupAvcSicSetBlockBasedRawSkipSadINTEL
+  {IR(41560, 50), 676}, // 695 SubgroupAvcSicSetIntraChromaModeCostFunctionINTEL
+  {IR(41512, 48), 675}, // 696 SubgroupAvcSicSetIntraLumaModeCostFunctionINTEL
+  {IR(41468, 44), 674}, // 697 SubgroupAvcSicSetIntraLumaShapePenaltyINTEL
+  {IR(41653, 48), 678}, // 698 SubgroupAvcSicSetSkcForwardTransformEnableINTEL
   {IR(5411, 18), 363}, // 699 SubgroupBallotKHR
-  {IR(44726, 27), 790}, // 700 SubgroupBlockPrefetchINTEL
-  {IR(36535, 23), 544}, // 701 SubgroupBlockReadINTEL
-  {IR(36558, 24), 545}, // 702 SubgroupBlockWriteINTEL
+  {IR(44751, 27), 791}, // 700 SubgroupBlockPrefetchINTEL
+  {IR(36560, 23), 545}, // 701 SubgroupBlockReadINTEL
+  {IR(36583, 24), 546}, // 702 SubgroupBlockWriteINTEL
   {IR(31796, 27), 364}, // 703 SubgroupFirstInvocationKHR
-  {IR(36582, 28), 546}, // 704 SubgroupImageBlockReadINTEL
-  {IR(36610, 29), 547}, // 705 SubgroupImageBlockWriteINTEL
-  {IR(36639, 33), 548}, // 706 SubgroupImageMediaBlockReadINTEL
-  {IR(36672, 34), 549}, // 707 SubgroupImageMediaBlockWriteINTEL
-  {IR(13795, 38), 796}, // 708 SubgroupMatrixMultiplyAccumulateINTEL
+  {IR(36607, 28), 547}, // 704 SubgroupImageBlockReadINTEL
+  {IR(36635, 29), 548}, // 705 SubgroupImageBlockWriteINTEL
+  {IR(36664, 33), 549}, // 706 SubgroupImageMediaBlockReadINTEL
+  {IR(36697, 34), 550}, // 707 SubgroupImageMediaBlockWriteINTEL
+  {IR(13795, 38), 797}, // 708 SubgroupMatrixMultiplyAccumulateINTEL
   {IR(31972, 26), 373}, // 709 SubgroupReadInvocationKHR
-  {IR(36463, 25), 541}, // 710 SubgroupShuffleDownINTEL
-  {IR(12010, 21), 540}, // 711 SubgroupShuffleINTEL
-  {IR(36488, 23), 542}, // 712 SubgroupShuffleUpINTEL
-  {IR(36511, 24), 543}, // 713 SubgroupShuffleXorINTEL
+  {IR(36488, 25), 542}, // 710 SubgroupShuffleDownINTEL
+  {IR(12010, 21), 541}, // 711 SubgroupShuffleINTEL
+  {IR(36513, 23), 543}, // 712 SubgroupShuffleUpINTEL
+  {IR(36536, 24), 544}, // 713 SubgroupShuffleXorINTEL
   {IR(29153, 7), 229}, // 714 Switch
-  {IR(44635, 23), 786}, // 715 TaskSequenceAsyncINTEL
-  {IR(44611, 24), 785}, // 716 TaskSequenceCreateINTEL
-  {IR(44658, 21), 787}, // 717 TaskSequenceGetINTEL
-  {IR(44679, 25), 788}, // 718 TaskSequenceReleaseINTEL
-  {IR(35806, 27), 517}, // 719 TensorLayoutSetBlockSizeNV
-  {IR(35670, 28), 510}, // 720 TensorLayoutSetClampValueNV
-  {IR(35599, 27), 507}, // 721 TensorLayoutSetDimensionNV
-  {IR(35626, 24), 508}, // 722 TensorLayoutSetStrideNV
-  {IR(35650, 20), 509}, // 723 TensorLayoutSliceNV
+  {IR(44660, 23), 787}, // 715 TaskSequenceAsyncINTEL
+  {IR(44636, 24), 786}, // 716 TaskSequenceCreateINTEL
+  {IR(44683, 21), 788}, // 717 TaskSequenceGetINTEL
+  {IR(44704, 25), 789}, // 718 TaskSequenceReleaseINTEL
+  {IR(35831, 27), 518}, // 719 TensorLayoutSetBlockSizeNV
+  {IR(35695, 28), 511}, // 720 TensorLayoutSetClampValueNV
+  {IR(35624, 27), 508}, // 721 TensorLayoutSetDimensionNV
+  {IR(35651, 24), 509}, // 722 TensorLayoutSetStrideNV
+  {IR(35675, 20), 510}, // 723 TensorLayoutSliceNV
   {IR(31571, 19), 350}, // 724 TensorQuerySizeARM
   {IR(31542, 14), 348}, // 725 TensorReadARM
-  {IR(35786, 20), 516}, // 726 TensorViewSetClipNV
-  {IR(35717, 25), 512}, // 727 TensorViewSetDimensionNV
-  {IR(35742, 22), 513}, // 728 TensorViewSetStrideNV
+  {IR(35811, 20), 517}, // 726 TensorViewSetClipNV
+  {IR(35742, 25), 513}, // 727 TensorViewSetDimensionNV
+  {IR(35767, 22), 514}, // 728 TensorViewSetStrideNV
   {IR(31556, 15), 349}, // 729 TensorWriteARM
   {IR(31683, 20), 358}, // 730 TerminateInvocation
-  {IR(32112, 16), 379}, // 731 TerminateRayKHR
-  {IR(34900, 15), 484}, // 732 TerminateRayNV
-  {IR(34923, 14), 486}, // 733 TraceMotionNV
-  {IR(34915, 8), 485}, // 734 TraceNV
-  {IR(32024, 12), 375}, // 735 TraceRayKHR
-  {IR(34937, 17), 487}, // 736 TraceRayMotionNV
+  {IR(32137, 16), 380}, // 731 TerminateRayKHR
+  {IR(34925, 15), 485}, // 732 TerminateRayNV
+  {IR(34948, 14), 487}, // 733 TraceMotionNV
+  {IR(34940, 8), 486}, // 734 TraceNV
+  {IR(32049, 12), 376}, // 735 TraceRayKHR
+  {IR(34962, 17), 488}, // 736 TraceRayMotionNV
   {IR(27005, 10), 76}, // 737 Transpose
-  {IR(35004, 29), 489}, // 738 TypeAccelerationStructureKHR
-  {IR(35033, 28), 489}, // 739 TypeAccelerationStructureNV
+  {IR(35029, 29), 490}, // 738 TypeAccelerationStructureKHR
+  {IR(35058, 28), 490}, // 739 TypeAccelerationStructureNV
   {IR(25954, 10), 25}, // 740 TypeArray
-  {IR(37448, 37), 586}, // 741 TypeAvcImeDualReferenceStreaminINTEL
-  {IR(37183, 23), 577}, // 742 TypeAvcImePayloadINTEL
-  {IR(37365, 44), 584}, // 743 TypeAvcImeResultDualReferenceStreamoutINTEL
-  {IR(37297, 22), 582}, // 744 TypeAvcImeResultINTEL
-  {IR(37319, 46), 583}, // 745 TypeAvcImeResultSingleReferenceStreamoutINTEL
-  {IR(37409, 39), 585}, // 746 TypeAvcImeSingleReferenceStreaminINTEL
-  {IR(37252, 23), 580}, // 747 TypeAvcMcePayloadINTEL
-  {IR(37275, 22), 581}, // 748 TypeAvcMceResultINTEL
-  {IR(37206, 23), 578}, // 749 TypeAvcRefPayloadINTEL
-  {IR(37485, 22), 587}, // 750 TypeAvcRefResultINTEL
-  {IR(37229, 23), 579}, // 751 TypeAvcSicPayloadINTEL
-  {IR(37507, 22), 588}, // 752 TypeAvcSicResultINTEL
+  {IR(37473, 37), 587}, // 741 TypeAvcImeDualReferenceStreaminINTEL
+  {IR(37208, 23), 578}, // 742 TypeAvcImePayloadINTEL
+  {IR(37390, 44), 585}, // 743 TypeAvcImeResultDualReferenceStreamoutINTEL
+  {IR(37322, 22), 583}, // 744 TypeAvcImeResultINTEL
+  {IR(37344, 46), 584}, // 745 TypeAvcImeResultSingleReferenceStreamoutINTEL
+  {IR(37434, 39), 586}, // 746 TypeAvcImeSingleReferenceStreaminINTEL
+  {IR(37277, 23), 581}, // 747 TypeAvcMcePayloadINTEL
+  {IR(37300, 22), 582}, // 748 TypeAvcMceResultINTEL
+  {IR(37231, 23), 579}, // 749 TypeAvcRefPayloadINTEL
+  {IR(37510, 22), 588}, // 750 TypeAvcRefResultINTEL
+  {IR(37254, 23), 580}, // 751 TypeAvcSicPayloadINTEL
+  {IR(37532, 22), 589}, // 752 TypeAvcSicResultINTEL
   {IR(25716, 9), 17}, // 753 TypeBool
-  {IR(44372, 23), 775}, // 754 TypeBufferSurfaceINTEL
-  {IR(32293, 25), 386}, // 755 TypeCooperativeMatrixKHR
-  {IR(35126, 24), 493}, // 756 TypeCooperativeMatrixNV
-  {IR(34426, 24), 468}, // 757 TypeCooperativeVectorNV
+  {IR(44397, 23), 776}, // 754 TypeBufferSurfaceINTEL
+  {IR(32318, 25), 387}, // 755 TypeCooperativeMatrixKHR
+  {IR(35151, 24), 494}, // 756 TypeCooperativeMatrixNV
+  {IR(34451, 24), 469}, // 757 TypeCooperativeVectorNV
   {IR(26069, 16), 32}, // 758 TypeDeviceEvent
   {IR(26059, 10), 31}, // 759 TypeEvent
   {IR(25770, 10), 19}, // 760 TypeFloat
   {IR(26118, 19), 36}, // 761 TypeForwardPointer
   {IR(26046, 13), 30}, // 762 TypeFunction
   {IR(31670, 13), 357}, // 763 TypeGraphARM
-  {IR(34387, 16), 466}, // 764 TypeHitObjectNV
+  {IR(34412, 16), 467}, // 764 TypeHitObjectNV
   {IR(25915, 10), 22}, // 765 TypeImage
   {IR(25725, 8), 18}, // 766 TypeInt
   {IR(25791, 11), 21}, // 767 TypeMatrix
   {IR(30500, 17), 300}, // 768 TypeNamedBarrier
-  {IR(33328, 25), 426}, // 769 TypeNodePayloadArrayAMDX
+  {IR(33353, 25), 427}, // 769 TypeNodePayloadArrayAMDX
   {IR(25992, 11), 28}, // 770 TypeOpaque
   {IR(26109, 9), 35}, // 771 TypePipe
   {IR(30378, 16), 295}, // 772 TypePipeStorage
   {IR(26034, 12), 29}, // 773 TypePointer
   {IR(26099, 10), 34}, // 774 TypeQueue
-  {IR(32572, 16), 394}, // 775 TypeRayQueryKHR
+  {IR(32597, 16), 395}, // 775 TypeRayQueryKHR
   {IR(26085, 14), 33}, // 776 TypeReserveId
   {IR(25964, 17), 26}, // 777 TypeRuntimeArray
   {IR(25937, 17), 24}, // 778 TypeSampledImage
   {IR(25925, 12), 23}, // 779 TypeSampler
   {IR(25981, 11), 27}, // 780 TypeStruct
-  {IR(44395, 25), 776}, // 781 TypeStructContinuedINTEL
-  {IR(44704, 22), 789}, // 782 TypeTaskSequenceINTEL
+  {IR(44420, 25), 777}, // 781 TypeStructContinuedINTEL
+  {IR(44729, 22), 790}, // 782 TypeTaskSequenceINTEL
   {IR(31486, 14), 347}, // 783 TypeTensorARM
-  {IR(35542, 19), 504}, // 784 TypeTensorLayoutNV
-  {IR(35561, 17), 505}, // 785 TypeTensorViewNV
+  {IR(35567, 19), 505}, // 784 TypeTensorLayoutNV
+  {IR(35586, 17), 506}, // 785 TypeTensorViewNV
   {IR(31703, 22), 359}, // 786 TypeUntypedPointerKHR
   {IR(25780, 11), 20}, // 787 TypeVector
-  {IR(37165, 18), 576}, // 788 TypeVmeImageINTEL
+  {IR(37190, 18), 577}, // 788 TypeVmeImageINTEL
   {IR(25707, 9), 16}, // 789 TypeVoid
-  {IR(36794, 13), 555}, // 790 UAddSatINTEL
-  {IR(36821, 14), 557}, // 791 UAverageINTEL
-  {IR(36856, 21), 559}, // 792 UAverageRoundedINTEL
+  {IR(36819, 13), 556}, // 790 UAddSatINTEL
+  {IR(36846, 14), 558}, // 791 UAverageINTEL
+  {IR(36881, 21), 560}, // 792 UAverageRoundedINTEL
   {IR(27522, 9), 103}, // 793 UConvert
-  {IR(36706, 24), 550}, // 794 UCountLeadingZerosINTEL
-  {IR(36730, 25), 551}, // 795 UCountTrailingZerosINTEL
+  {IR(36731, 24), 551}, // 794 UCountLeadingZerosINTEL
+  {IR(36755, 25), 552}, // 795 UCountTrailingZerosINTEL
   {IR(27734, 5), 123}, // 796 UDiv
-  {IR(32188, 5), 381}, // 797 UDot
-  {IR(32241, 11), 384}, // 798 UDotAccSat
-  {IR(32252, 14), 384}, // 799 UDotAccSatKHR
-  {IR(32193, 8), 381}, // 800 UDotKHR
+  {IR(32213, 5), 382}, // 797 UDot
+  {IR(32266, 11), 385}, // 798 UDotAccSat
+  {IR(32277, 14), 385}, // 799 UDotAccSatKHR
+  {IR(32218, 8), 382}, // 800 UDotKHR
   {IR(28094, 13), 160}, // 801 UGreaterThan
   {IR(28120, 18), 162}, // 802 UGreaterThanEqual
   {IR(28156, 10), 164}, // 803 ULessThan
   {IR(28176, 15), 166}, // 804 ULessThanEqual
   {IR(27749, 5), 126}, // 805 UMod
-  {IR(36918, 15), 563}, // 806 UMul32x16INTEL
+  {IR(36943, 15), 564}, // 806 UMul32x16INTEL
   {IR(27902, 13), 140}, // 807 UMulExtended
-  {IR(36890, 13), 561}, // 808 USubSatINTEL
+  {IR(36915, 13), 562}, // 808 USubSatINTEL
   {IR(25219, 6), 1}, // 809 Undef
   {IR(27999, 10), 151}, // 810 Unordered
   {IR(29184, 12), 233}, // 811 Unreachable
   {IR(31744, 22), 361}, // 812 UntypedAccessChainKHR
   {IR(31881, 22), 367}, // 813 UntypedArrayLengthKHR
-  {IR(31766, 30), 362}, // 814 UntypedInBoundsAccessChainKHR
-  {IR(31848, 33), 366}, // 815 UntypedInBoundsPtrAccessChainKHR
-  {IR(31903, 19), 368}, // 816 UntypedPrefetchKHR
-  {IR(31823, 25), 365}, // 817 UntypedPtrAccessChainKHR
-  {IR(31725, 19), 360}, // 818 UntypedVariableKHR
-  {IR(26530, 9), 52}, // 819 Variable
-  {IR(12466, 25), 693}, // 820 VariableLengthArrayINTEL
-  {IR(26887, 21), 69}, // 821 VectorExtractDynamic
-  {IR(26908, 20), 70}, // 822 VectorInsertDynamic
-  {IR(26928, 14), 71}, // 823 VectorShuffle
-  {IR(27810, 18), 133}, // 824 VectorTimesMatrix
-  {IR(27774, 18), 131}, // 825 VectorTimesScalar
-  {IR(37151, 14), 575}, // 826 VmeImageINTEL
-  {IR(34681, 33), 477}, // 827 WritePackedPrimitiveIndices4x8NV
-  {IR(29409, 10), 250}, // 828 WritePipe
-  {IR(43684, 23), 755}, // 829 WritePipeBlockingINTEL
+  {IR(32024, 25), 375}, // 814 UntypedGroupAsyncCopyKHR
+  {IR(31766, 30), 362}, // 815 UntypedInBoundsAccessChainKHR
+  {IR(31848, 33), 366}, // 816 UntypedInBoundsPtrAccessChainKHR
+  {IR(31903, 19), 368}, // 817 UntypedPrefetchKHR
+  {IR(31823, 25), 365}, // 818 UntypedPtrAccessChainKHR
+  {IR(31725, 19), 360}, // 819 UntypedVariableKHR
+  {IR(26530, 9), 52}, // 820 Variable
+  {IR(12466, 25), 694}, // 821 VariableLengthArrayINTEL
+  {IR(26887, 21), 69}, // 822 VectorExtractDynamic
+  {IR(26908, 20), 70}, // 823 VectorInsertDynamic
+  {IR(26928, 14), 71}, // 824 VectorShuffle
+  {IR(27810, 18), 133}, // 825 VectorTimesMatrix
+  {IR(27774, 18), 131}, // 826 VectorTimesScalar
+  {IR(37176, 14), 576}, // 827 VmeImageINTEL
+  {IR(34706, 33), 478}, // 828 WritePackedPrimitiveIndices4x8NV
+  {IR(29409, 10), 250}, // 829 WritePipe
+  {IR(43709, 23), 756}, // 830 WritePipeBlockingINTEL
 }};
 
 // Extended instruction descriptions, ordered by (extinst enum, opcode value).
@@ -4690,497 +4692,497 @@ static const std::array<NameIndex, 830> kInstructionNames{{
 //   name, a character-counting IndexRange into kStrings
 //   capabilities, an IndexRange into kCapabilitySpans
 static const std::array<ExtInstDesc, 491> kExtInstByValue{{
-    {0,IR(0, 0),IR(45492, 14),IR(1, 0)}, // DebugInfoNone in debuginfo
-    {1,IR(52, 3),IR(45506, 21),IR(1, 0)}, // DebugCompilationUnit in debuginfo
-    {2,IR(759, 3),IR(45579, 15),IR(1, 0)}, // DebugTypeBasic in debuginfo
-    {3,IR(762, 3),IR(45628, 17),IR(1, 0)}, // DebugTypePointer in debuginfo
-    {4,IR(765, 2),IR(45683, 19),IR(1, 0)}, // DebugTypeQualifier in debuginfo
-    {5,IR(168, 2),IR(45702, 15),IR(1, 0)}, // DebugTypeArray in debuginfo
-    {6,IR(261, 2),IR(45717, 16),IR(1, 0)}, // DebugTypeVector in debuginfo
-    {7,IR(767, 6),IR(45733, 13),IR(1, 0)}, // DebugTypedef in debuginfo
-    {8,IR(168, 2),IR(45746, 18),IR(1, 0)}, // DebugTypeFunction in debuginfo
-    {9,IR(773, 9),IR(45764, 14),IR(1, 0)}, // DebugTypeEnum in debuginfo
-    {10,IR(782, 9),IR(45816, 19),IR(1, 0)}, // DebugTypeComposite in debuginfo
-    {11,IR(791, 10),IR(45835, 16),IR(1, 0)}, // DebugTypeMember in debuginfo
-    {12,IR(801, 5),IR(45851, 21),IR(1, 0)}, // DebugTypeInheritance in debuginfo
-    {13,IR(36, 2),IR(45872, 21),IR(1, 0)}, // DebugTypePtrToMember in debuginfo
-    {14,IR(168, 2),IR(45893, 18),IR(1, 0)}, // DebugTypeTemplate in debuginfo
-    {15,IR(806, 6),IR(45911, 27),IR(1, 0)}, // DebugTypeTemplateParameter in debuginfo
-    {16,IR(812, 5),IR(45938, 35),IR(1, 0)}, // DebugTypeTemplateTemplateParameter in debuginfo
-    {17,IR(817, 5),IR(45973, 31),IR(1, 0)}, // DebugTypeTemplateParameterPack in debuginfo
-    {18,IR(791, 10),IR(46004, 20),IR(1, 0)}, // DebugGlobalVariable in debuginfo
-    {19,IR(822, 8),IR(46024, 25),IR(1, 0)}, // DebugFunctionDeclaration in debuginfo
-    {20,IR(830, 11),IR(46049, 14),IR(1, 0)}, // DebugFunction in debuginfo
-    {21,IR(841, 5),IR(46063, 18),IR(1, 0)}, // DebugLexicalBlock in debuginfo
-    {22,IR(846, 3),IR(46081, 31),IR(1, 0)}, // DebugLexicalBlockDiscriminator in debuginfo
-    {23,IR(849, 2),IR(46112, 11),IR(1, 0)}, // DebugScope in debuginfo
-    {24,IR(0, 0),IR(46123, 13),IR(1, 0)}, // DebugNoScope in debuginfo
-    {25,IR(851, 3),IR(46136, 15),IR(1, 0)}, // DebugInlinedAt in debuginfo
-    {26,IR(854, 7),IR(46193, 19),IR(1, 0)}, // DebugLocalVariable in debuginfo
-    {27,IR(36, 2),IR(46212, 21),IR(1, 0)}, // DebugInlinedVariable in debuginfo
-    {28,IR(33, 3),IR(46233, 13),IR(1, 0)}, // DebugDeclare in debuginfo
-    {29,IR(375, 3),IR(46246, 11),IR(1, 0)}, // DebugValue in debuginfo
-    {30,IR(861, 2),IR(46290, 15),IR(1, 0)}, // DebugOperation in debuginfo
-    {31,IR(695, 1),IR(46305, 16),IR(1, 0)}, // DebugExpression in debuginfo
-    {32,IR(863, 4),IR(46321, 14),IR(1, 0)}, // DebugMacroDef in debuginfo
-    {33,IR(846, 3),IR(46335, 16),IR(1, 0)}, // DebugMacroUndef in debuginfo
-    {1,IR(10, 1),IR(46351, 6),IR(1, 0)}, // Round in glsl_std_450
-    {2,IR(10, 1),IR(46357, 10),IR(1, 0)}, // RoundEven in glsl_std_450
-    {3,IR(10, 1),IR(46367, 6),IR(1, 0)}, // Trunc in glsl_std_450
-    {4,IR(10, 1),IR(46373, 5),IR(1, 0)}, // FAbs in glsl_std_450
-    {5,IR(10, 1),IR(46378, 5),IR(1, 0)}, // SAbs in glsl_std_450
-    {6,IR(10, 1),IR(46383, 6),IR(1, 0)}, // FSign in glsl_std_450
-    {7,IR(10, 1),IR(46389, 6),IR(1, 0)}, // SSign in glsl_std_450
-    {8,IR(10, 1),IR(46395, 6),IR(1, 0)}, // Floor in glsl_std_450
-    {9,IR(10, 1),IR(46401, 5),IR(1, 0)}, // Ceil in glsl_std_450
-    {10,IR(10, 1),IR(46406, 6),IR(1, 0)}, // Fract in glsl_std_450
-    {11,IR(10, 1),IR(46412, 8),IR(1, 0)}, // Radians in glsl_std_450
-    {12,IR(10, 1),IR(46420, 8),IR(1, 0)}, // Degrees in glsl_std_450
-    {13,IR(10, 1),IR(46428, 4),IR(1, 0)}, // Sin in glsl_std_450
-    {14,IR(10, 1),IR(46432, 4),IR(1, 0)}, // Cos in glsl_std_450
-    {15,IR(10, 1),IR(46436, 4),IR(1, 0)}, // Tan in glsl_std_450
-    {16,IR(10, 1),IR(46440, 5),IR(1, 0)}, // Asin in glsl_std_450
-    {17,IR(10, 1),IR(46445, 5),IR(1, 0)}, // Acos in glsl_std_450
-    {18,IR(10, 1),IR(46450, 5),IR(1, 0)}, // Atan in glsl_std_450
-    {19,IR(10, 1),IR(46455, 5),IR(1, 0)}, // Sinh in glsl_std_450
-    {20,IR(10, 1),IR(46460, 5),IR(1, 0)}, // Cosh in glsl_std_450
-    {21,IR(10, 1),IR(46465, 5),IR(1, 0)}, // Tanh in glsl_std_450
-    {22,IR(10, 1),IR(46470, 6),IR(1, 0)}, // Asinh in glsl_std_450
-    {23,IR(10, 1),IR(46476, 6),IR(1, 0)}, // Acosh in glsl_std_450
-    {24,IR(10, 1),IR(46482, 6),IR(1, 0)}, // Atanh in glsl_std_450
-    {25,IR(36, 2),IR(46488, 6),IR(1, 0)}, // Atan2 in glsl_std_450
-    {26,IR(36, 2),IR(46494, 4),IR(1, 0)}, // Pow in glsl_std_450
-    {27,IR(10, 1),IR(46498, 4),IR(1, 0)}, // Exp in glsl_std_450
-    {28,IR(10, 1),IR(46502, 4),IR(1, 0)}, // Log in glsl_std_450
-    {29,IR(10, 1),IR(46506, 5),IR(1, 0)}, // Exp2 in glsl_std_450
-    {30,IR(10, 1),IR(46511, 5),IR(1, 0)}, // Log2 in glsl_std_450
-    {31,IR(10, 1),IR(46516, 5),IR(1, 0)}, // Sqrt in glsl_std_450
-    {32,IR(10, 1),IR(46521, 12),IR(1, 0)}, // InverseSqrt in glsl_std_450
-    {33,IR(10, 1),IR(46533, 12),IR(1, 0)}, // Determinant in glsl_std_450
-    {34,IR(10, 1),IR(46545, 14),IR(1, 0)}, // MatrixInverse in glsl_std_450
-    {35,IR(36, 2),IR(46559, 5),IR(1, 0)}, // Modf in glsl_std_450
-    {36,IR(10, 1),IR(46564, 11),IR(1, 0)}, // ModfStruct in glsl_std_450
-    {37,IR(36, 2),IR(46575, 5),IR(1, 0)}, // FMin in glsl_std_450
-    {38,IR(36, 2),IR(46580, 5),IR(1, 0)}, // UMin in glsl_std_450
-    {39,IR(36, 2),IR(46585, 5),IR(1, 0)}, // SMin in glsl_std_450
-    {40,IR(36, 2),IR(46590, 5),IR(1, 0)}, // FMax in glsl_std_450
-    {41,IR(36, 2),IR(46595, 5),IR(1, 0)}, // UMax in glsl_std_450
-    {42,IR(36, 2),IR(46600, 5),IR(1, 0)}, // SMax in glsl_std_450
-    {43,IR(33, 3),IR(46605, 7),IR(1, 0)}, // FClamp in glsl_std_450
-    {44,IR(33, 3),IR(46612, 7),IR(1, 0)}, // UClamp in glsl_std_450
-    {45,IR(33, 3),IR(46619, 7),IR(1, 0)}, // SClamp in glsl_std_450
-    {46,IR(33, 3),IR(46626, 5),IR(1, 0)}, // FMix in glsl_std_450
-    {47,IR(33, 3),IR(46631, 5),IR(1, 0)}, // IMix in glsl_std_450
-    {48,IR(36, 2),IR(46636, 5),IR(1, 0)}, // Step in glsl_std_450
-    {49,IR(33, 3),IR(46641, 11),IR(1, 0)}, // SmoothStep in glsl_std_450
-    {50,IR(33, 3),IR(46652, 4),IR(1, 0)}, // Fma in glsl_std_450
-    {51,IR(36, 2),IR(46656, 6),IR(1, 0)}, // Frexp in glsl_std_450
-    {52,IR(10, 1),IR(46662, 12),IR(1, 0)}, // FrexpStruct in glsl_std_450
-    {53,IR(36, 2),IR(46674, 6),IR(1, 0)}, // Ldexp in glsl_std_450
-    {54,IR(10, 1),IR(46680, 13),IR(1, 0)}, // PackSnorm4x8 in glsl_std_450
-    {55,IR(10, 1),IR(46693, 13),IR(1, 0)}, // PackUnorm4x8 in glsl_std_450
-    {56,IR(10, 1),IR(46706, 14),IR(1, 0)}, // PackSnorm2x16 in glsl_std_450
-    {57,IR(10, 1),IR(46720, 14),IR(1, 0)}, // PackUnorm2x16 in glsl_std_450
-    {58,IR(10, 1),IR(46734, 13),IR(1, 0)}, // PackHalf2x16 in glsl_std_450
-    {59,IR(10, 1),IR(46747, 15),IR(308, 1)}, // PackDouble2x32 in glsl_std_450
-    {60,IR(10, 1),IR(46762, 16),IR(1, 0)}, // UnpackSnorm2x16 in glsl_std_450
-    {61,IR(10, 1),IR(46778, 16),IR(1, 0)}, // UnpackUnorm2x16 in glsl_std_450
-    {62,IR(10, 1),IR(46794, 15),IR(1, 0)}, // UnpackHalf2x16 in glsl_std_450
-    {63,IR(10, 1),IR(46809, 15),IR(1, 0)}, // UnpackSnorm4x8 in glsl_std_450
-    {64,IR(10, 1),IR(46824, 15),IR(1, 0)}, // UnpackUnorm4x8 in glsl_std_450
-    {65,IR(10, 1),IR(46839, 17),IR(308, 1)}, // UnpackDouble2x32 in glsl_std_450
-    {66,IR(10, 1),IR(46856, 7),IR(1, 0)}, // Length in glsl_std_450
-    {67,IR(36, 2),IR(46863, 9),IR(1, 0)}, // Distance in glsl_std_450
-    {68,IR(36, 2),IR(46872, 6),IR(1, 0)}, // Cross in glsl_std_450
-    {69,IR(10, 1),IR(46878, 10),IR(1, 0)}, // Normalize in glsl_std_450
-    {70,IR(33, 3),IR(46888, 12),IR(1, 0)}, // FaceForward in glsl_std_450
-    {71,IR(36, 2),IR(46900, 8),IR(1, 0)}, // Reflect in glsl_std_450
-    {72,IR(33, 3),IR(46908, 8),IR(1, 0)}, // Refract in glsl_std_450
-    {73,IR(10, 1),IR(46916, 9),IR(1, 0)}, // FindILsb in glsl_std_450
-    {74,IR(10, 1),IR(46925, 9),IR(1, 0)}, // FindSMsb in glsl_std_450
-    {75,IR(10, 1),IR(46934, 9),IR(1, 0)}, // FindUMsb in glsl_std_450
-    {76,IR(10, 1),IR(46943, 22),IR(309, 1)}, // InterpolateAtCentroid in glsl_std_450
-    {77,IR(36, 2),IR(46965, 20),IR(309, 1)}, // InterpolateAtSample in glsl_std_450
-    {78,IR(36, 2),IR(46985, 20),IR(309, 1)}, // InterpolateAtOffset in glsl_std_450
-    {79,IR(36, 2),IR(47005, 5),IR(1, 0)}, // NMin in glsl_std_450
-    {80,IR(36, 2),IR(47010, 5),IR(1, 0)}, // NMax in glsl_std_450
-    {81,IR(33, 3),IR(47015, 7),IR(1, 0)}, // NClamp in glsl_std_450
+    {0,IR(0, 0),IR(45517, 14),IR(1, 0)}, // DebugInfoNone in debuginfo
+    {1,IR(52, 3),IR(45531, 21),IR(1, 0)}, // DebugCompilationUnit in debuginfo
+    {2,IR(770, 3),IR(45604, 15),IR(1, 0)}, // DebugTypeBasic in debuginfo
+    {3,IR(773, 3),IR(45653, 17),IR(1, 0)}, // DebugTypePointer in debuginfo
+    {4,IR(776, 2),IR(45708, 19),IR(1, 0)}, // DebugTypeQualifier in debuginfo
+    {5,IR(168, 2),IR(45727, 15),IR(1, 0)}, // DebugTypeArray in debuginfo
+    {6,IR(261, 2),IR(45742, 16),IR(1, 0)}, // DebugTypeVector in debuginfo
+    {7,IR(778, 6),IR(45758, 13),IR(1, 0)}, // DebugTypedef in debuginfo
+    {8,IR(168, 2),IR(45771, 18),IR(1, 0)}, // DebugTypeFunction in debuginfo
+    {9,IR(784, 9),IR(45789, 14),IR(1, 0)}, // DebugTypeEnum in debuginfo
+    {10,IR(793, 9),IR(45841, 19),IR(1, 0)}, // DebugTypeComposite in debuginfo
+    {11,IR(802, 10),IR(45860, 16),IR(1, 0)}, // DebugTypeMember in debuginfo
+    {12,IR(812, 5),IR(45876, 21),IR(1, 0)}, // DebugTypeInheritance in debuginfo
+    {13,IR(36, 2),IR(45897, 21),IR(1, 0)}, // DebugTypePtrToMember in debuginfo
+    {14,IR(168, 2),IR(45918, 18),IR(1, 0)}, // DebugTypeTemplate in debuginfo
+    {15,IR(817, 6),IR(45936, 27),IR(1, 0)}, // DebugTypeTemplateParameter in debuginfo
+    {16,IR(823, 5),IR(45963, 35),IR(1, 0)}, // DebugTypeTemplateTemplateParameter in debuginfo
+    {17,IR(828, 5),IR(45998, 31),IR(1, 0)}, // DebugTypeTemplateParameterPack in debuginfo
+    {18,IR(802, 10),IR(46029, 20),IR(1, 0)}, // DebugGlobalVariable in debuginfo
+    {19,IR(833, 8),IR(46049, 25),IR(1, 0)}, // DebugFunctionDeclaration in debuginfo
+    {20,IR(841, 11),IR(46074, 14),IR(1, 0)}, // DebugFunction in debuginfo
+    {21,IR(852, 5),IR(46088, 18),IR(1, 0)}, // DebugLexicalBlock in debuginfo
+    {22,IR(857, 3),IR(46106, 31),IR(1, 0)}, // DebugLexicalBlockDiscriminator in debuginfo
+    {23,IR(860, 2),IR(46137, 11),IR(1, 0)}, // DebugScope in debuginfo
+    {24,IR(0, 0),IR(46148, 13),IR(1, 0)}, // DebugNoScope in debuginfo
+    {25,IR(862, 3),IR(46161, 15),IR(1, 0)}, // DebugInlinedAt in debuginfo
+    {26,IR(865, 7),IR(46218, 19),IR(1, 0)}, // DebugLocalVariable in debuginfo
+    {27,IR(36, 2),IR(46237, 21),IR(1, 0)}, // DebugInlinedVariable in debuginfo
+    {28,IR(33, 3),IR(46258, 13),IR(1, 0)}, // DebugDeclare in debuginfo
+    {29,IR(375, 3),IR(46271, 11),IR(1, 0)}, // DebugValue in debuginfo
+    {30,IR(872, 2),IR(46315, 15),IR(1, 0)}, // DebugOperation in debuginfo
+    {31,IR(706, 1),IR(46330, 16),IR(1, 0)}, // DebugExpression in debuginfo
+    {32,IR(874, 4),IR(46346, 14),IR(1, 0)}, // DebugMacroDef in debuginfo
+    {33,IR(857, 3),IR(46360, 16),IR(1, 0)}, // DebugMacroUndef in debuginfo
+    {1,IR(10, 1),IR(46376, 6),IR(1, 0)}, // Round in glsl_std_450
+    {2,IR(10, 1),IR(46382, 10),IR(1, 0)}, // RoundEven in glsl_std_450
+    {3,IR(10, 1),IR(46392, 6),IR(1, 0)}, // Trunc in glsl_std_450
+    {4,IR(10, 1),IR(46398, 5),IR(1, 0)}, // FAbs in glsl_std_450
+    {5,IR(10, 1),IR(46403, 5),IR(1, 0)}, // SAbs in glsl_std_450
+    {6,IR(10, 1),IR(46408, 6),IR(1, 0)}, // FSign in glsl_std_450
+    {7,IR(10, 1),IR(46414, 6),IR(1, 0)}, // SSign in glsl_std_450
+    {8,IR(10, 1),IR(46420, 6),IR(1, 0)}, // Floor in glsl_std_450
+    {9,IR(10, 1),IR(46426, 5),IR(1, 0)}, // Ceil in glsl_std_450
+    {10,IR(10, 1),IR(46431, 6),IR(1, 0)}, // Fract in glsl_std_450
+    {11,IR(10, 1),IR(46437, 8),IR(1, 0)}, // Radians in glsl_std_450
+    {12,IR(10, 1),IR(46445, 8),IR(1, 0)}, // Degrees in glsl_std_450
+    {13,IR(10, 1),IR(46453, 4),IR(1, 0)}, // Sin in glsl_std_450
+    {14,IR(10, 1),IR(46457, 4),IR(1, 0)}, // Cos in glsl_std_450
+    {15,IR(10, 1),IR(46461, 4),IR(1, 0)}, // Tan in glsl_std_450
+    {16,IR(10, 1),IR(46465, 5),IR(1, 0)}, // Asin in glsl_std_450
+    {17,IR(10, 1),IR(46470, 5),IR(1, 0)}, // Acos in glsl_std_450
+    {18,IR(10, 1),IR(46475, 5),IR(1, 0)}, // Atan in glsl_std_450
+    {19,IR(10, 1),IR(46480, 5),IR(1, 0)}, // Sinh in glsl_std_450
+    {20,IR(10, 1),IR(46485, 5),IR(1, 0)}, // Cosh in glsl_std_450
+    {21,IR(10, 1),IR(46490, 5),IR(1, 0)}, // Tanh in glsl_std_450
+    {22,IR(10, 1),IR(46495, 6),IR(1, 0)}, // Asinh in glsl_std_450
+    {23,IR(10, 1),IR(46501, 6),IR(1, 0)}, // Acosh in glsl_std_450
+    {24,IR(10, 1),IR(46507, 6),IR(1, 0)}, // Atanh in glsl_std_450
+    {25,IR(36, 2),IR(46513, 6),IR(1, 0)}, // Atan2 in glsl_std_450
+    {26,IR(36, 2),IR(46519, 4),IR(1, 0)}, // Pow in glsl_std_450
+    {27,IR(10, 1),IR(46523, 4),IR(1, 0)}, // Exp in glsl_std_450
+    {28,IR(10, 1),IR(46527, 4),IR(1, 0)}, // Log in glsl_std_450
+    {29,IR(10, 1),IR(46531, 5),IR(1, 0)}, // Exp2 in glsl_std_450
+    {30,IR(10, 1),IR(46536, 5),IR(1, 0)}, // Log2 in glsl_std_450
+    {31,IR(10, 1),IR(46541, 5),IR(1, 0)}, // Sqrt in glsl_std_450
+    {32,IR(10, 1),IR(46546, 12),IR(1, 0)}, // InverseSqrt in glsl_std_450
+    {33,IR(10, 1),IR(46558, 12),IR(1, 0)}, // Determinant in glsl_std_450
+    {34,IR(10, 1),IR(46570, 14),IR(1, 0)}, // MatrixInverse in glsl_std_450
+    {35,IR(36, 2),IR(46584, 5),IR(1, 0)}, // Modf in glsl_std_450
+    {36,IR(10, 1),IR(46589, 11),IR(1, 0)}, // ModfStruct in glsl_std_450
+    {37,IR(36, 2),IR(46600, 5),IR(1, 0)}, // FMin in glsl_std_450
+    {38,IR(36, 2),IR(46605, 5),IR(1, 0)}, // UMin in glsl_std_450
+    {39,IR(36, 2),IR(46610, 5),IR(1, 0)}, // SMin in glsl_std_450
+    {40,IR(36, 2),IR(46615, 5),IR(1, 0)}, // FMax in glsl_std_450
+    {41,IR(36, 2),IR(46620, 5),IR(1, 0)}, // UMax in glsl_std_450
+    {42,IR(36, 2),IR(46625, 5),IR(1, 0)}, // SMax in glsl_std_450
+    {43,IR(33, 3),IR(46630, 7),IR(1, 0)}, // FClamp in glsl_std_450
+    {44,IR(33, 3),IR(46637, 7),IR(1, 0)}, // UClamp in glsl_std_450
+    {45,IR(33, 3),IR(46644, 7),IR(1, 0)}, // SClamp in glsl_std_450
+    {46,IR(33, 3),IR(46651, 5),IR(1, 0)}, // FMix in glsl_std_450
+    {47,IR(33, 3),IR(46656, 5),IR(1, 0)}, // IMix in glsl_std_450
+    {48,IR(36, 2),IR(46661, 5),IR(1, 0)}, // Step in glsl_std_450
+    {49,IR(33, 3),IR(46666, 11),IR(1, 0)}, // SmoothStep in glsl_std_450
+    {50,IR(33, 3),IR(46677, 4),IR(1, 0)}, // Fma in glsl_std_450
+    {51,IR(36, 2),IR(46681, 6),IR(1, 0)}, // Frexp in glsl_std_450
+    {52,IR(10, 1),IR(46687, 12),IR(1, 0)}, // FrexpStruct in glsl_std_450
+    {53,IR(36, 2),IR(46699, 6),IR(1, 0)}, // Ldexp in glsl_std_450
+    {54,IR(10, 1),IR(46705, 13),IR(1, 0)}, // PackSnorm4x8 in glsl_std_450
+    {55,IR(10, 1),IR(46718, 13),IR(1, 0)}, // PackUnorm4x8 in glsl_std_450
+    {56,IR(10, 1),IR(46731, 14),IR(1, 0)}, // PackSnorm2x16 in glsl_std_450
+    {57,IR(10, 1),IR(46745, 14),IR(1, 0)}, // PackUnorm2x16 in glsl_std_450
+    {58,IR(10, 1),IR(46759, 13),IR(1, 0)}, // PackHalf2x16 in glsl_std_450
+    {59,IR(10, 1),IR(46772, 15),IR(308, 1)}, // PackDouble2x32 in glsl_std_450
+    {60,IR(10, 1),IR(46787, 16),IR(1, 0)}, // UnpackSnorm2x16 in glsl_std_450
+    {61,IR(10, 1),IR(46803, 16),IR(1, 0)}, // UnpackUnorm2x16 in glsl_std_450
+    {62,IR(10, 1),IR(46819, 15),IR(1, 0)}, // UnpackHalf2x16 in glsl_std_450
+    {63,IR(10, 1),IR(46834, 15),IR(1, 0)}, // UnpackSnorm4x8 in glsl_std_450
+    {64,IR(10, 1),IR(46849, 15),IR(1, 0)}, // UnpackUnorm4x8 in glsl_std_450
+    {65,IR(10, 1),IR(46864, 17),IR(308, 1)}, // UnpackDouble2x32 in glsl_std_450
+    {66,IR(10, 1),IR(46881, 7),IR(1, 0)}, // Length in glsl_std_450
+    {67,IR(36, 2),IR(46888, 9),IR(1, 0)}, // Distance in glsl_std_450
+    {68,IR(36, 2),IR(46897, 6),IR(1, 0)}, // Cross in glsl_std_450
+    {69,IR(10, 1),IR(46903, 10),IR(1, 0)}, // Normalize in glsl_std_450
+    {70,IR(33, 3),IR(46913, 12),IR(1, 0)}, // FaceForward in glsl_std_450
+    {71,IR(36, 2),IR(46925, 8),IR(1, 0)}, // Reflect in glsl_std_450
+    {72,IR(33, 3),IR(46933, 8),IR(1, 0)}, // Refract in glsl_std_450
+    {73,IR(10, 1),IR(46941, 9),IR(1, 0)}, // FindILsb in glsl_std_450
+    {74,IR(10, 1),IR(46950, 9),IR(1, 0)}, // FindSMsb in glsl_std_450
+    {75,IR(10, 1),IR(46959, 9),IR(1, 0)}, // FindUMsb in glsl_std_450
+    {76,IR(10, 1),IR(46968, 22),IR(309, 1)}, // InterpolateAtCentroid in glsl_std_450
+    {77,IR(36, 2),IR(46990, 20),IR(309, 1)}, // InterpolateAtSample in glsl_std_450
+    {78,IR(36, 2),IR(47010, 20),IR(309, 1)}, // InterpolateAtOffset in glsl_std_450
+    {79,IR(36, 2),IR(47030, 5),IR(1, 0)}, // NMin in glsl_std_450
+    {80,IR(36, 2),IR(47035, 5),IR(1, 0)}, // NMax in glsl_std_450
+    {81,IR(33, 3),IR(47040, 7),IR(1, 0)}, // NClamp in glsl_std_450
     {1,IR(399, 5),IR(4630, 7),IR(1, 0)}, // Kernel in nonsemantic_clspvreflection
-    {2,IR(867, 5),IR(47022, 13),IR(1, 0)}, // ArgumentInfo in nonsemantic_clspvreflection
-    {3,IR(872, 5),IR(47035, 22),IR(1, 0)}, // ArgumentStorageBuffer in nonsemantic_clspvreflection
-    {4,IR(872, 5),IR(47057, 16),IR(1, 0)}, // ArgumentUniform in nonsemantic_clspvreflection
-    {5,IR(543, 7),IR(47073, 25),IR(1, 0)}, // ArgumentPodStorageBuffer in nonsemantic_clspvreflection
-    {6,IR(543, 7),IR(47098, 19),IR(1, 0)}, // ArgumentPodUniform in nonsemantic_clspvreflection
-    {7,IR(872, 5),IR(47117, 24),IR(1, 0)}, // ArgumentPodPushConstant in nonsemantic_clspvreflection
-    {8,IR(872, 5),IR(47141, 21),IR(1, 0)}, // ArgumentSampledImage in nonsemantic_clspvreflection
-    {9,IR(872, 5),IR(47162, 21),IR(1, 0)}, // ArgumentStorageImage in nonsemantic_clspvreflection
-    {10,IR(872, 5),IR(47183, 16),IR(1, 0)}, // ArgumentSampler in nonsemantic_clspvreflection
-    {11,IR(872, 5),IR(47199, 18),IR(1, 0)}, // ArgumentWorkgroup in nonsemantic_clspvreflection
-    {12,IR(33, 3),IR(47217, 26),IR(1, 0)}, // SpecConstantWorkgroupSize in nonsemantic_clspvreflection
-    {13,IR(33, 3),IR(47243, 25),IR(1, 0)}, // SpecConstantGlobalOffset in nonsemantic_clspvreflection
-    {14,IR(10, 1),IR(47268, 20),IR(1, 0)}, // SpecConstantWorkDim in nonsemantic_clspvreflection
-    {15,IR(36, 2),IR(47288, 25),IR(1, 0)}, // PushConstantGlobalOffset in nonsemantic_clspvreflection
-    {16,IR(36, 2),IR(47313, 30),IR(1, 0)}, // PushConstantEnqueuedLocalSize in nonsemantic_clspvreflection
-    {17,IR(36, 2),IR(47343, 23),IR(1, 0)}, // PushConstantGlobalSize in nonsemantic_clspvreflection
-    {18,IR(36, 2),IR(47366, 25),IR(1, 0)}, // PushConstantRegionOffset in nonsemantic_clspvreflection
-    {19,IR(36, 2),IR(47391, 26),IR(1, 0)}, // PushConstantNumWorkgroups in nonsemantic_clspvreflection
-    {20,IR(36, 2),IR(47417, 30),IR(1, 0)}, // PushConstantRegionGroupOffset in nonsemantic_clspvreflection
-    {21,IR(33, 3),IR(47447, 26),IR(1, 0)}, // ConstantDataStorageBuffer in nonsemantic_clspvreflection
-    {22,IR(33, 3),IR(47473, 20),IR(1, 0)}, // ConstantDataUniform in nonsemantic_clspvreflection
+    {2,IR(878, 5),IR(47047, 13),IR(1, 0)}, // ArgumentInfo in nonsemantic_clspvreflection
+    {3,IR(883, 5),IR(47060, 22),IR(1, 0)}, // ArgumentStorageBuffer in nonsemantic_clspvreflection
+    {4,IR(883, 5),IR(47082, 16),IR(1, 0)}, // ArgumentUniform in nonsemantic_clspvreflection
+    {5,IR(554, 7),IR(47098, 25),IR(1, 0)}, // ArgumentPodStorageBuffer in nonsemantic_clspvreflection
+    {6,IR(554, 7),IR(47123, 19),IR(1, 0)}, // ArgumentPodUniform in nonsemantic_clspvreflection
+    {7,IR(883, 5),IR(47142, 24),IR(1, 0)}, // ArgumentPodPushConstant in nonsemantic_clspvreflection
+    {8,IR(883, 5),IR(47166, 21),IR(1, 0)}, // ArgumentSampledImage in nonsemantic_clspvreflection
+    {9,IR(883, 5),IR(47187, 21),IR(1, 0)}, // ArgumentStorageImage in nonsemantic_clspvreflection
+    {10,IR(883, 5),IR(47208, 16),IR(1, 0)}, // ArgumentSampler in nonsemantic_clspvreflection
+    {11,IR(883, 5),IR(47224, 18),IR(1, 0)}, // ArgumentWorkgroup in nonsemantic_clspvreflection
+    {12,IR(33, 3),IR(47242, 26),IR(1, 0)}, // SpecConstantWorkgroupSize in nonsemantic_clspvreflection
+    {13,IR(33, 3),IR(47268, 25),IR(1, 0)}, // SpecConstantGlobalOffset in nonsemantic_clspvreflection
+    {14,IR(10, 1),IR(47293, 20),IR(1, 0)}, // SpecConstantWorkDim in nonsemantic_clspvreflection
+    {15,IR(36, 2),IR(47313, 25),IR(1, 0)}, // PushConstantGlobalOffset in nonsemantic_clspvreflection
+    {16,IR(36, 2),IR(47338, 30),IR(1, 0)}, // PushConstantEnqueuedLocalSize in nonsemantic_clspvreflection
+    {17,IR(36, 2),IR(47368, 23),IR(1, 0)}, // PushConstantGlobalSize in nonsemantic_clspvreflection
+    {18,IR(36, 2),IR(47391, 25),IR(1, 0)}, // PushConstantRegionOffset in nonsemantic_clspvreflection
+    {19,IR(36, 2),IR(47416, 26),IR(1, 0)}, // PushConstantNumWorkgroups in nonsemantic_clspvreflection
+    {20,IR(36, 2),IR(47442, 30),IR(1, 0)}, // PushConstantRegionGroupOffset in nonsemantic_clspvreflection
+    {21,IR(33, 3),IR(47472, 26),IR(1, 0)}, // ConstantDataStorageBuffer in nonsemantic_clspvreflection
+    {22,IR(33, 3),IR(47498, 20),IR(1, 0)}, // ConstantDataUniform in nonsemantic_clspvreflection
     {23,IR(33, 3),IR(8055, 15),IR(1, 0)}, // LiteralSampler in nonsemantic_clspvreflection
-    {24,IR(296, 4),IR(47493, 30),IR(1, 0)}, // PropertyRequiredWorkgroupSize in nonsemantic_clspvreflection
-    {25,IR(10, 1),IR(47523, 28),IR(1, 0)}, // SpecConstantSubgroupMaxSize in nonsemantic_clspvreflection
-    {26,IR(872, 5),IR(47551, 28),IR(1, 0)}, // ArgumentPointerPushConstant in nonsemantic_clspvreflection
-    {27,IR(543, 7),IR(47579, 23),IR(1, 0)}, // ArgumentPointerUniform in nonsemantic_clspvreflection
-    {28,IR(33, 3),IR(47602, 35),IR(1, 0)}, // ProgramScopeVariablesStorageBuffer in nonsemantic_clspvreflection
-    {29,IR(33, 3),IR(47637, 38),IR(1, 0)}, // ProgramScopeVariablePointerRelocation in nonsemantic_clspvreflection
-    {30,IR(296, 4),IR(47675, 42),IR(1, 0)}, // ImageArgumentInfoChannelOrderPushConstant in nonsemantic_clspvreflection
-    {31,IR(296, 4),IR(47717, 45),IR(1, 0)}, // ImageArgumentInfoChannelDataTypePushConstant in nonsemantic_clspvreflection
-    {32,IR(514, 6),IR(47762, 37),IR(1, 0)}, // ImageArgumentInfoChannelOrderUniform in nonsemantic_clspvreflection
-    {33,IR(514, 6),IR(47799, 40),IR(1, 0)}, // ImageArgumentInfoChannelDataTypeUniform in nonsemantic_clspvreflection
-    {34,IR(872, 5),IR(47839, 27),IR(1, 0)}, // ArgumentStorageTexelBuffer in nonsemantic_clspvreflection
-    {35,IR(872, 5),IR(47866, 27),IR(1, 0)}, // ArgumentUniformTexelBuffer in nonsemantic_clspvreflection
-    {36,IR(33, 3),IR(47893, 32),IR(1, 0)}, // ConstantDataPointerPushConstant in nonsemantic_clspvreflection
-    {37,IR(33, 3),IR(47925, 40),IR(1, 0)}, // ProgramScopeVariablePointerPushConstant in nonsemantic_clspvreflection
-    {38,IR(375, 3),IR(47965, 11),IR(1, 0)}, // PrintfInfo in nonsemantic_clspvreflection
-    {39,IR(33, 3),IR(47976, 26),IR(1, 0)}, // PrintfBufferStorageBuffer in nonsemantic_clspvreflection
-    {40,IR(33, 3),IR(48002, 32),IR(1, 0)}, // PrintfBufferPointerPushConstant in nonsemantic_clspvreflection
-    {41,IR(296, 4),IR(48034, 34),IR(1, 0)}, // NormalizedSamplerMaskPushConstant in nonsemantic_clspvreflection
-    {42,IR(36, 2),IR(48068, 22),IR(1, 0)}, // WorkgroupVariableSize in nonsemantic_clspvreflection
-    {0,IR(0, 0),IR(45492, 14),IR(1, 0)}, // DebugInfoNone in nonsemantic_shader_debuginfo_100
-    {1,IR(296, 4),IR(45506, 21),IR(1, 0)}, // DebugCompilationUnit in nonsemantic_shader_debuginfo_100
-    {2,IR(296, 4),IR(45579, 15),IR(1, 0)}, // DebugTypeBasic in nonsemantic_shader_debuginfo_100
-    {3,IR(33, 3),IR(45628, 17),IR(1, 0)}, // DebugTypePointer in nonsemantic_shader_debuginfo_100
-    {4,IR(36, 2),IR(45683, 19),IR(1, 0)}, // DebugTypeQualifier in nonsemantic_shader_debuginfo_100
-    {5,IR(168, 2),IR(45702, 15),IR(1, 0)}, // DebugTypeArray in nonsemantic_shader_debuginfo_100
-    {6,IR(36, 2),IR(45717, 16),IR(1, 0)}, // DebugTypeVector in nonsemantic_shader_debuginfo_100
-    {7,IR(514, 6),IR(45733, 13),IR(1, 0)}, // DebugTypedef in nonsemantic_shader_debuginfo_100
-    {8,IR(375, 3),IR(45746, 18),IR(1, 0)}, // DebugTypeFunction in nonsemantic_shader_debuginfo_100
-    {9,IR(877, 9),IR(45764, 14),IR(1, 0)}, // DebugTypeEnum in nonsemantic_shader_debuginfo_100
-    {10,IR(886, 10),IR(45816, 19),IR(1, 0)}, // DebugTypeComposite in nonsemantic_shader_debuginfo_100
-    {11,IR(896, 9),IR(45835, 16),IR(1, 0)}, // DebugTypeMember in nonsemantic_shader_debuginfo_100
-    {12,IR(296, 4),IR(45851, 21),IR(1, 0)}, // DebugTypeInheritance in nonsemantic_shader_debuginfo_100
-    {13,IR(36, 2),IR(45872, 21),IR(1, 0)}, // DebugTypePtrToMember in nonsemantic_shader_debuginfo_100
-    {14,IR(168, 2),IR(45893, 18),IR(1, 0)}, // DebugTypeTemplate in nonsemantic_shader_debuginfo_100
-    {15,IR(514, 6),IR(45911, 27),IR(1, 0)}, // DebugTypeTemplateParameter in nonsemantic_shader_debuginfo_100
-    {16,IR(623, 5),IR(45938, 35),IR(1, 0)}, // DebugTypeTemplateTemplateParameter in nonsemantic_shader_debuginfo_100
-    {17,IR(905, 5),IR(45973, 31),IR(1, 0)}, // DebugTypeTemplateParameterPack in nonsemantic_shader_debuginfo_100
-    {18,IR(910, 10),IR(46004, 20),IR(1, 0)}, // DebugGlobalVariable in nonsemantic_shader_debuginfo_100
-    {19,IR(460, 8),IR(46024, 25),IR(1, 0)}, // DebugFunctionDeclaration in nonsemantic_shader_debuginfo_100
-    {20,IR(910, 10),IR(46049, 14),IR(1, 0)}, // DebugFunction in nonsemantic_shader_debuginfo_100
-    {21,IR(872, 5),IR(46063, 18),IR(1, 0)}, // DebugLexicalBlock in nonsemantic_shader_debuginfo_100
-    {22,IR(33, 3),IR(46081, 31),IR(1, 0)}, // DebugLexicalBlockDiscriminator in nonsemantic_shader_debuginfo_100
-    {23,IR(849, 2),IR(46112, 11),IR(1, 0)}, // DebugScope in nonsemantic_shader_debuginfo_100
-    {24,IR(0, 0),IR(46123, 13),IR(1, 0)}, // DebugNoScope in nonsemantic_shader_debuginfo_100
-    {25,IR(920, 3),IR(46136, 15),IR(1, 0)}, // DebugInlinedAt in nonsemantic_shader_debuginfo_100
-    {26,IR(923, 8),IR(46193, 19),IR(1, 0)}, // DebugLocalVariable in nonsemantic_shader_debuginfo_100
-    {27,IR(36, 2),IR(46212, 21),IR(1, 0)}, // DebugInlinedVariable in nonsemantic_shader_debuginfo_100
-    {28,IR(931, 4),IR(46233, 13),IR(1, 0)}, // DebugDeclare in nonsemantic_shader_debuginfo_100
-    {29,IR(931, 4),IR(46246, 11),IR(1, 0)}, // DebugValue in nonsemantic_shader_debuginfo_100
-    {30,IR(168, 2),IR(46290, 15),IR(1, 0)}, // DebugOperation in nonsemantic_shader_debuginfo_100
-    {31,IR(695, 1),IR(46305, 16),IR(1, 0)}, // DebugExpression in nonsemantic_shader_debuginfo_100
-    {32,IR(566, 4),IR(46321, 14),IR(1, 0)}, // DebugMacroDef in nonsemantic_shader_debuginfo_100
-    {33,IR(33, 3),IR(46335, 16),IR(1, 0)}, // DebugMacroUndef in nonsemantic_shader_debuginfo_100
-    {34,IR(495, 7),IR(48090, 20),IR(1, 0)}, // DebugImportedEntity in nonsemantic_shader_debuginfo_100
-    {35,IR(849, 2),IR(48110, 12),IR(1, 0)}, // DebugSource in nonsemantic_shader_debuginfo_100
-    {101,IR(36, 2),IR(48122, 24),IR(1, 0)}, // DebugFunctionDefinition in nonsemantic_shader_debuginfo_100
-    {102,IR(10, 1),IR(48146, 21),IR(1, 0)}, // DebugSourceContinued in nonsemantic_shader_debuginfo_100
-    {103,IR(623, 5),IR(48167, 10),IR(1, 0)}, // DebugLine in nonsemantic_shader_debuginfo_100
-    {104,IR(0, 0),IR(48177, 12),IR(1, 0)}, // DebugNoLine in nonsemantic_shader_debuginfo_100
-    {105,IR(36, 2),IR(48189, 21),IR(1, 0)}, // DebugBuildIdentifier in nonsemantic_shader_debuginfo_100
-    {106,IR(10, 1),IR(48210, 17),IR(1, 0)}, // DebugStoragePath in nonsemantic_shader_debuginfo_100
-    {107,IR(296, 4),IR(48227, 16),IR(1, 0)}, // DebugEntryPoint in nonsemantic_shader_debuginfo_100
-    {108,IR(33, 3),IR(48243, 16),IR(1, 0)}, // DebugTypeMatrix in nonsemantic_shader_debuginfo_100
-    {1,IR(713, 9),IR(48259, 14),IR(1, 0)}, // Configuration in nonsemantic_vkspreflection
-    {2,IR(10, 1),IR(48273, 13),IR(1, 0)}, // StartCounter in nonsemantic_vkspreflection
-    {3,IR(10, 1),IR(48286, 12),IR(1, 0)}, // StopCounter in nonsemantic_vkspreflection
-    {4,IR(296, 4),IR(48298, 14),IR(1, 0)}, // PushConstants in nonsemantic_vkspreflection
-    {5,IR(33, 3),IR(48312, 23),IR(1, 0)}, // SpecializationMapEntry in nonsemantic_vkspreflection
-    {6,IR(935, 15),IR(48335, 20),IR(1, 0)}, // DescriptorSetBuffer in nonsemantic_vkspreflection
-    {7,IR(950, 33),IR(48355, 19),IR(1, 0)}, // DescriptorSetImage in nonsemantic_vkspreflection
-    {8,IR(983, 19),IR(48374, 21),IR(1, 0)}, // DescriptorSetSampler in nonsemantic_vkspreflection
-    {0,IR(0, 0),IR(45492, 14),IR(1, 0)}, // DebugInfoNone in opencl_debuginfo_100
-    {1,IR(1002, 4),IR(45506, 21),IR(1, 0)}, // DebugCompilationUnit in opencl_debuginfo_100
-    {2,IR(1006, 3),IR(45579, 15),IR(1, 0)}, // DebugTypeBasic in opencl_debuginfo_100
-    {3,IR(1009, 3),IR(45628, 17),IR(1, 0)}, // DebugTypePointer in opencl_debuginfo_100
-    {4,IR(1012, 2),IR(45683, 19),IR(1, 0)}, // DebugTypeQualifier in opencl_debuginfo_100
-    {5,IR(168, 2),IR(45702, 15),IR(1, 0)}, // DebugTypeArray in opencl_debuginfo_100
-    {6,IR(261, 2),IR(45717, 16),IR(1, 0)}, // DebugTypeVector in opencl_debuginfo_100
-    {7,IR(767, 6),IR(45733, 13),IR(1, 0)}, // DebugTypedef in opencl_debuginfo_100
-    {8,IR(1014, 3),IR(45746, 18),IR(1, 0)}, // DebugTypeFunction in opencl_debuginfo_100
-    {9,IR(1017, 9),IR(45764, 14),IR(1, 0)}, // DebugTypeEnum in opencl_debuginfo_100
-    {10,IR(1026, 10),IR(45816, 19),IR(1, 0)}, // DebugTypeComposite in opencl_debuginfo_100
-    {11,IR(1036, 10),IR(45835, 16),IR(1, 0)}, // DebugTypeMember in opencl_debuginfo_100
-    {12,IR(1046, 5),IR(45851, 21),IR(1, 0)}, // DebugTypeInheritance in opencl_debuginfo_100
-    {13,IR(36, 2),IR(45872, 21),IR(1, 0)}, // DebugTypePtrToMember in opencl_debuginfo_100
-    {14,IR(168, 2),IR(45893, 18),IR(1, 0)}, // DebugTypeTemplate in opencl_debuginfo_100
-    {15,IR(806, 6),IR(45911, 27),IR(1, 0)}, // DebugTypeTemplateParameter in opencl_debuginfo_100
-    {16,IR(812, 5),IR(45938, 35),IR(1, 0)}, // DebugTypeTemplateTemplateParameter in opencl_debuginfo_100
-    {17,IR(817, 5),IR(45973, 31),IR(1, 0)}, // DebugTypeTemplateParameterPack in opencl_debuginfo_100
-    {18,IR(1036, 10),IR(46004, 20),IR(1, 0)}, // DebugGlobalVariable in opencl_debuginfo_100
-    {19,IR(1051, 8),IR(46024, 25),IR(1, 0)}, // DebugFunctionDeclaration in opencl_debuginfo_100
-    {20,IR(1059, 11),IR(46049, 14),IR(1, 0)}, // DebugFunction in opencl_debuginfo_100
-    {21,IR(841, 5),IR(46063, 18),IR(1, 0)}, // DebugLexicalBlock in opencl_debuginfo_100
-    {22,IR(846, 3),IR(46081, 31),IR(1, 0)}, // DebugLexicalBlockDiscriminator in opencl_debuginfo_100
-    {23,IR(849, 2),IR(46112, 11),IR(1, 0)}, // DebugScope in opencl_debuginfo_100
-    {24,IR(0, 0),IR(46123, 13),IR(1, 0)}, // DebugNoScope in opencl_debuginfo_100
-    {25,IR(851, 3),IR(46136, 15),IR(1, 0)}, // DebugInlinedAt in opencl_debuginfo_100
-    {26,IR(1070, 8),IR(46193, 19),IR(1, 0)}, // DebugLocalVariable in opencl_debuginfo_100
-    {27,IR(36, 2),IR(46212, 21),IR(1, 0)}, // DebugInlinedVariable in opencl_debuginfo_100
-    {28,IR(33, 3),IR(46233, 13),IR(1, 0)}, // DebugDeclare in opencl_debuginfo_100
-    {29,IR(931, 4),IR(46246, 11),IR(1, 0)}, // DebugValue in opencl_debuginfo_100
-    {30,IR(1078, 2),IR(46290, 15),IR(1, 0)}, // DebugOperation in opencl_debuginfo_100
-    {31,IR(695, 1),IR(46305, 16),IR(1, 0)}, // DebugExpression in opencl_debuginfo_100
-    {32,IR(863, 4),IR(46321, 14),IR(1, 0)}, // DebugMacroDef in opencl_debuginfo_100
-    {33,IR(846, 3),IR(46335, 16),IR(1, 0)}, // DebugMacroUndef in opencl_debuginfo_100
-    {34,IR(1080, 7),IR(48090, 20),IR(1, 0)}, // DebugImportedEntity in opencl_debuginfo_100
-    {35,IR(849, 2),IR(48110, 12),IR(1, 0)}, // DebugSource in opencl_debuginfo_100
-    {36,IR(1087, 8),IR(48695, 17),IR(1, 0)}, // DebugModuleINTEL in opencl_debuginfo_100
-    {0,IR(10, 1),IR(48712, 5),IR(1, 0)}, // acos in opencl_std_100
-    {1,IR(10, 1),IR(48717, 6),IR(1, 0)}, // acosh in opencl_std_100
-    {2,IR(10, 1),IR(48723, 7),IR(1, 0)}, // acospi in opencl_std_100
-    {3,IR(10, 1),IR(48730, 5),IR(1, 0)}, // asin in opencl_std_100
-    {4,IR(10, 1),IR(48735, 6),IR(1, 0)}, // asinh in opencl_std_100
-    {5,IR(10, 1),IR(48741, 7),IR(1, 0)}, // asinpi in opencl_std_100
-    {6,IR(10, 1),IR(48748, 5),IR(1, 0)}, // atan in opencl_std_100
-    {7,IR(36, 2),IR(48753, 6),IR(1, 0)}, // atan2 in opencl_std_100
-    {8,IR(10, 1),IR(48759, 6),IR(1, 0)}, // atanh in opencl_std_100
-    {9,IR(10, 1),IR(48765, 7),IR(1, 0)}, // atanpi in opencl_std_100
-    {10,IR(36, 2),IR(48772, 8),IR(1, 0)}, // atan2pi in opencl_std_100
-    {11,IR(10, 1),IR(48780, 5),IR(1, 0)}, // cbrt in opencl_std_100
-    {12,IR(10, 1),IR(48785, 5),IR(1, 0)}, // ceil in opencl_std_100
-    {13,IR(36, 2),IR(48790, 9),IR(1, 0)}, // copysign in opencl_std_100
-    {14,IR(10, 1),IR(48799, 4),IR(1, 0)}, // cos in opencl_std_100
-    {15,IR(10, 1),IR(48803, 5),IR(1, 0)}, // cosh in opencl_std_100
-    {16,IR(10, 1),IR(48808, 6),IR(1, 0)}, // cospi in opencl_std_100
-    {17,IR(10, 1),IR(48814, 5),IR(1, 0)}, // erfc in opencl_std_100
-    {18,IR(10, 1),IR(48819, 4),IR(1, 0)}, // erf in opencl_std_100
-    {19,IR(10, 1),IR(48823, 4),IR(1, 0)}, // exp in opencl_std_100
-    {20,IR(10, 1),IR(48827, 5),IR(1, 0)}, // exp2 in opencl_std_100
-    {21,IR(10, 1),IR(48832, 6),IR(1, 0)}, // exp10 in opencl_std_100
-    {22,IR(10, 1),IR(48838, 6),IR(1, 0)}, // expm1 in opencl_std_100
-    {23,IR(10, 1),IR(48844, 5),IR(1, 0)}, // fabs in opencl_std_100
-    {24,IR(36, 2),IR(48849, 5),IR(1, 0)}, // fdim in opencl_std_100
-    {25,IR(10, 1),IR(48854, 6),IR(1, 0)}, // floor in opencl_std_100
-    {26,IR(33, 3),IR(48860, 4),IR(1, 0)}, // fma in opencl_std_100
-    {27,IR(36, 2),IR(48864, 5),IR(1, 0)}, // fmax in opencl_std_100
-    {28,IR(36, 2),IR(48869, 5),IR(1, 0)}, // fmin in opencl_std_100
-    {29,IR(36, 2),IR(48874, 5),IR(1, 0)}, // fmod in opencl_std_100
-    {30,IR(36, 2),IR(48879, 6),IR(1, 0)}, // fract in opencl_std_100
-    {31,IR(36, 2),IR(48885, 6),IR(1, 0)}, // frexp in opencl_std_100
-    {32,IR(36, 2),IR(48891, 6),IR(1, 0)}, // hypot in opencl_std_100
-    {33,IR(10, 1),IR(48897, 6),IR(1, 0)}, // ilogb in opencl_std_100
-    {34,IR(36, 2),IR(48903, 6),IR(1, 0)}, // ldexp in opencl_std_100
-    {35,IR(10, 1),IR(48909, 7),IR(1, 0)}, // lgamma in opencl_std_100
-    {36,IR(36, 2),IR(48916, 9),IR(1, 0)}, // lgamma_r in opencl_std_100
-    {37,IR(10, 1),IR(48925, 4),IR(1, 0)}, // log in opencl_std_100
-    {38,IR(10, 1),IR(48929, 5),IR(1, 0)}, // log2 in opencl_std_100
-    {39,IR(10, 1),IR(48934, 6),IR(1, 0)}, // log10 in opencl_std_100
-    {40,IR(10, 1),IR(48940, 6),IR(1, 0)}, // log1p in opencl_std_100
-    {41,IR(10, 1),IR(48946, 5),IR(1, 0)}, // logb in opencl_std_100
-    {42,IR(33, 3),IR(48951, 4),IR(1, 0)}, // mad in opencl_std_100
-    {43,IR(36, 2),IR(48955, 7),IR(1, 0)}, // maxmag in opencl_std_100
-    {44,IR(36, 2),IR(48962, 7),IR(1, 0)}, // minmag in opencl_std_100
-    {45,IR(36, 2),IR(48969, 5),IR(1, 0)}, // modf in opencl_std_100
-    {46,IR(10, 1),IR(48974, 4),IR(1, 0)}, // nan in opencl_std_100
-    {47,IR(36, 2),IR(48978, 10),IR(1, 0)}, // nextafter in opencl_std_100
-    {48,IR(36, 2),IR(48988, 4),IR(1, 0)}, // pow in opencl_std_100
-    {49,IR(36, 2),IR(48992, 5),IR(1, 0)}, // pown in opencl_std_100
-    {50,IR(36, 2),IR(48997, 5),IR(1, 0)}, // powr in opencl_std_100
-    {51,IR(36, 2),IR(49002, 10),IR(1, 0)}, // remainder in opencl_std_100
-    {52,IR(33, 3),IR(49012, 7),IR(1, 0)}, // remquo in opencl_std_100
-    {53,IR(10, 1),IR(49019, 5),IR(1, 0)}, // rint in opencl_std_100
-    {54,IR(36, 2),IR(49024, 6),IR(1, 0)}, // rootn in opencl_std_100
-    {55,IR(10, 1),IR(49030, 6),IR(1, 0)}, // round in opencl_std_100
-    {56,IR(10, 1),IR(49036, 6),IR(1, 0)}, // rsqrt in opencl_std_100
-    {57,IR(10, 1),IR(49042, 4),IR(1, 0)}, // sin in opencl_std_100
-    {58,IR(36, 2),IR(49046, 7),IR(1, 0)}, // sincos in opencl_std_100
-    {59,IR(10, 1),IR(49053, 5),IR(1, 0)}, // sinh in opencl_std_100
-    {60,IR(10, 1),IR(49058, 6),IR(1, 0)}, // sinpi in opencl_std_100
-    {61,IR(10, 1),IR(49064, 5),IR(1, 0)}, // sqrt in opencl_std_100
-    {62,IR(10, 1),IR(49069, 4),IR(1, 0)}, // tan in opencl_std_100
-    {63,IR(10, 1),IR(49073, 5),IR(1, 0)}, // tanh in opencl_std_100
-    {64,IR(10, 1),IR(49078, 6),IR(1, 0)}, // tanpi in opencl_std_100
-    {65,IR(10, 1),IR(49084, 7),IR(1, 0)}, // tgamma in opencl_std_100
-    {66,IR(10, 1),IR(49091, 6),IR(1, 0)}, // trunc in opencl_std_100
-    {67,IR(10, 1),IR(49097, 9),IR(1, 0)}, // half_cos in opencl_std_100
-    {68,IR(36, 2),IR(49106, 12),IR(1, 0)}, // half_divide in opencl_std_100
-    {69,IR(10, 1),IR(49118, 9),IR(1, 0)}, // half_exp in opencl_std_100
-    {70,IR(10, 1),IR(49127, 10),IR(1, 0)}, // half_exp2 in opencl_std_100
-    {71,IR(10, 1),IR(49137, 11),IR(1, 0)}, // half_exp10 in opencl_std_100
-    {72,IR(10, 1),IR(49148, 9),IR(1, 0)}, // half_log in opencl_std_100
-    {73,IR(10, 1),IR(49157, 10),IR(1, 0)}, // half_log2 in opencl_std_100
-    {74,IR(10, 1),IR(49167, 11),IR(1, 0)}, // half_log10 in opencl_std_100
-    {75,IR(36, 2),IR(49178, 10),IR(1, 0)}, // half_powr in opencl_std_100
-    {76,IR(10, 1),IR(49188, 11),IR(1, 0)}, // half_recip in opencl_std_100
-    {77,IR(10, 1),IR(49199, 11),IR(1, 0)}, // half_rsqrt in opencl_std_100
-    {78,IR(10, 1),IR(49210, 9),IR(1, 0)}, // half_sin in opencl_std_100
-    {79,IR(10, 1),IR(49219, 10),IR(1, 0)}, // half_sqrt in opencl_std_100
-    {80,IR(10, 1),IR(49229, 9),IR(1, 0)}, // half_tan in opencl_std_100
-    {81,IR(10, 1),IR(49238, 11),IR(1, 0)}, // native_cos in opencl_std_100
-    {82,IR(36, 2),IR(49249, 14),IR(1, 0)}, // native_divide in opencl_std_100
-    {83,IR(10, 1),IR(49263, 11),IR(1, 0)}, // native_exp in opencl_std_100
-    {84,IR(10, 1),IR(49274, 12),IR(1, 0)}, // native_exp2 in opencl_std_100
-    {85,IR(10, 1),IR(49286, 13),IR(1, 0)}, // native_exp10 in opencl_std_100
-    {86,IR(10, 1),IR(49299, 11),IR(1, 0)}, // native_log in opencl_std_100
-    {87,IR(10, 1),IR(49310, 12),IR(1, 0)}, // native_log2 in opencl_std_100
-    {88,IR(10, 1),IR(49322, 13),IR(1, 0)}, // native_log10 in opencl_std_100
-    {89,IR(36, 2),IR(49335, 12),IR(1, 0)}, // native_powr in opencl_std_100
-    {90,IR(10, 1),IR(49347, 13),IR(1, 0)}, // native_recip in opencl_std_100
-    {91,IR(10, 1),IR(49360, 13),IR(1, 0)}, // native_rsqrt in opencl_std_100
-    {92,IR(10, 1),IR(49373, 11),IR(1, 0)}, // native_sin in opencl_std_100
-    {93,IR(10, 1),IR(49384, 12),IR(1, 0)}, // native_sqrt in opencl_std_100
-    {94,IR(10, 1),IR(49396, 11),IR(1, 0)}, // native_tan in opencl_std_100
-    {95,IR(33, 3),IR(49407, 7),IR(1, 0)}, // fclamp in opencl_std_100
-    {96,IR(10, 1),IR(49414, 8),IR(1, 0)}, // degrees in opencl_std_100
-    {97,IR(36, 2),IR(49422, 12),IR(1, 0)}, // fmax_common in opencl_std_100
-    {98,IR(36, 2),IR(49434, 12),IR(1, 0)}, // fmin_common in opencl_std_100
-    {99,IR(33, 3),IR(49446, 4),IR(1, 0)}, // mix in opencl_std_100
-    {100,IR(10, 1),IR(49450, 8),IR(1, 0)}, // radians in opencl_std_100
-    {101,IR(36, 2),IR(49458, 5),IR(1, 0)}, // step in opencl_std_100
-    {102,IR(33, 3),IR(49463, 11),IR(1, 0)}, // smoothstep in opencl_std_100
-    {103,IR(10, 1),IR(49474, 5),IR(1, 0)}, // sign in opencl_std_100
-    {104,IR(36, 2),IR(49479, 6),IR(1, 0)}, // cross in opencl_std_100
-    {105,IR(36, 2),IR(49485, 9),IR(1, 0)}, // distance in opencl_std_100
-    {106,IR(10, 1),IR(49494, 7),IR(1, 0)}, // length in opencl_std_100
-    {107,IR(10, 1),IR(49501, 10),IR(1, 0)}, // normalize in opencl_std_100
-    {108,IR(36, 2),IR(49511, 14),IR(1, 0)}, // fast_distance in opencl_std_100
-    {109,IR(10, 1),IR(49525, 12),IR(1, 0)}, // fast_length in opencl_std_100
-    {110,IR(10, 1),IR(49537, 15),IR(1, 0)}, // fast_normalize in opencl_std_100
-    {141,IR(10, 1),IR(49552, 6),IR(1, 0)}, // s_abs in opencl_std_100
-    {142,IR(36, 2),IR(49558, 11),IR(1, 0)}, // s_abs_diff in opencl_std_100
-    {143,IR(36, 2),IR(49569, 10),IR(1, 0)}, // s_add_sat in opencl_std_100
-    {144,IR(36, 2),IR(49579, 10),IR(1, 0)}, // u_add_sat in opencl_std_100
-    {145,IR(36, 2),IR(49589, 7),IR(1, 0)}, // s_hadd in opencl_std_100
-    {146,IR(36, 2),IR(49596, 7),IR(1, 0)}, // u_hadd in opencl_std_100
-    {147,IR(36, 2),IR(49603, 8),IR(1, 0)}, // s_rhadd in opencl_std_100
-    {148,IR(36, 2),IR(49611, 8),IR(1, 0)}, // u_rhadd in opencl_std_100
-    {149,IR(33, 3),IR(49619, 8),IR(1, 0)}, // s_clamp in opencl_std_100
-    {150,IR(33, 3),IR(49627, 8),IR(1, 0)}, // u_clamp in opencl_std_100
-    {151,IR(10, 1),IR(49635, 4),IR(1, 0)}, // clz in opencl_std_100
-    {152,IR(10, 1),IR(49639, 4),IR(1, 0)}, // ctz in opencl_std_100
-    {153,IR(33, 3),IR(49643, 9),IR(1, 0)}, // s_mad_hi in opencl_std_100
-    {154,IR(33, 3),IR(49652, 10),IR(1, 0)}, // u_mad_sat in opencl_std_100
-    {155,IR(33, 3),IR(49662, 10),IR(1, 0)}, // s_mad_sat in opencl_std_100
-    {156,IR(36, 2),IR(49672, 6),IR(1, 0)}, // s_max in opencl_std_100
-    {157,IR(36, 2),IR(49678, 6),IR(1, 0)}, // u_max in opencl_std_100
-    {158,IR(36, 2),IR(49684, 6),IR(1, 0)}, // s_min in opencl_std_100
-    {159,IR(36, 2),IR(49690, 6),IR(1, 0)}, // u_min in opencl_std_100
-    {160,IR(36, 2),IR(49696, 9),IR(1, 0)}, // s_mul_hi in opencl_std_100
-    {161,IR(36, 2),IR(49705, 7),IR(1, 0)}, // rotate in opencl_std_100
-    {162,IR(36, 2),IR(49712, 10),IR(1, 0)}, // s_sub_sat in opencl_std_100
-    {163,IR(36, 2),IR(49722, 10),IR(1, 0)}, // u_sub_sat in opencl_std_100
-    {164,IR(36, 2),IR(49732, 11),IR(1, 0)}, // u_upsample in opencl_std_100
-    {165,IR(36, 2),IR(49743, 11),IR(1, 0)}, // s_upsample in opencl_std_100
-    {166,IR(10, 1),IR(49754, 9),IR(1, 0)}, // popcount in opencl_std_100
-    {167,IR(33, 3),IR(49763, 8),IR(1, 0)}, // s_mad24 in opencl_std_100
-    {168,IR(33, 3),IR(49771, 8),IR(1, 0)}, // u_mad24 in opencl_std_100
-    {169,IR(36, 2),IR(49779, 8),IR(1, 0)}, // s_mul24 in opencl_std_100
-    {170,IR(36, 2),IR(49787, 8),IR(1, 0)}, // u_mul24 in opencl_std_100
-    {171,IR(1095, 3),IR(49795, 7),IR(1, 0)}, // vloadn in opencl_std_100
-    {172,IR(33, 3),IR(49802, 8),IR(1, 0)}, // vstoren in opencl_std_100
-    {173,IR(36, 2),IR(49810, 11),IR(1, 0)}, // vload_half in opencl_std_100
-    {174,IR(1095, 3),IR(49821, 12),IR(1, 0)}, // vload_halfn in opencl_std_100
-    {175,IR(33, 3),IR(49833, 12),IR(1, 0)}, // vstore_half in opencl_std_100
-    {176,IR(1098, 4),IR(49845, 14),IR(1, 0)}, // vstore_half_r in opencl_std_100
-    {177,IR(33, 3),IR(49859, 13),IR(1, 0)}, // vstore_halfn in opencl_std_100
-    {178,IR(1098, 4),IR(49872, 15),IR(1, 0)}, // vstore_halfn_r in opencl_std_100
-    {179,IR(1095, 3),IR(49887, 13),IR(1, 0)}, // vloada_halfn in opencl_std_100
-    {180,IR(33, 3),IR(49900, 14),IR(1, 0)}, // vstorea_halfn in opencl_std_100
-    {181,IR(1098, 4),IR(49914, 16),IR(1, 0)}, // vstorea_halfn_r in opencl_std_100
-    {182,IR(36, 2),IR(49930, 8),IR(1, 0)}, // shuffle in opencl_std_100
-    {183,IR(33, 3),IR(49938, 9),IR(1, 0)}, // shuffle2 in opencl_std_100
-    {184,IR(168, 2),IR(49947, 7),IR(1, 0)}, // printf in opencl_std_100
-    {185,IR(36, 2),IR(49954, 9),IR(1, 0)}, // prefetch in opencl_std_100
-    {186,IR(33, 3),IR(49963, 10),IR(1, 0)}, // bitselect in opencl_std_100
-    {187,IR(33, 3),IR(49973, 7),IR(1, 0)}, // select in opencl_std_100
-    {201,IR(10, 1),IR(49980, 6),IR(1, 0)}, // u_abs in opencl_std_100
-    {202,IR(36, 2),IR(49986, 11),IR(1, 0)}, // u_abs_diff in opencl_std_100
-    {203,IR(36, 2),IR(49997, 9),IR(1, 0)}, // u_mul_hi in opencl_std_100
-    {204,IR(33, 3),IR(50006, 9),IR(1, 0)}, // u_mad_hi in opencl_std_100
-    {1,IR(10, 1),IR(50015, 17),IR(1, 0)}, // CubeFaceIndexAMD in spv_amd_gcn_shader
-    {2,IR(10, 1),IR(50032, 17),IR(1, 0)}, // CubeFaceCoordAMD in spv_amd_gcn_shader
-    {3,IR(0, 0),IR(50049, 8),IR(1, 0)}, // TimeAMD in spv_amd_gcn_shader
-    {1,IR(36, 2),IR(50057, 22),IR(1, 0)}, // SwizzleInvocationsAMD in spv_amd_shader_ballot
-    {2,IR(36, 2),IR(50079, 28),IR(1, 0)}, // SwizzleInvocationsMaskedAMD in spv_amd_shader_ballot
-    {3,IR(33, 3),IR(50107, 19),IR(1, 0)}, // WriteInvocationAMD in spv_amd_shader_ballot
-    {4,IR(10, 1),IR(50126, 9),IR(1, 0)}, // MbcntAMD in spv_amd_shader_ballot
-    {1,IR(36, 2),IR(50135, 23),IR(1, 0)}, // InterpolateAtVertexAMD in spv_amd_shader_explicit_vertex_parameter
-    {1,IR(33, 3),IR(50158, 9),IR(1, 0)}, // FMin3AMD in spv_amd_shader_trinary_minmax
-    {2,IR(33, 3),IR(50167, 9),IR(1, 0)}, // UMin3AMD in spv_amd_shader_trinary_minmax
-    {3,IR(33, 3),IR(50176, 9),IR(1, 0)}, // SMin3AMD in spv_amd_shader_trinary_minmax
-    {4,IR(33, 3),IR(50185, 9),IR(1, 0)}, // FMax3AMD in spv_amd_shader_trinary_minmax
-    {5,IR(33, 3),IR(50194, 9),IR(1, 0)}, // UMax3AMD in spv_amd_shader_trinary_minmax
-    {6,IR(33, 3),IR(50203, 9),IR(1, 0)}, // SMax3AMD in spv_amd_shader_trinary_minmax
-    {7,IR(33, 3),IR(50212, 9),IR(1, 0)}, // FMid3AMD in spv_amd_shader_trinary_minmax
-    {8,IR(33, 3),IR(50221, 9),IR(1, 0)}, // UMid3AMD in spv_amd_shader_trinary_minmax
-    {9,IR(33, 3),IR(50230, 9),IR(1, 0)}, // SMid3AMD in spv_amd_shader_trinary_minmax
-    {0,IR(33, 3),IR(50239, 7),IR(1, 0)}, // ARGMAX in tosa_001000_1
-    {1,IR(495, 7),IR(50246, 11),IR(1, 0)}, // AVG_POOL2D in tosa_001000_1
-    {2,IR(703, 10),IR(50257, 7),IR(1, 0)}, // CONV2D in tosa_001000_1
-    {3,IR(703, 10),IR(50264, 7),IR(1, 0)}, // CONV3D in tosa_001000_1
-    {4,IR(703, 10),IR(50271, 17),IR(1, 0)}, // DEPTHWISE_CONV2D in tosa_001000_1
-    {5,IR(296, 4),IR(50288, 6),IR(1, 0)}, // FFT2D in tosa_001000_1
-    {6,IR(296, 4),IR(50294, 7),IR(1, 0)}, // MATMUL in tosa_001000_1
-    {7,IR(623, 5),IR(50301, 11),IR(1, 0)}, // MAX_POOL2D in tosa_001000_1
-    {8,IR(36, 2),IR(50312, 7),IR(1, 0)}, // RFFT2D in tosa_001000_1
-    {9,IR(713, 9),IR(50319, 17),IR(1, 0)}, // TRANSPOSE_CONV2D in tosa_001000_1
-    {10,IR(296, 4),IR(50336, 6),IR(1, 0)}, // CLAMP in tosa_001000_1
-    {11,IR(10, 1),IR(50342, 4),IR(1, 0)}, // ERF in tosa_001000_1
-    {12,IR(10, 1),IR(50346, 8),IR(1, 0)}, // SIGMOID in tosa_001000_1
-    {13,IR(10, 1),IR(50354, 5),IR(1, 0)}, // TANH in tosa_001000_1
-    {14,IR(36, 2),IR(50359, 4),IR(1, 0)}, // ADD in tosa_001000_1
-    {15,IR(33, 3),IR(50363, 23),IR(1, 0)}, // ARITHMETIC_RIGHT_SHIFT in tosa_001000_1
-    {16,IR(36, 2),IR(50386, 12),IR(1, 0)}, // BITWISE_AND in tosa_001000_1
-    {17,IR(36, 2),IR(50398, 11),IR(1, 0)}, // BITWISE_OR in tosa_001000_1
-    {18,IR(36, 2),IR(50409, 12),IR(1, 0)}, // BITWISE_XOR in tosa_001000_1
-    {19,IR(36, 2),IR(50421, 7),IR(1, 0)}, // INTDIV in tosa_001000_1
-    {20,IR(36, 2),IR(50428, 12),IR(1, 0)}, // LOGICAL_AND in tosa_001000_1
-    {21,IR(36, 2),IR(50440, 19),IR(1, 0)}, // LOGICAL_LEFT_SHIFT in tosa_001000_1
-    {22,IR(36, 2),IR(50459, 20),IR(1, 0)}, // LOGICAL_RIGHT_SHIFT in tosa_001000_1
-    {23,IR(36, 2),IR(50479, 11),IR(1, 0)}, // LOGICAL_OR in tosa_001000_1
-    {24,IR(36, 2),IR(50490, 12),IR(1, 0)}, // LOGICAL_XOR in tosa_001000_1
-    {25,IR(33, 3),IR(50502, 8),IR(1, 0)}, // MAXIMUM in tosa_001000_1
-    {26,IR(33, 3),IR(50510, 8),IR(1, 0)}, // MINIMUM in tosa_001000_1
-    {27,IR(33, 3),IR(50518, 4),IR(1, 0)}, // MUL in tosa_001000_1
-    {28,IR(36, 2),IR(50522, 4),IR(1, 0)}, // POW in tosa_001000_1
-    {29,IR(36, 2),IR(50526, 4),IR(1, 0)}, // SUB in tosa_001000_1
-    {30,IR(36, 2),IR(50530, 6),IR(1, 0)}, // TABLE in tosa_001000_1
-    {31,IR(10, 1),IR(50536, 4),IR(1, 0)}, // ABS in tosa_001000_1
-    {32,IR(10, 1),IR(50540, 12),IR(1, 0)}, // BITWISE_NOT in tosa_001000_1
-    {33,IR(10, 1),IR(50552, 5),IR(1, 0)}, // CEIL in tosa_001000_1
-    {34,IR(10, 1),IR(50557, 4),IR(1, 0)}, // CLZ in tosa_001000_1
-    {35,IR(10, 1),IR(50561, 4),IR(1, 0)}, // COS in tosa_001000_1
-    {36,IR(10, 1),IR(50565, 4),IR(1, 0)}, // EXP in tosa_001000_1
-    {37,IR(10, 1),IR(50569, 6),IR(1, 0)}, // FLOOR in tosa_001000_1
-    {38,IR(10, 1),IR(50575, 4),IR(1, 0)}, // LOG in tosa_001000_1
-    {39,IR(10, 1),IR(50579, 12),IR(1, 0)}, // LOGICAL_NOT in tosa_001000_1
-    {40,IR(33, 3),IR(50591, 7),IR(1, 0)}, // NEGATE in tosa_001000_1
-    {41,IR(10, 1),IR(50598, 11),IR(1, 0)}, // RECIPROCAL in tosa_001000_1
-    {42,IR(10, 1),IR(50609, 6),IR(1, 0)}, // RSQRT in tosa_001000_1
-    {43,IR(10, 1),IR(50615, 4),IR(1, 0)}, // SIN in tosa_001000_1
-    {44,IR(33, 3),IR(50619, 7),IR(1, 0)}, // SELECT in tosa_001000_1
-    {45,IR(36, 2),IR(50626, 6),IR(1, 0)}, // EQUAL in tosa_001000_1
-    {46,IR(36, 2),IR(50632, 8),IR(1, 0)}, // GREATER in tosa_001000_1
-    {47,IR(36, 2),IR(50640, 14),IR(1, 0)}, // GREATER_EQUAL in tosa_001000_1
-    {48,IR(36, 2),IR(50654, 11),IR(1, 0)}, // REDUCE_ALL in tosa_001000_1
-    {49,IR(36, 2),IR(50665, 11),IR(1, 0)}, // REDUCE_ANY in tosa_001000_1
-    {50,IR(33, 3),IR(50676, 11),IR(1, 0)}, // REDUCE_MAX in tosa_001000_1
-    {51,IR(33, 3),IR(50687, 11),IR(1, 0)}, // REDUCE_MIN in tosa_001000_1
-    {52,IR(36, 2),IR(50698, 15),IR(1, 0)}, // REDUCE_PRODUCT in tosa_001000_1
-    {53,IR(36, 2),IR(50713, 11),IR(1, 0)}, // REDUCE_SUM in tosa_001000_1
-    {54,IR(168, 2),IR(50724, 7),IR(1, 0)}, // CONCAT in tosa_001000_1
-    {55,IR(33, 3),IR(50731, 4),IR(1, 0)}, // PAD in tosa_001000_1
-    {56,IR(36, 2),IR(50735, 8),IR(1, 0)}, // RESHAPE in tosa_001000_1
-    {57,IR(36, 2),IR(50743, 8),IR(1, 0)}, // REVERSE in tosa_001000_1
-    {58,IR(33, 3),IR(50751, 6),IR(1, 0)}, // SLICE in tosa_001000_1
-    {59,IR(36, 2),IR(50757, 5),IR(1, 0)}, // TILE in tosa_001000_1
-    {60,IR(36, 2),IR(50762, 10),IR(1, 0)}, // TRANSPOSE in tosa_001000_1
-    {61,IR(36, 2),IR(50772, 7),IR(1, 0)}, // GATHER in tosa_001000_1
-    {62,IR(33, 3),IR(50779, 8),IR(1, 0)}, // SCATTER in tosa_001000_1
-    {63,IR(623, 5),IR(50787, 7),IR(1, 0)}, // RESIZE in tosa_001000_1
-    {64,IR(10, 1),IR(50794, 5),IR(1, 0)}, // CAST in tosa_001000_1
-    {65,IR(703, 10),IR(50799, 8),IR(1, 0)}, // RESCALE in tosa_001000_1
+    {24,IR(296, 4),IR(47518, 30),IR(1, 0)}, // PropertyRequiredWorkgroupSize in nonsemantic_clspvreflection
+    {25,IR(10, 1),IR(47548, 28),IR(1, 0)}, // SpecConstantSubgroupMaxSize in nonsemantic_clspvreflection
+    {26,IR(883, 5),IR(47576, 28),IR(1, 0)}, // ArgumentPointerPushConstant in nonsemantic_clspvreflection
+    {27,IR(554, 7),IR(47604, 23),IR(1, 0)}, // ArgumentPointerUniform in nonsemantic_clspvreflection
+    {28,IR(33, 3),IR(47627, 35),IR(1, 0)}, // ProgramScopeVariablesStorageBuffer in nonsemantic_clspvreflection
+    {29,IR(33, 3),IR(47662, 38),IR(1, 0)}, // ProgramScopeVariablePointerRelocation in nonsemantic_clspvreflection
+    {30,IR(296, 4),IR(47700, 42),IR(1, 0)}, // ImageArgumentInfoChannelOrderPushConstant in nonsemantic_clspvreflection
+    {31,IR(296, 4),IR(47742, 45),IR(1, 0)}, // ImageArgumentInfoChannelDataTypePushConstant in nonsemantic_clspvreflection
+    {32,IR(525, 6),IR(47787, 37),IR(1, 0)}, // ImageArgumentInfoChannelOrderUniform in nonsemantic_clspvreflection
+    {33,IR(525, 6),IR(47824, 40),IR(1, 0)}, // ImageArgumentInfoChannelDataTypeUniform in nonsemantic_clspvreflection
+    {34,IR(883, 5),IR(47864, 27),IR(1, 0)}, // ArgumentStorageTexelBuffer in nonsemantic_clspvreflection
+    {35,IR(883, 5),IR(47891, 27),IR(1, 0)}, // ArgumentUniformTexelBuffer in nonsemantic_clspvreflection
+    {36,IR(33, 3),IR(47918, 32),IR(1, 0)}, // ConstantDataPointerPushConstant in nonsemantic_clspvreflection
+    {37,IR(33, 3),IR(47950, 40),IR(1, 0)}, // ProgramScopeVariablePointerPushConstant in nonsemantic_clspvreflection
+    {38,IR(375, 3),IR(47990, 11),IR(1, 0)}, // PrintfInfo in nonsemantic_clspvreflection
+    {39,IR(33, 3),IR(48001, 26),IR(1, 0)}, // PrintfBufferStorageBuffer in nonsemantic_clspvreflection
+    {40,IR(33, 3),IR(48027, 32),IR(1, 0)}, // PrintfBufferPointerPushConstant in nonsemantic_clspvreflection
+    {41,IR(296, 4),IR(48059, 34),IR(1, 0)}, // NormalizedSamplerMaskPushConstant in nonsemantic_clspvreflection
+    {42,IR(36, 2),IR(48093, 22),IR(1, 0)}, // WorkgroupVariableSize in nonsemantic_clspvreflection
+    {0,IR(0, 0),IR(45517, 14),IR(1, 0)}, // DebugInfoNone in nonsemantic_shader_debuginfo_100
+    {1,IR(296, 4),IR(45531, 21),IR(1, 0)}, // DebugCompilationUnit in nonsemantic_shader_debuginfo_100
+    {2,IR(296, 4),IR(45604, 15),IR(1, 0)}, // DebugTypeBasic in nonsemantic_shader_debuginfo_100
+    {3,IR(33, 3),IR(45653, 17),IR(1, 0)}, // DebugTypePointer in nonsemantic_shader_debuginfo_100
+    {4,IR(36, 2),IR(45708, 19),IR(1, 0)}, // DebugTypeQualifier in nonsemantic_shader_debuginfo_100
+    {5,IR(168, 2),IR(45727, 15),IR(1, 0)}, // DebugTypeArray in nonsemantic_shader_debuginfo_100
+    {6,IR(36, 2),IR(45742, 16),IR(1, 0)}, // DebugTypeVector in nonsemantic_shader_debuginfo_100
+    {7,IR(525, 6),IR(45758, 13),IR(1, 0)}, // DebugTypedef in nonsemantic_shader_debuginfo_100
+    {8,IR(375, 3),IR(45771, 18),IR(1, 0)}, // DebugTypeFunction in nonsemantic_shader_debuginfo_100
+    {9,IR(888, 9),IR(45789, 14),IR(1, 0)}, // DebugTypeEnum in nonsemantic_shader_debuginfo_100
+    {10,IR(897, 10),IR(45841, 19),IR(1, 0)}, // DebugTypeComposite in nonsemantic_shader_debuginfo_100
+    {11,IR(907, 9),IR(45860, 16),IR(1, 0)}, // DebugTypeMember in nonsemantic_shader_debuginfo_100
+    {12,IR(296, 4),IR(45876, 21),IR(1, 0)}, // DebugTypeInheritance in nonsemantic_shader_debuginfo_100
+    {13,IR(36, 2),IR(45897, 21),IR(1, 0)}, // DebugTypePtrToMember in nonsemantic_shader_debuginfo_100
+    {14,IR(168, 2),IR(45918, 18),IR(1, 0)}, // DebugTypeTemplate in nonsemantic_shader_debuginfo_100
+    {15,IR(525, 6),IR(45936, 27),IR(1, 0)}, // DebugTypeTemplateParameter in nonsemantic_shader_debuginfo_100
+    {16,IR(634, 5),IR(45963, 35),IR(1, 0)}, // DebugTypeTemplateTemplateParameter in nonsemantic_shader_debuginfo_100
+    {17,IR(916, 5),IR(45998, 31),IR(1, 0)}, // DebugTypeTemplateParameterPack in nonsemantic_shader_debuginfo_100
+    {18,IR(921, 10),IR(46029, 20),IR(1, 0)}, // DebugGlobalVariable in nonsemantic_shader_debuginfo_100
+    {19,IR(471, 8),IR(46049, 25),IR(1, 0)}, // DebugFunctionDeclaration in nonsemantic_shader_debuginfo_100
+    {20,IR(921, 10),IR(46074, 14),IR(1, 0)}, // DebugFunction in nonsemantic_shader_debuginfo_100
+    {21,IR(883, 5),IR(46088, 18),IR(1, 0)}, // DebugLexicalBlock in nonsemantic_shader_debuginfo_100
+    {22,IR(33, 3),IR(46106, 31),IR(1, 0)}, // DebugLexicalBlockDiscriminator in nonsemantic_shader_debuginfo_100
+    {23,IR(860, 2),IR(46137, 11),IR(1, 0)}, // DebugScope in nonsemantic_shader_debuginfo_100
+    {24,IR(0, 0),IR(46148, 13),IR(1, 0)}, // DebugNoScope in nonsemantic_shader_debuginfo_100
+    {25,IR(931, 3),IR(46161, 15),IR(1, 0)}, // DebugInlinedAt in nonsemantic_shader_debuginfo_100
+    {26,IR(934, 8),IR(46218, 19),IR(1, 0)}, // DebugLocalVariable in nonsemantic_shader_debuginfo_100
+    {27,IR(36, 2),IR(46237, 21),IR(1, 0)}, // DebugInlinedVariable in nonsemantic_shader_debuginfo_100
+    {28,IR(942, 4),IR(46258, 13),IR(1, 0)}, // DebugDeclare in nonsemantic_shader_debuginfo_100
+    {29,IR(942, 4),IR(46271, 11),IR(1, 0)}, // DebugValue in nonsemantic_shader_debuginfo_100
+    {30,IR(168, 2),IR(46315, 15),IR(1, 0)}, // DebugOperation in nonsemantic_shader_debuginfo_100
+    {31,IR(706, 1),IR(46330, 16),IR(1, 0)}, // DebugExpression in nonsemantic_shader_debuginfo_100
+    {32,IR(577, 4),IR(46346, 14),IR(1, 0)}, // DebugMacroDef in nonsemantic_shader_debuginfo_100
+    {33,IR(33, 3),IR(46360, 16),IR(1, 0)}, // DebugMacroUndef in nonsemantic_shader_debuginfo_100
+    {34,IR(506, 7),IR(48115, 20),IR(1, 0)}, // DebugImportedEntity in nonsemantic_shader_debuginfo_100
+    {35,IR(860, 2),IR(48135, 12),IR(1, 0)}, // DebugSource in nonsemantic_shader_debuginfo_100
+    {101,IR(36, 2),IR(48147, 24),IR(1, 0)}, // DebugFunctionDefinition in nonsemantic_shader_debuginfo_100
+    {102,IR(10, 1),IR(48171, 21),IR(1, 0)}, // DebugSourceContinued in nonsemantic_shader_debuginfo_100
+    {103,IR(634, 5),IR(48192, 10),IR(1, 0)}, // DebugLine in nonsemantic_shader_debuginfo_100
+    {104,IR(0, 0),IR(48202, 12),IR(1, 0)}, // DebugNoLine in nonsemantic_shader_debuginfo_100
+    {105,IR(36, 2),IR(48214, 21),IR(1, 0)}, // DebugBuildIdentifier in nonsemantic_shader_debuginfo_100
+    {106,IR(10, 1),IR(48235, 17),IR(1, 0)}, // DebugStoragePath in nonsemantic_shader_debuginfo_100
+    {107,IR(296, 4),IR(48252, 16),IR(1, 0)}, // DebugEntryPoint in nonsemantic_shader_debuginfo_100
+    {108,IR(33, 3),IR(48268, 16),IR(1, 0)}, // DebugTypeMatrix in nonsemantic_shader_debuginfo_100
+    {1,IR(724, 9),IR(48284, 14),IR(1, 0)}, // Configuration in nonsemantic_vkspreflection
+    {2,IR(10, 1),IR(48298, 13),IR(1, 0)}, // StartCounter in nonsemantic_vkspreflection
+    {3,IR(10, 1),IR(48311, 12),IR(1, 0)}, // StopCounter in nonsemantic_vkspreflection
+    {4,IR(296, 4),IR(48323, 14),IR(1, 0)}, // PushConstants in nonsemantic_vkspreflection
+    {5,IR(33, 3),IR(48337, 23),IR(1, 0)}, // SpecializationMapEntry in nonsemantic_vkspreflection
+    {6,IR(946, 15),IR(48360, 20),IR(1, 0)}, // DescriptorSetBuffer in nonsemantic_vkspreflection
+    {7,IR(961, 33),IR(48380, 19),IR(1, 0)}, // DescriptorSetImage in nonsemantic_vkspreflection
+    {8,IR(994, 19),IR(48399, 21),IR(1, 0)}, // DescriptorSetSampler in nonsemantic_vkspreflection
+    {0,IR(0, 0),IR(45517, 14),IR(1, 0)}, // DebugInfoNone in opencl_debuginfo_100
+    {1,IR(1013, 4),IR(45531, 21),IR(1, 0)}, // DebugCompilationUnit in opencl_debuginfo_100
+    {2,IR(1017, 3),IR(45604, 15),IR(1, 0)}, // DebugTypeBasic in opencl_debuginfo_100
+    {3,IR(1020, 3),IR(45653, 17),IR(1, 0)}, // DebugTypePointer in opencl_debuginfo_100
+    {4,IR(1023, 2),IR(45708, 19),IR(1, 0)}, // DebugTypeQualifier in opencl_debuginfo_100
+    {5,IR(168, 2),IR(45727, 15),IR(1, 0)}, // DebugTypeArray in opencl_debuginfo_100
+    {6,IR(261, 2),IR(45742, 16),IR(1, 0)}, // DebugTypeVector in opencl_debuginfo_100
+    {7,IR(778, 6),IR(45758, 13),IR(1, 0)}, // DebugTypedef in opencl_debuginfo_100
+    {8,IR(1025, 3),IR(45771, 18),IR(1, 0)}, // DebugTypeFunction in opencl_debuginfo_100
+    {9,IR(1028, 9),IR(45789, 14),IR(1, 0)}, // DebugTypeEnum in opencl_debuginfo_100
+    {10,IR(1037, 10),IR(45841, 19),IR(1, 0)}, // DebugTypeComposite in opencl_debuginfo_100
+    {11,IR(1047, 10),IR(45860, 16),IR(1, 0)}, // DebugTypeMember in opencl_debuginfo_100
+    {12,IR(1057, 5),IR(45876, 21),IR(1, 0)}, // DebugTypeInheritance in opencl_debuginfo_100
+    {13,IR(36, 2),IR(45897, 21),IR(1, 0)}, // DebugTypePtrToMember in opencl_debuginfo_100
+    {14,IR(168, 2),IR(45918, 18),IR(1, 0)}, // DebugTypeTemplate in opencl_debuginfo_100
+    {15,IR(817, 6),IR(45936, 27),IR(1, 0)}, // DebugTypeTemplateParameter in opencl_debuginfo_100
+    {16,IR(823, 5),IR(45963, 35),IR(1, 0)}, // DebugTypeTemplateTemplateParameter in opencl_debuginfo_100
+    {17,IR(828, 5),IR(45998, 31),IR(1, 0)}, // DebugTypeTemplateParameterPack in opencl_debuginfo_100
+    {18,IR(1047, 10),IR(46029, 20),IR(1, 0)}, // DebugGlobalVariable in opencl_debuginfo_100
+    {19,IR(1062, 8),IR(46049, 25),IR(1, 0)}, // DebugFunctionDeclaration in opencl_debuginfo_100
+    {20,IR(1070, 11),IR(46074, 14),IR(1, 0)}, // DebugFunction in opencl_debuginfo_100
+    {21,IR(852, 5),IR(46088, 18),IR(1, 0)}, // DebugLexicalBlock in opencl_debuginfo_100
+    {22,IR(857, 3),IR(46106, 31),IR(1, 0)}, // DebugLexicalBlockDiscriminator in opencl_debuginfo_100
+    {23,IR(860, 2),IR(46137, 11),IR(1, 0)}, // DebugScope in opencl_debuginfo_100
+    {24,IR(0, 0),IR(46148, 13),IR(1, 0)}, // DebugNoScope in opencl_debuginfo_100
+    {25,IR(862, 3),IR(46161, 15),IR(1, 0)}, // DebugInlinedAt in opencl_debuginfo_100
+    {26,IR(1081, 8),IR(46218, 19),IR(1, 0)}, // DebugLocalVariable in opencl_debuginfo_100
+    {27,IR(36, 2),IR(46237, 21),IR(1, 0)}, // DebugInlinedVariable in opencl_debuginfo_100
+    {28,IR(33, 3),IR(46258, 13),IR(1, 0)}, // DebugDeclare in opencl_debuginfo_100
+    {29,IR(942, 4),IR(46271, 11),IR(1, 0)}, // DebugValue in opencl_debuginfo_100
+    {30,IR(1089, 2),IR(46315, 15),IR(1, 0)}, // DebugOperation in opencl_debuginfo_100
+    {31,IR(706, 1),IR(46330, 16),IR(1, 0)}, // DebugExpression in opencl_debuginfo_100
+    {32,IR(874, 4),IR(46346, 14),IR(1, 0)}, // DebugMacroDef in opencl_debuginfo_100
+    {33,IR(857, 3),IR(46360, 16),IR(1, 0)}, // DebugMacroUndef in opencl_debuginfo_100
+    {34,IR(1091, 7),IR(48115, 20),IR(1, 0)}, // DebugImportedEntity in opencl_debuginfo_100
+    {35,IR(860, 2),IR(48135, 12),IR(1, 0)}, // DebugSource in opencl_debuginfo_100
+    {36,IR(1098, 8),IR(48720, 17),IR(1, 0)}, // DebugModuleINTEL in opencl_debuginfo_100
+    {0,IR(10, 1),IR(48737, 5),IR(1, 0)}, // acos in opencl_std_100
+    {1,IR(10, 1),IR(48742, 6),IR(1, 0)}, // acosh in opencl_std_100
+    {2,IR(10, 1),IR(48748, 7),IR(1, 0)}, // acospi in opencl_std_100
+    {3,IR(10, 1),IR(48755, 5),IR(1, 0)}, // asin in opencl_std_100
+    {4,IR(10, 1),IR(48760, 6),IR(1, 0)}, // asinh in opencl_std_100
+    {5,IR(10, 1),IR(48766, 7),IR(1, 0)}, // asinpi in opencl_std_100
+    {6,IR(10, 1),IR(48773, 5),IR(1, 0)}, // atan in opencl_std_100
+    {7,IR(36, 2),IR(48778, 6),IR(1, 0)}, // atan2 in opencl_std_100
+    {8,IR(10, 1),IR(48784, 6),IR(1, 0)}, // atanh in opencl_std_100
+    {9,IR(10, 1),IR(48790, 7),IR(1, 0)}, // atanpi in opencl_std_100
+    {10,IR(36, 2),IR(48797, 8),IR(1, 0)}, // atan2pi in opencl_std_100
+    {11,IR(10, 1),IR(48805, 5),IR(1, 0)}, // cbrt in opencl_std_100
+    {12,IR(10, 1),IR(48810, 5),IR(1, 0)}, // ceil in opencl_std_100
+    {13,IR(36, 2),IR(48815, 9),IR(1, 0)}, // copysign in opencl_std_100
+    {14,IR(10, 1),IR(48824, 4),IR(1, 0)}, // cos in opencl_std_100
+    {15,IR(10, 1),IR(48828, 5),IR(1, 0)}, // cosh in opencl_std_100
+    {16,IR(10, 1),IR(48833, 6),IR(1, 0)}, // cospi in opencl_std_100
+    {17,IR(10, 1),IR(48839, 5),IR(1, 0)}, // erfc in opencl_std_100
+    {18,IR(10, 1),IR(48844, 4),IR(1, 0)}, // erf in opencl_std_100
+    {19,IR(10, 1),IR(48848, 4),IR(1, 0)}, // exp in opencl_std_100
+    {20,IR(10, 1),IR(48852, 5),IR(1, 0)}, // exp2 in opencl_std_100
+    {21,IR(10, 1),IR(48857, 6),IR(1, 0)}, // exp10 in opencl_std_100
+    {22,IR(10, 1),IR(48863, 6),IR(1, 0)}, // expm1 in opencl_std_100
+    {23,IR(10, 1),IR(48869, 5),IR(1, 0)}, // fabs in opencl_std_100
+    {24,IR(36, 2),IR(48874, 5),IR(1, 0)}, // fdim in opencl_std_100
+    {25,IR(10, 1),IR(48879, 6),IR(1, 0)}, // floor in opencl_std_100
+    {26,IR(33, 3),IR(48885, 4),IR(1, 0)}, // fma in opencl_std_100
+    {27,IR(36, 2),IR(48889, 5),IR(1, 0)}, // fmax in opencl_std_100
+    {28,IR(36, 2),IR(48894, 5),IR(1, 0)}, // fmin in opencl_std_100
+    {29,IR(36, 2),IR(48899, 5),IR(1, 0)}, // fmod in opencl_std_100
+    {30,IR(36, 2),IR(48904, 6),IR(1, 0)}, // fract in opencl_std_100
+    {31,IR(36, 2),IR(48910, 6),IR(1, 0)}, // frexp in opencl_std_100
+    {32,IR(36, 2),IR(48916, 6),IR(1, 0)}, // hypot in opencl_std_100
+    {33,IR(10, 1),IR(48922, 6),IR(1, 0)}, // ilogb in opencl_std_100
+    {34,IR(36, 2),IR(48928, 6),IR(1, 0)}, // ldexp in opencl_std_100
+    {35,IR(10, 1),IR(48934, 7),IR(1, 0)}, // lgamma in opencl_std_100
+    {36,IR(36, 2),IR(48941, 9),IR(1, 0)}, // lgamma_r in opencl_std_100
+    {37,IR(10, 1),IR(48950, 4),IR(1, 0)}, // log in opencl_std_100
+    {38,IR(10, 1),IR(48954, 5),IR(1, 0)}, // log2 in opencl_std_100
+    {39,IR(10, 1),IR(48959, 6),IR(1, 0)}, // log10 in opencl_std_100
+    {40,IR(10, 1),IR(48965, 6),IR(1, 0)}, // log1p in opencl_std_100
+    {41,IR(10, 1),IR(48971, 5),IR(1, 0)}, // logb in opencl_std_100
+    {42,IR(33, 3),IR(48976, 4),IR(1, 0)}, // mad in opencl_std_100
+    {43,IR(36, 2),IR(48980, 7),IR(1, 0)}, // maxmag in opencl_std_100
+    {44,IR(36, 2),IR(48987, 7),IR(1, 0)}, // minmag in opencl_std_100
+    {45,IR(36, 2),IR(48994, 5),IR(1, 0)}, // modf in opencl_std_100
+    {46,IR(10, 1),IR(48999, 4),IR(1, 0)}, // nan in opencl_std_100
+    {47,IR(36, 2),IR(49003, 10),IR(1, 0)}, // nextafter in opencl_std_100
+    {48,IR(36, 2),IR(49013, 4),IR(1, 0)}, // pow in opencl_std_100
+    {49,IR(36, 2),IR(49017, 5),IR(1, 0)}, // pown in opencl_std_100
+    {50,IR(36, 2),IR(49022, 5),IR(1, 0)}, // powr in opencl_std_100
+    {51,IR(36, 2),IR(49027, 10),IR(1, 0)}, // remainder in opencl_std_100
+    {52,IR(33, 3),IR(49037, 7),IR(1, 0)}, // remquo in opencl_std_100
+    {53,IR(10, 1),IR(49044, 5),IR(1, 0)}, // rint in opencl_std_100
+    {54,IR(36, 2),IR(49049, 6),IR(1, 0)}, // rootn in opencl_std_100
+    {55,IR(10, 1),IR(49055, 6),IR(1, 0)}, // round in opencl_std_100
+    {56,IR(10, 1),IR(49061, 6),IR(1, 0)}, // rsqrt in opencl_std_100
+    {57,IR(10, 1),IR(49067, 4),IR(1, 0)}, // sin in opencl_std_100
+    {58,IR(36, 2),IR(49071, 7),IR(1, 0)}, // sincos in opencl_std_100
+    {59,IR(10, 1),IR(49078, 5),IR(1, 0)}, // sinh in opencl_std_100
+    {60,IR(10, 1),IR(49083, 6),IR(1, 0)}, // sinpi in opencl_std_100
+    {61,IR(10, 1),IR(49089, 5),IR(1, 0)}, // sqrt in opencl_std_100
+    {62,IR(10, 1),IR(49094, 4),IR(1, 0)}, // tan in opencl_std_100
+    {63,IR(10, 1),IR(49098, 5),IR(1, 0)}, // tanh in opencl_std_100
+    {64,IR(10, 1),IR(49103, 6),IR(1, 0)}, // tanpi in opencl_std_100
+    {65,IR(10, 1),IR(49109, 7),IR(1, 0)}, // tgamma in opencl_std_100
+    {66,IR(10, 1),IR(49116, 6),IR(1, 0)}, // trunc in opencl_std_100
+    {67,IR(10, 1),IR(49122, 9),IR(1, 0)}, // half_cos in opencl_std_100
+    {68,IR(36, 2),IR(49131, 12),IR(1, 0)}, // half_divide in opencl_std_100
+    {69,IR(10, 1),IR(49143, 9),IR(1, 0)}, // half_exp in opencl_std_100
+    {70,IR(10, 1),IR(49152, 10),IR(1, 0)}, // half_exp2 in opencl_std_100
+    {71,IR(10, 1),IR(49162, 11),IR(1, 0)}, // half_exp10 in opencl_std_100
+    {72,IR(10, 1),IR(49173, 9),IR(1, 0)}, // half_log in opencl_std_100
+    {73,IR(10, 1),IR(49182, 10),IR(1, 0)}, // half_log2 in opencl_std_100
+    {74,IR(10, 1),IR(49192, 11),IR(1, 0)}, // half_log10 in opencl_std_100
+    {75,IR(36, 2),IR(49203, 10),IR(1, 0)}, // half_powr in opencl_std_100
+    {76,IR(10, 1),IR(49213, 11),IR(1, 0)}, // half_recip in opencl_std_100
+    {77,IR(10, 1),IR(49224, 11),IR(1, 0)}, // half_rsqrt in opencl_std_100
+    {78,IR(10, 1),IR(49235, 9),IR(1, 0)}, // half_sin in opencl_std_100
+    {79,IR(10, 1),IR(49244, 10),IR(1, 0)}, // half_sqrt in opencl_std_100
+    {80,IR(10, 1),IR(49254, 9),IR(1, 0)}, // half_tan in opencl_std_100
+    {81,IR(10, 1),IR(49263, 11),IR(1, 0)}, // native_cos in opencl_std_100
+    {82,IR(36, 2),IR(49274, 14),IR(1, 0)}, // native_divide in opencl_std_100
+    {83,IR(10, 1),IR(49288, 11),IR(1, 0)}, // native_exp in opencl_std_100
+    {84,IR(10, 1),IR(49299, 12),IR(1, 0)}, // native_exp2 in opencl_std_100
+    {85,IR(10, 1),IR(49311, 13),IR(1, 0)}, // native_exp10 in opencl_std_100
+    {86,IR(10, 1),IR(49324, 11),IR(1, 0)}, // native_log in opencl_std_100
+    {87,IR(10, 1),IR(49335, 12),IR(1, 0)}, // native_log2 in opencl_std_100
+    {88,IR(10, 1),IR(49347, 13),IR(1, 0)}, // native_log10 in opencl_std_100
+    {89,IR(36, 2),IR(49360, 12),IR(1, 0)}, // native_powr in opencl_std_100
+    {90,IR(10, 1),IR(49372, 13),IR(1, 0)}, // native_recip in opencl_std_100
+    {91,IR(10, 1),IR(49385, 13),IR(1, 0)}, // native_rsqrt in opencl_std_100
+    {92,IR(10, 1),IR(49398, 11),IR(1, 0)}, // native_sin in opencl_std_100
+    {93,IR(10, 1),IR(49409, 12),IR(1, 0)}, // native_sqrt in opencl_std_100
+    {94,IR(10, 1),IR(49421, 11),IR(1, 0)}, // native_tan in opencl_std_100
+    {95,IR(33, 3),IR(49432, 7),IR(1, 0)}, // fclamp in opencl_std_100
+    {96,IR(10, 1),IR(49439, 8),IR(1, 0)}, // degrees in opencl_std_100
+    {97,IR(36, 2),IR(49447, 12),IR(1, 0)}, // fmax_common in opencl_std_100
+    {98,IR(36, 2),IR(49459, 12),IR(1, 0)}, // fmin_common in opencl_std_100
+    {99,IR(33, 3),IR(49471, 4),IR(1, 0)}, // mix in opencl_std_100
+    {100,IR(10, 1),IR(49475, 8),IR(1, 0)}, // radians in opencl_std_100
+    {101,IR(36, 2),IR(49483, 5),IR(1, 0)}, // step in opencl_std_100
+    {102,IR(33, 3),IR(49488, 11),IR(1, 0)}, // smoothstep in opencl_std_100
+    {103,IR(10, 1),IR(49499, 5),IR(1, 0)}, // sign in opencl_std_100
+    {104,IR(36, 2),IR(49504, 6),IR(1, 0)}, // cross in opencl_std_100
+    {105,IR(36, 2),IR(49510, 9),IR(1, 0)}, // distance in opencl_std_100
+    {106,IR(10, 1),IR(49519, 7),IR(1, 0)}, // length in opencl_std_100
+    {107,IR(10, 1),IR(49526, 10),IR(1, 0)}, // normalize in opencl_std_100
+    {108,IR(36, 2),IR(49536, 14),IR(1, 0)}, // fast_distance in opencl_std_100
+    {109,IR(10, 1),IR(49550, 12),IR(1, 0)}, // fast_length in opencl_std_100
+    {110,IR(10, 1),IR(49562, 15),IR(1, 0)}, // fast_normalize in opencl_std_100
+    {141,IR(10, 1),IR(49577, 6),IR(1, 0)}, // s_abs in opencl_std_100
+    {142,IR(36, 2),IR(49583, 11),IR(1, 0)}, // s_abs_diff in opencl_std_100
+    {143,IR(36, 2),IR(49594, 10),IR(1, 0)}, // s_add_sat in opencl_std_100
+    {144,IR(36, 2),IR(49604, 10),IR(1, 0)}, // u_add_sat in opencl_std_100
+    {145,IR(36, 2),IR(49614, 7),IR(1, 0)}, // s_hadd in opencl_std_100
+    {146,IR(36, 2),IR(49621, 7),IR(1, 0)}, // u_hadd in opencl_std_100
+    {147,IR(36, 2),IR(49628, 8),IR(1, 0)}, // s_rhadd in opencl_std_100
+    {148,IR(36, 2),IR(49636, 8),IR(1, 0)}, // u_rhadd in opencl_std_100
+    {149,IR(33, 3),IR(49644, 8),IR(1, 0)}, // s_clamp in opencl_std_100
+    {150,IR(33, 3),IR(49652, 8),IR(1, 0)}, // u_clamp in opencl_std_100
+    {151,IR(10, 1),IR(49660, 4),IR(1, 0)}, // clz in opencl_std_100
+    {152,IR(10, 1),IR(49664, 4),IR(1, 0)}, // ctz in opencl_std_100
+    {153,IR(33, 3),IR(49668, 9),IR(1, 0)}, // s_mad_hi in opencl_std_100
+    {154,IR(33, 3),IR(49677, 10),IR(1, 0)}, // u_mad_sat in opencl_std_100
+    {155,IR(33, 3),IR(49687, 10),IR(1, 0)}, // s_mad_sat in opencl_std_100
+    {156,IR(36, 2),IR(49697, 6),IR(1, 0)}, // s_max in opencl_std_100
+    {157,IR(36, 2),IR(49703, 6),IR(1, 0)}, // u_max in opencl_std_100
+    {158,IR(36, 2),IR(49709, 6),IR(1, 0)}, // s_min in opencl_std_100
+    {159,IR(36, 2),IR(49715, 6),IR(1, 0)}, // u_min in opencl_std_100
+    {160,IR(36, 2),IR(49721, 9),IR(1, 0)}, // s_mul_hi in opencl_std_100
+    {161,IR(36, 2),IR(49730, 7),IR(1, 0)}, // rotate in opencl_std_100
+    {162,IR(36, 2),IR(49737, 10),IR(1, 0)}, // s_sub_sat in opencl_std_100
+    {163,IR(36, 2),IR(49747, 10),IR(1, 0)}, // u_sub_sat in opencl_std_100
+    {164,IR(36, 2),IR(49757, 11),IR(1, 0)}, // u_upsample in opencl_std_100
+    {165,IR(36, 2),IR(49768, 11),IR(1, 0)}, // s_upsample in opencl_std_100
+    {166,IR(10, 1),IR(49779, 9),IR(1, 0)}, // popcount in opencl_std_100
+    {167,IR(33, 3),IR(49788, 8),IR(1, 0)}, // s_mad24 in opencl_std_100
+    {168,IR(33, 3),IR(49796, 8),IR(1, 0)}, // u_mad24 in opencl_std_100
+    {169,IR(36, 2),IR(49804, 8),IR(1, 0)}, // s_mul24 in opencl_std_100
+    {170,IR(36, 2),IR(49812, 8),IR(1, 0)}, // u_mul24 in opencl_std_100
+    {171,IR(1106, 3),IR(49820, 7),IR(1, 0)}, // vloadn in opencl_std_100
+    {172,IR(33, 3),IR(49827, 8),IR(1, 0)}, // vstoren in opencl_std_100
+    {173,IR(36, 2),IR(49835, 11),IR(1, 0)}, // vload_half in opencl_std_100
+    {174,IR(1106, 3),IR(49846, 12),IR(1, 0)}, // vload_halfn in opencl_std_100
+    {175,IR(33, 3),IR(49858, 12),IR(1, 0)}, // vstore_half in opencl_std_100
+    {176,IR(1109, 4),IR(49870, 14),IR(1, 0)}, // vstore_half_r in opencl_std_100
+    {177,IR(33, 3),IR(49884, 13),IR(1, 0)}, // vstore_halfn in opencl_std_100
+    {178,IR(1109, 4),IR(49897, 15),IR(1, 0)}, // vstore_halfn_r in opencl_std_100
+    {179,IR(1106, 3),IR(49912, 13),IR(1, 0)}, // vloada_halfn in opencl_std_100
+    {180,IR(33, 3),IR(49925, 14),IR(1, 0)}, // vstorea_halfn in opencl_std_100
+    {181,IR(1109, 4),IR(49939, 16),IR(1, 0)}, // vstorea_halfn_r in opencl_std_100
+    {182,IR(36, 2),IR(49955, 8),IR(1, 0)}, // shuffle in opencl_std_100
+    {183,IR(33, 3),IR(49963, 9),IR(1, 0)}, // shuffle2 in opencl_std_100
+    {184,IR(168, 2),IR(49972, 7),IR(1, 0)}, // printf in opencl_std_100
+    {185,IR(36, 2),IR(49979, 9),IR(1, 0)}, // prefetch in opencl_std_100
+    {186,IR(33, 3),IR(49988, 10),IR(1, 0)}, // bitselect in opencl_std_100
+    {187,IR(33, 3),IR(49998, 7),IR(1, 0)}, // select in opencl_std_100
+    {201,IR(10, 1),IR(50005, 6),IR(1, 0)}, // u_abs in opencl_std_100
+    {202,IR(36, 2),IR(50011, 11),IR(1, 0)}, // u_abs_diff in opencl_std_100
+    {203,IR(36, 2),IR(50022, 9),IR(1, 0)}, // u_mul_hi in opencl_std_100
+    {204,IR(33, 3),IR(50031, 9),IR(1, 0)}, // u_mad_hi in opencl_std_100
+    {1,IR(10, 1),IR(50040, 17),IR(1, 0)}, // CubeFaceIndexAMD in spv_amd_gcn_shader
+    {2,IR(10, 1),IR(50057, 17),IR(1, 0)}, // CubeFaceCoordAMD in spv_amd_gcn_shader
+    {3,IR(0, 0),IR(50074, 8),IR(1, 0)}, // TimeAMD in spv_amd_gcn_shader
+    {1,IR(36, 2),IR(50082, 22),IR(1, 0)}, // SwizzleInvocationsAMD in spv_amd_shader_ballot
+    {2,IR(36, 2),IR(50104, 28),IR(1, 0)}, // SwizzleInvocationsMaskedAMD in spv_amd_shader_ballot
+    {3,IR(33, 3),IR(50132, 19),IR(1, 0)}, // WriteInvocationAMD in spv_amd_shader_ballot
+    {4,IR(10, 1),IR(50151, 9),IR(1, 0)}, // MbcntAMD in spv_amd_shader_ballot
+    {1,IR(36, 2),IR(50160, 23),IR(1, 0)}, // InterpolateAtVertexAMD in spv_amd_shader_explicit_vertex_parameter
+    {1,IR(33, 3),IR(50183, 9),IR(1, 0)}, // FMin3AMD in spv_amd_shader_trinary_minmax
+    {2,IR(33, 3),IR(50192, 9),IR(1, 0)}, // UMin3AMD in spv_amd_shader_trinary_minmax
+    {3,IR(33, 3),IR(50201, 9),IR(1, 0)}, // SMin3AMD in spv_amd_shader_trinary_minmax
+    {4,IR(33, 3),IR(50210, 9),IR(1, 0)}, // FMax3AMD in spv_amd_shader_trinary_minmax
+    {5,IR(33, 3),IR(50219, 9),IR(1, 0)}, // UMax3AMD in spv_amd_shader_trinary_minmax
+    {6,IR(33, 3),IR(50228, 9),IR(1, 0)}, // SMax3AMD in spv_amd_shader_trinary_minmax
+    {7,IR(33, 3),IR(50237, 9),IR(1, 0)}, // FMid3AMD in spv_amd_shader_trinary_minmax
+    {8,IR(33, 3),IR(50246, 9),IR(1, 0)}, // UMid3AMD in spv_amd_shader_trinary_minmax
+    {9,IR(33, 3),IR(50255, 9),IR(1, 0)}, // SMid3AMD in spv_amd_shader_trinary_minmax
+    {0,IR(33, 3),IR(50264, 7),IR(1, 0)}, // ARGMAX in tosa_001000_1
+    {1,IR(506, 7),IR(50271, 11),IR(1, 0)}, // AVG_POOL2D in tosa_001000_1
+    {2,IR(714, 10),IR(50282, 7),IR(1, 0)}, // CONV2D in tosa_001000_1
+    {3,IR(714, 10),IR(50289, 7),IR(1, 0)}, // CONV3D in tosa_001000_1
+    {4,IR(714, 10),IR(50296, 17),IR(1, 0)}, // DEPTHWISE_CONV2D in tosa_001000_1
+    {5,IR(296, 4),IR(50313, 6),IR(1, 0)}, // FFT2D in tosa_001000_1
+    {6,IR(296, 4),IR(50319, 7),IR(1, 0)}, // MATMUL in tosa_001000_1
+    {7,IR(634, 5),IR(50326, 11),IR(1, 0)}, // MAX_POOL2D in tosa_001000_1
+    {8,IR(36, 2),IR(50337, 7),IR(1, 0)}, // RFFT2D in tosa_001000_1
+    {9,IR(724, 9),IR(50344, 17),IR(1, 0)}, // TRANSPOSE_CONV2D in tosa_001000_1
+    {10,IR(296, 4),IR(50361, 6),IR(1, 0)}, // CLAMP in tosa_001000_1
+    {11,IR(10, 1),IR(50367, 4),IR(1, 0)}, // ERF in tosa_001000_1
+    {12,IR(10, 1),IR(50371, 8),IR(1, 0)}, // SIGMOID in tosa_001000_1
+    {13,IR(10, 1),IR(50379, 5),IR(1, 0)}, // TANH in tosa_001000_1
+    {14,IR(36, 2),IR(50384, 4),IR(1, 0)}, // ADD in tosa_001000_1
+    {15,IR(33, 3),IR(50388, 23),IR(1, 0)}, // ARITHMETIC_RIGHT_SHIFT in tosa_001000_1
+    {16,IR(36, 2),IR(50411, 12),IR(1, 0)}, // BITWISE_AND in tosa_001000_1
+    {17,IR(36, 2),IR(50423, 11),IR(1, 0)}, // BITWISE_OR in tosa_001000_1
+    {18,IR(36, 2),IR(50434, 12),IR(1, 0)}, // BITWISE_XOR in tosa_001000_1
+    {19,IR(36, 2),IR(50446, 7),IR(1, 0)}, // INTDIV in tosa_001000_1
+    {20,IR(36, 2),IR(50453, 12),IR(1, 0)}, // LOGICAL_AND in tosa_001000_1
+    {21,IR(36, 2),IR(50465, 19),IR(1, 0)}, // LOGICAL_LEFT_SHIFT in tosa_001000_1
+    {22,IR(36, 2),IR(50484, 20),IR(1, 0)}, // LOGICAL_RIGHT_SHIFT in tosa_001000_1
+    {23,IR(36, 2),IR(50504, 11),IR(1, 0)}, // LOGICAL_OR in tosa_001000_1
+    {24,IR(36, 2),IR(50515, 12),IR(1, 0)}, // LOGICAL_XOR in tosa_001000_1
+    {25,IR(33, 3),IR(50527, 8),IR(1, 0)}, // MAXIMUM in tosa_001000_1
+    {26,IR(33, 3),IR(50535, 8),IR(1, 0)}, // MINIMUM in tosa_001000_1
+    {27,IR(33, 3),IR(50543, 4),IR(1, 0)}, // MUL in tosa_001000_1
+    {28,IR(36, 2),IR(50547, 4),IR(1, 0)}, // POW in tosa_001000_1
+    {29,IR(36, 2),IR(50551, 4),IR(1, 0)}, // SUB in tosa_001000_1
+    {30,IR(36, 2),IR(50555, 6),IR(1, 0)}, // TABLE in tosa_001000_1
+    {31,IR(10, 1),IR(50561, 4),IR(1, 0)}, // ABS in tosa_001000_1
+    {32,IR(10, 1),IR(50565, 12),IR(1, 0)}, // BITWISE_NOT in tosa_001000_1
+    {33,IR(10, 1),IR(50577, 5),IR(1, 0)}, // CEIL in tosa_001000_1
+    {34,IR(10, 1),IR(50582, 4),IR(1, 0)}, // CLZ in tosa_001000_1
+    {35,IR(10, 1),IR(50586, 4),IR(1, 0)}, // COS in tosa_001000_1
+    {36,IR(10, 1),IR(50590, 4),IR(1, 0)}, // EXP in tosa_001000_1
+    {37,IR(10, 1),IR(50594, 6),IR(1, 0)}, // FLOOR in tosa_001000_1
+    {38,IR(10, 1),IR(50600, 4),IR(1, 0)}, // LOG in tosa_001000_1
+    {39,IR(10, 1),IR(50604, 12),IR(1, 0)}, // LOGICAL_NOT in tosa_001000_1
+    {40,IR(33, 3),IR(50616, 7),IR(1, 0)}, // NEGATE in tosa_001000_1
+    {41,IR(10, 1),IR(50623, 11),IR(1, 0)}, // RECIPROCAL in tosa_001000_1
+    {42,IR(10, 1),IR(50634, 6),IR(1, 0)}, // RSQRT in tosa_001000_1
+    {43,IR(10, 1),IR(50640, 4),IR(1, 0)}, // SIN in tosa_001000_1
+    {44,IR(33, 3),IR(50644, 7),IR(1, 0)}, // SELECT in tosa_001000_1
+    {45,IR(36, 2),IR(50651, 6),IR(1, 0)}, // EQUAL in tosa_001000_1
+    {46,IR(36, 2),IR(50657, 8),IR(1, 0)}, // GREATER in tosa_001000_1
+    {47,IR(36, 2),IR(50665, 14),IR(1, 0)}, // GREATER_EQUAL in tosa_001000_1
+    {48,IR(36, 2),IR(50679, 11),IR(1, 0)}, // REDUCE_ALL in tosa_001000_1
+    {49,IR(36, 2),IR(50690, 11),IR(1, 0)}, // REDUCE_ANY in tosa_001000_1
+    {50,IR(33, 3),IR(50701, 11),IR(1, 0)}, // REDUCE_MAX in tosa_001000_1
+    {51,IR(33, 3),IR(50712, 11),IR(1, 0)}, // REDUCE_MIN in tosa_001000_1
+    {52,IR(36, 2),IR(50723, 15),IR(1, 0)}, // REDUCE_PRODUCT in tosa_001000_1
+    {53,IR(36, 2),IR(50738, 11),IR(1, 0)}, // REDUCE_SUM in tosa_001000_1
+    {54,IR(168, 2),IR(50749, 7),IR(1, 0)}, // CONCAT in tosa_001000_1
+    {55,IR(33, 3),IR(50756, 4),IR(1, 0)}, // PAD in tosa_001000_1
+    {56,IR(36, 2),IR(50760, 8),IR(1, 0)}, // RESHAPE in tosa_001000_1
+    {57,IR(36, 2),IR(50768, 8),IR(1, 0)}, // REVERSE in tosa_001000_1
+    {58,IR(33, 3),IR(50776, 6),IR(1, 0)}, // SLICE in tosa_001000_1
+    {59,IR(36, 2),IR(50782, 5),IR(1, 0)}, // TILE in tosa_001000_1
+    {60,IR(36, 2),IR(50787, 10),IR(1, 0)}, // TRANSPOSE in tosa_001000_1
+    {61,IR(36, 2),IR(50797, 7),IR(1, 0)}, // GATHER in tosa_001000_1
+    {62,IR(33, 3),IR(50804, 8),IR(1, 0)}, // SCATTER in tosa_001000_1
+    {63,IR(634, 5),IR(50812, 7),IR(1, 0)}, // RESIZE in tosa_001000_1
+    {64,IR(10, 1),IR(50819, 5),IR(1, 0)}, // CAST in tosa_001000_1
+    {65,IR(714, 10),IR(50824, 8),IR(1, 0)}, // RESCALE in tosa_001000_1
 }};
 
 IndexRange ExtInstByValueRangeForKind(spv_ext_inst_type_t type) {
@@ -5207,497 +5209,497 @@ IndexRange ExtInstByValueRangeForKind(spv_ext_inst_type_t type) {
 //   name
 //   index into kExtInstByValue
 static const std::array<NameIndex, 491> kExtInstNames{{
-    {IR(45506, 21), 1}, // DebugCompilationUnit in debuginfo
-    {IR(46233, 13), 28}, // DebugDeclare in debuginfo
-    {IR(46305, 16), 31}, // DebugExpression in debuginfo
-    {IR(46049, 14), 20}, // DebugFunction in debuginfo
-    {IR(46024, 25), 19}, // DebugFunctionDeclaration in debuginfo
-    {IR(46004, 20), 18}, // DebugGlobalVariable in debuginfo
-    {IR(45492, 14), 0}, // DebugInfoNone in debuginfo
-    {IR(46136, 15), 25}, // DebugInlinedAt in debuginfo
-    {IR(46212, 21), 27}, // DebugInlinedVariable in debuginfo
-    {IR(46063, 18), 21}, // DebugLexicalBlock in debuginfo
-    {IR(46081, 31), 22}, // DebugLexicalBlockDiscriminator in debuginfo
-    {IR(46193, 19), 26}, // DebugLocalVariable in debuginfo
-    {IR(46321, 14), 32}, // DebugMacroDef in debuginfo
-    {IR(46335, 16), 33}, // DebugMacroUndef in debuginfo
-    {IR(46123, 13), 24}, // DebugNoScope in debuginfo
-    {IR(46290, 15), 30}, // DebugOperation in debuginfo
-    {IR(46112, 11), 23}, // DebugScope in debuginfo
-    {IR(45702, 15), 5}, // DebugTypeArray in debuginfo
-    {IR(45579, 15), 2}, // DebugTypeBasic in debuginfo
-    {IR(45816, 19), 10}, // DebugTypeComposite in debuginfo
-    {IR(45764, 14), 9}, // DebugTypeEnum in debuginfo
-    {IR(45746, 18), 8}, // DebugTypeFunction in debuginfo
-    {IR(45851, 21), 12}, // DebugTypeInheritance in debuginfo
-    {IR(45835, 16), 11}, // DebugTypeMember in debuginfo
-    {IR(45628, 17), 3}, // DebugTypePointer in debuginfo
-    {IR(45872, 21), 13}, // DebugTypePtrToMember in debuginfo
-    {IR(45683, 19), 4}, // DebugTypeQualifier in debuginfo
-    {IR(45893, 18), 14}, // DebugTypeTemplate in debuginfo
-    {IR(45911, 27), 15}, // DebugTypeTemplateParameter in debuginfo
-    {IR(45973, 31), 17}, // DebugTypeTemplateParameterPack in debuginfo
-    {IR(45938, 35), 16}, // DebugTypeTemplateTemplateParameter in debuginfo
-    {IR(45717, 16), 6}, // DebugTypeVector in debuginfo
-    {IR(45733, 13), 7}, // DebugTypedef in debuginfo
-    {IR(46246, 11), 29}, // DebugValue in debuginfo
-    {IR(46445, 5), 50}, // Acos in glsl_std_450
-    {IR(46476, 6), 56}, // Acosh in glsl_std_450
-    {IR(46440, 5), 49}, // Asin in glsl_std_450
-    {IR(46470, 6), 55}, // Asinh in glsl_std_450
-    {IR(46450, 5), 51}, // Atan in glsl_std_450
-    {IR(46488, 6), 58}, // Atan2 in glsl_std_450
-    {IR(46482, 6), 57}, // Atanh in glsl_std_450
-    {IR(46401, 5), 42}, // Ceil in glsl_std_450
-    {IR(46432, 4), 47}, // Cos in glsl_std_450
-    {IR(46460, 5), 53}, // Cosh in glsl_std_450
-    {IR(46872, 6), 101}, // Cross in glsl_std_450
-    {IR(46420, 8), 45}, // Degrees in glsl_std_450
-    {IR(46533, 12), 66}, // Determinant in glsl_std_450
-    {IR(46863, 9), 100}, // Distance in glsl_std_450
-    {IR(46498, 4), 60}, // Exp in glsl_std_450
-    {IR(46506, 5), 62}, // Exp2 in glsl_std_450
-    {IR(46373, 5), 37}, // FAbs in glsl_std_450
-    {IR(46605, 7), 76}, // FClamp in glsl_std_450
-    {IR(46590, 5), 73}, // FMax in glsl_std_450
-    {IR(46575, 5), 70}, // FMin in glsl_std_450
-    {IR(46626, 5), 79}, // FMix in glsl_std_450
-    {IR(46383, 6), 39}, // FSign in glsl_std_450
-    {IR(46888, 12), 103}, // FaceForward in glsl_std_450
-    {IR(46916, 9), 106}, // FindILsb in glsl_std_450
-    {IR(46925, 9), 107}, // FindSMsb in glsl_std_450
-    {IR(46934, 9), 108}, // FindUMsb in glsl_std_450
-    {IR(46395, 6), 41}, // Floor in glsl_std_450
-    {IR(46652, 4), 83}, // Fma in glsl_std_450
-    {IR(46406, 6), 43}, // Fract in glsl_std_450
-    {IR(46656, 6), 84}, // Frexp in glsl_std_450
-    {IR(46662, 12), 85}, // FrexpStruct in glsl_std_450
-    {IR(46631, 5), 80}, // IMix in glsl_std_450
-    {IR(46943, 22), 109}, // InterpolateAtCentroid in glsl_std_450
-    {IR(46985, 20), 111}, // InterpolateAtOffset in glsl_std_450
-    {IR(46965, 20), 110}, // InterpolateAtSample in glsl_std_450
-    {IR(46521, 12), 65}, // InverseSqrt in glsl_std_450
-    {IR(46674, 6), 86}, // Ldexp in glsl_std_450
-    {IR(46856, 7), 99}, // Length in glsl_std_450
-    {IR(46502, 4), 61}, // Log in glsl_std_450
-    {IR(46511, 5), 63}, // Log2 in glsl_std_450
-    {IR(46545, 14), 67}, // MatrixInverse in glsl_std_450
-    {IR(46559, 5), 68}, // Modf in glsl_std_450
-    {IR(46564, 11), 69}, // ModfStruct in glsl_std_450
-    {IR(47015, 7), 114}, // NClamp in glsl_std_450
-    {IR(47010, 5), 113}, // NMax in glsl_std_450
-    {IR(47005, 5), 112}, // NMin in glsl_std_450
-    {IR(46878, 10), 102}, // Normalize in glsl_std_450
-    {IR(46747, 15), 92}, // PackDouble2x32 in glsl_std_450
-    {IR(46734, 13), 91}, // PackHalf2x16 in glsl_std_450
-    {IR(46706, 14), 89}, // PackSnorm2x16 in glsl_std_450
-    {IR(46680, 13), 87}, // PackSnorm4x8 in glsl_std_450
-    {IR(46720, 14), 90}, // PackUnorm2x16 in glsl_std_450
-    {IR(46693, 13), 88}, // PackUnorm4x8 in glsl_std_450
-    {IR(46494, 4), 59}, // Pow in glsl_std_450
-    {IR(46412, 8), 44}, // Radians in glsl_std_450
-    {IR(46900, 8), 104}, // Reflect in glsl_std_450
-    {IR(46908, 8), 105}, // Refract in glsl_std_450
-    {IR(46351, 6), 34}, // Round in glsl_std_450
-    {IR(46357, 10), 35}, // RoundEven in glsl_std_450
-    {IR(46378, 5), 38}, // SAbs in glsl_std_450
-    {IR(46619, 7), 78}, // SClamp in glsl_std_450
-    {IR(46600, 5), 75}, // SMax in glsl_std_450
-    {IR(46585, 5), 72}, // SMin in glsl_std_450
-    {IR(46389, 6), 40}, // SSign in glsl_std_450
-    {IR(46428, 4), 46}, // Sin in glsl_std_450
-    {IR(46455, 5), 52}, // Sinh in glsl_std_450
-    {IR(46641, 11), 82}, // SmoothStep in glsl_std_450
-    {IR(46516, 5), 64}, // Sqrt in glsl_std_450
-    {IR(46636, 5), 81}, // Step in glsl_std_450
-    {IR(46436, 4), 48}, // Tan in glsl_std_450
-    {IR(46465, 5), 54}, // Tanh in glsl_std_450
-    {IR(46367, 6), 36}, // Trunc in glsl_std_450
-    {IR(46612, 7), 77}, // UClamp in glsl_std_450
-    {IR(46595, 5), 74}, // UMax in glsl_std_450
-    {IR(46580, 5), 71}, // UMin in glsl_std_450
-    {IR(46839, 17), 98}, // UnpackDouble2x32 in glsl_std_450
-    {IR(46794, 15), 95}, // UnpackHalf2x16 in glsl_std_450
-    {IR(46762, 16), 93}, // UnpackSnorm2x16 in glsl_std_450
-    {IR(46809, 15), 96}, // UnpackSnorm4x8 in glsl_std_450
-    {IR(46778, 16), 94}, // UnpackUnorm2x16 in glsl_std_450
-    {IR(46824, 15), 97}, // UnpackUnorm4x8 in glsl_std_450
-    {IR(47022, 13), 116}, // ArgumentInfo in nonsemantic_clspvreflection
-    {IR(47117, 24), 121}, // ArgumentPodPushConstant in nonsemantic_clspvreflection
-    {IR(47073, 25), 119}, // ArgumentPodStorageBuffer in nonsemantic_clspvreflection
-    {IR(47098, 19), 120}, // ArgumentPodUniform in nonsemantic_clspvreflection
-    {IR(47551, 28), 140}, // ArgumentPointerPushConstant in nonsemantic_clspvreflection
-    {IR(47579, 23), 141}, // ArgumentPointerUniform in nonsemantic_clspvreflection
-    {IR(47141, 21), 122}, // ArgumentSampledImage in nonsemantic_clspvreflection
-    {IR(47183, 16), 124}, // ArgumentSampler in nonsemantic_clspvreflection
-    {IR(47035, 22), 117}, // ArgumentStorageBuffer in nonsemantic_clspvreflection
-    {IR(47162, 21), 123}, // ArgumentStorageImage in nonsemantic_clspvreflection
-    {IR(47839, 27), 148}, // ArgumentStorageTexelBuffer in nonsemantic_clspvreflection
-    {IR(47057, 16), 118}, // ArgumentUniform in nonsemantic_clspvreflection
-    {IR(47866, 27), 149}, // ArgumentUniformTexelBuffer in nonsemantic_clspvreflection
-    {IR(47199, 18), 125}, // ArgumentWorkgroup in nonsemantic_clspvreflection
-    {IR(47893, 32), 150}, // ConstantDataPointerPushConstant in nonsemantic_clspvreflection
-    {IR(47447, 26), 135}, // ConstantDataStorageBuffer in nonsemantic_clspvreflection
-    {IR(47473, 20), 136}, // ConstantDataUniform in nonsemantic_clspvreflection
-    {IR(47717, 45), 145}, // ImageArgumentInfoChannelDataTypePushConstant in nonsemantic_clspvreflection
-    {IR(47799, 40), 147}, // ImageArgumentInfoChannelDataTypeUniform in nonsemantic_clspvreflection
-    {IR(47675, 42), 144}, // ImageArgumentInfoChannelOrderPushConstant in nonsemantic_clspvreflection
-    {IR(47762, 37), 146}, // ImageArgumentInfoChannelOrderUniform in nonsemantic_clspvreflection
+    {IR(45531, 21), 1}, // DebugCompilationUnit in debuginfo
+    {IR(46258, 13), 28}, // DebugDeclare in debuginfo
+    {IR(46330, 16), 31}, // DebugExpression in debuginfo
+    {IR(46074, 14), 20}, // DebugFunction in debuginfo
+    {IR(46049, 25), 19}, // DebugFunctionDeclaration in debuginfo
+    {IR(46029, 20), 18}, // DebugGlobalVariable in debuginfo
+    {IR(45517, 14), 0}, // DebugInfoNone in debuginfo
+    {IR(46161, 15), 25}, // DebugInlinedAt in debuginfo
+    {IR(46237, 21), 27}, // DebugInlinedVariable in debuginfo
+    {IR(46088, 18), 21}, // DebugLexicalBlock in debuginfo
+    {IR(46106, 31), 22}, // DebugLexicalBlockDiscriminator in debuginfo
+    {IR(46218, 19), 26}, // DebugLocalVariable in debuginfo
+    {IR(46346, 14), 32}, // DebugMacroDef in debuginfo
+    {IR(46360, 16), 33}, // DebugMacroUndef in debuginfo
+    {IR(46148, 13), 24}, // DebugNoScope in debuginfo
+    {IR(46315, 15), 30}, // DebugOperation in debuginfo
+    {IR(46137, 11), 23}, // DebugScope in debuginfo
+    {IR(45727, 15), 5}, // DebugTypeArray in debuginfo
+    {IR(45604, 15), 2}, // DebugTypeBasic in debuginfo
+    {IR(45841, 19), 10}, // DebugTypeComposite in debuginfo
+    {IR(45789, 14), 9}, // DebugTypeEnum in debuginfo
+    {IR(45771, 18), 8}, // DebugTypeFunction in debuginfo
+    {IR(45876, 21), 12}, // DebugTypeInheritance in debuginfo
+    {IR(45860, 16), 11}, // DebugTypeMember in debuginfo
+    {IR(45653, 17), 3}, // DebugTypePointer in debuginfo
+    {IR(45897, 21), 13}, // DebugTypePtrToMember in debuginfo
+    {IR(45708, 19), 4}, // DebugTypeQualifier in debuginfo
+    {IR(45918, 18), 14}, // DebugTypeTemplate in debuginfo
+    {IR(45936, 27), 15}, // DebugTypeTemplateParameter in debuginfo
+    {IR(45998, 31), 17}, // DebugTypeTemplateParameterPack in debuginfo
+    {IR(45963, 35), 16}, // DebugTypeTemplateTemplateParameter in debuginfo
+    {IR(45742, 16), 6}, // DebugTypeVector in debuginfo
+    {IR(45758, 13), 7}, // DebugTypedef in debuginfo
+    {IR(46271, 11), 29}, // DebugValue in debuginfo
+    {IR(46470, 5), 50}, // Acos in glsl_std_450
+    {IR(46501, 6), 56}, // Acosh in glsl_std_450
+    {IR(46465, 5), 49}, // Asin in glsl_std_450
+    {IR(46495, 6), 55}, // Asinh in glsl_std_450
+    {IR(46475, 5), 51}, // Atan in glsl_std_450
+    {IR(46513, 6), 58}, // Atan2 in glsl_std_450
+    {IR(46507, 6), 57}, // Atanh in glsl_std_450
+    {IR(46426, 5), 42}, // Ceil in glsl_std_450
+    {IR(46457, 4), 47}, // Cos in glsl_std_450
+    {IR(46485, 5), 53}, // Cosh in glsl_std_450
+    {IR(46897, 6), 101}, // Cross in glsl_std_450
+    {IR(46445, 8), 45}, // Degrees in glsl_std_450
+    {IR(46558, 12), 66}, // Determinant in glsl_std_450
+    {IR(46888, 9), 100}, // Distance in glsl_std_450
+    {IR(46523, 4), 60}, // Exp in glsl_std_450
+    {IR(46531, 5), 62}, // Exp2 in glsl_std_450
+    {IR(46398, 5), 37}, // FAbs in glsl_std_450
+    {IR(46630, 7), 76}, // FClamp in glsl_std_450
+    {IR(46615, 5), 73}, // FMax in glsl_std_450
+    {IR(46600, 5), 70}, // FMin in glsl_std_450
+    {IR(46651, 5), 79}, // FMix in glsl_std_450
+    {IR(46408, 6), 39}, // FSign in glsl_std_450
+    {IR(46913, 12), 103}, // FaceForward in glsl_std_450
+    {IR(46941, 9), 106}, // FindILsb in glsl_std_450
+    {IR(46950, 9), 107}, // FindSMsb in glsl_std_450
+    {IR(46959, 9), 108}, // FindUMsb in glsl_std_450
+    {IR(46420, 6), 41}, // Floor in glsl_std_450
+    {IR(46677, 4), 83}, // Fma in glsl_std_450
+    {IR(46431, 6), 43}, // Fract in glsl_std_450
+    {IR(46681, 6), 84}, // Frexp in glsl_std_450
+    {IR(46687, 12), 85}, // FrexpStruct in glsl_std_450
+    {IR(46656, 5), 80}, // IMix in glsl_std_450
+    {IR(46968, 22), 109}, // InterpolateAtCentroid in glsl_std_450
+    {IR(47010, 20), 111}, // InterpolateAtOffset in glsl_std_450
+    {IR(46990, 20), 110}, // InterpolateAtSample in glsl_std_450
+    {IR(46546, 12), 65}, // InverseSqrt in glsl_std_450
+    {IR(46699, 6), 86}, // Ldexp in glsl_std_450
+    {IR(46881, 7), 99}, // Length in glsl_std_450
+    {IR(46527, 4), 61}, // Log in glsl_std_450
+    {IR(46536, 5), 63}, // Log2 in glsl_std_450
+    {IR(46570, 14), 67}, // MatrixInverse in glsl_std_450
+    {IR(46584, 5), 68}, // Modf in glsl_std_450
+    {IR(46589, 11), 69}, // ModfStruct in glsl_std_450
+    {IR(47040, 7), 114}, // NClamp in glsl_std_450
+    {IR(47035, 5), 113}, // NMax in glsl_std_450
+    {IR(47030, 5), 112}, // NMin in glsl_std_450
+    {IR(46903, 10), 102}, // Normalize in glsl_std_450
+    {IR(46772, 15), 92}, // PackDouble2x32 in glsl_std_450
+    {IR(46759, 13), 91}, // PackHalf2x16 in glsl_std_450
+    {IR(46731, 14), 89}, // PackSnorm2x16 in glsl_std_450
+    {IR(46705, 13), 87}, // PackSnorm4x8 in glsl_std_450
+    {IR(46745, 14), 90}, // PackUnorm2x16 in glsl_std_450
+    {IR(46718, 13), 88}, // PackUnorm4x8 in glsl_std_450
+    {IR(46519, 4), 59}, // Pow in glsl_std_450
+    {IR(46437, 8), 44}, // Radians in glsl_std_450
+    {IR(46925, 8), 104}, // Reflect in glsl_std_450
+    {IR(46933, 8), 105}, // Refract in glsl_std_450
+    {IR(46376, 6), 34}, // Round in glsl_std_450
+    {IR(46382, 10), 35}, // RoundEven in glsl_std_450
+    {IR(46403, 5), 38}, // SAbs in glsl_std_450
+    {IR(46644, 7), 78}, // SClamp in glsl_std_450
+    {IR(46625, 5), 75}, // SMax in glsl_std_450
+    {IR(46610, 5), 72}, // SMin in glsl_std_450
+    {IR(46414, 6), 40}, // SSign in glsl_std_450
+    {IR(46453, 4), 46}, // Sin in glsl_std_450
+    {IR(46480, 5), 52}, // Sinh in glsl_std_450
+    {IR(46666, 11), 82}, // SmoothStep in glsl_std_450
+    {IR(46541, 5), 64}, // Sqrt in glsl_std_450
+    {IR(46661, 5), 81}, // Step in glsl_std_450
+    {IR(46461, 4), 48}, // Tan in glsl_std_450
+    {IR(46490, 5), 54}, // Tanh in glsl_std_450
+    {IR(46392, 6), 36}, // Trunc in glsl_std_450
+    {IR(46637, 7), 77}, // UClamp in glsl_std_450
+    {IR(46620, 5), 74}, // UMax in glsl_std_450
+    {IR(46605, 5), 71}, // UMin in glsl_std_450
+    {IR(46864, 17), 98}, // UnpackDouble2x32 in glsl_std_450
+    {IR(46819, 15), 95}, // UnpackHalf2x16 in glsl_std_450
+    {IR(46787, 16), 93}, // UnpackSnorm2x16 in glsl_std_450
+    {IR(46834, 15), 96}, // UnpackSnorm4x8 in glsl_std_450
+    {IR(46803, 16), 94}, // UnpackUnorm2x16 in glsl_std_450
+    {IR(46849, 15), 97}, // UnpackUnorm4x8 in glsl_std_450
+    {IR(47047, 13), 116}, // ArgumentInfo in nonsemantic_clspvreflection
+    {IR(47142, 24), 121}, // ArgumentPodPushConstant in nonsemantic_clspvreflection
+    {IR(47098, 25), 119}, // ArgumentPodStorageBuffer in nonsemantic_clspvreflection
+    {IR(47123, 19), 120}, // ArgumentPodUniform in nonsemantic_clspvreflection
+    {IR(47576, 28), 140}, // ArgumentPointerPushConstant in nonsemantic_clspvreflection
+    {IR(47604, 23), 141}, // ArgumentPointerUniform in nonsemantic_clspvreflection
+    {IR(47166, 21), 122}, // ArgumentSampledImage in nonsemantic_clspvreflection
+    {IR(47208, 16), 124}, // ArgumentSampler in nonsemantic_clspvreflection
+    {IR(47060, 22), 117}, // ArgumentStorageBuffer in nonsemantic_clspvreflection
+    {IR(47187, 21), 123}, // ArgumentStorageImage in nonsemantic_clspvreflection
+    {IR(47864, 27), 148}, // ArgumentStorageTexelBuffer in nonsemantic_clspvreflection
+    {IR(47082, 16), 118}, // ArgumentUniform in nonsemantic_clspvreflection
+    {IR(47891, 27), 149}, // ArgumentUniformTexelBuffer in nonsemantic_clspvreflection
+    {IR(47224, 18), 125}, // ArgumentWorkgroup in nonsemantic_clspvreflection
+    {IR(47918, 32), 150}, // ConstantDataPointerPushConstant in nonsemantic_clspvreflection
+    {IR(47472, 26), 135}, // ConstantDataStorageBuffer in nonsemantic_clspvreflection
+    {IR(47498, 20), 136}, // ConstantDataUniform in nonsemantic_clspvreflection
+    {IR(47742, 45), 145}, // ImageArgumentInfoChannelDataTypePushConstant in nonsemantic_clspvreflection
+    {IR(47824, 40), 147}, // ImageArgumentInfoChannelDataTypeUniform in nonsemantic_clspvreflection
+    {IR(47700, 42), 144}, // ImageArgumentInfoChannelOrderPushConstant in nonsemantic_clspvreflection
+    {IR(47787, 37), 146}, // ImageArgumentInfoChannelOrderUniform in nonsemantic_clspvreflection
     {IR(4630, 7), 115}, // Kernel in nonsemantic_clspvreflection
     {IR(8055, 15), 137}, // LiteralSampler in nonsemantic_clspvreflection
-    {IR(48034, 34), 155}, // NormalizedSamplerMaskPushConstant in nonsemantic_clspvreflection
-    {IR(48002, 32), 154}, // PrintfBufferPointerPushConstant in nonsemantic_clspvreflection
-    {IR(47976, 26), 153}, // PrintfBufferStorageBuffer in nonsemantic_clspvreflection
-    {IR(47965, 11), 152}, // PrintfInfo in nonsemantic_clspvreflection
-    {IR(47925, 40), 151}, // ProgramScopeVariablePointerPushConstant in nonsemantic_clspvreflection
-    {IR(47637, 38), 143}, // ProgramScopeVariablePointerRelocation in nonsemantic_clspvreflection
-    {IR(47602, 35), 142}, // ProgramScopeVariablesStorageBuffer in nonsemantic_clspvreflection
-    {IR(47493, 30), 138}, // PropertyRequiredWorkgroupSize in nonsemantic_clspvreflection
-    {IR(47313, 30), 130}, // PushConstantEnqueuedLocalSize in nonsemantic_clspvreflection
-    {IR(47288, 25), 129}, // PushConstantGlobalOffset in nonsemantic_clspvreflection
-    {IR(47343, 23), 131}, // PushConstantGlobalSize in nonsemantic_clspvreflection
-    {IR(47391, 26), 133}, // PushConstantNumWorkgroups in nonsemantic_clspvreflection
-    {IR(47417, 30), 134}, // PushConstantRegionGroupOffset in nonsemantic_clspvreflection
-    {IR(47366, 25), 132}, // PushConstantRegionOffset in nonsemantic_clspvreflection
-    {IR(47243, 25), 127}, // SpecConstantGlobalOffset in nonsemantic_clspvreflection
-    {IR(47523, 28), 139}, // SpecConstantSubgroupMaxSize in nonsemantic_clspvreflection
-    {IR(47268, 20), 128}, // SpecConstantWorkDim in nonsemantic_clspvreflection
-    {IR(47217, 26), 126}, // SpecConstantWorkgroupSize in nonsemantic_clspvreflection
-    {IR(48068, 22), 156}, // WorkgroupVariableSize in nonsemantic_clspvreflection
-    {IR(48189, 21), 197}, // DebugBuildIdentifier in nonsemantic_shader_debuginfo_100
-    {IR(45506, 21), 158}, // DebugCompilationUnit in nonsemantic_shader_debuginfo_100
-    {IR(46233, 13), 185}, // DebugDeclare in nonsemantic_shader_debuginfo_100
-    {IR(48227, 16), 199}, // DebugEntryPoint in nonsemantic_shader_debuginfo_100
-    {IR(46305, 16), 188}, // DebugExpression in nonsemantic_shader_debuginfo_100
-    {IR(46049, 14), 177}, // DebugFunction in nonsemantic_shader_debuginfo_100
-    {IR(46024, 25), 176}, // DebugFunctionDeclaration in nonsemantic_shader_debuginfo_100
-    {IR(48122, 24), 193}, // DebugFunctionDefinition in nonsemantic_shader_debuginfo_100
-    {IR(46004, 20), 175}, // DebugGlobalVariable in nonsemantic_shader_debuginfo_100
-    {IR(48090, 20), 191}, // DebugImportedEntity in nonsemantic_shader_debuginfo_100
-    {IR(45492, 14), 157}, // DebugInfoNone in nonsemantic_shader_debuginfo_100
-    {IR(46136, 15), 182}, // DebugInlinedAt in nonsemantic_shader_debuginfo_100
-    {IR(46212, 21), 184}, // DebugInlinedVariable in nonsemantic_shader_debuginfo_100
-    {IR(46063, 18), 178}, // DebugLexicalBlock in nonsemantic_shader_debuginfo_100
-    {IR(46081, 31), 179}, // DebugLexicalBlockDiscriminator in nonsemantic_shader_debuginfo_100
-    {IR(48167, 10), 195}, // DebugLine in nonsemantic_shader_debuginfo_100
-    {IR(46193, 19), 183}, // DebugLocalVariable in nonsemantic_shader_debuginfo_100
-    {IR(46321, 14), 189}, // DebugMacroDef in nonsemantic_shader_debuginfo_100
-    {IR(46335, 16), 190}, // DebugMacroUndef in nonsemantic_shader_debuginfo_100
-    {IR(48177, 12), 196}, // DebugNoLine in nonsemantic_shader_debuginfo_100
-    {IR(46123, 13), 181}, // DebugNoScope in nonsemantic_shader_debuginfo_100
-    {IR(46290, 15), 187}, // DebugOperation in nonsemantic_shader_debuginfo_100
-    {IR(46112, 11), 180}, // DebugScope in nonsemantic_shader_debuginfo_100
-    {IR(48110, 12), 192}, // DebugSource in nonsemantic_shader_debuginfo_100
-    {IR(48146, 21), 194}, // DebugSourceContinued in nonsemantic_shader_debuginfo_100
-    {IR(48210, 17), 198}, // DebugStoragePath in nonsemantic_shader_debuginfo_100
-    {IR(45702, 15), 162}, // DebugTypeArray in nonsemantic_shader_debuginfo_100
-    {IR(45579, 15), 159}, // DebugTypeBasic in nonsemantic_shader_debuginfo_100
-    {IR(45816, 19), 167}, // DebugTypeComposite in nonsemantic_shader_debuginfo_100
-    {IR(45764, 14), 166}, // DebugTypeEnum in nonsemantic_shader_debuginfo_100
-    {IR(45746, 18), 165}, // DebugTypeFunction in nonsemantic_shader_debuginfo_100
-    {IR(45851, 21), 169}, // DebugTypeInheritance in nonsemantic_shader_debuginfo_100
-    {IR(48243, 16), 200}, // DebugTypeMatrix in nonsemantic_shader_debuginfo_100
-    {IR(45835, 16), 168}, // DebugTypeMember in nonsemantic_shader_debuginfo_100
-    {IR(45628, 17), 160}, // DebugTypePointer in nonsemantic_shader_debuginfo_100
-    {IR(45872, 21), 170}, // DebugTypePtrToMember in nonsemantic_shader_debuginfo_100
-    {IR(45683, 19), 161}, // DebugTypeQualifier in nonsemantic_shader_debuginfo_100
-    {IR(45893, 18), 171}, // DebugTypeTemplate in nonsemantic_shader_debuginfo_100
-    {IR(45911, 27), 172}, // DebugTypeTemplateParameter in nonsemantic_shader_debuginfo_100
-    {IR(45973, 31), 174}, // DebugTypeTemplateParameterPack in nonsemantic_shader_debuginfo_100
-    {IR(45938, 35), 173}, // DebugTypeTemplateTemplateParameter in nonsemantic_shader_debuginfo_100
-    {IR(45717, 16), 163}, // DebugTypeVector in nonsemantic_shader_debuginfo_100
-    {IR(45733, 13), 164}, // DebugTypedef in nonsemantic_shader_debuginfo_100
-    {IR(46246, 11), 186}, // DebugValue in nonsemantic_shader_debuginfo_100
-    {IR(48259, 14), 201}, // Configuration in nonsemantic_vkspreflection
-    {IR(48335, 20), 206}, // DescriptorSetBuffer in nonsemantic_vkspreflection
-    {IR(48355, 19), 207}, // DescriptorSetImage in nonsemantic_vkspreflection
-    {IR(48374, 21), 208}, // DescriptorSetSampler in nonsemantic_vkspreflection
-    {IR(48298, 14), 204}, // PushConstants in nonsemantic_vkspreflection
-    {IR(48312, 23), 205}, // SpecializationMapEntry in nonsemantic_vkspreflection
-    {IR(48273, 13), 202}, // StartCounter in nonsemantic_vkspreflection
-    {IR(48286, 12), 203}, // StopCounter in nonsemantic_vkspreflection
-    {IR(45506, 21), 210}, // DebugCompilationUnit in opencl_debuginfo_100
-    {IR(46233, 13), 237}, // DebugDeclare in opencl_debuginfo_100
-    {IR(46305, 16), 240}, // DebugExpression in opencl_debuginfo_100
-    {IR(46049, 14), 229}, // DebugFunction in opencl_debuginfo_100
-    {IR(46024, 25), 228}, // DebugFunctionDeclaration in opencl_debuginfo_100
-    {IR(46004, 20), 227}, // DebugGlobalVariable in opencl_debuginfo_100
-    {IR(48090, 20), 243}, // DebugImportedEntity in opencl_debuginfo_100
-    {IR(45492, 14), 209}, // DebugInfoNone in opencl_debuginfo_100
-    {IR(46136, 15), 234}, // DebugInlinedAt in opencl_debuginfo_100
-    {IR(46212, 21), 236}, // DebugInlinedVariable in opencl_debuginfo_100
-    {IR(46063, 18), 230}, // DebugLexicalBlock in opencl_debuginfo_100
-    {IR(46081, 31), 231}, // DebugLexicalBlockDiscriminator in opencl_debuginfo_100
-    {IR(46193, 19), 235}, // DebugLocalVariable in opencl_debuginfo_100
-    {IR(46321, 14), 241}, // DebugMacroDef in opencl_debuginfo_100
-    {IR(46335, 16), 242}, // DebugMacroUndef in opencl_debuginfo_100
-    {IR(48695, 17), 245}, // DebugModuleINTEL in opencl_debuginfo_100
-    {IR(46123, 13), 233}, // DebugNoScope in opencl_debuginfo_100
-    {IR(46290, 15), 239}, // DebugOperation in opencl_debuginfo_100
-    {IR(46112, 11), 232}, // DebugScope in opencl_debuginfo_100
-    {IR(48110, 12), 244}, // DebugSource in opencl_debuginfo_100
-    {IR(45702, 15), 214}, // DebugTypeArray in opencl_debuginfo_100
-    {IR(45579, 15), 211}, // DebugTypeBasic in opencl_debuginfo_100
-    {IR(45816, 19), 219}, // DebugTypeComposite in opencl_debuginfo_100
-    {IR(45764, 14), 218}, // DebugTypeEnum in opencl_debuginfo_100
-    {IR(45746, 18), 217}, // DebugTypeFunction in opencl_debuginfo_100
-    {IR(45851, 21), 221}, // DebugTypeInheritance in opencl_debuginfo_100
-    {IR(45835, 16), 220}, // DebugTypeMember in opencl_debuginfo_100
-    {IR(45628, 17), 212}, // DebugTypePointer in opencl_debuginfo_100
-    {IR(45872, 21), 222}, // DebugTypePtrToMember in opencl_debuginfo_100
-    {IR(45683, 19), 213}, // DebugTypeQualifier in opencl_debuginfo_100
-    {IR(45893, 18), 223}, // DebugTypeTemplate in opencl_debuginfo_100
-    {IR(45911, 27), 224}, // DebugTypeTemplateParameter in opencl_debuginfo_100
-    {IR(45973, 31), 226}, // DebugTypeTemplateParameterPack in opencl_debuginfo_100
-    {IR(45938, 35), 225}, // DebugTypeTemplateTemplateParameter in opencl_debuginfo_100
-    {IR(45717, 16), 215}, // DebugTypeVector in opencl_debuginfo_100
-    {IR(45733, 13), 216}, // DebugTypedef in opencl_debuginfo_100
-    {IR(46246, 11), 238}, // DebugValue in opencl_debuginfo_100
-    {IR(48712, 5), 246}, // acos in opencl_std_100
-    {IR(48717, 6), 247}, // acosh in opencl_std_100
-    {IR(48723, 7), 248}, // acospi in opencl_std_100
-    {IR(48730, 5), 249}, // asin in opencl_std_100
-    {IR(48735, 6), 250}, // asinh in opencl_std_100
-    {IR(48741, 7), 251}, // asinpi in opencl_std_100
-    {IR(48748, 5), 252}, // atan in opencl_std_100
-    {IR(48753, 6), 253}, // atan2 in opencl_std_100
-    {IR(48772, 8), 256}, // atan2pi in opencl_std_100
-    {IR(48759, 6), 254}, // atanh in opencl_std_100
-    {IR(48765, 7), 255}, // atanpi in opencl_std_100
-    {IR(49963, 10), 402}, // bitselect in opencl_std_100
-    {IR(48780, 5), 257}, // cbrt in opencl_std_100
-    {IR(48785, 5), 258}, // ceil in opencl_std_100
-    {IR(49635, 4), 367}, // clz in opencl_std_100
-    {IR(48790, 9), 259}, // copysign in opencl_std_100
-    {IR(48799, 4), 260}, // cos in opencl_std_100
-    {IR(48803, 5), 261}, // cosh in opencl_std_100
-    {IR(48808, 6), 262}, // cospi in opencl_std_100
-    {IR(49479, 6), 350}, // cross in opencl_std_100
-    {IR(49639, 4), 368}, // ctz in opencl_std_100
-    {IR(49414, 8), 342}, // degrees in opencl_std_100
-    {IR(49485, 9), 351}, // distance in opencl_std_100
-    {IR(48819, 4), 264}, // erf in opencl_std_100
-    {IR(48814, 5), 263}, // erfc in opencl_std_100
-    {IR(48823, 4), 265}, // exp in opencl_std_100
-    {IR(48832, 6), 267}, // exp10 in opencl_std_100
-    {IR(48827, 5), 266}, // exp2 in opencl_std_100
-    {IR(48838, 6), 268}, // expm1 in opencl_std_100
-    {IR(48844, 5), 269}, // fabs in opencl_std_100
-    {IR(49511, 14), 354}, // fast_distance in opencl_std_100
-    {IR(49525, 12), 355}, // fast_length in opencl_std_100
-    {IR(49537, 15), 356}, // fast_normalize in opencl_std_100
-    {IR(49407, 7), 341}, // fclamp in opencl_std_100
-    {IR(48849, 5), 270}, // fdim in opencl_std_100
-    {IR(48854, 6), 271}, // floor in opencl_std_100
-    {IR(48860, 4), 272}, // fma in opencl_std_100
-    {IR(48864, 5), 273}, // fmax in opencl_std_100
-    {IR(49422, 12), 343}, // fmax_common in opencl_std_100
-    {IR(48869, 5), 274}, // fmin in opencl_std_100
-    {IR(49434, 12), 344}, // fmin_common in opencl_std_100
-    {IR(48874, 5), 275}, // fmod in opencl_std_100
-    {IR(48879, 6), 276}, // fract in opencl_std_100
-    {IR(48885, 6), 277}, // frexp in opencl_std_100
-    {IR(49097, 9), 313}, // half_cos in opencl_std_100
-    {IR(49106, 12), 314}, // half_divide in opencl_std_100
-    {IR(49118, 9), 315}, // half_exp in opencl_std_100
-    {IR(49137, 11), 317}, // half_exp10 in opencl_std_100
-    {IR(49127, 10), 316}, // half_exp2 in opencl_std_100
-    {IR(49148, 9), 318}, // half_log in opencl_std_100
-    {IR(49167, 11), 320}, // half_log10 in opencl_std_100
-    {IR(49157, 10), 319}, // half_log2 in opencl_std_100
-    {IR(49178, 10), 321}, // half_powr in opencl_std_100
-    {IR(49188, 11), 322}, // half_recip in opencl_std_100
-    {IR(49199, 11), 323}, // half_rsqrt in opencl_std_100
-    {IR(49210, 9), 324}, // half_sin in opencl_std_100
-    {IR(49219, 10), 325}, // half_sqrt in opencl_std_100
-    {IR(49229, 9), 326}, // half_tan in opencl_std_100
-    {IR(48891, 6), 278}, // hypot in opencl_std_100
-    {IR(48897, 6), 279}, // ilogb in opencl_std_100
-    {IR(48903, 6), 280}, // ldexp in opencl_std_100
-    {IR(49494, 7), 352}, // length in opencl_std_100
-    {IR(48909, 7), 281}, // lgamma in opencl_std_100
-    {IR(48916, 9), 282}, // lgamma_r in opencl_std_100
-    {IR(48925, 4), 283}, // log in opencl_std_100
-    {IR(48934, 6), 285}, // log10 in opencl_std_100
-    {IR(48940, 6), 286}, // log1p in opencl_std_100
-    {IR(48929, 5), 284}, // log2 in opencl_std_100
-    {IR(48946, 5), 287}, // logb in opencl_std_100
-    {IR(48951, 4), 288}, // mad in opencl_std_100
-    {IR(48955, 7), 289}, // maxmag in opencl_std_100
-    {IR(48962, 7), 290}, // minmag in opencl_std_100
-    {IR(49446, 4), 345}, // mix in opencl_std_100
-    {IR(48969, 5), 291}, // modf in opencl_std_100
-    {IR(48974, 4), 292}, // nan in opencl_std_100
-    {IR(49238, 11), 327}, // native_cos in opencl_std_100
-    {IR(49249, 14), 328}, // native_divide in opencl_std_100
-    {IR(49263, 11), 329}, // native_exp in opencl_std_100
-    {IR(49286, 13), 331}, // native_exp10 in opencl_std_100
-    {IR(49274, 12), 330}, // native_exp2 in opencl_std_100
-    {IR(49299, 11), 332}, // native_log in opencl_std_100
-    {IR(49322, 13), 334}, // native_log10 in opencl_std_100
-    {IR(49310, 12), 333}, // native_log2 in opencl_std_100
-    {IR(49335, 12), 335}, // native_powr in opencl_std_100
-    {IR(49347, 13), 336}, // native_recip in opencl_std_100
-    {IR(49360, 13), 337}, // native_rsqrt in opencl_std_100
-    {IR(49373, 11), 338}, // native_sin in opencl_std_100
-    {IR(49384, 12), 339}, // native_sqrt in opencl_std_100
-    {IR(49396, 11), 340}, // native_tan in opencl_std_100
-    {IR(48978, 10), 293}, // nextafter in opencl_std_100
-    {IR(49501, 10), 353}, // normalize in opencl_std_100
-    {IR(49754, 9), 382}, // popcount in opencl_std_100
-    {IR(48988, 4), 294}, // pow in opencl_std_100
-    {IR(48992, 5), 295}, // pown in opencl_std_100
-    {IR(48997, 5), 296}, // powr in opencl_std_100
-    {IR(49954, 9), 401}, // prefetch in opencl_std_100
-    {IR(49947, 7), 400}, // printf in opencl_std_100
-    {IR(49450, 8), 346}, // radians in opencl_std_100
-    {IR(49002, 10), 297}, // remainder in opencl_std_100
-    {IR(49012, 7), 298}, // remquo in opencl_std_100
-    {IR(49019, 5), 299}, // rint in opencl_std_100
-    {IR(49024, 6), 300}, // rootn in opencl_std_100
-    {IR(49705, 7), 377}, // rotate in opencl_std_100
-    {IR(49030, 6), 301}, // round in opencl_std_100
-    {IR(49036, 6), 302}, // rsqrt in opencl_std_100
-    {IR(49552, 6), 357}, // s_abs in opencl_std_100
-    {IR(49558, 11), 358}, // s_abs_diff in opencl_std_100
-    {IR(49569, 10), 359}, // s_add_sat in opencl_std_100
-    {IR(49619, 8), 365}, // s_clamp in opencl_std_100
-    {IR(49589, 7), 361}, // s_hadd in opencl_std_100
-    {IR(49763, 8), 383}, // s_mad24 in opencl_std_100
-    {IR(49643, 9), 369}, // s_mad_hi in opencl_std_100
-    {IR(49662, 10), 371}, // s_mad_sat in opencl_std_100
-    {IR(49672, 6), 372}, // s_max in opencl_std_100
-    {IR(49684, 6), 374}, // s_min in opencl_std_100
-    {IR(49779, 8), 385}, // s_mul24 in opencl_std_100
-    {IR(49696, 9), 376}, // s_mul_hi in opencl_std_100
-    {IR(49603, 8), 363}, // s_rhadd in opencl_std_100
-    {IR(49712, 10), 378}, // s_sub_sat in opencl_std_100
-    {IR(49743, 11), 381}, // s_upsample in opencl_std_100
-    {IR(49973, 7), 403}, // select in opencl_std_100
-    {IR(49930, 8), 398}, // shuffle in opencl_std_100
-    {IR(49938, 9), 399}, // shuffle2 in opencl_std_100
-    {IR(49474, 5), 349}, // sign in opencl_std_100
-    {IR(49042, 4), 303}, // sin in opencl_std_100
-    {IR(49046, 7), 304}, // sincos in opencl_std_100
-    {IR(49053, 5), 305}, // sinh in opencl_std_100
-    {IR(49058, 6), 306}, // sinpi in opencl_std_100
-    {IR(49463, 11), 348}, // smoothstep in opencl_std_100
-    {IR(49064, 5), 307}, // sqrt in opencl_std_100
-    {IR(49458, 5), 347}, // step in opencl_std_100
-    {IR(49069, 4), 308}, // tan in opencl_std_100
-    {IR(49073, 5), 309}, // tanh in opencl_std_100
-    {IR(49078, 6), 310}, // tanpi in opencl_std_100
-    {IR(49084, 7), 311}, // tgamma in opencl_std_100
-    {IR(49091, 6), 312}, // trunc in opencl_std_100
-    {IR(49980, 6), 404}, // u_abs in opencl_std_100
-    {IR(49986, 11), 405}, // u_abs_diff in opencl_std_100
-    {IR(49579, 10), 360}, // u_add_sat in opencl_std_100
-    {IR(49627, 8), 366}, // u_clamp in opencl_std_100
-    {IR(49596, 7), 362}, // u_hadd in opencl_std_100
-    {IR(49771, 8), 384}, // u_mad24 in opencl_std_100
-    {IR(50006, 9), 407}, // u_mad_hi in opencl_std_100
-    {IR(49652, 10), 370}, // u_mad_sat in opencl_std_100
-    {IR(49678, 6), 373}, // u_max in opencl_std_100
-    {IR(49690, 6), 375}, // u_min in opencl_std_100
-    {IR(49787, 8), 386}, // u_mul24 in opencl_std_100
-    {IR(49997, 9), 406}, // u_mul_hi in opencl_std_100
-    {IR(49611, 8), 364}, // u_rhadd in opencl_std_100
-    {IR(49722, 10), 379}, // u_sub_sat in opencl_std_100
-    {IR(49732, 11), 380}, // u_upsample in opencl_std_100
-    {IR(49810, 11), 389}, // vload_half in opencl_std_100
-    {IR(49821, 12), 390}, // vload_halfn in opencl_std_100
-    {IR(49887, 13), 395}, // vloada_halfn in opencl_std_100
-    {IR(49795, 7), 387}, // vloadn in opencl_std_100
-    {IR(49833, 12), 391}, // vstore_half in opencl_std_100
-    {IR(49845, 14), 392}, // vstore_half_r in opencl_std_100
-    {IR(49859, 13), 393}, // vstore_halfn in opencl_std_100
-    {IR(49872, 15), 394}, // vstore_halfn_r in opencl_std_100
-    {IR(49900, 14), 396}, // vstorea_halfn in opencl_std_100
-    {IR(49914, 16), 397}, // vstorea_halfn_r in opencl_std_100
-    {IR(49802, 8), 388}, // vstoren in opencl_std_100
-    {IR(50032, 17), 409}, // CubeFaceCoordAMD in spv_amd_gcn_shader
-    {IR(50015, 17), 408}, // CubeFaceIndexAMD in spv_amd_gcn_shader
-    {IR(50049, 8), 410}, // TimeAMD in spv_amd_gcn_shader
-    {IR(50126, 9), 414}, // MbcntAMD in spv_amd_shader_ballot
-    {IR(50057, 22), 411}, // SwizzleInvocationsAMD in spv_amd_shader_ballot
-    {IR(50079, 28), 412}, // SwizzleInvocationsMaskedAMD in spv_amd_shader_ballot
-    {IR(50107, 19), 413}, // WriteInvocationAMD in spv_amd_shader_ballot
-    {IR(50135, 23), 415}, // InterpolateAtVertexAMD in spv_amd_shader_explicit_vertex_parameter
-    {IR(50185, 9), 419}, // FMax3AMD in spv_amd_shader_trinary_minmax
-    {IR(50212, 9), 422}, // FMid3AMD in spv_amd_shader_trinary_minmax
-    {IR(50158, 9), 416}, // FMin3AMD in spv_amd_shader_trinary_minmax
-    {IR(50203, 9), 421}, // SMax3AMD in spv_amd_shader_trinary_minmax
-    {IR(50230, 9), 424}, // SMid3AMD in spv_amd_shader_trinary_minmax
-    {IR(50176, 9), 418}, // SMin3AMD in spv_amd_shader_trinary_minmax
-    {IR(50194, 9), 420}, // UMax3AMD in spv_amd_shader_trinary_minmax
-    {IR(50221, 9), 423}, // UMid3AMD in spv_amd_shader_trinary_minmax
-    {IR(50167, 9), 417}, // UMin3AMD in spv_amd_shader_trinary_minmax
-    {IR(50536, 4), 456}, // ABS in tosa_001000_1
-    {IR(50359, 4), 439}, // ADD in tosa_001000_1
-    {IR(50239, 7), 425}, // ARGMAX in tosa_001000_1
-    {IR(50363, 23), 440}, // ARITHMETIC_RIGHT_SHIFT in tosa_001000_1
-    {IR(50246, 11), 426}, // AVG_POOL2D in tosa_001000_1
-    {IR(50386, 12), 441}, // BITWISE_AND in tosa_001000_1
-    {IR(50540, 12), 457}, // BITWISE_NOT in tosa_001000_1
-    {IR(50398, 11), 442}, // BITWISE_OR in tosa_001000_1
-    {IR(50409, 12), 443}, // BITWISE_XOR in tosa_001000_1
-    {IR(50794, 5), 489}, // CAST in tosa_001000_1
-    {IR(50552, 5), 458}, // CEIL in tosa_001000_1
-    {IR(50336, 6), 435}, // CLAMP in tosa_001000_1
-    {IR(50557, 4), 459}, // CLZ in tosa_001000_1
-    {IR(50724, 7), 479}, // CONCAT in tosa_001000_1
-    {IR(50257, 7), 427}, // CONV2D in tosa_001000_1
-    {IR(50264, 7), 428}, // CONV3D in tosa_001000_1
-    {IR(50561, 4), 460}, // COS in tosa_001000_1
-    {IR(50271, 17), 429}, // DEPTHWISE_CONV2D in tosa_001000_1
-    {IR(50626, 6), 470}, // EQUAL in tosa_001000_1
-    {IR(50342, 4), 436}, // ERF in tosa_001000_1
-    {IR(50565, 4), 461}, // EXP in tosa_001000_1
-    {IR(50288, 6), 430}, // FFT2D in tosa_001000_1
-    {IR(50569, 6), 462}, // FLOOR in tosa_001000_1
-    {IR(50772, 7), 486}, // GATHER in tosa_001000_1
-    {IR(50632, 8), 471}, // GREATER in tosa_001000_1
-    {IR(50640, 14), 472}, // GREATER_EQUAL in tosa_001000_1
-    {IR(50421, 7), 444}, // INTDIV in tosa_001000_1
-    {IR(50575, 4), 463}, // LOG in tosa_001000_1
-    {IR(50428, 12), 445}, // LOGICAL_AND in tosa_001000_1
-    {IR(50440, 19), 446}, // LOGICAL_LEFT_SHIFT in tosa_001000_1
-    {IR(50579, 12), 464}, // LOGICAL_NOT in tosa_001000_1
-    {IR(50479, 11), 448}, // LOGICAL_OR in tosa_001000_1
-    {IR(50459, 20), 447}, // LOGICAL_RIGHT_SHIFT in tosa_001000_1
-    {IR(50490, 12), 449}, // LOGICAL_XOR in tosa_001000_1
-    {IR(50294, 7), 431}, // MATMUL in tosa_001000_1
-    {IR(50502, 8), 450}, // MAXIMUM in tosa_001000_1
-    {IR(50301, 11), 432}, // MAX_POOL2D in tosa_001000_1
-    {IR(50510, 8), 451}, // MINIMUM in tosa_001000_1
-    {IR(50518, 4), 452}, // MUL in tosa_001000_1
-    {IR(50591, 7), 465}, // NEGATE in tosa_001000_1
-    {IR(50731, 4), 480}, // PAD in tosa_001000_1
-    {IR(50522, 4), 453}, // POW in tosa_001000_1
-    {IR(50598, 11), 466}, // RECIPROCAL in tosa_001000_1
-    {IR(50654, 11), 473}, // REDUCE_ALL in tosa_001000_1
-    {IR(50665, 11), 474}, // REDUCE_ANY in tosa_001000_1
-    {IR(50676, 11), 475}, // REDUCE_MAX in tosa_001000_1
-    {IR(50687, 11), 476}, // REDUCE_MIN in tosa_001000_1
-    {IR(50698, 15), 477}, // REDUCE_PRODUCT in tosa_001000_1
-    {IR(50713, 11), 478}, // REDUCE_SUM in tosa_001000_1
-    {IR(50799, 8), 490}, // RESCALE in tosa_001000_1
-    {IR(50735, 8), 481}, // RESHAPE in tosa_001000_1
-    {IR(50787, 7), 488}, // RESIZE in tosa_001000_1
-    {IR(50743, 8), 482}, // REVERSE in tosa_001000_1
-    {IR(50312, 7), 433}, // RFFT2D in tosa_001000_1
-    {IR(50609, 6), 467}, // RSQRT in tosa_001000_1
-    {IR(50779, 8), 487}, // SCATTER in tosa_001000_1
-    {IR(50619, 7), 469}, // SELECT in tosa_001000_1
-    {IR(50346, 8), 437}, // SIGMOID in tosa_001000_1
-    {IR(50615, 4), 468}, // SIN in tosa_001000_1
-    {IR(50751, 6), 483}, // SLICE in tosa_001000_1
-    {IR(50526, 4), 454}, // SUB in tosa_001000_1
-    {IR(50530, 6), 455}, // TABLE in tosa_001000_1
-    {IR(50354, 5), 438}, // TANH in tosa_001000_1
-    {IR(50757, 5), 484}, // TILE in tosa_001000_1
-    {IR(50762, 10), 485}, // TRANSPOSE in tosa_001000_1
-    {IR(50319, 17), 434}, // TRANSPOSE_CONV2D in tosa_001000_1
+    {IR(48059, 34), 155}, // NormalizedSamplerMaskPushConstant in nonsemantic_clspvreflection
+    {IR(48027, 32), 154}, // PrintfBufferPointerPushConstant in nonsemantic_clspvreflection
+    {IR(48001, 26), 153}, // PrintfBufferStorageBuffer in nonsemantic_clspvreflection
+    {IR(47990, 11), 152}, // PrintfInfo in nonsemantic_clspvreflection
+    {IR(47950, 40), 151}, // ProgramScopeVariablePointerPushConstant in nonsemantic_clspvreflection
+    {IR(47662, 38), 143}, // ProgramScopeVariablePointerRelocation in nonsemantic_clspvreflection
+    {IR(47627, 35), 142}, // ProgramScopeVariablesStorageBuffer in nonsemantic_clspvreflection
+    {IR(47518, 30), 138}, // PropertyRequiredWorkgroupSize in nonsemantic_clspvreflection
+    {IR(47338, 30), 130}, // PushConstantEnqueuedLocalSize in nonsemantic_clspvreflection
+    {IR(47313, 25), 129}, // PushConstantGlobalOffset in nonsemantic_clspvreflection
+    {IR(47368, 23), 131}, // PushConstantGlobalSize in nonsemantic_clspvreflection
+    {IR(47416, 26), 133}, // PushConstantNumWorkgroups in nonsemantic_clspvreflection
+    {IR(47442, 30), 134}, // PushConstantRegionGroupOffset in nonsemantic_clspvreflection
+    {IR(47391, 25), 132}, // PushConstantRegionOffset in nonsemantic_clspvreflection
+    {IR(47268, 25), 127}, // SpecConstantGlobalOffset in nonsemantic_clspvreflection
+    {IR(47548, 28), 139}, // SpecConstantSubgroupMaxSize in nonsemantic_clspvreflection
+    {IR(47293, 20), 128}, // SpecConstantWorkDim in nonsemantic_clspvreflection
+    {IR(47242, 26), 126}, // SpecConstantWorkgroupSize in nonsemantic_clspvreflection
+    {IR(48093, 22), 156}, // WorkgroupVariableSize in nonsemantic_clspvreflection
+    {IR(48214, 21), 197}, // DebugBuildIdentifier in nonsemantic_shader_debuginfo_100
+    {IR(45531, 21), 158}, // DebugCompilationUnit in nonsemantic_shader_debuginfo_100
+    {IR(46258, 13), 185}, // DebugDeclare in nonsemantic_shader_debuginfo_100
+    {IR(48252, 16), 199}, // DebugEntryPoint in nonsemantic_shader_debuginfo_100
+    {IR(46330, 16), 188}, // DebugExpression in nonsemantic_shader_debuginfo_100
+    {IR(46074, 14), 177}, // DebugFunction in nonsemantic_shader_debuginfo_100
+    {IR(46049, 25), 176}, // DebugFunctionDeclaration in nonsemantic_shader_debuginfo_100
+    {IR(48147, 24), 193}, // DebugFunctionDefinition in nonsemantic_shader_debuginfo_100
+    {IR(46029, 20), 175}, // DebugGlobalVariable in nonsemantic_shader_debuginfo_100
+    {IR(48115, 20), 191}, // DebugImportedEntity in nonsemantic_shader_debuginfo_100
+    {IR(45517, 14), 157}, // DebugInfoNone in nonsemantic_shader_debuginfo_100
+    {IR(46161, 15), 182}, // DebugInlinedAt in nonsemantic_shader_debuginfo_100
+    {IR(46237, 21), 184}, // DebugInlinedVariable in nonsemantic_shader_debuginfo_100
+    {IR(46088, 18), 178}, // DebugLexicalBlock in nonsemantic_shader_debuginfo_100
+    {IR(46106, 31), 179}, // DebugLexicalBlockDiscriminator in nonsemantic_shader_debuginfo_100
+    {IR(48192, 10), 195}, // DebugLine in nonsemantic_shader_debuginfo_100
+    {IR(46218, 19), 183}, // DebugLocalVariable in nonsemantic_shader_debuginfo_100
+    {IR(46346, 14), 189}, // DebugMacroDef in nonsemantic_shader_debuginfo_100
+    {IR(46360, 16), 190}, // DebugMacroUndef in nonsemantic_shader_debuginfo_100
+    {IR(48202, 12), 196}, // DebugNoLine in nonsemantic_shader_debuginfo_100
+    {IR(46148, 13), 181}, // DebugNoScope in nonsemantic_shader_debuginfo_100
+    {IR(46315, 15), 187}, // DebugOperation in nonsemantic_shader_debuginfo_100
+    {IR(46137, 11), 180}, // DebugScope in nonsemantic_shader_debuginfo_100
+    {IR(48135, 12), 192}, // DebugSource in nonsemantic_shader_debuginfo_100
+    {IR(48171, 21), 194}, // DebugSourceContinued in nonsemantic_shader_debuginfo_100
+    {IR(48235, 17), 198}, // DebugStoragePath in nonsemantic_shader_debuginfo_100
+    {IR(45727, 15), 162}, // DebugTypeArray in nonsemantic_shader_debuginfo_100
+    {IR(45604, 15), 159}, // DebugTypeBasic in nonsemantic_shader_debuginfo_100
+    {IR(45841, 19), 167}, // DebugTypeComposite in nonsemantic_shader_debuginfo_100
+    {IR(45789, 14), 166}, // DebugTypeEnum in nonsemantic_shader_debuginfo_100
+    {IR(45771, 18), 165}, // DebugTypeFunction in nonsemantic_shader_debuginfo_100
+    {IR(45876, 21), 169}, // DebugTypeInheritance in nonsemantic_shader_debuginfo_100
+    {IR(48268, 16), 200}, // DebugTypeMatrix in nonsemantic_shader_debuginfo_100
+    {IR(45860, 16), 168}, // DebugTypeMember in nonsemantic_shader_debuginfo_100
+    {IR(45653, 17), 160}, // DebugTypePointer in nonsemantic_shader_debuginfo_100
+    {IR(45897, 21), 170}, // DebugTypePtrToMember in nonsemantic_shader_debuginfo_100
+    {IR(45708, 19), 161}, // DebugTypeQualifier in nonsemantic_shader_debuginfo_100
+    {IR(45918, 18), 171}, // DebugTypeTemplate in nonsemantic_shader_debuginfo_100
+    {IR(45936, 27), 172}, // DebugTypeTemplateParameter in nonsemantic_shader_debuginfo_100
+    {IR(45998, 31), 174}, // DebugTypeTemplateParameterPack in nonsemantic_shader_debuginfo_100
+    {IR(45963, 35), 173}, // DebugTypeTemplateTemplateParameter in nonsemantic_shader_debuginfo_100
+    {IR(45742, 16), 163}, // DebugTypeVector in nonsemantic_shader_debuginfo_100
+    {IR(45758, 13), 164}, // DebugTypedef in nonsemantic_shader_debuginfo_100
+    {IR(46271, 11), 186}, // DebugValue in nonsemantic_shader_debuginfo_100
+    {IR(48284, 14), 201}, // Configuration in nonsemantic_vkspreflection
+    {IR(48360, 20), 206}, // DescriptorSetBuffer in nonsemantic_vkspreflection
+    {IR(48380, 19), 207}, // DescriptorSetImage in nonsemantic_vkspreflection
+    {IR(48399, 21), 208}, // DescriptorSetSampler in nonsemantic_vkspreflection
+    {IR(48323, 14), 204}, // PushConstants in nonsemantic_vkspreflection
+    {IR(48337, 23), 205}, // SpecializationMapEntry in nonsemantic_vkspreflection
+    {IR(48298, 13), 202}, // StartCounter in nonsemantic_vkspreflection
+    {IR(48311, 12), 203}, // StopCounter in nonsemantic_vkspreflection
+    {IR(45531, 21), 210}, // DebugCompilationUnit in opencl_debuginfo_100
+    {IR(46258, 13), 237}, // DebugDeclare in opencl_debuginfo_100
+    {IR(46330, 16), 240}, // DebugExpression in opencl_debuginfo_100
+    {IR(46074, 14), 229}, // DebugFunction in opencl_debuginfo_100
+    {IR(46049, 25), 228}, // DebugFunctionDeclaration in opencl_debuginfo_100
+    {IR(46029, 20), 227}, // DebugGlobalVariable in opencl_debuginfo_100
+    {IR(48115, 20), 243}, // DebugImportedEntity in opencl_debuginfo_100
+    {IR(45517, 14), 209}, // DebugInfoNone in opencl_debuginfo_100
+    {IR(46161, 15), 234}, // DebugInlinedAt in opencl_debuginfo_100
+    {IR(46237, 21), 236}, // DebugInlinedVariable in opencl_debuginfo_100
+    {IR(46088, 18), 230}, // DebugLexicalBlock in opencl_debuginfo_100
+    {IR(46106, 31), 231}, // DebugLexicalBlockDiscriminator in opencl_debuginfo_100
+    {IR(46218, 19), 235}, // DebugLocalVariable in opencl_debuginfo_100
+    {IR(46346, 14), 241}, // DebugMacroDef in opencl_debuginfo_100
+    {IR(46360, 16), 242}, // DebugMacroUndef in opencl_debuginfo_100
+    {IR(48720, 17), 245}, // DebugModuleINTEL in opencl_debuginfo_100
+    {IR(46148, 13), 233}, // DebugNoScope in opencl_debuginfo_100
+    {IR(46315, 15), 239}, // DebugOperation in opencl_debuginfo_100
+    {IR(46137, 11), 232}, // DebugScope in opencl_debuginfo_100
+    {IR(48135, 12), 244}, // DebugSource in opencl_debuginfo_100
+    {IR(45727, 15), 214}, // DebugTypeArray in opencl_debuginfo_100
+    {IR(45604, 15), 211}, // DebugTypeBasic in opencl_debuginfo_100
+    {IR(45841, 19), 219}, // DebugTypeComposite in opencl_debuginfo_100
+    {IR(45789, 14), 218}, // DebugTypeEnum in opencl_debuginfo_100
+    {IR(45771, 18), 217}, // DebugTypeFunction in opencl_debuginfo_100
+    {IR(45876, 21), 221}, // DebugTypeInheritance in opencl_debuginfo_100
+    {IR(45860, 16), 220}, // DebugTypeMember in opencl_debuginfo_100
+    {IR(45653, 17), 212}, // DebugTypePointer in opencl_debuginfo_100
+    {IR(45897, 21), 222}, // DebugTypePtrToMember in opencl_debuginfo_100
+    {IR(45708, 19), 213}, // DebugTypeQualifier in opencl_debuginfo_100
+    {IR(45918, 18), 223}, // DebugTypeTemplate in opencl_debuginfo_100
+    {IR(45936, 27), 224}, // DebugTypeTemplateParameter in opencl_debuginfo_100
+    {IR(45998, 31), 226}, // DebugTypeTemplateParameterPack in opencl_debuginfo_100
+    {IR(45963, 35), 225}, // DebugTypeTemplateTemplateParameter in opencl_debuginfo_100
+    {IR(45742, 16), 215}, // DebugTypeVector in opencl_debuginfo_100
+    {IR(45758, 13), 216}, // DebugTypedef in opencl_debuginfo_100
+    {IR(46271, 11), 238}, // DebugValue in opencl_debuginfo_100
+    {IR(48737, 5), 246}, // acos in opencl_std_100
+    {IR(48742, 6), 247}, // acosh in opencl_std_100
+    {IR(48748, 7), 248}, // acospi in opencl_std_100
+    {IR(48755, 5), 249}, // asin in opencl_std_100
+    {IR(48760, 6), 250}, // asinh in opencl_std_100
+    {IR(48766, 7), 251}, // asinpi in opencl_std_100
+    {IR(48773, 5), 252}, // atan in opencl_std_100
+    {IR(48778, 6), 253}, // atan2 in opencl_std_100
+    {IR(48797, 8), 256}, // atan2pi in opencl_std_100
+    {IR(48784, 6), 254}, // atanh in opencl_std_100
+    {IR(48790, 7), 255}, // atanpi in opencl_std_100
+    {IR(49988, 10), 402}, // bitselect in opencl_std_100
+    {IR(48805, 5), 257}, // cbrt in opencl_std_100
+    {IR(48810, 5), 258}, // ceil in opencl_std_100
+    {IR(49660, 4), 367}, // clz in opencl_std_100
+    {IR(48815, 9), 259}, // copysign in opencl_std_100
+    {IR(48824, 4), 260}, // cos in opencl_std_100
+    {IR(48828, 5), 261}, // cosh in opencl_std_100
+    {IR(48833, 6), 262}, // cospi in opencl_std_100
+    {IR(49504, 6), 350}, // cross in opencl_std_100
+    {IR(49664, 4), 368}, // ctz in opencl_std_100
+    {IR(49439, 8), 342}, // degrees in opencl_std_100
+    {IR(49510, 9), 351}, // distance in opencl_std_100
+    {IR(48844, 4), 264}, // erf in opencl_std_100
+    {IR(48839, 5), 263}, // erfc in opencl_std_100
+    {IR(48848, 4), 265}, // exp in opencl_std_100
+    {IR(48857, 6), 267}, // exp10 in opencl_std_100
+    {IR(48852, 5), 266}, // exp2 in opencl_std_100
+    {IR(48863, 6), 268}, // expm1 in opencl_std_100
+    {IR(48869, 5), 269}, // fabs in opencl_std_100
+    {IR(49536, 14), 354}, // fast_distance in opencl_std_100
+    {IR(49550, 12), 355}, // fast_length in opencl_std_100
+    {IR(49562, 15), 356}, // fast_normalize in opencl_std_100
+    {IR(49432, 7), 341}, // fclamp in opencl_std_100
+    {IR(48874, 5), 270}, // fdim in opencl_std_100
+    {IR(48879, 6), 271}, // floor in opencl_std_100
+    {IR(48885, 4), 272}, // fma in opencl_std_100
+    {IR(48889, 5), 273}, // fmax in opencl_std_100
+    {IR(49447, 12), 343}, // fmax_common in opencl_std_100
+    {IR(48894, 5), 274}, // fmin in opencl_std_100
+    {IR(49459, 12), 344}, // fmin_common in opencl_std_100
+    {IR(48899, 5), 275}, // fmod in opencl_std_100
+    {IR(48904, 6), 276}, // fract in opencl_std_100
+    {IR(48910, 6), 277}, // frexp in opencl_std_100
+    {IR(49122, 9), 313}, // half_cos in opencl_std_100
+    {IR(49131, 12), 314}, // half_divide in opencl_std_100
+    {IR(49143, 9), 315}, // half_exp in opencl_std_100
+    {IR(49162, 11), 317}, // half_exp10 in opencl_std_100
+    {IR(49152, 10), 316}, // half_exp2 in opencl_std_100
+    {IR(49173, 9), 318}, // half_log in opencl_std_100
+    {IR(49192, 11), 320}, // half_log10 in opencl_std_100
+    {IR(49182, 10), 319}, // half_log2 in opencl_std_100
+    {IR(49203, 10), 321}, // half_powr in opencl_std_100
+    {IR(49213, 11), 322}, // half_recip in opencl_std_100
+    {IR(49224, 11), 323}, // half_rsqrt in opencl_std_100
+    {IR(49235, 9), 324}, // half_sin in opencl_std_100
+    {IR(49244, 10), 325}, // half_sqrt in opencl_std_100
+    {IR(49254, 9), 326}, // half_tan in opencl_std_100
+    {IR(48916, 6), 278}, // hypot in opencl_std_100
+    {IR(48922, 6), 279}, // ilogb in opencl_std_100
+    {IR(48928, 6), 280}, // ldexp in opencl_std_100
+    {IR(49519, 7), 352}, // length in opencl_std_100
+    {IR(48934, 7), 281}, // lgamma in opencl_std_100
+    {IR(48941, 9), 282}, // lgamma_r in opencl_std_100
+    {IR(48950, 4), 283}, // log in opencl_std_100
+    {IR(48959, 6), 285}, // log10 in opencl_std_100
+    {IR(48965, 6), 286}, // log1p in opencl_std_100
+    {IR(48954, 5), 284}, // log2 in opencl_std_100
+    {IR(48971, 5), 287}, // logb in opencl_std_100
+    {IR(48976, 4), 288}, // mad in opencl_std_100
+    {IR(48980, 7), 289}, // maxmag in opencl_std_100
+    {IR(48987, 7), 290}, // minmag in opencl_std_100
+    {IR(49471, 4), 345}, // mix in opencl_std_100
+    {IR(48994, 5), 291}, // modf in opencl_std_100
+    {IR(48999, 4), 292}, // nan in opencl_std_100
+    {IR(49263, 11), 327}, // native_cos in opencl_std_100
+    {IR(49274, 14), 328}, // native_divide in opencl_std_100
+    {IR(49288, 11), 329}, // native_exp in opencl_std_100
+    {IR(49311, 13), 331}, // native_exp10 in opencl_std_100
+    {IR(49299, 12), 330}, // native_exp2 in opencl_std_100
+    {IR(49324, 11), 332}, // native_log in opencl_std_100
+    {IR(49347, 13), 334}, // native_log10 in opencl_std_100
+    {IR(49335, 12), 333}, // native_log2 in opencl_std_100
+    {IR(49360, 12), 335}, // native_powr in opencl_std_100
+    {IR(49372, 13), 336}, // native_recip in opencl_std_100
+    {IR(49385, 13), 337}, // native_rsqrt in opencl_std_100
+    {IR(49398, 11), 338}, // native_sin in opencl_std_100
+    {IR(49409, 12), 339}, // native_sqrt in opencl_std_100
+    {IR(49421, 11), 340}, // native_tan in opencl_std_100
+    {IR(49003, 10), 293}, // nextafter in opencl_std_100
+    {IR(49526, 10), 353}, // normalize in opencl_std_100
+    {IR(49779, 9), 382}, // popcount in opencl_std_100
+    {IR(49013, 4), 294}, // pow in opencl_std_100
+    {IR(49017, 5), 295}, // pown in opencl_std_100
+    {IR(49022, 5), 296}, // powr in opencl_std_100
+    {IR(49979, 9), 401}, // prefetch in opencl_std_100
+    {IR(49972, 7), 400}, // printf in opencl_std_100
+    {IR(49475, 8), 346}, // radians in opencl_std_100
+    {IR(49027, 10), 297}, // remainder in opencl_std_100
+    {IR(49037, 7), 298}, // remquo in opencl_std_100
+    {IR(49044, 5), 299}, // rint in opencl_std_100
+    {IR(49049, 6), 300}, // rootn in opencl_std_100
+    {IR(49730, 7), 377}, // rotate in opencl_std_100
+    {IR(49055, 6), 301}, // round in opencl_std_100
+    {IR(49061, 6), 302}, // rsqrt in opencl_std_100
+    {IR(49577, 6), 357}, // s_abs in opencl_std_100
+    {IR(49583, 11), 358}, // s_abs_diff in opencl_std_100
+    {IR(49594, 10), 359}, // s_add_sat in opencl_std_100
+    {IR(49644, 8), 365}, // s_clamp in opencl_std_100
+    {IR(49614, 7), 361}, // s_hadd in opencl_std_100
+    {IR(49788, 8), 383}, // s_mad24 in opencl_std_100
+    {IR(49668, 9), 369}, // s_mad_hi in opencl_std_100
+    {IR(49687, 10), 371}, // s_mad_sat in opencl_std_100
+    {IR(49697, 6), 372}, // s_max in opencl_std_100
+    {IR(49709, 6), 374}, // s_min in opencl_std_100
+    {IR(49804, 8), 385}, // s_mul24 in opencl_std_100
+    {IR(49721, 9), 376}, // s_mul_hi in opencl_std_100
+    {IR(49628, 8), 363}, // s_rhadd in opencl_std_100
+    {IR(49737, 10), 378}, // s_sub_sat in opencl_std_100
+    {IR(49768, 11), 381}, // s_upsample in opencl_std_100
+    {IR(49998, 7), 403}, // select in opencl_std_100
+    {IR(49955, 8), 398}, // shuffle in opencl_std_100
+    {IR(49963, 9), 399}, // shuffle2 in opencl_std_100
+    {IR(49499, 5), 349}, // sign in opencl_std_100
+    {IR(49067, 4), 303}, // sin in opencl_std_100
+    {IR(49071, 7), 304}, // sincos in opencl_std_100
+    {IR(49078, 5), 305}, // sinh in opencl_std_100
+    {IR(49083, 6), 306}, // sinpi in opencl_std_100
+    {IR(49488, 11), 348}, // smoothstep in opencl_std_100
+    {IR(49089, 5), 307}, // sqrt in opencl_std_100
+    {IR(49483, 5), 347}, // step in opencl_std_100
+    {IR(49094, 4), 308}, // tan in opencl_std_100
+    {IR(49098, 5), 309}, // tanh in opencl_std_100
+    {IR(49103, 6), 310}, // tanpi in opencl_std_100
+    {IR(49109, 7), 311}, // tgamma in opencl_std_100
+    {IR(49116, 6), 312}, // trunc in opencl_std_100
+    {IR(50005, 6), 404}, // u_abs in opencl_std_100
+    {IR(50011, 11), 405}, // u_abs_diff in opencl_std_100
+    {IR(49604, 10), 360}, // u_add_sat in opencl_std_100
+    {IR(49652, 8), 366}, // u_clamp in opencl_std_100
+    {IR(49621, 7), 362}, // u_hadd in opencl_std_100
+    {IR(49796, 8), 384}, // u_mad24 in opencl_std_100
+    {IR(50031, 9), 407}, // u_mad_hi in opencl_std_100
+    {IR(49677, 10), 370}, // u_mad_sat in opencl_std_100
+    {IR(49703, 6), 373}, // u_max in opencl_std_100
+    {IR(49715, 6), 375}, // u_min in opencl_std_100
+    {IR(49812, 8), 386}, // u_mul24 in opencl_std_100
+    {IR(50022, 9), 406}, // u_mul_hi in opencl_std_100
+    {IR(49636, 8), 364}, // u_rhadd in opencl_std_100
+    {IR(49747, 10), 379}, // u_sub_sat in opencl_std_100
+    {IR(49757, 11), 380}, // u_upsample in opencl_std_100
+    {IR(49835, 11), 389}, // vload_half in opencl_std_100
+    {IR(49846, 12), 390}, // vload_halfn in opencl_std_100
+    {IR(49912, 13), 395}, // vloada_halfn in opencl_std_100
+    {IR(49820, 7), 387}, // vloadn in opencl_std_100
+    {IR(49858, 12), 391}, // vstore_half in opencl_std_100
+    {IR(49870, 14), 392}, // vstore_half_r in opencl_std_100
+    {IR(49884, 13), 393}, // vstore_halfn in opencl_std_100
+    {IR(49897, 15), 394}, // vstore_halfn_r in opencl_std_100
+    {IR(49925, 14), 396}, // vstorea_halfn in opencl_std_100
+    {IR(49939, 16), 397}, // vstorea_halfn_r in opencl_std_100
+    {IR(49827, 8), 388}, // vstoren in opencl_std_100
+    {IR(50057, 17), 409}, // CubeFaceCoordAMD in spv_amd_gcn_shader
+    {IR(50040, 17), 408}, // CubeFaceIndexAMD in spv_amd_gcn_shader
+    {IR(50074, 8), 410}, // TimeAMD in spv_amd_gcn_shader
+    {IR(50151, 9), 414}, // MbcntAMD in spv_amd_shader_ballot
+    {IR(50082, 22), 411}, // SwizzleInvocationsAMD in spv_amd_shader_ballot
+    {IR(50104, 28), 412}, // SwizzleInvocationsMaskedAMD in spv_amd_shader_ballot
+    {IR(50132, 19), 413}, // WriteInvocationAMD in spv_amd_shader_ballot
+    {IR(50160, 23), 415}, // InterpolateAtVertexAMD in spv_amd_shader_explicit_vertex_parameter
+    {IR(50210, 9), 419}, // FMax3AMD in spv_amd_shader_trinary_minmax
+    {IR(50237, 9), 422}, // FMid3AMD in spv_amd_shader_trinary_minmax
+    {IR(50183, 9), 416}, // FMin3AMD in spv_amd_shader_trinary_minmax
+    {IR(50228, 9), 421}, // SMax3AMD in spv_amd_shader_trinary_minmax
+    {IR(50255, 9), 424}, // SMid3AMD in spv_amd_shader_trinary_minmax
+    {IR(50201, 9), 418}, // SMin3AMD in spv_amd_shader_trinary_minmax
+    {IR(50219, 9), 420}, // UMax3AMD in spv_amd_shader_trinary_minmax
+    {IR(50246, 9), 423}, // UMid3AMD in spv_amd_shader_trinary_minmax
+    {IR(50192, 9), 417}, // UMin3AMD in spv_amd_shader_trinary_minmax
+    {IR(50561, 4), 456}, // ABS in tosa_001000_1
+    {IR(50384, 4), 439}, // ADD in tosa_001000_1
+    {IR(50264, 7), 425}, // ARGMAX in tosa_001000_1
+    {IR(50388, 23), 440}, // ARITHMETIC_RIGHT_SHIFT in tosa_001000_1
+    {IR(50271, 11), 426}, // AVG_POOL2D in tosa_001000_1
+    {IR(50411, 12), 441}, // BITWISE_AND in tosa_001000_1
+    {IR(50565, 12), 457}, // BITWISE_NOT in tosa_001000_1
+    {IR(50423, 11), 442}, // BITWISE_OR in tosa_001000_1
+    {IR(50434, 12), 443}, // BITWISE_XOR in tosa_001000_1
+    {IR(50819, 5), 489}, // CAST in tosa_001000_1
+    {IR(50577, 5), 458}, // CEIL in tosa_001000_1
+    {IR(50361, 6), 435}, // CLAMP in tosa_001000_1
+    {IR(50582, 4), 459}, // CLZ in tosa_001000_1
+    {IR(50749, 7), 479}, // CONCAT in tosa_001000_1
+    {IR(50282, 7), 427}, // CONV2D in tosa_001000_1
+    {IR(50289, 7), 428}, // CONV3D in tosa_001000_1
+    {IR(50586, 4), 460}, // COS in tosa_001000_1
+    {IR(50296, 17), 429}, // DEPTHWISE_CONV2D in tosa_001000_1
+    {IR(50651, 6), 470}, // EQUAL in tosa_001000_1
+    {IR(50367, 4), 436}, // ERF in tosa_001000_1
+    {IR(50590, 4), 461}, // EXP in tosa_001000_1
+    {IR(50313, 6), 430}, // FFT2D in tosa_001000_1
+    {IR(50594, 6), 462}, // FLOOR in tosa_001000_1
+    {IR(50797, 7), 486}, // GATHER in tosa_001000_1
+    {IR(50657, 8), 471}, // GREATER in tosa_001000_1
+    {IR(50665, 14), 472}, // GREATER_EQUAL in tosa_001000_1
+    {IR(50446, 7), 444}, // INTDIV in tosa_001000_1
+    {IR(50600, 4), 463}, // LOG in tosa_001000_1
+    {IR(50453, 12), 445}, // LOGICAL_AND in tosa_001000_1
+    {IR(50465, 19), 446}, // LOGICAL_LEFT_SHIFT in tosa_001000_1
+    {IR(50604, 12), 464}, // LOGICAL_NOT in tosa_001000_1
+    {IR(50504, 11), 448}, // LOGICAL_OR in tosa_001000_1
+    {IR(50484, 20), 447}, // LOGICAL_RIGHT_SHIFT in tosa_001000_1
+    {IR(50515, 12), 449}, // LOGICAL_XOR in tosa_001000_1
+    {IR(50319, 7), 431}, // MATMUL in tosa_001000_1
+    {IR(50527, 8), 450}, // MAXIMUM in tosa_001000_1
+    {IR(50326, 11), 432}, // MAX_POOL2D in tosa_001000_1
+    {IR(50535, 8), 451}, // MINIMUM in tosa_001000_1
+    {IR(50543, 4), 452}, // MUL in tosa_001000_1
+    {IR(50616, 7), 465}, // NEGATE in tosa_001000_1
+    {IR(50756, 4), 480}, // PAD in tosa_001000_1
+    {IR(50547, 4), 453}, // POW in tosa_001000_1
+    {IR(50623, 11), 466}, // RECIPROCAL in tosa_001000_1
+    {IR(50679, 11), 473}, // REDUCE_ALL in tosa_001000_1
+    {IR(50690, 11), 474}, // REDUCE_ANY in tosa_001000_1
+    {IR(50701, 11), 475}, // REDUCE_MAX in tosa_001000_1
+    {IR(50712, 11), 476}, // REDUCE_MIN in tosa_001000_1
+    {IR(50723, 15), 477}, // REDUCE_PRODUCT in tosa_001000_1
+    {IR(50738, 11), 478}, // REDUCE_SUM in tosa_001000_1
+    {IR(50824, 8), 490}, // RESCALE in tosa_001000_1
+    {IR(50760, 8), 481}, // RESHAPE in tosa_001000_1
+    {IR(50812, 7), 488}, // RESIZE in tosa_001000_1
+    {IR(50768, 8), 482}, // REVERSE in tosa_001000_1
+    {IR(50337, 7), 433}, // RFFT2D in tosa_001000_1
+    {IR(50634, 6), 467}, // RSQRT in tosa_001000_1
+    {IR(50804, 8), 487}, // SCATTER in tosa_001000_1
+    {IR(50644, 7), 469}, // SELECT in tosa_001000_1
+    {IR(50371, 8), 437}, // SIGMOID in tosa_001000_1
+    {IR(50640, 4), 468}, // SIN in tosa_001000_1
+    {IR(50776, 6), 483}, // SLICE in tosa_001000_1
+    {IR(50551, 4), 454}, // SUB in tosa_001000_1
+    {IR(50555, 6), 455}, // TABLE in tosa_001000_1
+    {IR(50379, 5), 438}, // TANH in tosa_001000_1
+    {IR(50782, 5), 484}, // TILE in tosa_001000_1
+    {IR(50787, 10), 485}, // TRANSPOSE in tosa_001000_1
+    {IR(50344, 17), 434}, // TRANSPOSE_CONV2D in tosa_001000_1
 }};
 
 IndexRange ExtInstNameRangeForKind(spv_ext_inst_type_t type) {
@@ -7450,892 +7452,893 @@ static const char kStrings[] =
   "SubgroupAllEqualKHR\0" // IR(31952, 20)
   "SubgroupReadInvocationKHR\0" // IR(31972, 26)
   "ExtInstWithForwardRefsKHR\0" // IR(31998, 26)
-  "TraceRayKHR\0" // IR(32024, 12)
-  "ExecuteCallableKHR\0" // IR(32036, 19)
-  "ConvertUToAccelerationStructureKHR\0" // IR(32055, 35)
-  "IgnoreIntersectionKHR\0" // IR(32090, 22)
-  "TerminateRayKHR\0" // IR(32112, 16)
-  "SPV_OPERAND_TYPE_OPTIONAL_PACKED_VECTOR_FORMAT\0" // IR(32128, 47)
-  "SDot\0" // IR(32175, 5)
-  "SDotKHR\0" // IR(32180, 8)
-  "UDot\0" // IR(32188, 5)
-  "UDotKHR\0" // IR(32193, 8)
-  "SUDot\0" // IR(32201, 6)
-  "SUDotKHR\0" // IR(32207, 9)
-  "SDotAccSat\0" // IR(32216, 11)
-  "SDotAccSatKHR\0" // IR(32227, 14)
-  "UDotAccSat\0" // IR(32241, 11)
-  "UDotAccSatKHR\0" // IR(32252, 14)
-  "SUDotAccSat\0" // IR(32266, 12)
-  "SUDotAccSatKHR\0" // IR(32278, 15)
-  "TypeCooperativeMatrixKHR\0" // IR(32293, 25)
-  "CooperativeMatrixLoadKHR\0" // IR(32318, 25)
-  "CooperativeMatrixStoreKHR\0" // IR(32343, 26)
-  "SPV_OPERAND_TYPE_OPTIONAL_COOPERATIVE_MATRIX_OPERANDS\0" // IR(32369, 54)
-  "CooperativeMatrixMulAddKHR\0" // IR(32423, 27)
-  "CooperativeMatrixLengthKHR\0" // IR(32450, 27)
-  "ConstantCompositeReplicateEXT\0" // IR(32477, 30)
-  "SpecConstantCompositeReplicateEXT\0" // IR(32507, 34)
-  "CompositeConstructReplicateEXT\0" // IR(32541, 31)
-  "TypeRayQueryKHR\0" // IR(32572, 16)
-  "RayQueryInitializeKHR\0" // IR(32588, 22)
-  "RayQueryTerminateKHR\0" // IR(32610, 21)
-  "RayQueryGenerateIntersectionKHR\0" // IR(32631, 32)
-  "RayQueryConfirmIntersectionKHR\0" // IR(32663, 31)
-  "RayQueryProceedKHR\0" // IR(32694, 19)
-  "RayQueryGetIntersectionTypeKHR\0" // IR(32713, 31)
-  "ImageSampleWeightedQCOM\0" // IR(32744, 24)
-  "ImageBoxFilterQCOM\0" // IR(32768, 19)
-  "ImageBlockMatchSSDQCOM\0" // IR(32787, 23)
-  "ImageBlockMatchSADQCOM\0" // IR(32810, 23)
-  "BitCastArrayQCOM\0" // IR(32833, 17)
-  "ImageBlockMatchWindowSSDQCOM\0" // IR(32850, 29)
-  "ImageBlockMatchWindowSADQCOM\0" // IR(32879, 29)
-  "ImageBlockMatchGatherSSDQCOM\0" // IR(32908, 29)
-  "ImageBlockMatchGatherSADQCOM\0" // IR(32937, 29)
-  "CompositeConstructCoopMatQCOM\0" // IR(32966, 30)
-  "CompositeExtractCoopMatQCOM\0" // IR(32996, 28)
-  "ExtractSubArrayQCOM\0" // IR(33024, 20)
-  "GroupIAddNonUniformAMD\0" // IR(33044, 23)
-  "GroupFAddNonUniformAMD\0" // IR(33067, 23)
-  "GroupFMinNonUniformAMD\0" // IR(33090, 23)
-  "GroupUMinNonUniformAMD\0" // IR(33113, 23)
-  "GroupSMinNonUniformAMD\0" // IR(33136, 23)
-  "GroupFMaxNonUniformAMD\0" // IR(33159, 23)
-  "GroupUMaxNonUniformAMD\0" // IR(33182, 23)
-  "GroupSMaxNonUniformAMD\0" // IR(33205, 23)
-  "FragmentMaskFetchAMD\0" // IR(33228, 21)
-  "FragmentFetchAMD\0" // IR(33249, 17)
-  "ReadClockKHR\0" // IR(33266, 13)
-  "AllocateNodePayloadsAMDX\0" // IR(33279, 25)
-  "EnqueueNodePayloadsAMDX\0" // IR(33304, 24)
-  "TypeNodePayloadArrayAMDX\0" // IR(33328, 25)
-  "FinishWritingNodePayloadAMDX\0" // IR(33353, 29)
-  "NodePayloadArrayLengthAMDX\0" // IR(33382, 27)
-  "IsNodePayloadValidAMDX\0" // IR(33409, 23)
-  "ConstantStringAMDX\0" // IR(33432, 19)
-  "SpecConstantStringAMDX\0" // IR(33451, 23)
-  "GroupNonUniformQuadAllKHR\0" // IR(33474, 26)
-  "GroupNonUniformQuadAnyKHR\0" // IR(33500, 26)
-  "HitObjectRecordHitMotionNV\0" // IR(33526, 27)
-  "HitObjectRecordHitWithIndexMotionNV\0" // IR(33553, 36)
-  "HitObjectRecordMissMotionNV\0" // IR(33589, 28)
-  "HitObjectGetWorldToObjectNV\0" // IR(33617, 28)
-  "HitObjectGetObjectToWorldNV\0" // IR(33645, 28)
-  "HitObjectGetObjectRayDirectionNV\0" // IR(33673, 33)
-  "HitObjectGetObjectRayOriginNV\0" // IR(33706, 30)
-  "HitObjectTraceRayMotionNV\0" // IR(33736, 26)
-  "HitObjectGetShaderRecordBufferHandleNV\0" // IR(33762, 39)
-  "HitObjectGetShaderBindingTableRecordIndexNV\0" // IR(33801, 44)
-  "HitObjectRecordEmptyNV\0" // IR(33845, 23)
-  "HitObjectTraceRayNV\0" // IR(33868, 20)
-  "HitObjectRecordHitNV\0" // IR(33888, 21)
-  "HitObjectRecordHitWithIndexNV\0" // IR(33909, 30)
-  "HitObjectRecordMissNV\0" // IR(33939, 22)
-  "HitObjectExecuteShaderNV\0" // IR(33961, 25)
-  "HitObjectGetCurrentTimeNV\0" // IR(33986, 26)
-  "HitObjectGetAttributesNV\0" // IR(34012, 25)
-  "HitObjectGetHitKindNV\0" // IR(34037, 22)
-  "HitObjectGetPrimitiveIndexNV\0" // IR(34059, 29)
-  "HitObjectGetGeometryIndexNV\0" // IR(34088, 28)
-  "HitObjectGetInstanceIdNV\0" // IR(34116, 25)
-  "HitObjectGetInstanceCustomIndexNV\0" // IR(34141, 34)
-  "HitObjectGetWorldRayDirectionNV\0" // IR(34175, 32)
-  "HitObjectGetWorldRayOriginNV\0" // IR(34207, 29)
-  "HitObjectGetRayTMaxNV\0" // IR(34236, 22)
-  "HitObjectGetRayTMinNV\0" // IR(34258, 22)
-  "HitObjectIsEmptyNV\0" // IR(34280, 19)
-  "HitObjectIsHitNV\0" // IR(34299, 17)
-  "HitObjectIsMissNV\0" // IR(34316, 18)
-  "ReorderThreadWithHitObjectNV\0" // IR(34334, 29)
-  "ReorderThreadWithHintNV\0" // IR(34363, 24)
-  "TypeHitObjectNV\0" // IR(34387, 16)
-  "ImageSampleFootprintNV\0" // IR(34403, 23)
-  "TypeCooperativeVectorNV\0" // IR(34426, 24)
-  "CooperativeVectorMatrixMulNV\0" // IR(34450, 29)
-  "CooperativeVectorOuterProductAccumulateNV\0" // IR(34479, 42)
-  "CooperativeVectorReduceSumAccumulateNV\0" // IR(34521, 39)
-  "CooperativeVectorMatrixMulAddNV\0" // IR(34560, 32)
-  "CooperativeMatrixConvertNV\0" // IR(34592, 27)
-  "EmitMeshTasksEXT\0" // IR(34619, 17)
-  "SetMeshOutputsEXT\0" // IR(34636, 18)
-  "GroupNonUniformPartitionNV\0" // IR(34654, 27)
-  "WritePackedPrimitiveIndices4x8NV\0" // IR(34681, 33)
-  "FetchMicroTriangleVertexPositionNV\0" // IR(34714, 35)
-  "FetchMicroTriangleVertexBarycentricNV\0" // IR(34749, 38)
-  "CooperativeVectorLoadNV\0" // IR(34787, 24)
-  "CooperativeVectorStoreNV\0" // IR(34811, 25)
-  "ReportIntersectionKHR\0" // IR(34836, 22)
-  "ReportIntersectionNV\0" // IR(34858, 21)
-  "IgnoreIntersectionNV\0" // IR(34879, 21)
-  "TerminateRayNV\0" // IR(34900, 15)
-  "TraceNV\0" // IR(34915, 8)
-  "TraceMotionNV\0" // IR(34923, 14)
-  "TraceRayMotionNV\0" // IR(34937, 17)
-  "RayQueryGetIntersectionTriangleVertexPositionsKHR\0" // IR(34954, 50)
-  "TypeAccelerationStructureKHR\0" // IR(35004, 29)
-  "TypeAccelerationStructureNV\0" // IR(35033, 28)
-  "ExecuteCallableNV\0" // IR(35061, 18)
-  "RayQueryGetClusterIdNV\0" // IR(35079, 23)
-  "HitObjectGetClusterIdNV\0" // IR(35102, 24)
-  "TypeCooperativeMatrixNV\0" // IR(35126, 24)
-  "CooperativeMatrixLoadNV\0" // IR(35150, 24)
-  "CooperativeMatrixStoreNV\0" // IR(35174, 25)
-  "CooperativeMatrixMulAddNV\0" // IR(35199, 26)
-  "CooperativeMatrixLengthNV\0" // IR(35225, 26)
-  "BeginInvocationInterlockEXT\0" // IR(35251, 28)
-  "EndInvocationInterlockEXT\0" // IR(35279, 26)
-  "SPV_OPERAND_TYPE_COOPERATIVE_MATRIX_REDUCE\0" // IR(35305, 43)
-  "CooperativeMatrixReduceNV\0" // IR(35348, 26)
-  "SPV_OPERAND_TYPE_MEMORY_ACCESS\0" // IR(35374, 31)
-  "SPV_OPERAND_TYPE_TENSOR_ADDRESSING_OPERANDS\0" // IR(35405, 44)
-  "CooperativeMatrixLoadTensorNV\0" // IR(35449, 30)
-  "CooperativeMatrixStoreTensorNV\0" // IR(35479, 31)
-  "CooperativeMatrixPerElementOpNV\0" // IR(35510, 32)
-  "TypeTensorLayoutNV\0" // IR(35542, 19)
-  "TypeTensorViewNV\0" // IR(35561, 17)
-  "CreateTensorLayoutNV\0" // IR(35578, 21)
-  "TensorLayoutSetDimensionNV\0" // IR(35599, 27)
-  "TensorLayoutSetStrideNV\0" // IR(35626, 24)
-  "TensorLayoutSliceNV\0" // IR(35650, 20)
-  "TensorLayoutSetClampValueNV\0" // IR(35670, 28)
-  "CreateTensorViewNV\0" // IR(35698, 19)
-  "TensorViewSetDimensionNV\0" // IR(35717, 25)
-  "TensorViewSetStrideNV\0" // IR(35742, 22)
-  "IsHelperInvocationEXT\0" // IR(35764, 22)
-  "TensorViewSetClipNV\0" // IR(35786, 20)
-  "TensorLayoutSetBlockSizeNV\0" // IR(35806, 27)
-  "CooperativeMatrixTransposeNV\0" // IR(35833, 29)
-  "ConvertUToImageNV\0" // IR(35862, 18)
-  "ConvertUToSamplerNV\0" // IR(35880, 20)
-  "ConvertImageToUNV\0" // IR(35900, 18)
-  "ConvertSamplerToUNV\0" // IR(35918, 20)
-  "ConvertUToSampledImageNV\0" // IR(35938, 25)
-  "ConvertSampledImageToUNV\0" // IR(35963, 25)
-  "SamplerImageAddressingModeNV\0" // IR(35988, 29)
-  "SPV_OPERAND_TYPE_OPTIONAL_RAW_ACCESS_CHAIN_OPERANDS\0" // IR(36017, 52)
-  "RawAccessChainNV\0" // IR(36069, 17)
-  "RayQueryGetIntersectionSpherePositionNV\0" // IR(36086, 40)
-  "RayQueryGetIntersectionSphereRadiusNV\0" // IR(36126, 38)
-  "RayQueryGetIntersectionLSSPositionsNV\0" // IR(36164, 38)
-  "RayQueryGetIntersectionLSSRadiiNV\0" // IR(36202, 34)
-  "RayQueryGetIntersectionLSSHitValueNV\0" // IR(36236, 37)
-  "HitObjectGetSpherePositionNV\0" // IR(36273, 29)
-  "HitObjectGetSphereRadiusNV\0" // IR(36302, 27)
-  "HitObjectGetLSSPositionsNV\0" // IR(36329, 27)
-  "HitObjectGetLSSRadiiNV\0" // IR(36356, 23)
-  "HitObjectIsSphereHitNV\0" // IR(36379, 23)
-  "HitObjectIsLSSHitNV\0" // IR(36402, 20)
-  "RayQueryIsSphereHitNV\0" // IR(36422, 22)
-  "RayQueryIsLSSHitNV\0" // IR(36444, 19)
-  "SubgroupShuffleDownINTEL\0" // IR(36463, 25)
-  "SubgroupShuffleUpINTEL\0" // IR(36488, 23)
-  "SubgroupShuffleXorINTEL\0" // IR(36511, 24)
-  "SubgroupBlockReadINTEL\0" // IR(36535, 23)
-  "SubgroupBlockWriteINTEL\0" // IR(36558, 24)
-  "SubgroupImageBlockReadINTEL\0" // IR(36582, 28)
-  "SubgroupImageBlockWriteINTEL\0" // IR(36610, 29)
-  "SubgroupImageMediaBlockReadINTEL\0" // IR(36639, 33)
-  "SubgroupImageMediaBlockWriteINTEL\0" // IR(36672, 34)
-  "UCountLeadingZerosINTEL\0" // IR(36706, 24)
-  "UCountTrailingZerosINTEL\0" // IR(36730, 25)
-  "AbsISubINTEL\0" // IR(36755, 13)
-  "AbsUSubINTEL\0" // IR(36768, 13)
-  "IAddSatINTEL\0" // IR(36781, 13)
-  "UAddSatINTEL\0" // IR(36794, 13)
-  "IAverageINTEL\0" // IR(36807, 14)
-  "UAverageINTEL\0" // IR(36821, 14)
-  "IAverageRoundedINTEL\0" // IR(36835, 21)
-  "UAverageRoundedINTEL\0" // IR(36856, 21)
-  "ISubSatINTEL\0" // IR(36877, 13)
-  "USubSatINTEL\0" // IR(36890, 13)
-  "IMul32x16INTEL\0" // IR(36903, 15)
-  "UMul32x16INTEL\0" // IR(36918, 15)
-  "ConstantFunctionPointerINTEL\0" // IR(36933, 29)
-  "FunctionPointerCallINTEL\0" // IR(36962, 25)
-  "AsmTargetINTEL\0" // IR(36987, 15)
-  "AsmCallINTEL\0" // IR(37002, 13)
-  "AtomicFMinEXT\0" // IR(37015, 14)
-  "AtomicFMaxEXT\0" // IR(37029, 14)
-  "AssumeTrueKHR\0" // IR(37043, 14)
-  "ExpectKHR\0" // IR(37057, 10)
-  "DecorateString\0" // IR(37067, 15)
-  "DecorateStringGOOGLE\0" // IR(37082, 21)
-  "MemberDecorateString\0" // IR(37103, 21)
-  "MemberDecorateStringGOOGLE\0" // IR(37124, 27)
-  "VmeImageINTEL\0" // IR(37151, 14)
-  "TypeVmeImageINTEL\0" // IR(37165, 18)
-  "TypeAvcImePayloadINTEL\0" // IR(37183, 23)
-  "TypeAvcRefPayloadINTEL\0" // IR(37206, 23)
-  "TypeAvcSicPayloadINTEL\0" // IR(37229, 23)
-  "TypeAvcMcePayloadINTEL\0" // IR(37252, 23)
-  "TypeAvcMceResultINTEL\0" // IR(37275, 22)
-  "TypeAvcImeResultINTEL\0" // IR(37297, 22)
-  "TypeAvcImeResultSingleReferenceStreamoutINTEL\0" // IR(37319, 46)
-  "TypeAvcImeResultDualReferenceStreamoutINTEL\0" // IR(37365, 44)
-  "TypeAvcImeSingleReferenceStreaminINTEL\0" // IR(37409, 39)
-  "TypeAvcImeDualReferenceStreaminINTEL\0" // IR(37448, 37)
-  "TypeAvcRefResultINTEL\0" // IR(37485, 22)
-  "TypeAvcSicResultINTEL\0" // IR(37507, 22)
-  "SubgroupAvcMceGetDefaultInterBaseMultiReferencePenaltyINTEL\0" // IR(37529, 60)
-  "SubgroupAvcMceSetInterBaseMultiReferencePenaltyINTEL\0" // IR(37589, 53)
-  "SubgroupAvcMceGetDefaultInterShapePenaltyINTEL\0" // IR(37642, 47)
-  "SubgroupAvcMceSetInterShapePenaltyINTEL\0" // IR(37689, 40)
-  "SubgroupAvcMceGetDefaultInterDirectionPenaltyINTEL\0" // IR(37729, 51)
-  "SubgroupAvcMceSetInterDirectionPenaltyINTEL\0" // IR(37780, 44)
-  "SubgroupAvcMceGetDefaultIntraLumaShapePenaltyINTEL\0" // IR(37824, 51)
-  "SubgroupAvcMceGetDefaultInterMotionVectorCostTableINTEL\0" // IR(37875, 56)
-  "SubgroupAvcMceGetDefaultHighPenaltyCostTableINTEL\0" // IR(37931, 50)
-  "SubgroupAvcMceGetDefaultMediumPenaltyCostTableINTEL\0" // IR(37981, 52)
-  "SubgroupAvcMceGetDefaultLowPenaltyCostTableINTEL\0" // IR(38033, 49)
-  "SubgroupAvcMceSetMotionVectorCostFunctionINTEL\0" // IR(38082, 47)
-  "SubgroupAvcMceGetDefaultIntraLumaModePenaltyINTEL\0" // IR(38129, 50)
-  "SubgroupAvcMceGetDefaultNonDcLumaIntraPenaltyINTEL\0" // IR(38179, 51)
-  "SubgroupAvcMceGetDefaultIntraChromaModeBasePenaltyINTEL\0" // IR(38230, 56)
-  "SubgroupAvcMceSetAcOnlyHaarINTEL\0" // IR(38286, 33)
-  "SubgroupAvcMceSetSourceInterlacedFieldPolarityINTEL\0" // IR(38319, 52)
-  "SubgroupAvcMceSetSingleReferenceInterlacedFieldPolarityINTEL\0" // IR(38371, 61)
-  "SubgroupAvcMceSetDualReferenceInterlacedFieldPolaritiesINTEL\0" // IR(38432, 61)
-  "SubgroupAvcMceConvertToImePayloadINTEL\0" // IR(38493, 39)
-  "SubgroupAvcMceConvertToImeResultINTEL\0" // IR(38532, 38)
-  "SubgroupAvcMceConvertToRefPayloadINTEL\0" // IR(38570, 39)
-  "SubgroupAvcMceConvertToRefResultINTEL\0" // IR(38609, 38)
-  "SubgroupAvcMceConvertToSicPayloadINTEL\0" // IR(38647, 39)
-  "SubgroupAvcMceConvertToSicResultINTEL\0" // IR(38686, 38)
-  "SubgroupAvcMceGetMotionVectorsINTEL\0" // IR(38724, 36)
-  "SubgroupAvcMceGetInterDistortionsINTEL\0" // IR(38760, 39)
-  "SubgroupAvcMceGetBestInterDistortionsINTEL\0" // IR(38799, 43)
-  "SubgroupAvcMceGetInterMajorShapeINTEL\0" // IR(38842, 38)
-  "SubgroupAvcMceGetInterMinorShapeINTEL\0" // IR(38880, 38)
-  "SubgroupAvcMceGetInterDirectionsINTEL\0" // IR(38918, 38)
-  "SubgroupAvcMceGetInterMotionVectorCountINTEL\0" // IR(38956, 45)
-  "SubgroupAvcMceGetInterReferenceIdsINTEL\0" // IR(39001, 40)
-  "SubgroupAvcMceGetInterReferenceInterlacedFieldPolaritiesINTEL\0" // IR(39041, 62)
-  "SubgroupAvcImeInitializeINTEL\0" // IR(39103, 30)
-  "SubgroupAvcImeSetSingleReferenceINTEL\0" // IR(39133, 38)
-  "SubgroupAvcImeSetDualReferenceINTEL\0" // IR(39171, 36)
-  "SubgroupAvcImeRefWindowSizeINTEL\0" // IR(39207, 33)
-  "SubgroupAvcImeAdjustRefOffsetINTEL\0" // IR(39240, 35)
-  "SubgroupAvcImeConvertToMcePayloadINTEL\0" // IR(39275, 39)
-  "SubgroupAvcImeSetMaxMotionVectorCountINTEL\0" // IR(39314, 43)
-  "SubgroupAvcImeSetUnidirectionalMixDisableINTEL\0" // IR(39357, 47)
-  "SubgroupAvcImeSetEarlySearchTerminationThresholdINTEL\0" // IR(39404, 54)
-  "SubgroupAvcImeSetWeightedSadINTEL\0" // IR(39458, 34)
-  "SubgroupAvcImeEvaluateWithSingleReferenceINTEL\0" // IR(39492, 47)
-  "SubgroupAvcImeEvaluateWithDualReferenceINTEL\0" // IR(39539, 45)
-  "SubgroupAvcImeEvaluateWithSingleReferenceStreaminINTEL\0" // IR(39584, 55)
-  "SubgroupAvcImeEvaluateWithDualReferenceStreaminINTEL\0" // IR(39639, 53)
-  "SubgroupAvcImeEvaluateWithSingleReferenceStreamoutINTEL\0" // IR(39692, 56)
-  "SubgroupAvcImeEvaluateWithDualReferenceStreamoutINTEL\0" // IR(39748, 54)
-  "SubgroupAvcImeEvaluateWithSingleReferenceStreaminoutINTEL\0" // IR(39802, 58)
-  "SubgroupAvcImeEvaluateWithDualReferenceStreaminoutINTEL\0" // IR(39860, 56)
-  "SubgroupAvcImeConvertToMceResultINTEL\0" // IR(39916, 38)
-  "SubgroupAvcImeGetSingleReferenceStreaminINTEL\0" // IR(39954, 46)
-  "SubgroupAvcImeGetDualReferenceStreaminINTEL\0" // IR(40000, 44)
-  "SubgroupAvcImeStripSingleReferenceStreamoutINTEL\0" // IR(40044, 49)
-  "SubgroupAvcImeStripDualReferenceStreamoutINTEL\0" // IR(40093, 47)
-  "SubgroupAvcImeGetStreamoutSingleReferenceMajorShapeMotionVectorsINTEL\0" // IR(40140, 70)
-  "SubgroupAvcImeGetStreamoutSingleReferenceMajorShapeDistortionsINTEL\0" // IR(40210, 68)
-  "SubgroupAvcImeGetStreamoutSingleReferenceMajorShapeReferenceIdsINTEL\0" // IR(40278, 69)
-  "SubgroupAvcImeGetStreamoutDualReferenceMajorShapeMotionVectorsINTEL\0" // IR(40347, 68)
-  "SubgroupAvcImeGetStreamoutDualReferenceMajorShapeDistortionsINTEL\0" // IR(40415, 66)
-  "SubgroupAvcImeGetStreamoutDualReferenceMajorShapeReferenceIdsINTEL\0" // IR(40481, 67)
-  "SubgroupAvcImeGetBorderReachedINTEL\0" // IR(40548, 36)
-  "SubgroupAvcImeGetTruncatedSearchIndicationINTEL\0" // IR(40584, 48)
-  "SubgroupAvcImeGetUnidirectionalEarlySearchTerminationINTEL\0" // IR(40632, 59)
-  "SubgroupAvcImeGetWeightingPatternMinimumMotionVectorINTEL\0" // IR(40691, 58)
-  "SubgroupAvcImeGetWeightingPatternMinimumDistortionINTEL\0" // IR(40749, 56)
-  "SubgroupAvcFmeInitializeINTEL\0" // IR(40805, 30)
-  "SubgroupAvcBmeInitializeINTEL\0" // IR(40835, 30)
-  "SubgroupAvcRefConvertToMcePayloadINTEL\0" // IR(40865, 39)
-  "SubgroupAvcRefSetBidirectionalMixDisableINTEL\0" // IR(40904, 46)
-  "SubgroupAvcRefSetBilinearFilterEnableINTEL\0" // IR(40950, 43)
-  "SubgroupAvcRefEvaluateWithSingleReferenceINTEL\0" // IR(40993, 47)
-  "SubgroupAvcRefEvaluateWithDualReferenceINTEL\0" // IR(41040, 45)
-  "SubgroupAvcRefEvaluateWithMultiReferenceINTEL\0" // IR(41085, 46)
-  "SubgroupAvcRefEvaluateWithMultiReferenceInterlacedINTEL\0" // IR(41131, 56)
-  "SubgroupAvcRefConvertToMceResultINTEL\0" // IR(41187, 38)
-  "SubgroupAvcSicInitializeINTEL\0" // IR(41225, 30)
-  "SubgroupAvcSicConfigureSkcINTEL\0" // IR(41255, 32)
-  "SubgroupAvcSicConfigureIpeLumaINTEL\0" // IR(41287, 36)
-  "SubgroupAvcSicConfigureIpeLumaChromaINTEL\0" // IR(41323, 42)
-  "SubgroupAvcSicGetMotionVectorMaskINTEL\0" // IR(41365, 39)
-  "SubgroupAvcSicConvertToMcePayloadINTEL\0" // IR(41404, 39)
-  "SubgroupAvcSicSetIntraLumaShapePenaltyINTEL\0" // IR(41443, 44)
-  "SubgroupAvcSicSetIntraLumaModeCostFunctionINTEL\0" // IR(41487, 48)
-  "SubgroupAvcSicSetIntraChromaModeCostFunctionINTEL\0" // IR(41535, 50)
-  "SubgroupAvcSicSetBilinearFilterEnableINTEL\0" // IR(41585, 43)
-  "SubgroupAvcSicSetSkcForwardTransformEnableINTEL\0" // IR(41628, 48)
-  "SubgroupAvcSicSetBlockBasedRawSkipSadINTEL\0" // IR(41676, 43)
-  "SubgroupAvcSicEvaluateIpeINTEL\0" // IR(41719, 31)
-  "SubgroupAvcSicEvaluateWithSingleReferenceINTEL\0" // IR(41750, 47)
-  "SubgroupAvcSicEvaluateWithDualReferenceINTEL\0" // IR(41797, 45)
-  "SubgroupAvcSicEvaluateWithMultiReferenceINTEL\0" // IR(41842, 46)
-  "SubgroupAvcSicEvaluateWithMultiReferenceInterlacedINTEL\0" // IR(41888, 56)
-  "SubgroupAvcSicConvertToMceResultINTEL\0" // IR(41944, 38)
-  "SubgroupAvcSicGetIpeLumaShapeINTEL\0" // IR(41982, 35)
-  "SubgroupAvcSicGetBestIpeLumaDistortionINTEL\0" // IR(42017, 44)
-  "SubgroupAvcSicGetBestIpeChromaDistortionINTEL\0" // IR(42061, 46)
-  "SubgroupAvcSicGetPackedIpeLumaModesINTEL\0" // IR(42107, 41)
-  "SubgroupAvcSicGetIpeChromaModeINTEL\0" // IR(42148, 36)
-  "SubgroupAvcSicGetPackedSkcLumaCountThresholdINTEL\0" // IR(42184, 50)
-  "SubgroupAvcSicGetPackedSkcLumaSumThresholdINTEL\0" // IR(42234, 48)
-  "SubgroupAvcSicGetInterRawSadsINTEL\0" // IR(42282, 35)
-  "SaveMemoryINTEL\0" // IR(42317, 16)
-  "RestoreMemoryINTEL\0" // IR(42333, 19)
-  "ArbitraryFloatSinCosPiINTEL\0" // IR(42352, 28)
-  "ArbitraryFloatCastINTEL\0" // IR(42380, 24)
-  "ArbitraryFloatCastFromIntINTEL\0" // IR(42404, 31)
-  "ArbitraryFloatCastToIntINTEL\0" // IR(42435, 29)
-  "ArbitraryFloatAddINTEL\0" // IR(42464, 23)
-  "ArbitraryFloatSubINTEL\0" // IR(42487, 23)
-  "ArbitraryFloatMulINTEL\0" // IR(42510, 23)
-  "ArbitraryFloatDivINTEL\0" // IR(42533, 23)
-  "ArbitraryFloatGTINTEL\0" // IR(42556, 22)
-  "ArbitraryFloatGEINTEL\0" // IR(42578, 22)
-  "ArbitraryFloatLTINTEL\0" // IR(42600, 22)
-  "ArbitraryFloatLEINTEL\0" // IR(42622, 22)
-  "ArbitraryFloatEQINTEL\0" // IR(42644, 22)
-  "ArbitraryFloatRecipINTEL\0" // IR(42666, 25)
-  "ArbitraryFloatRSqrtINTEL\0" // IR(42691, 25)
-  "ArbitraryFloatCbrtINTEL\0" // IR(42716, 24)
-  "ArbitraryFloatHypotINTEL\0" // IR(42740, 25)
-  "ArbitraryFloatSqrtINTEL\0" // IR(42765, 24)
-  "ArbitraryFloatLogINTEL\0" // IR(42789, 23)
-  "ArbitraryFloatLog2INTEL\0" // IR(42812, 24)
-  "ArbitraryFloatLog10INTEL\0" // IR(42836, 25)
-  "ArbitraryFloatLog1pINTEL\0" // IR(42861, 25)
-  "ArbitraryFloatExpINTEL\0" // IR(42886, 23)
-  "ArbitraryFloatExp2INTEL\0" // IR(42909, 24)
-  "ArbitraryFloatExp10INTEL\0" // IR(42933, 25)
-  "ArbitraryFloatExpm1INTEL\0" // IR(42958, 25)
-  "ArbitraryFloatSinINTEL\0" // IR(42983, 23)
-  "ArbitraryFloatCosINTEL\0" // IR(43006, 23)
-  "ArbitraryFloatSinCosINTEL\0" // IR(43029, 26)
-  "ArbitraryFloatSinPiINTEL\0" // IR(43055, 25)
-  "ArbitraryFloatCosPiINTEL\0" // IR(43080, 25)
-  "ArbitraryFloatASinINTEL\0" // IR(43105, 24)
-  "ArbitraryFloatASinPiINTEL\0" // IR(43129, 26)
-  "ArbitraryFloatACosINTEL\0" // IR(43155, 24)
-  "ArbitraryFloatACosPiINTEL\0" // IR(43179, 26)
-  "ArbitraryFloatATanINTEL\0" // IR(43205, 24)
-  "ArbitraryFloatATanPiINTEL\0" // IR(43229, 26)
-  "ArbitraryFloatATan2INTEL\0" // IR(43255, 25)
-  "ArbitraryFloatPowINTEL\0" // IR(43280, 23)
-  "ArbitraryFloatPowRINTEL\0" // IR(43303, 24)
-  "ArbitraryFloatPowNINTEL\0" // IR(43327, 24)
-  "LoopControlINTEL\0" // IR(43351, 17)
-  "AliasDomainDeclINTEL\0" // IR(43368, 21)
-  "AliasScopeDeclINTEL\0" // IR(43389, 20)
-  "AliasScopeListDeclINTEL\0" // IR(43409, 24)
-  "FixedSqrtINTEL\0" // IR(43433, 15)
-  "FixedRecipINTEL\0" // IR(43448, 16)
-  "FixedRsqrtINTEL\0" // IR(43464, 16)
-  "FixedSinINTEL\0" // IR(43480, 14)
-  "FixedCosINTEL\0" // IR(43494, 14)
-  "FixedSinCosINTEL\0" // IR(43508, 17)
-  "FixedSinPiINTEL\0" // IR(43525, 16)
-  "FixedCosPiINTEL\0" // IR(43541, 16)
-  "FixedSinCosPiINTEL\0" // IR(43557, 19)
-  "FixedLogINTEL\0" // IR(43576, 14)
-  "FixedExpINTEL\0" // IR(43590, 14)
-  "PtrCastToCrossWorkgroupINTEL\0" // IR(43604, 29)
-  "CrossWorkgroupCastToPtrINTEL\0" // IR(43633, 29)
-  "ReadPipeBlockingINTEL\0" // IR(43662, 22)
-  "WritePipeBlockingINTEL\0" // IR(43684, 23)
-  "RayQueryGetRayTMinKHR\0" // IR(43707, 22)
-  "RayQueryGetRayFlagsKHR\0" // IR(43729, 23)
-  "RayQueryGetIntersectionTKHR\0" // IR(43752, 28)
-  "RayQueryGetIntersectionInstanceCustomIndexKHR\0" // IR(43780, 46)
-  "RayQueryGetIntersectionInstanceIdKHR\0" // IR(43826, 37)
-  "RayQueryGetIntersectionInstanceShaderBindingTableRecordOffsetKHR\0" // IR(43863, 65)
-  "RayQueryGetIntersectionGeometryIndexKHR\0" // IR(43928, 40)
-  "RayQueryGetIntersectionPrimitiveIndexKHR\0" // IR(43968, 41)
-  "RayQueryGetIntersectionBarycentricsKHR\0" // IR(44009, 39)
-  "RayQueryGetIntersectionFrontFaceKHR\0" // IR(44048, 36)
-  "RayQueryGetIntersectionCandidateAABBOpaqueKHR\0" // IR(44084, 46)
-  "RayQueryGetIntersectionObjectRayDirectionKHR\0" // IR(44130, 45)
-  "RayQueryGetIntersectionObjectRayOriginKHR\0" // IR(44175, 42)
-  "RayQueryGetWorldRayDirectionKHR\0" // IR(44217, 32)
-  "RayQueryGetWorldRayOriginKHR\0" // IR(44249, 29)
-  "RayQueryGetIntersectionObjectToWorldKHR\0" // IR(44278, 40)
-  "RayQueryGetIntersectionWorldToObjectKHR\0" // IR(44318, 40)
-  "AtomicFAddEXT\0" // IR(44358, 14)
-  "TypeBufferSurfaceINTEL\0" // IR(44372, 23)
-  "TypeStructContinuedINTEL\0" // IR(44395, 25)
-  "ConstantCompositeContinuedINTEL\0" // IR(44420, 32)
-  "SpecConstantCompositeContinuedINTEL\0" // IR(44452, 36)
-  "CompositeConstructContinuedINTEL\0" // IR(44488, 33)
-  "ConvertFToBF16INTEL\0" // IR(44521, 20)
-  "ConvertBF16ToFINTEL\0" // IR(44541, 20)
-  "ControlBarrierArriveINTEL\0" // IR(44561, 26)
-  "ControlBarrierWaitINTEL\0" // IR(44587, 24)
-  "TaskSequenceCreateINTEL\0" // IR(44611, 24)
-  "TaskSequenceAsyncINTEL\0" // IR(44635, 23)
-  "TaskSequenceGetINTEL\0" // IR(44658, 21)
-  "TaskSequenceReleaseINTEL\0" // IR(44679, 25)
-  "TypeTaskSequenceINTEL\0" // IR(44704, 22)
-  "SubgroupBlockPrefetchINTEL\0" // IR(44726, 27)
-  "Subgroup2DBlockLoadINTEL\0" // IR(44753, 25)
-  "Subgroup2DBlockLoadTransformINTEL\0" // IR(44778, 34)
-  "Subgroup2DBlockLoadTransposeINTEL\0" // IR(44812, 34)
-  "Subgroup2DBlockPrefetchINTEL\0" // IR(44846, 29)
-  "Subgroup2DBlockStoreINTEL\0" // IR(44875, 26)
-  "SPV_OPERAND_TYPE_OPTIONAL_MATRIX_MULTIPLY_ACCUMULATE_OPERANDS\0" // IR(44901, 62)
-  "BitwiseFunctionINTEL\0" // IR(44963, 21)
-  "ConditionalExtensionINTEL\0" // IR(44984, 26)
-  "ConditionalEntryPointINTEL\0" // IR(45010, 27)
-  "ConditionalCapabilityINTEL\0" // IR(45037, 27)
-  "SpecConstantTargetINTEL\0" // IR(45064, 24)
-  "SpecConstantArchitectureINTEL\0" // IR(45088, 30)
-  "SPV_OPERAND_TYPE_VARIABLE_CAPABILITY\0" // IR(45118, 37)
-  "SpecConstantCapabilitiesINTEL\0" // IR(45155, 30)
-  "ConditionalCopyObjectINTEL\0" // IR(45185, 27)
-  "GroupIMulKHR\0" // IR(45212, 13)
-  "GroupFMulKHR\0" // IR(45225, 13)
-  "GroupBitwiseAndKHR\0" // IR(45238, 19)
-  "GroupBitwiseOrKHR\0" // IR(45257, 18)
-  "GroupBitwiseXorKHR\0" // IR(45275, 19)
-  "GroupLogicalAndKHR\0" // IR(45294, 19)
-  "GroupLogicalOrKHR\0" // IR(45313, 18)
-  "GroupLogicalXorKHR\0" // IR(45331, 19)
-  "RoundFToTF32INTEL\0" // IR(45350, 18)
-  "MaskedGatherINTEL\0" // IR(45368, 18)
-  "MaskedScatterINTEL\0" // IR(45386, 19)
-  "ConvertHandleToImageINTEL\0" // IR(45405, 26)
-  "ConvertHandleToSamplerINTEL\0" // IR(45431, 28)
-  "ConvertHandleToSampledImageINTEL\0" // IR(45459, 33)
-  "DebugInfoNone\0" // IR(45492, 14)
-  "DebugCompilationUnit\0" // IR(45506, 21)
-  "SPV_OPERAND_TYPE_DEBUG_BASE_TYPE_ATTRIBUTE_ENCODING\0" // IR(45527, 52)
-  "DebugTypeBasic\0" // IR(45579, 15)
-  "SPV_OPERAND_TYPE_DEBUG_INFO_FLAGS\0" // IR(45594, 34)
-  "DebugTypePointer\0" // IR(45628, 17)
-  "SPV_OPERAND_TYPE_DEBUG_TYPE_QUALIFIER\0" // IR(45645, 38)
-  "DebugTypeQualifier\0" // IR(45683, 19)
-  "DebugTypeArray\0" // IR(45702, 15)
-  "DebugTypeVector\0" // IR(45717, 16)
-  "DebugTypedef\0" // IR(45733, 13)
-  "DebugTypeFunction\0" // IR(45746, 18)
-  "DebugTypeEnum\0" // IR(45764, 14)
-  "SPV_OPERAND_TYPE_DEBUG_COMPOSITE_TYPE\0" // IR(45778, 38)
-  "DebugTypeComposite\0" // IR(45816, 19)
-  "DebugTypeMember\0" // IR(45835, 16)
-  "DebugTypeInheritance\0" // IR(45851, 21)
-  "DebugTypePtrToMember\0" // IR(45872, 21)
-  "DebugTypeTemplate\0" // IR(45893, 18)
-  "DebugTypeTemplateParameter\0" // IR(45911, 27)
-  "DebugTypeTemplateTemplateParameter\0" // IR(45938, 35)
-  "DebugTypeTemplateParameterPack\0" // IR(45973, 31)
-  "DebugGlobalVariable\0" // IR(46004, 20)
-  "DebugFunctionDeclaration\0" // IR(46024, 25)
-  "DebugFunction\0" // IR(46049, 14)
-  "DebugLexicalBlock\0" // IR(46063, 18)
-  "DebugLexicalBlockDiscriminator\0" // IR(46081, 31)
-  "DebugScope\0" // IR(46112, 11)
-  "DebugNoScope\0" // IR(46123, 13)
-  "DebugInlinedAt\0" // IR(46136, 15)
-  "SPV_OPERAND_TYPE_OPTIONAL_LITERAL_INTEGER\0" // IR(46151, 42)
-  "DebugLocalVariable\0" // IR(46193, 19)
-  "DebugInlinedVariable\0" // IR(46212, 21)
-  "DebugDeclare\0" // IR(46233, 13)
-  "DebugValue\0" // IR(46246, 11)
-  "SPV_OPERAND_TYPE_DEBUG_OPERATION\0" // IR(46257, 33)
-  "DebugOperation\0" // IR(46290, 15)
-  "DebugExpression\0" // IR(46305, 16)
-  "DebugMacroDef\0" // IR(46321, 14)
-  "DebugMacroUndef\0" // IR(46335, 16)
-  "Round\0" // IR(46351, 6)
-  "RoundEven\0" // IR(46357, 10)
-  "Trunc\0" // IR(46367, 6)
-  "FAbs\0" // IR(46373, 5)
-  "SAbs\0" // IR(46378, 5)
-  "FSign\0" // IR(46383, 6)
-  "SSign\0" // IR(46389, 6)
-  "Floor\0" // IR(46395, 6)
-  "Ceil\0" // IR(46401, 5)
-  "Fract\0" // IR(46406, 6)
-  "Radians\0" // IR(46412, 8)
-  "Degrees\0" // IR(46420, 8)
-  "Sin\0" // IR(46428, 4)
-  "Cos\0" // IR(46432, 4)
-  "Tan\0" // IR(46436, 4)
-  "Asin\0" // IR(46440, 5)
-  "Acos\0" // IR(46445, 5)
-  "Atan\0" // IR(46450, 5)
-  "Sinh\0" // IR(46455, 5)
-  "Cosh\0" // IR(46460, 5)
-  "Tanh\0" // IR(46465, 5)
-  "Asinh\0" // IR(46470, 6)
-  "Acosh\0" // IR(46476, 6)
-  "Atanh\0" // IR(46482, 6)
-  "Atan2\0" // IR(46488, 6)
-  "Pow\0" // IR(46494, 4)
-  "Exp\0" // IR(46498, 4)
-  "Log\0" // IR(46502, 4)
-  "Exp2\0" // IR(46506, 5)
-  "Log2\0" // IR(46511, 5)
-  "Sqrt\0" // IR(46516, 5)
-  "InverseSqrt\0" // IR(46521, 12)
-  "Determinant\0" // IR(46533, 12)
-  "MatrixInverse\0" // IR(46545, 14)
-  "Modf\0" // IR(46559, 5)
-  "ModfStruct\0" // IR(46564, 11)
-  "FMin\0" // IR(46575, 5)
-  "UMin\0" // IR(46580, 5)
-  "SMin\0" // IR(46585, 5)
-  "FMax\0" // IR(46590, 5)
-  "UMax\0" // IR(46595, 5)
-  "SMax\0" // IR(46600, 5)
-  "FClamp\0" // IR(46605, 7)
-  "UClamp\0" // IR(46612, 7)
-  "SClamp\0" // IR(46619, 7)
-  "FMix\0" // IR(46626, 5)
-  "IMix\0" // IR(46631, 5)
-  "Step\0" // IR(46636, 5)
-  "SmoothStep\0" // IR(46641, 11)
-  "Fma\0" // IR(46652, 4)
-  "Frexp\0" // IR(46656, 6)
-  "FrexpStruct\0" // IR(46662, 12)
-  "Ldexp\0" // IR(46674, 6)
-  "PackSnorm4x8\0" // IR(46680, 13)
-  "PackUnorm4x8\0" // IR(46693, 13)
-  "PackSnorm2x16\0" // IR(46706, 14)
-  "PackUnorm2x16\0" // IR(46720, 14)
-  "PackHalf2x16\0" // IR(46734, 13)
-  "PackDouble2x32\0" // IR(46747, 15)
-  "UnpackSnorm2x16\0" // IR(46762, 16)
-  "UnpackUnorm2x16\0" // IR(46778, 16)
-  "UnpackHalf2x16\0" // IR(46794, 15)
-  "UnpackSnorm4x8\0" // IR(46809, 15)
-  "UnpackUnorm4x8\0" // IR(46824, 15)
-  "UnpackDouble2x32\0" // IR(46839, 17)
-  "Length\0" // IR(46856, 7)
-  "Distance\0" // IR(46863, 9)
-  "Cross\0" // IR(46872, 6)
-  "Normalize\0" // IR(46878, 10)
-  "FaceForward\0" // IR(46888, 12)
-  "Reflect\0" // IR(46900, 8)
-  "Refract\0" // IR(46908, 8)
-  "FindILsb\0" // IR(46916, 9)
-  "FindSMsb\0" // IR(46925, 9)
-  "FindUMsb\0" // IR(46934, 9)
-  "InterpolateAtCentroid\0" // IR(46943, 22)
-  "InterpolateAtSample\0" // IR(46965, 20)
-  "InterpolateAtOffset\0" // IR(46985, 20)
-  "NMin\0" // IR(47005, 5)
-  "NMax\0" // IR(47010, 5)
-  "NClamp\0" // IR(47015, 7)
-  "ArgumentInfo\0" // IR(47022, 13)
-  "ArgumentStorageBuffer\0" // IR(47035, 22)
-  "ArgumentUniform\0" // IR(47057, 16)
-  "ArgumentPodStorageBuffer\0" // IR(47073, 25)
-  "ArgumentPodUniform\0" // IR(47098, 19)
-  "ArgumentPodPushConstant\0" // IR(47117, 24)
-  "ArgumentSampledImage\0" // IR(47141, 21)
-  "ArgumentStorageImage\0" // IR(47162, 21)
-  "ArgumentSampler\0" // IR(47183, 16)
-  "ArgumentWorkgroup\0" // IR(47199, 18)
-  "SpecConstantWorkgroupSize\0" // IR(47217, 26)
-  "SpecConstantGlobalOffset\0" // IR(47243, 25)
-  "SpecConstantWorkDim\0" // IR(47268, 20)
-  "PushConstantGlobalOffset\0" // IR(47288, 25)
-  "PushConstantEnqueuedLocalSize\0" // IR(47313, 30)
-  "PushConstantGlobalSize\0" // IR(47343, 23)
-  "PushConstantRegionOffset\0" // IR(47366, 25)
-  "PushConstantNumWorkgroups\0" // IR(47391, 26)
-  "PushConstantRegionGroupOffset\0" // IR(47417, 30)
-  "ConstantDataStorageBuffer\0" // IR(47447, 26)
-  "ConstantDataUniform\0" // IR(47473, 20)
-  "PropertyRequiredWorkgroupSize\0" // IR(47493, 30)
-  "SpecConstantSubgroupMaxSize\0" // IR(47523, 28)
-  "ArgumentPointerPushConstant\0" // IR(47551, 28)
-  "ArgumentPointerUniform\0" // IR(47579, 23)
-  "ProgramScopeVariablesStorageBuffer\0" // IR(47602, 35)
-  "ProgramScopeVariablePointerRelocation\0" // IR(47637, 38)
-  "ImageArgumentInfoChannelOrderPushConstant\0" // IR(47675, 42)
-  "ImageArgumentInfoChannelDataTypePushConstant\0" // IR(47717, 45)
-  "ImageArgumentInfoChannelOrderUniform\0" // IR(47762, 37)
-  "ImageArgumentInfoChannelDataTypeUniform\0" // IR(47799, 40)
-  "ArgumentStorageTexelBuffer\0" // IR(47839, 27)
-  "ArgumentUniformTexelBuffer\0" // IR(47866, 27)
-  "ConstantDataPointerPushConstant\0" // IR(47893, 32)
-  "ProgramScopeVariablePointerPushConstant\0" // IR(47925, 40)
-  "PrintfInfo\0" // IR(47965, 11)
-  "PrintfBufferStorageBuffer\0" // IR(47976, 26)
-  "PrintfBufferPointerPushConstant\0" // IR(48002, 32)
-  "NormalizedSamplerMaskPushConstant\0" // IR(48034, 34)
-  "WorkgroupVariableSize\0" // IR(48068, 22)
-  "DebugImportedEntity\0" // IR(48090, 20)
-  "DebugSource\0" // IR(48110, 12)
-  "DebugFunctionDefinition\0" // IR(48122, 24)
-  "DebugSourceContinued\0" // IR(48146, 21)
-  "DebugLine\0" // IR(48167, 10)
-  "DebugNoLine\0" // IR(48177, 12)
-  "DebugBuildIdentifier\0" // IR(48189, 21)
-  "DebugStoragePath\0" // IR(48210, 17)
-  "DebugEntryPoint\0" // IR(48227, 16)
-  "DebugTypeMatrix\0" // IR(48243, 16)
-  "Configuration\0" // IR(48259, 14)
-  "StartCounter\0" // IR(48273, 13)
-  "StopCounter\0" // IR(48286, 12)
-  "PushConstants\0" // IR(48298, 14)
-  "SpecializationMapEntry\0" // IR(48312, 23)
-  "DescriptorSetBuffer\0" // IR(48335, 20)
-  "DescriptorSetImage\0" // IR(48355, 19)
-  "DescriptorSetSampler\0" // IR(48374, 21)
-  "SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_BASE_TYPE_ATTRIBUTE_ENCODING\0" // IR(48395, 63)
-  "SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_INFO_FLAGS\0" // IR(48458, 45)
-  "SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_TYPE_QUALIFIER\0" // IR(48503, 49)
-  "SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_COMPOSITE_TYPE\0" // IR(48552, 49)
-  "SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_OPERATION\0" // IR(48601, 44)
-  "SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_IMPORTED_ENTITY\0" // IR(48645, 50)
-  "DebugModuleINTEL\0" // IR(48695, 17)
-  "acos\0" // IR(48712, 5)
-  "acosh\0" // IR(48717, 6)
-  "acospi\0" // IR(48723, 7)
-  "asin\0" // IR(48730, 5)
-  "asinh\0" // IR(48735, 6)
-  "asinpi\0" // IR(48741, 7)
-  "atan\0" // IR(48748, 5)
-  "atan2\0" // IR(48753, 6)
-  "atanh\0" // IR(48759, 6)
-  "atanpi\0" // IR(48765, 7)
-  "atan2pi\0" // IR(48772, 8)
-  "cbrt\0" // IR(48780, 5)
-  "ceil\0" // IR(48785, 5)
-  "copysign\0" // IR(48790, 9)
-  "cos\0" // IR(48799, 4)
-  "cosh\0" // IR(48803, 5)
-  "cospi\0" // IR(48808, 6)
-  "erfc\0" // IR(48814, 5)
-  "erf\0" // IR(48819, 4)
-  "exp\0" // IR(48823, 4)
-  "exp2\0" // IR(48827, 5)
-  "exp10\0" // IR(48832, 6)
-  "expm1\0" // IR(48838, 6)
-  "fabs\0" // IR(48844, 5)
-  "fdim\0" // IR(48849, 5)
-  "floor\0" // IR(48854, 6)
-  "fma\0" // IR(48860, 4)
-  "fmax\0" // IR(48864, 5)
-  "fmin\0" // IR(48869, 5)
-  "fmod\0" // IR(48874, 5)
-  "fract\0" // IR(48879, 6)
-  "frexp\0" // IR(48885, 6)
-  "hypot\0" // IR(48891, 6)
-  "ilogb\0" // IR(48897, 6)
-  "ldexp\0" // IR(48903, 6)
-  "lgamma\0" // IR(48909, 7)
-  "lgamma_r\0" // IR(48916, 9)
-  "log\0" // IR(48925, 4)
-  "log2\0" // IR(48929, 5)
-  "log10\0" // IR(48934, 6)
-  "log1p\0" // IR(48940, 6)
-  "logb\0" // IR(48946, 5)
-  "mad\0" // IR(48951, 4)
-  "maxmag\0" // IR(48955, 7)
-  "minmag\0" // IR(48962, 7)
-  "modf\0" // IR(48969, 5)
-  "nan\0" // IR(48974, 4)
-  "nextafter\0" // IR(48978, 10)
-  "pow\0" // IR(48988, 4)
-  "pown\0" // IR(48992, 5)
-  "powr\0" // IR(48997, 5)
-  "remainder\0" // IR(49002, 10)
-  "remquo\0" // IR(49012, 7)
-  "rint\0" // IR(49019, 5)
-  "rootn\0" // IR(49024, 6)
-  "round\0" // IR(49030, 6)
-  "rsqrt\0" // IR(49036, 6)
-  "sin\0" // IR(49042, 4)
-  "sincos\0" // IR(49046, 7)
-  "sinh\0" // IR(49053, 5)
-  "sinpi\0" // IR(49058, 6)
-  "sqrt\0" // IR(49064, 5)
-  "tan\0" // IR(49069, 4)
-  "tanh\0" // IR(49073, 5)
-  "tanpi\0" // IR(49078, 6)
-  "tgamma\0" // IR(49084, 7)
-  "trunc\0" // IR(49091, 6)
-  "half_cos\0" // IR(49097, 9)
-  "half_divide\0" // IR(49106, 12)
-  "half_exp\0" // IR(49118, 9)
-  "half_exp2\0" // IR(49127, 10)
-  "half_exp10\0" // IR(49137, 11)
-  "half_log\0" // IR(49148, 9)
-  "half_log2\0" // IR(49157, 10)
-  "half_log10\0" // IR(49167, 11)
-  "half_powr\0" // IR(49178, 10)
-  "half_recip\0" // IR(49188, 11)
-  "half_rsqrt\0" // IR(49199, 11)
-  "half_sin\0" // IR(49210, 9)
-  "half_sqrt\0" // IR(49219, 10)
-  "half_tan\0" // IR(49229, 9)
-  "native_cos\0" // IR(49238, 11)
-  "native_divide\0" // IR(49249, 14)
-  "native_exp\0" // IR(49263, 11)
-  "native_exp2\0" // IR(49274, 12)
-  "native_exp10\0" // IR(49286, 13)
-  "native_log\0" // IR(49299, 11)
-  "native_log2\0" // IR(49310, 12)
-  "native_log10\0" // IR(49322, 13)
-  "native_powr\0" // IR(49335, 12)
-  "native_recip\0" // IR(49347, 13)
-  "native_rsqrt\0" // IR(49360, 13)
-  "native_sin\0" // IR(49373, 11)
-  "native_sqrt\0" // IR(49384, 12)
-  "native_tan\0" // IR(49396, 11)
-  "fclamp\0" // IR(49407, 7)
-  "degrees\0" // IR(49414, 8)
-  "fmax_common\0" // IR(49422, 12)
-  "fmin_common\0" // IR(49434, 12)
-  "mix\0" // IR(49446, 4)
-  "radians\0" // IR(49450, 8)
-  "step\0" // IR(49458, 5)
-  "smoothstep\0" // IR(49463, 11)
-  "sign\0" // IR(49474, 5)
-  "cross\0" // IR(49479, 6)
-  "distance\0" // IR(49485, 9)
-  "length\0" // IR(49494, 7)
-  "normalize\0" // IR(49501, 10)
-  "fast_distance\0" // IR(49511, 14)
-  "fast_length\0" // IR(49525, 12)
-  "fast_normalize\0" // IR(49537, 15)
-  "s_abs\0" // IR(49552, 6)
-  "s_abs_diff\0" // IR(49558, 11)
-  "s_add_sat\0" // IR(49569, 10)
-  "u_add_sat\0" // IR(49579, 10)
-  "s_hadd\0" // IR(49589, 7)
-  "u_hadd\0" // IR(49596, 7)
-  "s_rhadd\0" // IR(49603, 8)
-  "u_rhadd\0" // IR(49611, 8)
-  "s_clamp\0" // IR(49619, 8)
-  "u_clamp\0" // IR(49627, 8)
-  "clz\0" // IR(49635, 4)
-  "ctz\0" // IR(49639, 4)
-  "s_mad_hi\0" // IR(49643, 9)
-  "u_mad_sat\0" // IR(49652, 10)
-  "s_mad_sat\0" // IR(49662, 10)
-  "s_max\0" // IR(49672, 6)
-  "u_max\0" // IR(49678, 6)
-  "s_min\0" // IR(49684, 6)
-  "u_min\0" // IR(49690, 6)
-  "s_mul_hi\0" // IR(49696, 9)
-  "rotate\0" // IR(49705, 7)
-  "s_sub_sat\0" // IR(49712, 10)
-  "u_sub_sat\0" // IR(49722, 10)
-  "u_upsample\0" // IR(49732, 11)
-  "s_upsample\0" // IR(49743, 11)
-  "popcount\0" // IR(49754, 9)
-  "s_mad24\0" // IR(49763, 8)
-  "u_mad24\0" // IR(49771, 8)
-  "s_mul24\0" // IR(49779, 8)
-  "u_mul24\0" // IR(49787, 8)
-  "vloadn\0" // IR(49795, 7)
-  "vstoren\0" // IR(49802, 8)
-  "vload_half\0" // IR(49810, 11)
-  "vload_halfn\0" // IR(49821, 12)
-  "vstore_half\0" // IR(49833, 12)
-  "vstore_half_r\0" // IR(49845, 14)
-  "vstore_halfn\0" // IR(49859, 13)
-  "vstore_halfn_r\0" // IR(49872, 15)
-  "vloada_halfn\0" // IR(49887, 13)
-  "vstorea_halfn\0" // IR(49900, 14)
-  "vstorea_halfn_r\0" // IR(49914, 16)
-  "shuffle\0" // IR(49930, 8)
-  "shuffle2\0" // IR(49938, 9)
-  "printf\0" // IR(49947, 7)
-  "prefetch\0" // IR(49954, 9)
-  "bitselect\0" // IR(49963, 10)
-  "select\0" // IR(49973, 7)
-  "u_abs\0" // IR(49980, 6)
-  "u_abs_diff\0" // IR(49986, 11)
-  "u_mul_hi\0" // IR(49997, 9)
-  "u_mad_hi\0" // IR(50006, 9)
-  "CubeFaceIndexAMD\0" // IR(50015, 17)
-  "CubeFaceCoordAMD\0" // IR(50032, 17)
-  "TimeAMD\0" // IR(50049, 8)
-  "SwizzleInvocationsAMD\0" // IR(50057, 22)
-  "SwizzleInvocationsMaskedAMD\0" // IR(50079, 28)
-  "WriteInvocationAMD\0" // IR(50107, 19)
-  "MbcntAMD\0" // IR(50126, 9)
-  "InterpolateAtVertexAMD\0" // IR(50135, 23)
-  "FMin3AMD\0" // IR(50158, 9)
-  "UMin3AMD\0" // IR(50167, 9)
-  "SMin3AMD\0" // IR(50176, 9)
-  "FMax3AMD\0" // IR(50185, 9)
-  "UMax3AMD\0" // IR(50194, 9)
-  "SMax3AMD\0" // IR(50203, 9)
-  "FMid3AMD\0" // IR(50212, 9)
-  "UMid3AMD\0" // IR(50221, 9)
-  "SMid3AMD\0" // IR(50230, 9)
-  "ARGMAX\0" // IR(50239, 7)
-  "AVG_POOL2D\0" // IR(50246, 11)
-  "CONV2D\0" // IR(50257, 7)
-  "CONV3D\0" // IR(50264, 7)
-  "DEPTHWISE_CONV2D\0" // IR(50271, 17)
-  "FFT2D\0" // IR(50288, 6)
-  "MATMUL\0" // IR(50294, 7)
-  "MAX_POOL2D\0" // IR(50301, 11)
-  "RFFT2D\0" // IR(50312, 7)
-  "TRANSPOSE_CONV2D\0" // IR(50319, 17)
-  "CLAMP\0" // IR(50336, 6)
-  "ERF\0" // IR(50342, 4)
-  "SIGMOID\0" // IR(50346, 8)
-  "TANH\0" // IR(50354, 5)
-  "ADD\0" // IR(50359, 4)
-  "ARITHMETIC_RIGHT_SHIFT\0" // IR(50363, 23)
-  "BITWISE_AND\0" // IR(50386, 12)
-  "BITWISE_OR\0" // IR(50398, 11)
-  "BITWISE_XOR\0" // IR(50409, 12)
-  "INTDIV\0" // IR(50421, 7)
-  "LOGICAL_AND\0" // IR(50428, 12)
-  "LOGICAL_LEFT_SHIFT\0" // IR(50440, 19)
-  "LOGICAL_RIGHT_SHIFT\0" // IR(50459, 20)
-  "LOGICAL_OR\0" // IR(50479, 11)
-  "LOGICAL_XOR\0" // IR(50490, 12)
-  "MAXIMUM\0" // IR(50502, 8)
-  "MINIMUM\0" // IR(50510, 8)
-  "MUL\0" // IR(50518, 4)
-  "POW\0" // IR(50522, 4)
-  "SUB\0" // IR(50526, 4)
-  "TABLE\0" // IR(50530, 6)
-  "ABS\0" // IR(50536, 4)
-  "BITWISE_NOT\0" // IR(50540, 12)
-  "CEIL\0" // IR(50552, 5)
-  "CLZ\0" // IR(50557, 4)
-  "COS\0" // IR(50561, 4)
-  "EXP\0" // IR(50565, 4)
-  "FLOOR\0" // IR(50569, 6)
-  "LOG\0" // IR(50575, 4)
-  "LOGICAL_NOT\0" // IR(50579, 12)
-  "NEGATE\0" // IR(50591, 7)
-  "RECIPROCAL\0" // IR(50598, 11)
-  "RSQRT\0" // IR(50609, 6)
-  "SIN\0" // IR(50615, 4)
-  "SELECT\0" // IR(50619, 7)
-  "EQUAL\0" // IR(50626, 6)
-  "GREATER\0" // IR(50632, 8)
-  "GREATER_EQUAL\0" // IR(50640, 14)
-  "REDUCE_ALL\0" // IR(50654, 11)
-  "REDUCE_ANY\0" // IR(50665, 11)
-  "REDUCE_MAX\0" // IR(50676, 11)
-  "REDUCE_MIN\0" // IR(50687, 11)
-  "REDUCE_PRODUCT\0" // IR(50698, 15)
-  "REDUCE_SUM\0" // IR(50713, 11)
-  "CONCAT\0" // IR(50724, 7)
-  "PAD\0" // IR(50731, 4)
-  "RESHAPE\0" // IR(50735, 8)
-  "REVERSE\0" // IR(50743, 8)
-  "SLICE\0" // IR(50751, 6)
-  "TILE\0" // IR(50757, 5)
-  "TRANSPOSE\0" // IR(50762, 10)
-  "GATHER\0" // IR(50772, 7)
-  "SCATTER\0" // IR(50779, 8)
-  "RESIZE\0" // IR(50787, 7)
-  "CAST\0" // IR(50794, 5)
-  "RESCALE\0" // IR(50799, 8)
+  "UntypedGroupAsyncCopyKHR\0" // IR(32024, 25)
+  "TraceRayKHR\0" // IR(32049, 12)
+  "ExecuteCallableKHR\0" // IR(32061, 19)
+  "ConvertUToAccelerationStructureKHR\0" // IR(32080, 35)
+  "IgnoreIntersectionKHR\0" // IR(32115, 22)
+  "TerminateRayKHR\0" // IR(32137, 16)
+  "SPV_OPERAND_TYPE_OPTIONAL_PACKED_VECTOR_FORMAT\0" // IR(32153, 47)
+  "SDot\0" // IR(32200, 5)
+  "SDotKHR\0" // IR(32205, 8)
+  "UDot\0" // IR(32213, 5)
+  "UDotKHR\0" // IR(32218, 8)
+  "SUDot\0" // IR(32226, 6)
+  "SUDotKHR\0" // IR(32232, 9)
+  "SDotAccSat\0" // IR(32241, 11)
+  "SDotAccSatKHR\0" // IR(32252, 14)
+  "UDotAccSat\0" // IR(32266, 11)
+  "UDotAccSatKHR\0" // IR(32277, 14)
+  "SUDotAccSat\0" // IR(32291, 12)
+  "SUDotAccSatKHR\0" // IR(32303, 15)
+  "TypeCooperativeMatrixKHR\0" // IR(32318, 25)
+  "CooperativeMatrixLoadKHR\0" // IR(32343, 25)
+  "CooperativeMatrixStoreKHR\0" // IR(32368, 26)
+  "SPV_OPERAND_TYPE_OPTIONAL_COOPERATIVE_MATRIX_OPERANDS\0" // IR(32394, 54)
+  "CooperativeMatrixMulAddKHR\0" // IR(32448, 27)
+  "CooperativeMatrixLengthKHR\0" // IR(32475, 27)
+  "ConstantCompositeReplicateEXT\0" // IR(32502, 30)
+  "SpecConstantCompositeReplicateEXT\0" // IR(32532, 34)
+  "CompositeConstructReplicateEXT\0" // IR(32566, 31)
+  "TypeRayQueryKHR\0" // IR(32597, 16)
+  "RayQueryInitializeKHR\0" // IR(32613, 22)
+  "RayQueryTerminateKHR\0" // IR(32635, 21)
+  "RayQueryGenerateIntersectionKHR\0" // IR(32656, 32)
+  "RayQueryConfirmIntersectionKHR\0" // IR(32688, 31)
+  "RayQueryProceedKHR\0" // IR(32719, 19)
+  "RayQueryGetIntersectionTypeKHR\0" // IR(32738, 31)
+  "ImageSampleWeightedQCOM\0" // IR(32769, 24)
+  "ImageBoxFilterQCOM\0" // IR(32793, 19)
+  "ImageBlockMatchSSDQCOM\0" // IR(32812, 23)
+  "ImageBlockMatchSADQCOM\0" // IR(32835, 23)
+  "BitCastArrayQCOM\0" // IR(32858, 17)
+  "ImageBlockMatchWindowSSDQCOM\0" // IR(32875, 29)
+  "ImageBlockMatchWindowSADQCOM\0" // IR(32904, 29)
+  "ImageBlockMatchGatherSSDQCOM\0" // IR(32933, 29)
+  "ImageBlockMatchGatherSADQCOM\0" // IR(32962, 29)
+  "CompositeConstructCoopMatQCOM\0" // IR(32991, 30)
+  "CompositeExtractCoopMatQCOM\0" // IR(33021, 28)
+  "ExtractSubArrayQCOM\0" // IR(33049, 20)
+  "GroupIAddNonUniformAMD\0" // IR(33069, 23)
+  "GroupFAddNonUniformAMD\0" // IR(33092, 23)
+  "GroupFMinNonUniformAMD\0" // IR(33115, 23)
+  "GroupUMinNonUniformAMD\0" // IR(33138, 23)
+  "GroupSMinNonUniformAMD\0" // IR(33161, 23)
+  "GroupFMaxNonUniformAMD\0" // IR(33184, 23)
+  "GroupUMaxNonUniformAMD\0" // IR(33207, 23)
+  "GroupSMaxNonUniformAMD\0" // IR(33230, 23)
+  "FragmentMaskFetchAMD\0" // IR(33253, 21)
+  "FragmentFetchAMD\0" // IR(33274, 17)
+  "ReadClockKHR\0" // IR(33291, 13)
+  "AllocateNodePayloadsAMDX\0" // IR(33304, 25)
+  "EnqueueNodePayloadsAMDX\0" // IR(33329, 24)
+  "TypeNodePayloadArrayAMDX\0" // IR(33353, 25)
+  "FinishWritingNodePayloadAMDX\0" // IR(33378, 29)
+  "NodePayloadArrayLengthAMDX\0" // IR(33407, 27)
+  "IsNodePayloadValidAMDX\0" // IR(33434, 23)
+  "ConstantStringAMDX\0" // IR(33457, 19)
+  "SpecConstantStringAMDX\0" // IR(33476, 23)
+  "GroupNonUniformQuadAllKHR\0" // IR(33499, 26)
+  "GroupNonUniformQuadAnyKHR\0" // IR(33525, 26)
+  "HitObjectRecordHitMotionNV\0" // IR(33551, 27)
+  "HitObjectRecordHitWithIndexMotionNV\0" // IR(33578, 36)
+  "HitObjectRecordMissMotionNV\0" // IR(33614, 28)
+  "HitObjectGetWorldToObjectNV\0" // IR(33642, 28)
+  "HitObjectGetObjectToWorldNV\0" // IR(33670, 28)
+  "HitObjectGetObjectRayDirectionNV\0" // IR(33698, 33)
+  "HitObjectGetObjectRayOriginNV\0" // IR(33731, 30)
+  "HitObjectTraceRayMotionNV\0" // IR(33761, 26)
+  "HitObjectGetShaderRecordBufferHandleNV\0" // IR(33787, 39)
+  "HitObjectGetShaderBindingTableRecordIndexNV\0" // IR(33826, 44)
+  "HitObjectRecordEmptyNV\0" // IR(33870, 23)
+  "HitObjectTraceRayNV\0" // IR(33893, 20)
+  "HitObjectRecordHitNV\0" // IR(33913, 21)
+  "HitObjectRecordHitWithIndexNV\0" // IR(33934, 30)
+  "HitObjectRecordMissNV\0" // IR(33964, 22)
+  "HitObjectExecuteShaderNV\0" // IR(33986, 25)
+  "HitObjectGetCurrentTimeNV\0" // IR(34011, 26)
+  "HitObjectGetAttributesNV\0" // IR(34037, 25)
+  "HitObjectGetHitKindNV\0" // IR(34062, 22)
+  "HitObjectGetPrimitiveIndexNV\0" // IR(34084, 29)
+  "HitObjectGetGeometryIndexNV\0" // IR(34113, 28)
+  "HitObjectGetInstanceIdNV\0" // IR(34141, 25)
+  "HitObjectGetInstanceCustomIndexNV\0" // IR(34166, 34)
+  "HitObjectGetWorldRayDirectionNV\0" // IR(34200, 32)
+  "HitObjectGetWorldRayOriginNV\0" // IR(34232, 29)
+  "HitObjectGetRayTMaxNV\0" // IR(34261, 22)
+  "HitObjectGetRayTMinNV\0" // IR(34283, 22)
+  "HitObjectIsEmptyNV\0" // IR(34305, 19)
+  "HitObjectIsHitNV\0" // IR(34324, 17)
+  "HitObjectIsMissNV\0" // IR(34341, 18)
+  "ReorderThreadWithHitObjectNV\0" // IR(34359, 29)
+  "ReorderThreadWithHintNV\0" // IR(34388, 24)
+  "TypeHitObjectNV\0" // IR(34412, 16)
+  "ImageSampleFootprintNV\0" // IR(34428, 23)
+  "TypeCooperativeVectorNV\0" // IR(34451, 24)
+  "CooperativeVectorMatrixMulNV\0" // IR(34475, 29)
+  "CooperativeVectorOuterProductAccumulateNV\0" // IR(34504, 42)
+  "CooperativeVectorReduceSumAccumulateNV\0" // IR(34546, 39)
+  "CooperativeVectorMatrixMulAddNV\0" // IR(34585, 32)
+  "CooperativeMatrixConvertNV\0" // IR(34617, 27)
+  "EmitMeshTasksEXT\0" // IR(34644, 17)
+  "SetMeshOutputsEXT\0" // IR(34661, 18)
+  "GroupNonUniformPartitionNV\0" // IR(34679, 27)
+  "WritePackedPrimitiveIndices4x8NV\0" // IR(34706, 33)
+  "FetchMicroTriangleVertexPositionNV\0" // IR(34739, 35)
+  "FetchMicroTriangleVertexBarycentricNV\0" // IR(34774, 38)
+  "CooperativeVectorLoadNV\0" // IR(34812, 24)
+  "CooperativeVectorStoreNV\0" // IR(34836, 25)
+  "ReportIntersectionKHR\0" // IR(34861, 22)
+  "ReportIntersectionNV\0" // IR(34883, 21)
+  "IgnoreIntersectionNV\0" // IR(34904, 21)
+  "TerminateRayNV\0" // IR(34925, 15)
+  "TraceNV\0" // IR(34940, 8)
+  "TraceMotionNV\0" // IR(34948, 14)
+  "TraceRayMotionNV\0" // IR(34962, 17)
+  "RayQueryGetIntersectionTriangleVertexPositionsKHR\0" // IR(34979, 50)
+  "TypeAccelerationStructureKHR\0" // IR(35029, 29)
+  "TypeAccelerationStructureNV\0" // IR(35058, 28)
+  "ExecuteCallableNV\0" // IR(35086, 18)
+  "RayQueryGetClusterIdNV\0" // IR(35104, 23)
+  "HitObjectGetClusterIdNV\0" // IR(35127, 24)
+  "TypeCooperativeMatrixNV\0" // IR(35151, 24)
+  "CooperativeMatrixLoadNV\0" // IR(35175, 24)
+  "CooperativeMatrixStoreNV\0" // IR(35199, 25)
+  "CooperativeMatrixMulAddNV\0" // IR(35224, 26)
+  "CooperativeMatrixLengthNV\0" // IR(35250, 26)
+  "BeginInvocationInterlockEXT\0" // IR(35276, 28)
+  "EndInvocationInterlockEXT\0" // IR(35304, 26)
+  "SPV_OPERAND_TYPE_COOPERATIVE_MATRIX_REDUCE\0" // IR(35330, 43)
+  "CooperativeMatrixReduceNV\0" // IR(35373, 26)
+  "SPV_OPERAND_TYPE_MEMORY_ACCESS\0" // IR(35399, 31)
+  "SPV_OPERAND_TYPE_TENSOR_ADDRESSING_OPERANDS\0" // IR(35430, 44)
+  "CooperativeMatrixLoadTensorNV\0" // IR(35474, 30)
+  "CooperativeMatrixStoreTensorNV\0" // IR(35504, 31)
+  "CooperativeMatrixPerElementOpNV\0" // IR(35535, 32)
+  "TypeTensorLayoutNV\0" // IR(35567, 19)
+  "TypeTensorViewNV\0" // IR(35586, 17)
+  "CreateTensorLayoutNV\0" // IR(35603, 21)
+  "TensorLayoutSetDimensionNV\0" // IR(35624, 27)
+  "TensorLayoutSetStrideNV\0" // IR(35651, 24)
+  "TensorLayoutSliceNV\0" // IR(35675, 20)
+  "TensorLayoutSetClampValueNV\0" // IR(35695, 28)
+  "CreateTensorViewNV\0" // IR(35723, 19)
+  "TensorViewSetDimensionNV\0" // IR(35742, 25)
+  "TensorViewSetStrideNV\0" // IR(35767, 22)
+  "IsHelperInvocationEXT\0" // IR(35789, 22)
+  "TensorViewSetClipNV\0" // IR(35811, 20)
+  "TensorLayoutSetBlockSizeNV\0" // IR(35831, 27)
+  "CooperativeMatrixTransposeNV\0" // IR(35858, 29)
+  "ConvertUToImageNV\0" // IR(35887, 18)
+  "ConvertUToSamplerNV\0" // IR(35905, 20)
+  "ConvertImageToUNV\0" // IR(35925, 18)
+  "ConvertSamplerToUNV\0" // IR(35943, 20)
+  "ConvertUToSampledImageNV\0" // IR(35963, 25)
+  "ConvertSampledImageToUNV\0" // IR(35988, 25)
+  "SamplerImageAddressingModeNV\0" // IR(36013, 29)
+  "SPV_OPERAND_TYPE_OPTIONAL_RAW_ACCESS_CHAIN_OPERANDS\0" // IR(36042, 52)
+  "RawAccessChainNV\0" // IR(36094, 17)
+  "RayQueryGetIntersectionSpherePositionNV\0" // IR(36111, 40)
+  "RayQueryGetIntersectionSphereRadiusNV\0" // IR(36151, 38)
+  "RayQueryGetIntersectionLSSPositionsNV\0" // IR(36189, 38)
+  "RayQueryGetIntersectionLSSRadiiNV\0" // IR(36227, 34)
+  "RayQueryGetIntersectionLSSHitValueNV\0" // IR(36261, 37)
+  "HitObjectGetSpherePositionNV\0" // IR(36298, 29)
+  "HitObjectGetSphereRadiusNV\0" // IR(36327, 27)
+  "HitObjectGetLSSPositionsNV\0" // IR(36354, 27)
+  "HitObjectGetLSSRadiiNV\0" // IR(36381, 23)
+  "HitObjectIsSphereHitNV\0" // IR(36404, 23)
+  "HitObjectIsLSSHitNV\0" // IR(36427, 20)
+  "RayQueryIsSphereHitNV\0" // IR(36447, 22)
+  "RayQueryIsLSSHitNV\0" // IR(36469, 19)
+  "SubgroupShuffleDownINTEL\0" // IR(36488, 25)
+  "SubgroupShuffleUpINTEL\0" // IR(36513, 23)
+  "SubgroupShuffleXorINTEL\0" // IR(36536, 24)
+  "SubgroupBlockReadINTEL\0" // IR(36560, 23)
+  "SubgroupBlockWriteINTEL\0" // IR(36583, 24)
+  "SubgroupImageBlockReadINTEL\0" // IR(36607, 28)
+  "SubgroupImageBlockWriteINTEL\0" // IR(36635, 29)
+  "SubgroupImageMediaBlockReadINTEL\0" // IR(36664, 33)
+  "SubgroupImageMediaBlockWriteINTEL\0" // IR(36697, 34)
+  "UCountLeadingZerosINTEL\0" // IR(36731, 24)
+  "UCountTrailingZerosINTEL\0" // IR(36755, 25)
+  "AbsISubINTEL\0" // IR(36780, 13)
+  "AbsUSubINTEL\0" // IR(36793, 13)
+  "IAddSatINTEL\0" // IR(36806, 13)
+  "UAddSatINTEL\0" // IR(36819, 13)
+  "IAverageINTEL\0" // IR(36832, 14)
+  "UAverageINTEL\0" // IR(36846, 14)
+  "IAverageRoundedINTEL\0" // IR(36860, 21)
+  "UAverageRoundedINTEL\0" // IR(36881, 21)
+  "ISubSatINTEL\0" // IR(36902, 13)
+  "USubSatINTEL\0" // IR(36915, 13)
+  "IMul32x16INTEL\0" // IR(36928, 15)
+  "UMul32x16INTEL\0" // IR(36943, 15)
+  "ConstantFunctionPointerINTEL\0" // IR(36958, 29)
+  "FunctionPointerCallINTEL\0" // IR(36987, 25)
+  "AsmTargetINTEL\0" // IR(37012, 15)
+  "AsmCallINTEL\0" // IR(37027, 13)
+  "AtomicFMinEXT\0" // IR(37040, 14)
+  "AtomicFMaxEXT\0" // IR(37054, 14)
+  "AssumeTrueKHR\0" // IR(37068, 14)
+  "ExpectKHR\0" // IR(37082, 10)
+  "DecorateString\0" // IR(37092, 15)
+  "DecorateStringGOOGLE\0" // IR(37107, 21)
+  "MemberDecorateString\0" // IR(37128, 21)
+  "MemberDecorateStringGOOGLE\0" // IR(37149, 27)
+  "VmeImageINTEL\0" // IR(37176, 14)
+  "TypeVmeImageINTEL\0" // IR(37190, 18)
+  "TypeAvcImePayloadINTEL\0" // IR(37208, 23)
+  "TypeAvcRefPayloadINTEL\0" // IR(37231, 23)
+  "TypeAvcSicPayloadINTEL\0" // IR(37254, 23)
+  "TypeAvcMcePayloadINTEL\0" // IR(37277, 23)
+  "TypeAvcMceResultINTEL\0" // IR(37300, 22)
+  "TypeAvcImeResultINTEL\0" // IR(37322, 22)
+  "TypeAvcImeResultSingleReferenceStreamoutINTEL\0" // IR(37344, 46)
+  "TypeAvcImeResultDualReferenceStreamoutINTEL\0" // IR(37390, 44)
+  "TypeAvcImeSingleReferenceStreaminINTEL\0" // IR(37434, 39)
+  "TypeAvcImeDualReferenceStreaminINTEL\0" // IR(37473, 37)
+  "TypeAvcRefResultINTEL\0" // IR(37510, 22)
+  "TypeAvcSicResultINTEL\0" // IR(37532, 22)
+  "SubgroupAvcMceGetDefaultInterBaseMultiReferencePenaltyINTEL\0" // IR(37554, 60)
+  "SubgroupAvcMceSetInterBaseMultiReferencePenaltyINTEL\0" // IR(37614, 53)
+  "SubgroupAvcMceGetDefaultInterShapePenaltyINTEL\0" // IR(37667, 47)
+  "SubgroupAvcMceSetInterShapePenaltyINTEL\0" // IR(37714, 40)
+  "SubgroupAvcMceGetDefaultInterDirectionPenaltyINTEL\0" // IR(37754, 51)
+  "SubgroupAvcMceSetInterDirectionPenaltyINTEL\0" // IR(37805, 44)
+  "SubgroupAvcMceGetDefaultIntraLumaShapePenaltyINTEL\0" // IR(37849, 51)
+  "SubgroupAvcMceGetDefaultInterMotionVectorCostTableINTEL\0" // IR(37900, 56)
+  "SubgroupAvcMceGetDefaultHighPenaltyCostTableINTEL\0" // IR(37956, 50)
+  "SubgroupAvcMceGetDefaultMediumPenaltyCostTableINTEL\0" // IR(38006, 52)
+  "SubgroupAvcMceGetDefaultLowPenaltyCostTableINTEL\0" // IR(38058, 49)
+  "SubgroupAvcMceSetMotionVectorCostFunctionINTEL\0" // IR(38107, 47)
+  "SubgroupAvcMceGetDefaultIntraLumaModePenaltyINTEL\0" // IR(38154, 50)
+  "SubgroupAvcMceGetDefaultNonDcLumaIntraPenaltyINTEL\0" // IR(38204, 51)
+  "SubgroupAvcMceGetDefaultIntraChromaModeBasePenaltyINTEL\0" // IR(38255, 56)
+  "SubgroupAvcMceSetAcOnlyHaarINTEL\0" // IR(38311, 33)
+  "SubgroupAvcMceSetSourceInterlacedFieldPolarityINTEL\0" // IR(38344, 52)
+  "SubgroupAvcMceSetSingleReferenceInterlacedFieldPolarityINTEL\0" // IR(38396, 61)
+  "SubgroupAvcMceSetDualReferenceInterlacedFieldPolaritiesINTEL\0" // IR(38457, 61)
+  "SubgroupAvcMceConvertToImePayloadINTEL\0" // IR(38518, 39)
+  "SubgroupAvcMceConvertToImeResultINTEL\0" // IR(38557, 38)
+  "SubgroupAvcMceConvertToRefPayloadINTEL\0" // IR(38595, 39)
+  "SubgroupAvcMceConvertToRefResultINTEL\0" // IR(38634, 38)
+  "SubgroupAvcMceConvertToSicPayloadINTEL\0" // IR(38672, 39)
+  "SubgroupAvcMceConvertToSicResultINTEL\0" // IR(38711, 38)
+  "SubgroupAvcMceGetMotionVectorsINTEL\0" // IR(38749, 36)
+  "SubgroupAvcMceGetInterDistortionsINTEL\0" // IR(38785, 39)
+  "SubgroupAvcMceGetBestInterDistortionsINTEL\0" // IR(38824, 43)
+  "SubgroupAvcMceGetInterMajorShapeINTEL\0" // IR(38867, 38)
+  "SubgroupAvcMceGetInterMinorShapeINTEL\0" // IR(38905, 38)
+  "SubgroupAvcMceGetInterDirectionsINTEL\0" // IR(38943, 38)
+  "SubgroupAvcMceGetInterMotionVectorCountINTEL\0" // IR(38981, 45)
+  "SubgroupAvcMceGetInterReferenceIdsINTEL\0" // IR(39026, 40)
+  "SubgroupAvcMceGetInterReferenceInterlacedFieldPolaritiesINTEL\0" // IR(39066, 62)
+  "SubgroupAvcImeInitializeINTEL\0" // IR(39128, 30)
+  "SubgroupAvcImeSetSingleReferenceINTEL\0" // IR(39158, 38)
+  "SubgroupAvcImeSetDualReferenceINTEL\0" // IR(39196, 36)
+  "SubgroupAvcImeRefWindowSizeINTEL\0" // IR(39232, 33)
+  "SubgroupAvcImeAdjustRefOffsetINTEL\0" // IR(39265, 35)
+  "SubgroupAvcImeConvertToMcePayloadINTEL\0" // IR(39300, 39)
+  "SubgroupAvcImeSetMaxMotionVectorCountINTEL\0" // IR(39339, 43)
+  "SubgroupAvcImeSetUnidirectionalMixDisableINTEL\0" // IR(39382, 47)
+  "SubgroupAvcImeSetEarlySearchTerminationThresholdINTEL\0" // IR(39429, 54)
+  "SubgroupAvcImeSetWeightedSadINTEL\0" // IR(39483, 34)
+  "SubgroupAvcImeEvaluateWithSingleReferenceINTEL\0" // IR(39517, 47)
+  "SubgroupAvcImeEvaluateWithDualReferenceINTEL\0" // IR(39564, 45)
+  "SubgroupAvcImeEvaluateWithSingleReferenceStreaminINTEL\0" // IR(39609, 55)
+  "SubgroupAvcImeEvaluateWithDualReferenceStreaminINTEL\0" // IR(39664, 53)
+  "SubgroupAvcImeEvaluateWithSingleReferenceStreamoutINTEL\0" // IR(39717, 56)
+  "SubgroupAvcImeEvaluateWithDualReferenceStreamoutINTEL\0" // IR(39773, 54)
+  "SubgroupAvcImeEvaluateWithSingleReferenceStreaminoutINTEL\0" // IR(39827, 58)
+  "SubgroupAvcImeEvaluateWithDualReferenceStreaminoutINTEL\0" // IR(39885, 56)
+  "SubgroupAvcImeConvertToMceResultINTEL\0" // IR(39941, 38)
+  "SubgroupAvcImeGetSingleReferenceStreaminINTEL\0" // IR(39979, 46)
+  "SubgroupAvcImeGetDualReferenceStreaminINTEL\0" // IR(40025, 44)
+  "SubgroupAvcImeStripSingleReferenceStreamoutINTEL\0" // IR(40069, 49)
+  "SubgroupAvcImeStripDualReferenceStreamoutINTEL\0" // IR(40118, 47)
+  "SubgroupAvcImeGetStreamoutSingleReferenceMajorShapeMotionVectorsINTEL\0" // IR(40165, 70)
+  "SubgroupAvcImeGetStreamoutSingleReferenceMajorShapeDistortionsINTEL\0" // IR(40235, 68)
+  "SubgroupAvcImeGetStreamoutSingleReferenceMajorShapeReferenceIdsINTEL\0" // IR(40303, 69)
+  "SubgroupAvcImeGetStreamoutDualReferenceMajorShapeMotionVectorsINTEL\0" // IR(40372, 68)
+  "SubgroupAvcImeGetStreamoutDualReferenceMajorShapeDistortionsINTEL\0" // IR(40440, 66)
+  "SubgroupAvcImeGetStreamoutDualReferenceMajorShapeReferenceIdsINTEL\0" // IR(40506, 67)
+  "SubgroupAvcImeGetBorderReachedINTEL\0" // IR(40573, 36)
+  "SubgroupAvcImeGetTruncatedSearchIndicationINTEL\0" // IR(40609, 48)
+  "SubgroupAvcImeGetUnidirectionalEarlySearchTerminationINTEL\0" // IR(40657, 59)
+  "SubgroupAvcImeGetWeightingPatternMinimumMotionVectorINTEL\0" // IR(40716, 58)
+  "SubgroupAvcImeGetWeightingPatternMinimumDistortionINTEL\0" // IR(40774, 56)
+  "SubgroupAvcFmeInitializeINTEL\0" // IR(40830, 30)
+  "SubgroupAvcBmeInitializeINTEL\0" // IR(40860, 30)
+  "SubgroupAvcRefConvertToMcePayloadINTEL\0" // IR(40890, 39)
+  "SubgroupAvcRefSetBidirectionalMixDisableINTEL\0" // IR(40929, 46)
+  "SubgroupAvcRefSetBilinearFilterEnableINTEL\0" // IR(40975, 43)
+  "SubgroupAvcRefEvaluateWithSingleReferenceINTEL\0" // IR(41018, 47)
+  "SubgroupAvcRefEvaluateWithDualReferenceINTEL\0" // IR(41065, 45)
+  "SubgroupAvcRefEvaluateWithMultiReferenceINTEL\0" // IR(41110, 46)
+  "SubgroupAvcRefEvaluateWithMultiReferenceInterlacedINTEL\0" // IR(41156, 56)
+  "SubgroupAvcRefConvertToMceResultINTEL\0" // IR(41212, 38)
+  "SubgroupAvcSicInitializeINTEL\0" // IR(41250, 30)
+  "SubgroupAvcSicConfigureSkcINTEL\0" // IR(41280, 32)
+  "SubgroupAvcSicConfigureIpeLumaINTEL\0" // IR(41312, 36)
+  "SubgroupAvcSicConfigureIpeLumaChromaINTEL\0" // IR(41348, 42)
+  "SubgroupAvcSicGetMotionVectorMaskINTEL\0" // IR(41390, 39)
+  "SubgroupAvcSicConvertToMcePayloadINTEL\0" // IR(41429, 39)
+  "SubgroupAvcSicSetIntraLumaShapePenaltyINTEL\0" // IR(41468, 44)
+  "SubgroupAvcSicSetIntraLumaModeCostFunctionINTEL\0" // IR(41512, 48)
+  "SubgroupAvcSicSetIntraChromaModeCostFunctionINTEL\0" // IR(41560, 50)
+  "SubgroupAvcSicSetBilinearFilterEnableINTEL\0" // IR(41610, 43)
+  "SubgroupAvcSicSetSkcForwardTransformEnableINTEL\0" // IR(41653, 48)
+  "SubgroupAvcSicSetBlockBasedRawSkipSadINTEL\0" // IR(41701, 43)
+  "SubgroupAvcSicEvaluateIpeINTEL\0" // IR(41744, 31)
+  "SubgroupAvcSicEvaluateWithSingleReferenceINTEL\0" // IR(41775, 47)
+  "SubgroupAvcSicEvaluateWithDualReferenceINTEL\0" // IR(41822, 45)
+  "SubgroupAvcSicEvaluateWithMultiReferenceINTEL\0" // IR(41867, 46)
+  "SubgroupAvcSicEvaluateWithMultiReferenceInterlacedINTEL\0" // IR(41913, 56)
+  "SubgroupAvcSicConvertToMceResultINTEL\0" // IR(41969, 38)
+  "SubgroupAvcSicGetIpeLumaShapeINTEL\0" // IR(42007, 35)
+  "SubgroupAvcSicGetBestIpeLumaDistortionINTEL\0" // IR(42042, 44)
+  "SubgroupAvcSicGetBestIpeChromaDistortionINTEL\0" // IR(42086, 46)
+  "SubgroupAvcSicGetPackedIpeLumaModesINTEL\0" // IR(42132, 41)
+  "SubgroupAvcSicGetIpeChromaModeINTEL\0" // IR(42173, 36)
+  "SubgroupAvcSicGetPackedSkcLumaCountThresholdINTEL\0" // IR(42209, 50)
+  "SubgroupAvcSicGetPackedSkcLumaSumThresholdINTEL\0" // IR(42259, 48)
+  "SubgroupAvcSicGetInterRawSadsINTEL\0" // IR(42307, 35)
+  "SaveMemoryINTEL\0" // IR(42342, 16)
+  "RestoreMemoryINTEL\0" // IR(42358, 19)
+  "ArbitraryFloatSinCosPiINTEL\0" // IR(42377, 28)
+  "ArbitraryFloatCastINTEL\0" // IR(42405, 24)
+  "ArbitraryFloatCastFromIntINTEL\0" // IR(42429, 31)
+  "ArbitraryFloatCastToIntINTEL\0" // IR(42460, 29)
+  "ArbitraryFloatAddINTEL\0" // IR(42489, 23)
+  "ArbitraryFloatSubINTEL\0" // IR(42512, 23)
+  "ArbitraryFloatMulINTEL\0" // IR(42535, 23)
+  "ArbitraryFloatDivINTEL\0" // IR(42558, 23)
+  "ArbitraryFloatGTINTEL\0" // IR(42581, 22)
+  "ArbitraryFloatGEINTEL\0" // IR(42603, 22)
+  "ArbitraryFloatLTINTEL\0" // IR(42625, 22)
+  "ArbitraryFloatLEINTEL\0" // IR(42647, 22)
+  "ArbitraryFloatEQINTEL\0" // IR(42669, 22)
+  "ArbitraryFloatRecipINTEL\0" // IR(42691, 25)
+  "ArbitraryFloatRSqrtINTEL\0" // IR(42716, 25)
+  "ArbitraryFloatCbrtINTEL\0" // IR(42741, 24)
+  "ArbitraryFloatHypotINTEL\0" // IR(42765, 25)
+  "ArbitraryFloatSqrtINTEL\0" // IR(42790, 24)
+  "ArbitraryFloatLogINTEL\0" // IR(42814, 23)
+  "ArbitraryFloatLog2INTEL\0" // IR(42837, 24)
+  "ArbitraryFloatLog10INTEL\0" // IR(42861, 25)
+  "ArbitraryFloatLog1pINTEL\0" // IR(42886, 25)
+  "ArbitraryFloatExpINTEL\0" // IR(42911, 23)
+  "ArbitraryFloatExp2INTEL\0" // IR(42934, 24)
+  "ArbitraryFloatExp10INTEL\0" // IR(42958, 25)
+  "ArbitraryFloatExpm1INTEL\0" // IR(42983, 25)
+  "ArbitraryFloatSinINTEL\0" // IR(43008, 23)
+  "ArbitraryFloatCosINTEL\0" // IR(43031, 23)
+  "ArbitraryFloatSinCosINTEL\0" // IR(43054, 26)
+  "ArbitraryFloatSinPiINTEL\0" // IR(43080, 25)
+  "ArbitraryFloatCosPiINTEL\0" // IR(43105, 25)
+  "ArbitraryFloatASinINTEL\0" // IR(43130, 24)
+  "ArbitraryFloatASinPiINTEL\0" // IR(43154, 26)
+  "ArbitraryFloatACosINTEL\0" // IR(43180, 24)
+  "ArbitraryFloatACosPiINTEL\0" // IR(43204, 26)
+  "ArbitraryFloatATanINTEL\0" // IR(43230, 24)
+  "ArbitraryFloatATanPiINTEL\0" // IR(43254, 26)
+  "ArbitraryFloatATan2INTEL\0" // IR(43280, 25)
+  "ArbitraryFloatPowINTEL\0" // IR(43305, 23)
+  "ArbitraryFloatPowRINTEL\0" // IR(43328, 24)
+  "ArbitraryFloatPowNINTEL\0" // IR(43352, 24)
+  "LoopControlINTEL\0" // IR(43376, 17)
+  "AliasDomainDeclINTEL\0" // IR(43393, 21)
+  "AliasScopeDeclINTEL\0" // IR(43414, 20)
+  "AliasScopeListDeclINTEL\0" // IR(43434, 24)
+  "FixedSqrtINTEL\0" // IR(43458, 15)
+  "FixedRecipINTEL\0" // IR(43473, 16)
+  "FixedRsqrtINTEL\0" // IR(43489, 16)
+  "FixedSinINTEL\0" // IR(43505, 14)
+  "FixedCosINTEL\0" // IR(43519, 14)
+  "FixedSinCosINTEL\0" // IR(43533, 17)
+  "FixedSinPiINTEL\0" // IR(43550, 16)
+  "FixedCosPiINTEL\0" // IR(43566, 16)
+  "FixedSinCosPiINTEL\0" // IR(43582, 19)
+  "FixedLogINTEL\0" // IR(43601, 14)
+  "FixedExpINTEL\0" // IR(43615, 14)
+  "PtrCastToCrossWorkgroupINTEL\0" // IR(43629, 29)
+  "CrossWorkgroupCastToPtrINTEL\0" // IR(43658, 29)
+  "ReadPipeBlockingINTEL\0" // IR(43687, 22)
+  "WritePipeBlockingINTEL\0" // IR(43709, 23)
+  "RayQueryGetRayTMinKHR\0" // IR(43732, 22)
+  "RayQueryGetRayFlagsKHR\0" // IR(43754, 23)
+  "RayQueryGetIntersectionTKHR\0" // IR(43777, 28)
+  "RayQueryGetIntersectionInstanceCustomIndexKHR\0" // IR(43805, 46)
+  "RayQueryGetIntersectionInstanceIdKHR\0" // IR(43851, 37)
+  "RayQueryGetIntersectionInstanceShaderBindingTableRecordOffsetKHR\0" // IR(43888, 65)
+  "RayQueryGetIntersectionGeometryIndexKHR\0" // IR(43953, 40)
+  "RayQueryGetIntersectionPrimitiveIndexKHR\0" // IR(43993, 41)
+  "RayQueryGetIntersectionBarycentricsKHR\0" // IR(44034, 39)
+  "RayQueryGetIntersectionFrontFaceKHR\0" // IR(44073, 36)
+  "RayQueryGetIntersectionCandidateAABBOpaqueKHR\0" // IR(44109, 46)
+  "RayQueryGetIntersectionObjectRayDirectionKHR\0" // IR(44155, 45)
+  "RayQueryGetIntersectionObjectRayOriginKHR\0" // IR(44200, 42)
+  "RayQueryGetWorldRayDirectionKHR\0" // IR(44242, 32)
+  "RayQueryGetWorldRayOriginKHR\0" // IR(44274, 29)
+  "RayQueryGetIntersectionObjectToWorldKHR\0" // IR(44303, 40)
+  "RayQueryGetIntersectionWorldToObjectKHR\0" // IR(44343, 40)
+  "AtomicFAddEXT\0" // IR(44383, 14)
+  "TypeBufferSurfaceINTEL\0" // IR(44397, 23)
+  "TypeStructContinuedINTEL\0" // IR(44420, 25)
+  "ConstantCompositeContinuedINTEL\0" // IR(44445, 32)
+  "SpecConstantCompositeContinuedINTEL\0" // IR(44477, 36)
+  "CompositeConstructContinuedINTEL\0" // IR(44513, 33)
+  "ConvertFToBF16INTEL\0" // IR(44546, 20)
+  "ConvertBF16ToFINTEL\0" // IR(44566, 20)
+  "ControlBarrierArriveINTEL\0" // IR(44586, 26)
+  "ControlBarrierWaitINTEL\0" // IR(44612, 24)
+  "TaskSequenceCreateINTEL\0" // IR(44636, 24)
+  "TaskSequenceAsyncINTEL\0" // IR(44660, 23)
+  "TaskSequenceGetINTEL\0" // IR(44683, 21)
+  "TaskSequenceReleaseINTEL\0" // IR(44704, 25)
+  "TypeTaskSequenceINTEL\0" // IR(44729, 22)
+  "SubgroupBlockPrefetchINTEL\0" // IR(44751, 27)
+  "Subgroup2DBlockLoadINTEL\0" // IR(44778, 25)
+  "Subgroup2DBlockLoadTransformINTEL\0" // IR(44803, 34)
+  "Subgroup2DBlockLoadTransposeINTEL\0" // IR(44837, 34)
+  "Subgroup2DBlockPrefetchINTEL\0" // IR(44871, 29)
+  "Subgroup2DBlockStoreINTEL\0" // IR(44900, 26)
+  "SPV_OPERAND_TYPE_OPTIONAL_MATRIX_MULTIPLY_ACCUMULATE_OPERANDS\0" // IR(44926, 62)
+  "BitwiseFunctionINTEL\0" // IR(44988, 21)
+  "ConditionalExtensionINTEL\0" // IR(45009, 26)
+  "ConditionalEntryPointINTEL\0" // IR(45035, 27)
+  "ConditionalCapabilityINTEL\0" // IR(45062, 27)
+  "SpecConstantTargetINTEL\0" // IR(45089, 24)
+  "SpecConstantArchitectureINTEL\0" // IR(45113, 30)
+  "SPV_OPERAND_TYPE_VARIABLE_CAPABILITY\0" // IR(45143, 37)
+  "SpecConstantCapabilitiesINTEL\0" // IR(45180, 30)
+  "ConditionalCopyObjectINTEL\0" // IR(45210, 27)
+  "GroupIMulKHR\0" // IR(45237, 13)
+  "GroupFMulKHR\0" // IR(45250, 13)
+  "GroupBitwiseAndKHR\0" // IR(45263, 19)
+  "GroupBitwiseOrKHR\0" // IR(45282, 18)
+  "GroupBitwiseXorKHR\0" // IR(45300, 19)
+  "GroupLogicalAndKHR\0" // IR(45319, 19)
+  "GroupLogicalOrKHR\0" // IR(45338, 18)
+  "GroupLogicalXorKHR\0" // IR(45356, 19)
+  "RoundFToTF32INTEL\0" // IR(45375, 18)
+  "MaskedGatherINTEL\0" // IR(45393, 18)
+  "MaskedScatterINTEL\0" // IR(45411, 19)
+  "ConvertHandleToImageINTEL\0" // IR(45430, 26)
+  "ConvertHandleToSamplerINTEL\0" // IR(45456, 28)
+  "ConvertHandleToSampledImageINTEL\0" // IR(45484, 33)
+  "DebugInfoNone\0" // IR(45517, 14)
+  "DebugCompilationUnit\0" // IR(45531, 21)
+  "SPV_OPERAND_TYPE_DEBUG_BASE_TYPE_ATTRIBUTE_ENCODING\0" // IR(45552, 52)
+  "DebugTypeBasic\0" // IR(45604, 15)
+  "SPV_OPERAND_TYPE_DEBUG_INFO_FLAGS\0" // IR(45619, 34)
+  "DebugTypePointer\0" // IR(45653, 17)
+  "SPV_OPERAND_TYPE_DEBUG_TYPE_QUALIFIER\0" // IR(45670, 38)
+  "DebugTypeQualifier\0" // IR(45708, 19)
+  "DebugTypeArray\0" // IR(45727, 15)
+  "DebugTypeVector\0" // IR(45742, 16)
+  "DebugTypedef\0" // IR(45758, 13)
+  "DebugTypeFunction\0" // IR(45771, 18)
+  "DebugTypeEnum\0" // IR(45789, 14)
+  "SPV_OPERAND_TYPE_DEBUG_COMPOSITE_TYPE\0" // IR(45803, 38)
+  "DebugTypeComposite\0" // IR(45841, 19)
+  "DebugTypeMember\0" // IR(45860, 16)
+  "DebugTypeInheritance\0" // IR(45876, 21)
+  "DebugTypePtrToMember\0" // IR(45897, 21)
+  "DebugTypeTemplate\0" // IR(45918, 18)
+  "DebugTypeTemplateParameter\0" // IR(45936, 27)
+  "DebugTypeTemplateTemplateParameter\0" // IR(45963, 35)
+  "DebugTypeTemplateParameterPack\0" // IR(45998, 31)
+  "DebugGlobalVariable\0" // IR(46029, 20)
+  "DebugFunctionDeclaration\0" // IR(46049, 25)
+  "DebugFunction\0" // IR(46074, 14)
+  "DebugLexicalBlock\0" // IR(46088, 18)
+  "DebugLexicalBlockDiscriminator\0" // IR(46106, 31)
+  "DebugScope\0" // IR(46137, 11)
+  "DebugNoScope\0" // IR(46148, 13)
+  "DebugInlinedAt\0" // IR(46161, 15)
+  "SPV_OPERAND_TYPE_OPTIONAL_LITERAL_INTEGER\0" // IR(46176, 42)
+  "DebugLocalVariable\0" // IR(46218, 19)
+  "DebugInlinedVariable\0" // IR(46237, 21)
+  "DebugDeclare\0" // IR(46258, 13)
+  "DebugValue\0" // IR(46271, 11)
+  "SPV_OPERAND_TYPE_DEBUG_OPERATION\0" // IR(46282, 33)
+  "DebugOperation\0" // IR(46315, 15)
+  "DebugExpression\0" // IR(46330, 16)
+  "DebugMacroDef\0" // IR(46346, 14)
+  "DebugMacroUndef\0" // IR(46360, 16)
+  "Round\0" // IR(46376, 6)
+  "RoundEven\0" // IR(46382, 10)
+  "Trunc\0" // IR(46392, 6)
+  "FAbs\0" // IR(46398, 5)
+  "SAbs\0" // IR(46403, 5)
+  "FSign\0" // IR(46408, 6)
+  "SSign\0" // IR(46414, 6)
+  "Floor\0" // IR(46420, 6)
+  "Ceil\0" // IR(46426, 5)
+  "Fract\0" // IR(46431, 6)
+  "Radians\0" // IR(46437, 8)
+  "Degrees\0" // IR(46445, 8)
+  "Sin\0" // IR(46453, 4)
+  "Cos\0" // IR(46457, 4)
+  "Tan\0" // IR(46461, 4)
+  "Asin\0" // IR(46465, 5)
+  "Acos\0" // IR(46470, 5)
+  "Atan\0" // IR(46475, 5)
+  "Sinh\0" // IR(46480, 5)
+  "Cosh\0" // IR(46485, 5)
+  "Tanh\0" // IR(46490, 5)
+  "Asinh\0" // IR(46495, 6)
+  "Acosh\0" // IR(46501, 6)
+  "Atanh\0" // IR(46507, 6)
+  "Atan2\0" // IR(46513, 6)
+  "Pow\0" // IR(46519, 4)
+  "Exp\0" // IR(46523, 4)
+  "Log\0" // IR(46527, 4)
+  "Exp2\0" // IR(46531, 5)
+  "Log2\0" // IR(46536, 5)
+  "Sqrt\0" // IR(46541, 5)
+  "InverseSqrt\0" // IR(46546, 12)
+  "Determinant\0" // IR(46558, 12)
+  "MatrixInverse\0" // IR(46570, 14)
+  "Modf\0" // IR(46584, 5)
+  "ModfStruct\0" // IR(46589, 11)
+  "FMin\0" // IR(46600, 5)
+  "UMin\0" // IR(46605, 5)
+  "SMin\0" // IR(46610, 5)
+  "FMax\0" // IR(46615, 5)
+  "UMax\0" // IR(46620, 5)
+  "SMax\0" // IR(46625, 5)
+  "FClamp\0" // IR(46630, 7)
+  "UClamp\0" // IR(46637, 7)
+  "SClamp\0" // IR(46644, 7)
+  "FMix\0" // IR(46651, 5)
+  "IMix\0" // IR(46656, 5)
+  "Step\0" // IR(46661, 5)
+  "SmoothStep\0" // IR(46666, 11)
+  "Fma\0" // IR(46677, 4)
+  "Frexp\0" // IR(46681, 6)
+  "FrexpStruct\0" // IR(46687, 12)
+  "Ldexp\0" // IR(46699, 6)
+  "PackSnorm4x8\0" // IR(46705, 13)
+  "PackUnorm4x8\0" // IR(46718, 13)
+  "PackSnorm2x16\0" // IR(46731, 14)
+  "PackUnorm2x16\0" // IR(46745, 14)
+  "PackHalf2x16\0" // IR(46759, 13)
+  "PackDouble2x32\0" // IR(46772, 15)
+  "UnpackSnorm2x16\0" // IR(46787, 16)
+  "UnpackUnorm2x16\0" // IR(46803, 16)
+  "UnpackHalf2x16\0" // IR(46819, 15)
+  "UnpackSnorm4x8\0" // IR(46834, 15)
+  "UnpackUnorm4x8\0" // IR(46849, 15)
+  "UnpackDouble2x32\0" // IR(46864, 17)
+  "Length\0" // IR(46881, 7)
+  "Distance\0" // IR(46888, 9)
+  "Cross\0" // IR(46897, 6)
+  "Normalize\0" // IR(46903, 10)
+  "FaceForward\0" // IR(46913, 12)
+  "Reflect\0" // IR(46925, 8)
+  "Refract\0" // IR(46933, 8)
+  "FindILsb\0" // IR(46941, 9)
+  "FindSMsb\0" // IR(46950, 9)
+  "FindUMsb\0" // IR(46959, 9)
+  "InterpolateAtCentroid\0" // IR(46968, 22)
+  "InterpolateAtSample\0" // IR(46990, 20)
+  "InterpolateAtOffset\0" // IR(47010, 20)
+  "NMin\0" // IR(47030, 5)
+  "NMax\0" // IR(47035, 5)
+  "NClamp\0" // IR(47040, 7)
+  "ArgumentInfo\0" // IR(47047, 13)
+  "ArgumentStorageBuffer\0" // IR(47060, 22)
+  "ArgumentUniform\0" // IR(47082, 16)
+  "ArgumentPodStorageBuffer\0" // IR(47098, 25)
+  "ArgumentPodUniform\0" // IR(47123, 19)
+  "ArgumentPodPushConstant\0" // IR(47142, 24)
+  "ArgumentSampledImage\0" // IR(47166, 21)
+  "ArgumentStorageImage\0" // IR(47187, 21)
+  "ArgumentSampler\0" // IR(47208, 16)
+  "ArgumentWorkgroup\0" // IR(47224, 18)
+  "SpecConstantWorkgroupSize\0" // IR(47242, 26)
+  "SpecConstantGlobalOffset\0" // IR(47268, 25)
+  "SpecConstantWorkDim\0" // IR(47293, 20)
+  "PushConstantGlobalOffset\0" // IR(47313, 25)
+  "PushConstantEnqueuedLocalSize\0" // IR(47338, 30)
+  "PushConstantGlobalSize\0" // IR(47368, 23)
+  "PushConstantRegionOffset\0" // IR(47391, 25)
+  "PushConstantNumWorkgroups\0" // IR(47416, 26)
+  "PushConstantRegionGroupOffset\0" // IR(47442, 30)
+  "ConstantDataStorageBuffer\0" // IR(47472, 26)
+  "ConstantDataUniform\0" // IR(47498, 20)
+  "PropertyRequiredWorkgroupSize\0" // IR(47518, 30)
+  "SpecConstantSubgroupMaxSize\0" // IR(47548, 28)
+  "ArgumentPointerPushConstant\0" // IR(47576, 28)
+  "ArgumentPointerUniform\0" // IR(47604, 23)
+  "ProgramScopeVariablesStorageBuffer\0" // IR(47627, 35)
+  "ProgramScopeVariablePointerRelocation\0" // IR(47662, 38)
+  "ImageArgumentInfoChannelOrderPushConstant\0" // IR(47700, 42)
+  "ImageArgumentInfoChannelDataTypePushConstant\0" // IR(47742, 45)
+  "ImageArgumentInfoChannelOrderUniform\0" // IR(47787, 37)
+  "ImageArgumentInfoChannelDataTypeUniform\0" // IR(47824, 40)
+  "ArgumentStorageTexelBuffer\0" // IR(47864, 27)
+  "ArgumentUniformTexelBuffer\0" // IR(47891, 27)
+  "ConstantDataPointerPushConstant\0" // IR(47918, 32)
+  "ProgramScopeVariablePointerPushConstant\0" // IR(47950, 40)
+  "PrintfInfo\0" // IR(47990, 11)
+  "PrintfBufferStorageBuffer\0" // IR(48001, 26)
+  "PrintfBufferPointerPushConstant\0" // IR(48027, 32)
+  "NormalizedSamplerMaskPushConstant\0" // IR(48059, 34)
+  "WorkgroupVariableSize\0" // IR(48093, 22)
+  "DebugImportedEntity\0" // IR(48115, 20)
+  "DebugSource\0" // IR(48135, 12)
+  "DebugFunctionDefinition\0" // IR(48147, 24)
+  "DebugSourceContinued\0" // IR(48171, 21)
+  "DebugLine\0" // IR(48192, 10)
+  "DebugNoLine\0" // IR(48202, 12)
+  "DebugBuildIdentifier\0" // IR(48214, 21)
+  "DebugStoragePath\0" // IR(48235, 17)
+  "DebugEntryPoint\0" // IR(48252, 16)
+  "DebugTypeMatrix\0" // IR(48268, 16)
+  "Configuration\0" // IR(48284, 14)
+  "StartCounter\0" // IR(48298, 13)
+  "StopCounter\0" // IR(48311, 12)
+  "PushConstants\0" // IR(48323, 14)
+  "SpecializationMapEntry\0" // IR(48337, 23)
+  "DescriptorSetBuffer\0" // IR(48360, 20)
+  "DescriptorSetImage\0" // IR(48380, 19)
+  "DescriptorSetSampler\0" // IR(48399, 21)
+  "SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_BASE_TYPE_ATTRIBUTE_ENCODING\0" // IR(48420, 63)
+  "SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_INFO_FLAGS\0" // IR(48483, 45)
+  "SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_TYPE_QUALIFIER\0" // IR(48528, 49)
+  "SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_COMPOSITE_TYPE\0" // IR(48577, 49)
+  "SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_OPERATION\0" // IR(48626, 44)
+  "SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_IMPORTED_ENTITY\0" // IR(48670, 50)
+  "DebugModuleINTEL\0" // IR(48720, 17)
+  "acos\0" // IR(48737, 5)
+  "acosh\0" // IR(48742, 6)
+  "acospi\0" // IR(48748, 7)
+  "asin\0" // IR(48755, 5)
+  "asinh\0" // IR(48760, 6)
+  "asinpi\0" // IR(48766, 7)
+  "atan\0" // IR(48773, 5)
+  "atan2\0" // IR(48778, 6)
+  "atanh\0" // IR(48784, 6)
+  "atanpi\0" // IR(48790, 7)
+  "atan2pi\0" // IR(48797, 8)
+  "cbrt\0" // IR(48805, 5)
+  "ceil\0" // IR(48810, 5)
+  "copysign\0" // IR(48815, 9)
+  "cos\0" // IR(48824, 4)
+  "cosh\0" // IR(48828, 5)
+  "cospi\0" // IR(48833, 6)
+  "erfc\0" // IR(48839, 5)
+  "erf\0" // IR(48844, 4)
+  "exp\0" // IR(48848, 4)
+  "exp2\0" // IR(48852, 5)
+  "exp10\0" // IR(48857, 6)
+  "expm1\0" // IR(48863, 6)
+  "fabs\0" // IR(48869, 5)
+  "fdim\0" // IR(48874, 5)
+  "floor\0" // IR(48879, 6)
+  "fma\0" // IR(48885, 4)
+  "fmax\0" // IR(48889, 5)
+  "fmin\0" // IR(48894, 5)
+  "fmod\0" // IR(48899, 5)
+  "fract\0" // IR(48904, 6)
+  "frexp\0" // IR(48910, 6)
+  "hypot\0" // IR(48916, 6)
+  "ilogb\0" // IR(48922, 6)
+  "ldexp\0" // IR(48928, 6)
+  "lgamma\0" // IR(48934, 7)
+  "lgamma_r\0" // IR(48941, 9)
+  "log\0" // IR(48950, 4)
+  "log2\0" // IR(48954, 5)
+  "log10\0" // IR(48959, 6)
+  "log1p\0" // IR(48965, 6)
+  "logb\0" // IR(48971, 5)
+  "mad\0" // IR(48976, 4)
+  "maxmag\0" // IR(48980, 7)
+  "minmag\0" // IR(48987, 7)
+  "modf\0" // IR(48994, 5)
+  "nan\0" // IR(48999, 4)
+  "nextafter\0" // IR(49003, 10)
+  "pow\0" // IR(49013, 4)
+  "pown\0" // IR(49017, 5)
+  "powr\0" // IR(49022, 5)
+  "remainder\0" // IR(49027, 10)
+  "remquo\0" // IR(49037, 7)
+  "rint\0" // IR(49044, 5)
+  "rootn\0" // IR(49049, 6)
+  "round\0" // IR(49055, 6)
+  "rsqrt\0" // IR(49061, 6)
+  "sin\0" // IR(49067, 4)
+  "sincos\0" // IR(49071, 7)
+  "sinh\0" // IR(49078, 5)
+  "sinpi\0" // IR(49083, 6)
+  "sqrt\0" // IR(49089, 5)
+  "tan\0" // IR(49094, 4)
+  "tanh\0" // IR(49098, 5)
+  "tanpi\0" // IR(49103, 6)
+  "tgamma\0" // IR(49109, 7)
+  "trunc\0" // IR(49116, 6)
+  "half_cos\0" // IR(49122, 9)
+  "half_divide\0" // IR(49131, 12)
+  "half_exp\0" // IR(49143, 9)
+  "half_exp2\0" // IR(49152, 10)
+  "half_exp10\0" // IR(49162, 11)
+  "half_log\0" // IR(49173, 9)
+  "half_log2\0" // IR(49182, 10)
+  "half_log10\0" // IR(49192, 11)
+  "half_powr\0" // IR(49203, 10)
+  "half_recip\0" // IR(49213, 11)
+  "half_rsqrt\0" // IR(49224, 11)
+  "half_sin\0" // IR(49235, 9)
+  "half_sqrt\0" // IR(49244, 10)
+  "half_tan\0" // IR(49254, 9)
+  "native_cos\0" // IR(49263, 11)
+  "native_divide\0" // IR(49274, 14)
+  "native_exp\0" // IR(49288, 11)
+  "native_exp2\0" // IR(49299, 12)
+  "native_exp10\0" // IR(49311, 13)
+  "native_log\0" // IR(49324, 11)
+  "native_log2\0" // IR(49335, 12)
+  "native_log10\0" // IR(49347, 13)
+  "native_powr\0" // IR(49360, 12)
+  "native_recip\0" // IR(49372, 13)
+  "native_rsqrt\0" // IR(49385, 13)
+  "native_sin\0" // IR(49398, 11)
+  "native_sqrt\0" // IR(49409, 12)
+  "native_tan\0" // IR(49421, 11)
+  "fclamp\0" // IR(49432, 7)
+  "degrees\0" // IR(49439, 8)
+  "fmax_common\0" // IR(49447, 12)
+  "fmin_common\0" // IR(49459, 12)
+  "mix\0" // IR(49471, 4)
+  "radians\0" // IR(49475, 8)
+  "step\0" // IR(49483, 5)
+  "smoothstep\0" // IR(49488, 11)
+  "sign\0" // IR(49499, 5)
+  "cross\0" // IR(49504, 6)
+  "distance\0" // IR(49510, 9)
+  "length\0" // IR(49519, 7)
+  "normalize\0" // IR(49526, 10)
+  "fast_distance\0" // IR(49536, 14)
+  "fast_length\0" // IR(49550, 12)
+  "fast_normalize\0" // IR(49562, 15)
+  "s_abs\0" // IR(49577, 6)
+  "s_abs_diff\0" // IR(49583, 11)
+  "s_add_sat\0" // IR(49594, 10)
+  "u_add_sat\0" // IR(49604, 10)
+  "s_hadd\0" // IR(49614, 7)
+  "u_hadd\0" // IR(49621, 7)
+  "s_rhadd\0" // IR(49628, 8)
+  "u_rhadd\0" // IR(49636, 8)
+  "s_clamp\0" // IR(49644, 8)
+  "u_clamp\0" // IR(49652, 8)
+  "clz\0" // IR(49660, 4)
+  "ctz\0" // IR(49664, 4)
+  "s_mad_hi\0" // IR(49668, 9)
+  "u_mad_sat\0" // IR(49677, 10)
+  "s_mad_sat\0" // IR(49687, 10)
+  "s_max\0" // IR(49697, 6)
+  "u_max\0" // IR(49703, 6)
+  "s_min\0" // IR(49709, 6)
+  "u_min\0" // IR(49715, 6)
+  "s_mul_hi\0" // IR(49721, 9)
+  "rotate\0" // IR(49730, 7)
+  "s_sub_sat\0" // IR(49737, 10)
+  "u_sub_sat\0" // IR(49747, 10)
+  "u_upsample\0" // IR(49757, 11)
+  "s_upsample\0" // IR(49768, 11)
+  "popcount\0" // IR(49779, 9)
+  "s_mad24\0" // IR(49788, 8)
+  "u_mad24\0" // IR(49796, 8)
+  "s_mul24\0" // IR(49804, 8)
+  "u_mul24\0" // IR(49812, 8)
+  "vloadn\0" // IR(49820, 7)
+  "vstoren\0" // IR(49827, 8)
+  "vload_half\0" // IR(49835, 11)
+  "vload_halfn\0" // IR(49846, 12)
+  "vstore_half\0" // IR(49858, 12)
+  "vstore_half_r\0" // IR(49870, 14)
+  "vstore_halfn\0" // IR(49884, 13)
+  "vstore_halfn_r\0" // IR(49897, 15)
+  "vloada_halfn\0" // IR(49912, 13)
+  "vstorea_halfn\0" // IR(49925, 14)
+  "vstorea_halfn_r\0" // IR(49939, 16)
+  "shuffle\0" // IR(49955, 8)
+  "shuffle2\0" // IR(49963, 9)
+  "printf\0" // IR(49972, 7)
+  "prefetch\0" // IR(49979, 9)
+  "bitselect\0" // IR(49988, 10)
+  "select\0" // IR(49998, 7)
+  "u_abs\0" // IR(50005, 6)
+  "u_abs_diff\0" // IR(50011, 11)
+  "u_mul_hi\0" // IR(50022, 9)
+  "u_mad_hi\0" // IR(50031, 9)
+  "CubeFaceIndexAMD\0" // IR(50040, 17)
+  "CubeFaceCoordAMD\0" // IR(50057, 17)
+  "TimeAMD\0" // IR(50074, 8)
+  "SwizzleInvocationsAMD\0" // IR(50082, 22)
+  "SwizzleInvocationsMaskedAMD\0" // IR(50104, 28)
+  "WriteInvocationAMD\0" // IR(50132, 19)
+  "MbcntAMD\0" // IR(50151, 9)
+  "InterpolateAtVertexAMD\0" // IR(50160, 23)
+  "FMin3AMD\0" // IR(50183, 9)
+  "UMin3AMD\0" // IR(50192, 9)
+  "SMin3AMD\0" // IR(50201, 9)
+  "FMax3AMD\0" // IR(50210, 9)
+  "UMax3AMD\0" // IR(50219, 9)
+  "SMax3AMD\0" // IR(50228, 9)
+  "FMid3AMD\0" // IR(50237, 9)
+  "UMid3AMD\0" // IR(50246, 9)
+  "SMid3AMD\0" // IR(50255, 9)
+  "ARGMAX\0" // IR(50264, 7)
+  "AVG_POOL2D\0" // IR(50271, 11)
+  "CONV2D\0" // IR(50282, 7)
+  "CONV3D\0" // IR(50289, 7)
+  "DEPTHWISE_CONV2D\0" // IR(50296, 17)
+  "FFT2D\0" // IR(50313, 6)
+  "MATMUL\0" // IR(50319, 7)
+  "MAX_POOL2D\0" // IR(50326, 11)
+  "RFFT2D\0" // IR(50337, 7)
+  "TRANSPOSE_CONV2D\0" // IR(50344, 17)
+  "CLAMP\0" // IR(50361, 6)
+  "ERF\0" // IR(50367, 4)
+  "SIGMOID\0" // IR(50371, 8)
+  "TANH\0" // IR(50379, 5)
+  "ADD\0" // IR(50384, 4)
+  "ARITHMETIC_RIGHT_SHIFT\0" // IR(50388, 23)
+  "BITWISE_AND\0" // IR(50411, 12)
+  "BITWISE_OR\0" // IR(50423, 11)
+  "BITWISE_XOR\0" // IR(50434, 12)
+  "INTDIV\0" // IR(50446, 7)
+  "LOGICAL_AND\0" // IR(50453, 12)
+  "LOGICAL_LEFT_SHIFT\0" // IR(50465, 19)
+  "LOGICAL_RIGHT_SHIFT\0" // IR(50484, 20)
+  "LOGICAL_OR\0" // IR(50504, 11)
+  "LOGICAL_XOR\0" // IR(50515, 12)
+  "MAXIMUM\0" // IR(50527, 8)
+  "MINIMUM\0" // IR(50535, 8)
+  "MUL\0" // IR(50543, 4)
+  "POW\0" // IR(50547, 4)
+  "SUB\0" // IR(50551, 4)
+  "TABLE\0" // IR(50555, 6)
+  "ABS\0" // IR(50561, 4)
+  "BITWISE_NOT\0" // IR(50565, 12)
+  "CEIL\0" // IR(50577, 5)
+  "CLZ\0" // IR(50582, 4)
+  "COS\0" // IR(50586, 4)
+  "EXP\0" // IR(50590, 4)
+  "FLOOR\0" // IR(50594, 6)
+  "LOG\0" // IR(50600, 4)
+  "LOGICAL_NOT\0" // IR(50604, 12)
+  "NEGATE\0" // IR(50616, 7)
+  "RECIPROCAL\0" // IR(50623, 11)
+  "RSQRT\0" // IR(50634, 6)
+  "SIN\0" // IR(50640, 4)
+  "SELECT\0" // IR(50644, 7)
+  "EQUAL\0" // IR(50651, 6)
+  "GREATER\0" // IR(50657, 8)
+  "GREATER_EQUAL\0" // IR(50665, 14)
+  "REDUCE_ALL\0" // IR(50679, 11)
+  "REDUCE_ANY\0" // IR(50690, 11)
+  "REDUCE_MAX\0" // IR(50701, 11)
+  "REDUCE_MIN\0" // IR(50712, 11)
+  "REDUCE_PRODUCT\0" // IR(50723, 15)
+  "REDUCE_SUM\0" // IR(50738, 11)
+  "CONCAT\0" // IR(50749, 7)
+  "PAD\0" // IR(50756, 4)
+  "RESHAPE\0" // IR(50760, 8)
+  "REVERSE\0" // IR(50768, 8)
+  "SLICE\0" // IR(50776, 6)
+  "TILE\0" // IR(50782, 5)
+  "TRANSPOSE\0" // IR(50787, 10)
+  "GATHER\0" // IR(50797, 7)
+  "SCATTER\0" // IR(50804, 8)
+  "RESIZE\0" // IR(50812, 7)
+  "CAST\0" // IR(50819, 5)
+  "RESCALE\0" // IR(50824, 8)
 ;
 
 // Array of IndexRanges, where each represents a string by referencing
@@ -8437,16 +8440,16 @@ static const IndexRange kAliasSpans[] = {
   IR(24785, 21), // 90 IncomingRayPayloadNV
   IR(24828, 21), // 91 ShaderRecordBufferNV
   IR(24871, 25), // 92 PhysicalStorageBufferEXT
-  IR(32180, 8), // 93 SDotKHR
-  IR(32193, 8), // 94 UDotKHR
-  IR(32207, 9), // 95 SUDotKHR
-  IR(32227, 14), // 96 SDotAccSatKHR
-  IR(32252, 14), // 97 UDotAccSatKHR
-  IR(32278, 15), // 98 SUDotAccSatKHR
-  IR(34858, 21), // 99 ReportIntersectionNV
-  IR(35033, 28), // 100 TypeAccelerationStructureNV
-  IR(37082, 21), // 101 DecorateStringGOOGLE
-  IR(37124, 27), // 102 MemberDecorateStringGOOGLE
+  IR(32205, 8), // 93 SDotKHR
+  IR(32218, 8), // 94 UDotKHR
+  IR(32232, 9), // 95 SUDotKHR
+  IR(32252, 14), // 96 SDotAccSatKHR
+  IR(32277, 14), // 97 UDotAccSatKHR
+  IR(32303, 15), // 98 SUDotAccSatKHR
+  IR(34883, 21), // 99 ReportIntersectionNV
+  IR(35058, 28), // 100 TypeAccelerationStructureNV
+  IR(37107, 21), // 101 DecorateStringGOOGLE
+  IR(37149, 27), // 102 MemberDecorateStringGOOGLE
 };
 
 // Array of capabilities, referenced by IndexRanges elsewhere.
@@ -9364,8 +9367,8 @@ static const spv_operand_type_t kOperandSpans[] = {
   SPV_OPERAND_TYPE_ID, // 412
   SPV_OPERAND_TYPE_EXTENSION_INSTRUCTION_NUMBER, // 413
   SPV_OPERAND_TYPE_VARIABLE_ID, // 414
-  SPV_OPERAND_TYPE_ID, // 415
-  SPV_OPERAND_TYPE_ID, // 416
+  SPV_OPERAND_TYPE_TYPE_ID, // 415
+  SPV_OPERAND_TYPE_RESULT_ID, // 416
   SPV_OPERAND_TYPE_ID, // 417
   SPV_OPERAND_TYPE_ID, // 418
   SPV_OPERAND_TYPE_ID, // 419
@@ -9373,53 +9376,53 @@ static const spv_operand_type_t kOperandSpans[] = {
   SPV_OPERAND_TYPE_ID, // 421
   SPV_OPERAND_TYPE_ID, // 422
   SPV_OPERAND_TYPE_ID, // 423
-  SPV_OPERAND_TYPE_ID, // 424
-  SPV_OPERAND_TYPE_ID, // 425
-  SPV_OPERAND_TYPE_TYPE_ID, // 426
-  SPV_OPERAND_TYPE_RESULT_ID, // 427
+  SPV_OPERAND_TYPE_OPTIONAL_MEMORY_ACCESS, // 424
+  SPV_OPERAND_TYPE_OPTIONAL_MEMORY_ACCESS, // 425
+  SPV_OPERAND_TYPE_ID, // 426
+  SPV_OPERAND_TYPE_ID, // 427
   SPV_OPERAND_TYPE_ID, // 428
   SPV_OPERAND_TYPE_ID, // 429
-  SPV_OPERAND_TYPE_OPTIONAL_PACKED_VECTOR_FORMAT, // 430
-  SPV_OPERAND_TYPE_TYPE_ID, // 431
-  SPV_OPERAND_TYPE_RESULT_ID, // 432
+  SPV_OPERAND_TYPE_ID, // 430
+  SPV_OPERAND_TYPE_ID, // 431
+  SPV_OPERAND_TYPE_ID, // 432
   SPV_OPERAND_TYPE_ID, // 433
   SPV_OPERAND_TYPE_ID, // 434
   SPV_OPERAND_TYPE_ID, // 435
-  SPV_OPERAND_TYPE_OPTIONAL_PACKED_VECTOR_FORMAT, // 436
-  SPV_OPERAND_TYPE_RESULT_ID, // 437
-  SPV_OPERAND_TYPE_ID, // 438
-  SPV_OPERAND_TYPE_SCOPE_ID, // 439
+  SPV_OPERAND_TYPE_ID, // 436
+  SPV_OPERAND_TYPE_TYPE_ID, // 437
+  SPV_OPERAND_TYPE_RESULT_ID, // 438
+  SPV_OPERAND_TYPE_ID, // 439
   SPV_OPERAND_TYPE_ID, // 440
-  SPV_OPERAND_TYPE_ID, // 441
-  SPV_OPERAND_TYPE_ID, // 442
-  SPV_OPERAND_TYPE_TYPE_ID, // 443
-  SPV_OPERAND_TYPE_RESULT_ID, // 444
+  SPV_OPERAND_TYPE_OPTIONAL_PACKED_VECTOR_FORMAT, // 441
+  SPV_OPERAND_TYPE_TYPE_ID, // 442
+  SPV_OPERAND_TYPE_RESULT_ID, // 443
+  SPV_OPERAND_TYPE_ID, // 444
   SPV_OPERAND_TYPE_ID, // 445
   SPV_OPERAND_TYPE_ID, // 446
-  SPV_OPERAND_TYPE_OPTIONAL_ID, // 447
-  SPV_OPERAND_TYPE_OPTIONAL_MEMORY_ACCESS, // 448
+  SPV_OPERAND_TYPE_OPTIONAL_PACKED_VECTOR_FORMAT, // 447
+  SPV_OPERAND_TYPE_RESULT_ID, // 448
   SPV_OPERAND_TYPE_ID, // 449
-  SPV_OPERAND_TYPE_ID, // 450
+  SPV_OPERAND_TYPE_SCOPE_ID, // 450
   SPV_OPERAND_TYPE_ID, // 451
-  SPV_OPERAND_TYPE_OPTIONAL_ID, // 452
-  SPV_OPERAND_TYPE_OPTIONAL_MEMORY_ACCESS, // 453
+  SPV_OPERAND_TYPE_ID, // 452
+  SPV_OPERAND_TYPE_ID, // 453
   SPV_OPERAND_TYPE_TYPE_ID, // 454
   SPV_OPERAND_TYPE_RESULT_ID, // 455
   SPV_OPERAND_TYPE_ID, // 456
   SPV_OPERAND_TYPE_ID, // 457
-  SPV_OPERAND_TYPE_ID, // 458
-  SPV_OPERAND_TYPE_OPTIONAL_COOPERATIVE_MATRIX_OPERANDS, // 459
+  SPV_OPERAND_TYPE_OPTIONAL_ID, // 458
+  SPV_OPERAND_TYPE_OPTIONAL_MEMORY_ACCESS, // 459
   SPV_OPERAND_TYPE_ID, // 460
   SPV_OPERAND_TYPE_ID, // 461
   SPV_OPERAND_TYPE_ID, // 462
-  SPV_OPERAND_TYPE_ID, // 463
-  SPV_OPERAND_TYPE_ID, // 464
-  SPV_OPERAND_TYPE_ID, // 465
-  SPV_OPERAND_TYPE_ID, // 466
+  SPV_OPERAND_TYPE_OPTIONAL_ID, // 463
+  SPV_OPERAND_TYPE_OPTIONAL_MEMORY_ACCESS, // 464
+  SPV_OPERAND_TYPE_TYPE_ID, // 465
+  SPV_OPERAND_TYPE_RESULT_ID, // 466
   SPV_OPERAND_TYPE_ID, // 467
   SPV_OPERAND_TYPE_ID, // 468
   SPV_OPERAND_TYPE_ID, // 469
-  SPV_OPERAND_TYPE_ID, // 470
+  SPV_OPERAND_TYPE_OPTIONAL_COOPERATIVE_MATRIX_OPERANDS, // 470
   SPV_OPERAND_TYPE_ID, // 471
   SPV_OPERAND_TYPE_ID, // 472
   SPV_OPERAND_TYPE_ID, // 473
@@ -9470,141 +9473,141 @@ static const spv_operand_type_t kOperandSpans[] = {
   SPV_OPERAND_TYPE_ID, // 518
   SPV_OPERAND_TYPE_ID, // 519
   SPV_OPERAND_TYPE_ID, // 520
-  SPV_OPERAND_TYPE_OPTIONAL_ID, // 521
-  SPV_OPERAND_TYPE_OPTIONAL_ID, // 522
-  SPV_OPERAND_TYPE_TYPE_ID, // 523
-  SPV_OPERAND_TYPE_RESULT_ID, // 524
+  SPV_OPERAND_TYPE_ID, // 521
+  SPV_OPERAND_TYPE_ID, // 522
+  SPV_OPERAND_TYPE_ID, // 523
+  SPV_OPERAND_TYPE_ID, // 524
   SPV_OPERAND_TYPE_ID, // 525
   SPV_OPERAND_TYPE_ID, // 526
   SPV_OPERAND_TYPE_ID, // 527
   SPV_OPERAND_TYPE_ID, // 528
-  SPV_OPERAND_TYPE_OPTIONAL_IMAGE, // 529
-  SPV_OPERAND_TYPE_TYPE_ID, // 530
-  SPV_OPERAND_TYPE_RESULT_ID, // 531
-  SPV_OPERAND_TYPE_ID, // 532
-  SPV_OPERAND_TYPE_ID, // 533
-  SPV_OPERAND_TYPE_ID, // 534
-  SPV_OPERAND_TYPE_ID, // 535
+  SPV_OPERAND_TYPE_ID, // 529
+  SPV_OPERAND_TYPE_ID, // 530
+  SPV_OPERAND_TYPE_ID, // 531
+  SPV_OPERAND_TYPE_OPTIONAL_ID, // 532
+  SPV_OPERAND_TYPE_OPTIONAL_ID, // 533
+  SPV_OPERAND_TYPE_TYPE_ID, // 534
+  SPV_OPERAND_TYPE_RESULT_ID, // 535
   SPV_OPERAND_TYPE_ID, // 536
   SPV_OPERAND_TYPE_ID, // 537
   SPV_OPERAND_TYPE_ID, // 538
   SPV_OPERAND_TYPE_ID, // 539
-  SPV_OPERAND_TYPE_ID, // 540
-  SPV_OPERAND_TYPE_OPTIONAL_ID, // 541
-  SPV_OPERAND_TYPE_OPTIONAL_COOPERATIVE_MATRIX_OPERANDS, // 542
+  SPV_OPERAND_TYPE_OPTIONAL_IMAGE, // 540
+  SPV_OPERAND_TYPE_TYPE_ID, // 541
+  SPV_OPERAND_TYPE_RESULT_ID, // 542
   SPV_OPERAND_TYPE_ID, // 543
   SPV_OPERAND_TYPE_ID, // 544
   SPV_OPERAND_TYPE_ID, // 545
   SPV_OPERAND_TYPE_ID, // 546
   SPV_OPERAND_TYPE_ID, // 547
   SPV_OPERAND_TYPE_ID, // 548
-  SPV_OPERAND_TYPE_OPTIONAL_ID, // 549
-  SPV_OPERAND_TYPE_TYPE_ID, // 550
-  SPV_OPERAND_TYPE_RESULT_ID, // 551
-  SPV_OPERAND_TYPE_ID, // 552
-  SPV_OPERAND_TYPE_ID, // 553
+  SPV_OPERAND_TYPE_ID, // 549
+  SPV_OPERAND_TYPE_ID, // 550
+  SPV_OPERAND_TYPE_ID, // 551
+  SPV_OPERAND_TYPE_OPTIONAL_ID, // 552
+  SPV_OPERAND_TYPE_OPTIONAL_COOPERATIVE_MATRIX_OPERANDS, // 553
   SPV_OPERAND_TYPE_ID, // 554
   SPV_OPERAND_TYPE_ID, // 555
   SPV_OPERAND_TYPE_ID, // 556
   SPV_OPERAND_TYPE_ID, // 557
   SPV_OPERAND_TYPE_ID, // 558
   SPV_OPERAND_TYPE_ID, // 559
-  SPV_OPERAND_TYPE_ID, // 560
-  SPV_OPERAND_TYPE_ID, // 561
-  SPV_OPERAND_TYPE_ID, // 562
+  SPV_OPERAND_TYPE_OPTIONAL_ID, // 560
+  SPV_OPERAND_TYPE_TYPE_ID, // 561
+  SPV_OPERAND_TYPE_RESULT_ID, // 562
   SPV_OPERAND_TYPE_ID, // 563
-  SPV_OPERAND_TYPE_OPTIONAL_ID, // 564
-  SPV_OPERAND_TYPE_OPTIONAL_COOPERATIVE_MATRIX_OPERANDS, // 565
+  SPV_OPERAND_TYPE_ID, // 564
+  SPV_OPERAND_TYPE_ID, // 565
   SPV_OPERAND_TYPE_ID, // 566
   SPV_OPERAND_TYPE_ID, // 567
   SPV_OPERAND_TYPE_ID, // 568
-  SPV_OPERAND_TYPE_OPTIONAL_ID, // 569
-  SPV_OPERAND_TYPE_TYPE_ID, // 570
-  SPV_OPERAND_TYPE_RESULT_ID, // 571
+  SPV_OPERAND_TYPE_ID, // 569
+  SPV_OPERAND_TYPE_ID, // 570
+  SPV_OPERAND_TYPE_ID, // 571
   SPV_OPERAND_TYPE_ID, // 572
   SPV_OPERAND_TYPE_ID, // 573
-  SPV_OPERAND_TYPE_OPTIONAL_MEMORY_ACCESS, // 574
-  SPV_OPERAND_TYPE_ID, // 575
-  SPV_OPERAND_TYPE_ID, // 576
+  SPV_OPERAND_TYPE_ID, // 574
+  SPV_OPERAND_TYPE_OPTIONAL_ID, // 575
+  SPV_OPERAND_TYPE_OPTIONAL_COOPERATIVE_MATRIX_OPERANDS, // 576
   SPV_OPERAND_TYPE_ID, // 577
-  SPV_OPERAND_TYPE_OPTIONAL_MEMORY_ACCESS, // 578
-  SPV_OPERAND_TYPE_RESULT_ID, // 579
-  SPV_OPERAND_TYPE_ID, // 580
-  SPV_OPERAND_TYPE_SCOPE_ID, // 581
-  SPV_OPERAND_TYPE_ID, // 582
+  SPV_OPERAND_TYPE_ID, // 578
+  SPV_OPERAND_TYPE_ID, // 579
+  SPV_OPERAND_TYPE_OPTIONAL_ID, // 580
+  SPV_OPERAND_TYPE_TYPE_ID, // 581
+  SPV_OPERAND_TYPE_RESULT_ID, // 582
   SPV_OPERAND_TYPE_ID, // 583
-  SPV_OPERAND_TYPE_TYPE_ID, // 584
-  SPV_OPERAND_TYPE_RESULT_ID, // 585
+  SPV_OPERAND_TYPE_ID, // 584
+  SPV_OPERAND_TYPE_OPTIONAL_MEMORY_ACCESS, // 585
   SPV_OPERAND_TYPE_ID, // 586
   SPV_OPERAND_TYPE_ID, // 587
   SPV_OPERAND_TYPE_ID, // 588
   SPV_OPERAND_TYPE_OPTIONAL_MEMORY_ACCESS, // 589
-  SPV_OPERAND_TYPE_ID, // 590
+  SPV_OPERAND_TYPE_RESULT_ID, // 590
   SPV_OPERAND_TYPE_ID, // 591
-  SPV_OPERAND_TYPE_ID, // 592
+  SPV_OPERAND_TYPE_SCOPE_ID, // 592
   SPV_OPERAND_TYPE_ID, // 593
-  SPV_OPERAND_TYPE_OPTIONAL_MEMORY_ACCESS, // 594
+  SPV_OPERAND_TYPE_ID, // 594
   SPV_OPERAND_TYPE_TYPE_ID, // 595
   SPV_OPERAND_TYPE_RESULT_ID, // 596
   SPV_OPERAND_TYPE_ID, // 597
-  SPV_OPERAND_TYPE_COOPERATIVE_MATRIX_REDUCE, // 598
+  SPV_OPERAND_TYPE_ID, // 598
   SPV_OPERAND_TYPE_ID, // 599
-  SPV_OPERAND_TYPE_TYPE_ID, // 600
-  SPV_OPERAND_TYPE_RESULT_ID, // 601
+  SPV_OPERAND_TYPE_OPTIONAL_MEMORY_ACCESS, // 600
+  SPV_OPERAND_TYPE_ID, // 601
   SPV_OPERAND_TYPE_ID, // 602
   SPV_OPERAND_TYPE_ID, // 603
   SPV_OPERAND_TYPE_ID, // 604
-  SPV_OPERAND_TYPE_MEMORY_ACCESS, // 605
-  SPV_OPERAND_TYPE_TENSOR_ADDRESSING_OPERANDS, // 606
-  SPV_OPERAND_TYPE_ID, // 607
+  SPV_OPERAND_TYPE_OPTIONAL_MEMORY_ACCESS, // 605
+  SPV_OPERAND_TYPE_TYPE_ID, // 606
+  SPV_OPERAND_TYPE_RESULT_ID, // 607
   SPV_OPERAND_TYPE_ID, // 608
-  SPV_OPERAND_TYPE_ID, // 609
-  SPV_OPERAND_TYPE_MEMORY_ACCESS, // 610
-  SPV_OPERAND_TYPE_TENSOR_ADDRESSING_OPERANDS, // 611
+  SPV_OPERAND_TYPE_COOPERATIVE_MATRIX_REDUCE, // 609
+  SPV_OPERAND_TYPE_ID, // 610
+  SPV_OPERAND_TYPE_TYPE_ID, // 611
   SPV_OPERAND_TYPE_RESULT_ID, // 612
   SPV_OPERAND_TYPE_ID, // 613
   SPV_OPERAND_TYPE_ID, // 614
-  SPV_OPERAND_TYPE_VARIABLE_ID, // 615
-  SPV_OPERAND_TYPE_TYPE_ID, // 616
-  SPV_OPERAND_TYPE_RESULT_ID, // 617
+  SPV_OPERAND_TYPE_ID, // 615
+  SPV_OPERAND_TYPE_MEMORY_ACCESS, // 616
+  SPV_OPERAND_TYPE_TENSOR_ADDRESSING_OPERANDS, // 617
   SPV_OPERAND_TYPE_ID, // 618
   SPV_OPERAND_TYPE_ID, // 619
   SPV_OPERAND_TYPE_ID, // 620
-  SPV_OPERAND_TYPE_ID, // 621
-  SPV_OPERAND_TYPE_OPTIONAL_RAW_ACCESS_CHAIN_OPERANDS, // 622
-  SPV_OPERAND_TYPE_ID, // 623
+  SPV_OPERAND_TYPE_MEMORY_ACCESS, // 621
+  SPV_OPERAND_TYPE_TENSOR_ADDRESSING_OPERANDS, // 622
+  SPV_OPERAND_TYPE_RESULT_ID, // 623
   SPV_OPERAND_TYPE_ID, // 624
   SPV_OPERAND_TYPE_ID, // 625
-  SPV_OPERAND_TYPE_ID, // 626
-  SPV_OPERAND_TYPE_ID, // 627
-  SPV_OPERAND_TYPE_TYPE_ID, // 628
-  SPV_OPERAND_TYPE_RESULT_ID, // 629
+  SPV_OPERAND_TYPE_VARIABLE_ID, // 626
+  SPV_OPERAND_TYPE_TYPE_ID, // 627
+  SPV_OPERAND_TYPE_RESULT_ID, // 628
+  SPV_OPERAND_TYPE_ID, // 629
   SPV_OPERAND_TYPE_ID, // 630
   SPV_OPERAND_TYPE_ID, // 631
-  SPV_OPERAND_TYPE_LITERAL_STRING, // 632
-  SPV_OPERAND_TYPE_LITERAL_STRING, // 633
-  SPV_OPERAND_TYPE_TYPE_ID, // 634
-  SPV_OPERAND_TYPE_RESULT_ID, // 635
+  SPV_OPERAND_TYPE_ID, // 632
+  SPV_OPERAND_TYPE_OPTIONAL_RAW_ACCESS_CHAIN_OPERANDS, // 633
+  SPV_OPERAND_TYPE_ID, // 634
+  SPV_OPERAND_TYPE_ID, // 635
   SPV_OPERAND_TYPE_ID, // 636
   SPV_OPERAND_TYPE_ID, // 637
   SPV_OPERAND_TYPE_ID, // 638
-  SPV_OPERAND_TYPE_ID, // 639
-  SPV_OPERAND_TYPE_ID, // 640
+  SPV_OPERAND_TYPE_TYPE_ID, // 639
+  SPV_OPERAND_TYPE_RESULT_ID, // 640
   SPV_OPERAND_TYPE_ID, // 641
   SPV_OPERAND_TYPE_ID, // 642
-  SPV_OPERAND_TYPE_TYPE_ID, // 643
-  SPV_OPERAND_TYPE_RESULT_ID, // 644
-  SPV_OPERAND_TYPE_ID, // 645
-  SPV_OPERAND_TYPE_ID, // 646
+  SPV_OPERAND_TYPE_LITERAL_STRING, // 643
+  SPV_OPERAND_TYPE_LITERAL_STRING, // 644
+  SPV_OPERAND_TYPE_TYPE_ID, // 645
+  SPV_OPERAND_TYPE_RESULT_ID, // 646
   SPV_OPERAND_TYPE_ID, // 647
   SPV_OPERAND_TYPE_ID, // 648
   SPV_OPERAND_TYPE_ID, // 649
   SPV_OPERAND_TYPE_ID, // 650
   SPV_OPERAND_TYPE_ID, // 651
   SPV_OPERAND_TYPE_ID, // 652
-  SPV_OPERAND_TYPE_TYPE_ID, // 653
-  SPV_OPERAND_TYPE_RESULT_ID, // 654
-  SPV_OPERAND_TYPE_ID, // 655
+  SPV_OPERAND_TYPE_ID, // 653
+  SPV_OPERAND_TYPE_TYPE_ID, // 654
+  SPV_OPERAND_TYPE_RESULT_ID, // 655
   SPV_OPERAND_TYPE_ID, // 656
   SPV_OPERAND_TYPE_ID, // 657
   SPV_OPERAND_TYPE_ID, // 658
@@ -9613,56 +9616,56 @@ static const spv_operand_type_t kOperandSpans[] = {
   SPV_OPERAND_TYPE_ID, // 661
   SPV_OPERAND_TYPE_ID, // 662
   SPV_OPERAND_TYPE_ID, // 663
-  SPV_OPERAND_TYPE_ID, // 664
-  SPV_OPERAND_TYPE_ID, // 665
-  SPV_OPERAND_TYPE_TYPE_ID, // 666
-  SPV_OPERAND_TYPE_RESULT_ID, // 667
+  SPV_OPERAND_TYPE_TYPE_ID, // 664
+  SPV_OPERAND_TYPE_RESULT_ID, // 665
+  SPV_OPERAND_TYPE_ID, // 666
+  SPV_OPERAND_TYPE_ID, // 667
   SPV_OPERAND_TYPE_ID, // 668
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 669
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 670
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 671
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 672
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 673
-  SPV_OPERAND_TYPE_TYPE_ID, // 674
-  SPV_OPERAND_TYPE_RESULT_ID, // 675
+  SPV_OPERAND_TYPE_ID, // 669
+  SPV_OPERAND_TYPE_ID, // 670
+  SPV_OPERAND_TYPE_ID, // 671
+  SPV_OPERAND_TYPE_ID, // 672
+  SPV_OPERAND_TYPE_ID, // 673
+  SPV_OPERAND_TYPE_ID, // 674
+  SPV_OPERAND_TYPE_ID, // 675
   SPV_OPERAND_TYPE_ID, // 676
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 677
-  SPV_OPERAND_TYPE_ID, // 678
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 679
+  SPV_OPERAND_TYPE_TYPE_ID, // 677
+  SPV_OPERAND_TYPE_RESULT_ID, // 678
+  SPV_OPERAND_TYPE_ID, // 679
   SPV_OPERAND_TYPE_LITERAL_INTEGER, // 680
   SPV_OPERAND_TYPE_LITERAL_INTEGER, // 681
   SPV_OPERAND_TYPE_LITERAL_INTEGER, // 682
   SPV_OPERAND_TYPE_LITERAL_INTEGER, // 683
-  SPV_OPERAND_TYPE_TYPE_ID, // 684
-  SPV_OPERAND_TYPE_RESULT_ID, // 685
-  SPV_OPERAND_TYPE_ID, // 686
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 687
-  SPV_OPERAND_TYPE_ID, // 688
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 689
-  SPV_OPERAND_TYPE_RESULT_ID, // 690
-  SPV_OPERAND_TYPE_OPTIONAL_ID, // 691
-  SPV_OPERAND_TYPE_RESULT_ID, // 692
-  SPV_OPERAND_TYPE_ID, // 693
-  SPV_OPERAND_TYPE_OPTIONAL_ID, // 694
-  SPV_OPERAND_TYPE_VARIABLE_ID, // 695
-  SPV_OPERAND_TYPE_TYPE_ID, // 696
-  SPV_OPERAND_TYPE_RESULT_ID, // 697
-  SPV_OPERAND_TYPE_ID, // 698
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 699
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 684
+  SPV_OPERAND_TYPE_TYPE_ID, // 685
+  SPV_OPERAND_TYPE_RESULT_ID, // 686
+  SPV_OPERAND_TYPE_ID, // 687
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 688
+  SPV_OPERAND_TYPE_ID, // 689
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 690
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 691
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 692
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 693
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 694
+  SPV_OPERAND_TYPE_TYPE_ID, // 695
+  SPV_OPERAND_TYPE_RESULT_ID, // 696
+  SPV_OPERAND_TYPE_ID, // 697
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 698
+  SPV_OPERAND_TYPE_ID, // 699
   SPV_OPERAND_TYPE_LITERAL_INTEGER, // 700
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 701
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 702
-  SPV_OPERAND_TYPE_ID, // 703
+  SPV_OPERAND_TYPE_RESULT_ID, // 701
+  SPV_OPERAND_TYPE_OPTIONAL_ID, // 702
+  SPV_OPERAND_TYPE_RESULT_ID, // 703
   SPV_OPERAND_TYPE_ID, // 704
-  SPV_OPERAND_TYPE_ID, // 705
-  SPV_OPERAND_TYPE_ID, // 706
-  SPV_OPERAND_TYPE_ID, // 707
-  SPV_OPERAND_TYPE_ID, // 708
+  SPV_OPERAND_TYPE_OPTIONAL_ID, // 705
+  SPV_OPERAND_TYPE_VARIABLE_ID, // 706
+  SPV_OPERAND_TYPE_TYPE_ID, // 707
+  SPV_OPERAND_TYPE_RESULT_ID, // 708
   SPV_OPERAND_TYPE_ID, // 709
-  SPV_OPERAND_TYPE_ID, // 710
-  SPV_OPERAND_TYPE_ID, // 711
-  SPV_OPERAND_TYPE_ID, // 712
-  SPV_OPERAND_TYPE_ID, // 713
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 710
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 711
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 712
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 713
   SPV_OPERAND_TYPE_ID, // 714
   SPV_OPERAND_TYPE_ID, // 715
   SPV_OPERAND_TYPE_ID, // 716
@@ -9671,172 +9674,172 @@ static const spv_operand_type_t kOperandSpans[] = {
   SPV_OPERAND_TYPE_ID, // 719
   SPV_OPERAND_TYPE_ID, // 720
   SPV_OPERAND_TYPE_ID, // 721
-  SPV_OPERAND_TYPE_TYPE_ID, // 722
-  SPV_OPERAND_TYPE_RESULT_ID, // 723
+  SPV_OPERAND_TYPE_ID, // 722
+  SPV_OPERAND_TYPE_ID, // 723
   SPV_OPERAND_TYPE_ID, // 724
   SPV_OPERAND_TYPE_ID, // 725
   SPV_OPERAND_TYPE_ID, // 726
   SPV_OPERAND_TYPE_ID, // 727
-  SPV_OPERAND_TYPE_OPTIONAL_MATRIX_MULTIPLY_ACCUMULATE_OPERANDS, // 728
+  SPV_OPERAND_TYPE_ID, // 728
   SPV_OPERAND_TYPE_ID, // 729
-  SPV_OPERAND_TYPE_EXECUTION_MODEL, // 730
+  SPV_OPERAND_TYPE_ID, // 730
   SPV_OPERAND_TYPE_ID, // 731
-  SPV_OPERAND_TYPE_LITERAL_STRING, // 732
-  SPV_OPERAND_TYPE_VARIABLE_ID, // 733
-  SPV_OPERAND_TYPE_ID, // 734
-  SPV_OPERAND_TYPE_CAPABILITY, // 735
-  SPV_OPERAND_TYPE_TYPE_ID, // 736
-  SPV_OPERAND_TYPE_RESULT_ID, // 737
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 738
-  SPV_OPERAND_TYPE_VARIABLE_LITERAL_INTEGER, // 739
-  SPV_OPERAND_TYPE_TYPE_ID, // 740
-  SPV_OPERAND_TYPE_RESULT_ID, // 741
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 742
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 743
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 744
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 745
-  SPV_OPERAND_TYPE_TYPE_ID, // 746
-  SPV_OPERAND_TYPE_RESULT_ID, // 747
-  SPV_OPERAND_TYPE_VARIABLE_CAPABILITY, // 748
-  SPV_OPERAND_TYPE_TYPE_ID, // 749
-  SPV_OPERAND_TYPE_RESULT_ID, // 750
-  SPV_OPERAND_TYPE_ID, // 751
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 752
-  SPV_OPERAND_TYPE_ID, // 753
-  SPV_OPERAND_TYPE_ID, // 754
-  SPV_OPERAND_TYPE_ID, // 755
-  SPV_OPERAND_TYPE_ID, // 756
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 757
-  SPV_OPERAND_TYPE_ID, // 758
-  SPV_OPERAND_TYPE_ID, // 759
-  SPV_OPERAND_TYPE_ID, // 760
-  SPV_OPERAND_TYPE_DEBUG_BASE_TYPE_ATTRIBUTE_ENCODING, // 761
+  SPV_OPERAND_TYPE_ID, // 732
+  SPV_OPERAND_TYPE_TYPE_ID, // 733
+  SPV_OPERAND_TYPE_RESULT_ID, // 734
+  SPV_OPERAND_TYPE_ID, // 735
+  SPV_OPERAND_TYPE_ID, // 736
+  SPV_OPERAND_TYPE_ID, // 737
+  SPV_OPERAND_TYPE_ID, // 738
+  SPV_OPERAND_TYPE_OPTIONAL_MATRIX_MULTIPLY_ACCUMULATE_OPERANDS, // 739
+  SPV_OPERAND_TYPE_ID, // 740
+  SPV_OPERAND_TYPE_EXECUTION_MODEL, // 741
+  SPV_OPERAND_TYPE_ID, // 742
+  SPV_OPERAND_TYPE_LITERAL_STRING, // 743
+  SPV_OPERAND_TYPE_VARIABLE_ID, // 744
+  SPV_OPERAND_TYPE_ID, // 745
+  SPV_OPERAND_TYPE_CAPABILITY, // 746
+  SPV_OPERAND_TYPE_TYPE_ID, // 747
+  SPV_OPERAND_TYPE_RESULT_ID, // 748
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 749
+  SPV_OPERAND_TYPE_VARIABLE_LITERAL_INTEGER, // 750
+  SPV_OPERAND_TYPE_TYPE_ID, // 751
+  SPV_OPERAND_TYPE_RESULT_ID, // 752
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 753
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 754
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 755
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 756
+  SPV_OPERAND_TYPE_TYPE_ID, // 757
+  SPV_OPERAND_TYPE_RESULT_ID, // 758
+  SPV_OPERAND_TYPE_VARIABLE_CAPABILITY, // 759
+  SPV_OPERAND_TYPE_TYPE_ID, // 760
+  SPV_OPERAND_TYPE_RESULT_ID, // 761
   SPV_OPERAND_TYPE_ID, // 762
-  SPV_OPERAND_TYPE_STORAGE_CLASS, // 763
-  SPV_OPERAND_TYPE_DEBUG_INFO_FLAGS, // 764
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 763
+  SPV_OPERAND_TYPE_ID, // 764
   SPV_OPERAND_TYPE_ID, // 765
-  SPV_OPERAND_TYPE_DEBUG_TYPE_QUALIFIER, // 766
+  SPV_OPERAND_TYPE_ID, // 766
   SPV_OPERAND_TYPE_ID, // 767
-  SPV_OPERAND_TYPE_ID, // 768
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 768
   SPV_OPERAND_TYPE_ID, // 769
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 770
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 771
-  SPV_OPERAND_TYPE_ID, // 772
+  SPV_OPERAND_TYPE_ID, // 770
+  SPV_OPERAND_TYPE_ID, // 771
+  SPV_OPERAND_TYPE_DEBUG_BASE_TYPE_ATTRIBUTE_ENCODING, // 772
   SPV_OPERAND_TYPE_ID, // 773
-  SPV_OPERAND_TYPE_ID, // 774
-  SPV_OPERAND_TYPE_ID, // 775
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 776
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 777
+  SPV_OPERAND_TYPE_STORAGE_CLASS, // 774
+  SPV_OPERAND_TYPE_DEBUG_INFO_FLAGS, // 775
+  SPV_OPERAND_TYPE_ID, // 776
+  SPV_OPERAND_TYPE_DEBUG_TYPE_QUALIFIER, // 777
   SPV_OPERAND_TYPE_ID, // 778
   SPV_OPERAND_TYPE_ID, // 779
-  SPV_OPERAND_TYPE_DEBUG_INFO_FLAGS, // 780
-  SPV_OPERAND_TYPE_VARIABLE_ID, // 781
-  SPV_OPERAND_TYPE_ID, // 782
-  SPV_OPERAND_TYPE_DEBUG_COMPOSITE_TYPE, // 783
+  SPV_OPERAND_TYPE_ID, // 780
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 781
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 782
+  SPV_OPERAND_TYPE_ID, // 783
   SPV_OPERAND_TYPE_ID, // 784
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 785
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 786
-  SPV_OPERAND_TYPE_ID, // 787
-  SPV_OPERAND_TYPE_ID, // 788
-  SPV_OPERAND_TYPE_DEBUG_INFO_FLAGS, // 789
-  SPV_OPERAND_TYPE_VARIABLE_ID, // 790
-  SPV_OPERAND_TYPE_ID, // 791
-  SPV_OPERAND_TYPE_ID, // 792
+  SPV_OPERAND_TYPE_ID, // 785
+  SPV_OPERAND_TYPE_ID, // 786
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 787
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 788
+  SPV_OPERAND_TYPE_ID, // 789
+  SPV_OPERAND_TYPE_ID, // 790
+  SPV_OPERAND_TYPE_DEBUG_INFO_FLAGS, // 791
+  SPV_OPERAND_TYPE_VARIABLE_ID, // 792
   SPV_OPERAND_TYPE_ID, // 793
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 794
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 795
-  SPV_OPERAND_TYPE_ID, // 796
-  SPV_OPERAND_TYPE_ID, // 797
+  SPV_OPERAND_TYPE_DEBUG_COMPOSITE_TYPE, // 794
+  SPV_OPERAND_TYPE_ID, // 795
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 796
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 797
   SPV_OPERAND_TYPE_ID, // 798
-  SPV_OPERAND_TYPE_DEBUG_INFO_FLAGS, // 799
-  SPV_OPERAND_TYPE_OPTIONAL_ID, // 800
-  SPV_OPERAND_TYPE_ID, // 801
+  SPV_OPERAND_TYPE_ID, // 799
+  SPV_OPERAND_TYPE_DEBUG_INFO_FLAGS, // 800
+  SPV_OPERAND_TYPE_VARIABLE_ID, // 801
   SPV_OPERAND_TYPE_ID, // 802
   SPV_OPERAND_TYPE_ID, // 803
   SPV_OPERAND_TYPE_ID, // 804
-  SPV_OPERAND_TYPE_DEBUG_INFO_FLAGS, // 805
-  SPV_OPERAND_TYPE_ID, // 806
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 805
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 806
   SPV_OPERAND_TYPE_ID, // 807
   SPV_OPERAND_TYPE_ID, // 808
   SPV_OPERAND_TYPE_ID, // 809
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 810
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 811
+  SPV_OPERAND_TYPE_DEBUG_INFO_FLAGS, // 810
+  SPV_OPERAND_TYPE_OPTIONAL_ID, // 811
   SPV_OPERAND_TYPE_ID, // 812
   SPV_OPERAND_TYPE_ID, // 813
   SPV_OPERAND_TYPE_ID, // 814
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 815
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 816
+  SPV_OPERAND_TYPE_ID, // 815
+  SPV_OPERAND_TYPE_DEBUG_INFO_FLAGS, // 816
   SPV_OPERAND_TYPE_ID, // 817
   SPV_OPERAND_TYPE_ID, // 818
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 819
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 820
-  SPV_OPERAND_TYPE_VARIABLE_ID, // 821
-  SPV_OPERAND_TYPE_ID, // 822
+  SPV_OPERAND_TYPE_ID, // 819
+  SPV_OPERAND_TYPE_ID, // 820
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 821
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 822
   SPV_OPERAND_TYPE_ID, // 823
   SPV_OPERAND_TYPE_ID, // 824
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 825
+  SPV_OPERAND_TYPE_ID, // 825
   SPV_OPERAND_TYPE_LITERAL_INTEGER, // 826
-  SPV_OPERAND_TYPE_ID, // 827
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 827
   SPV_OPERAND_TYPE_ID, // 828
-  SPV_OPERAND_TYPE_DEBUG_INFO_FLAGS, // 829
-  SPV_OPERAND_TYPE_ID, // 830
-  SPV_OPERAND_TYPE_ID, // 831
-  SPV_OPERAND_TYPE_ID, // 832
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 833
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 834
+  SPV_OPERAND_TYPE_ID, // 829
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 830
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 831
+  SPV_OPERAND_TYPE_VARIABLE_ID, // 832
+  SPV_OPERAND_TYPE_ID, // 833
+  SPV_OPERAND_TYPE_ID, // 834
   SPV_OPERAND_TYPE_ID, // 835
-  SPV_OPERAND_TYPE_ID, // 836
-  SPV_OPERAND_TYPE_DEBUG_INFO_FLAGS, // 837
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 838
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 836
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 837
+  SPV_OPERAND_TYPE_ID, // 838
   SPV_OPERAND_TYPE_ID, // 839
-  SPV_OPERAND_TYPE_OPTIONAL_ID, // 840
+  SPV_OPERAND_TYPE_DEBUG_INFO_FLAGS, // 840
   SPV_OPERAND_TYPE_ID, // 841
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 842
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 843
-  SPV_OPERAND_TYPE_ID, // 844
-  SPV_OPERAND_TYPE_OPTIONAL_ID, // 845
+  SPV_OPERAND_TYPE_ID, // 842
+  SPV_OPERAND_TYPE_ID, // 843
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 844
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 845
   SPV_OPERAND_TYPE_ID, // 846
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 847
-  SPV_OPERAND_TYPE_ID, // 848
-  SPV_OPERAND_TYPE_ID, // 849
-  SPV_OPERAND_TYPE_OPTIONAL_ID, // 850
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 851
+  SPV_OPERAND_TYPE_ID, // 847
+  SPV_OPERAND_TYPE_DEBUG_INFO_FLAGS, // 848
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 849
+  SPV_OPERAND_TYPE_ID, // 850
+  SPV_OPERAND_TYPE_OPTIONAL_ID, // 851
   SPV_OPERAND_TYPE_ID, // 852
-  SPV_OPERAND_TYPE_OPTIONAL_ID, // 853
-  SPV_OPERAND_TYPE_ID, // 854
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 853
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 854
   SPV_OPERAND_TYPE_ID, // 855
-  SPV_OPERAND_TYPE_ID, // 856
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 857
+  SPV_OPERAND_TYPE_OPTIONAL_ID, // 856
+  SPV_OPERAND_TYPE_ID, // 857
   SPV_OPERAND_TYPE_LITERAL_INTEGER, // 858
   SPV_OPERAND_TYPE_ID, // 859
-  SPV_OPERAND_TYPE_OPTIONAL_LITERAL_INTEGER, // 860
-  SPV_OPERAND_TYPE_DEBUG_OPERATION, // 861
-  SPV_OPERAND_TYPE_VARIABLE_LITERAL_INTEGER, // 862
+  SPV_OPERAND_TYPE_ID, // 860
+  SPV_OPERAND_TYPE_OPTIONAL_ID, // 861
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 862
   SPV_OPERAND_TYPE_ID, // 863
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 864
+  SPV_OPERAND_TYPE_OPTIONAL_ID, // 864
   SPV_OPERAND_TYPE_ID, // 865
-  SPV_OPERAND_TYPE_OPTIONAL_ID, // 866
+  SPV_OPERAND_TYPE_ID, // 866
   SPV_OPERAND_TYPE_ID, // 867
-  SPV_OPERAND_TYPE_OPTIONAL_ID, // 868
-  SPV_OPERAND_TYPE_OPTIONAL_ID, // 869
-  SPV_OPERAND_TYPE_OPTIONAL_ID, // 870
-  SPV_OPERAND_TYPE_OPTIONAL_ID, // 871
-  SPV_OPERAND_TYPE_ID, // 872
-  SPV_OPERAND_TYPE_ID, // 873
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 868
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 869
+  SPV_OPERAND_TYPE_ID, // 870
+  SPV_OPERAND_TYPE_OPTIONAL_LITERAL_INTEGER, // 871
+  SPV_OPERAND_TYPE_DEBUG_OPERATION, // 872
+  SPV_OPERAND_TYPE_VARIABLE_LITERAL_INTEGER, // 873
   SPV_OPERAND_TYPE_ID, // 874
-  SPV_OPERAND_TYPE_ID, // 875
-  SPV_OPERAND_TYPE_OPTIONAL_ID, // 876
-  SPV_OPERAND_TYPE_ID, // 877
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 875
+  SPV_OPERAND_TYPE_ID, // 876
+  SPV_OPERAND_TYPE_OPTIONAL_ID, // 877
   SPV_OPERAND_TYPE_ID, // 878
-  SPV_OPERAND_TYPE_ID, // 879
-  SPV_OPERAND_TYPE_ID, // 880
-  SPV_OPERAND_TYPE_ID, // 881
-  SPV_OPERAND_TYPE_ID, // 882
+  SPV_OPERAND_TYPE_OPTIONAL_ID, // 879
+  SPV_OPERAND_TYPE_OPTIONAL_ID, // 880
+  SPV_OPERAND_TYPE_OPTIONAL_ID, // 881
+  SPV_OPERAND_TYPE_OPTIONAL_ID, // 882
   SPV_OPERAND_TYPE_ID, // 883
   SPV_OPERAND_TYPE_ID, // 884
-  SPV_OPERAND_TYPE_VARIABLE_ID, // 885
+  SPV_OPERAND_TYPE_ID, // 885
   SPV_OPERAND_TYPE_ID, // 886
-  SPV_OPERAND_TYPE_ID, // 887
+  SPV_OPERAND_TYPE_OPTIONAL_ID, // 887
   SPV_OPERAND_TYPE_ID, // 888
   SPV_OPERAND_TYPE_ID, // 889
   SPV_OPERAND_TYPE_ID, // 890
@@ -9844,8 +9847,8 @@ static const spv_operand_type_t kOperandSpans[] = {
   SPV_OPERAND_TYPE_ID, // 892
   SPV_OPERAND_TYPE_ID, // 893
   SPV_OPERAND_TYPE_ID, // 894
-  SPV_OPERAND_TYPE_VARIABLE_ID, // 895
-  SPV_OPERAND_TYPE_ID, // 896
+  SPV_OPERAND_TYPE_ID, // 895
+  SPV_OPERAND_TYPE_VARIABLE_ID, // 896
   SPV_OPERAND_TYPE_ID, // 897
   SPV_OPERAND_TYPE_ID, // 898
   SPV_OPERAND_TYPE_ID, // 899
@@ -9853,25 +9856,25 @@ static const spv_operand_type_t kOperandSpans[] = {
   SPV_OPERAND_TYPE_ID, // 901
   SPV_OPERAND_TYPE_ID, // 902
   SPV_OPERAND_TYPE_ID, // 903
-  SPV_OPERAND_TYPE_OPTIONAL_ID, // 904
+  SPV_OPERAND_TYPE_ID, // 904
   SPV_OPERAND_TYPE_ID, // 905
-  SPV_OPERAND_TYPE_ID, // 906
+  SPV_OPERAND_TYPE_VARIABLE_ID, // 906
   SPV_OPERAND_TYPE_ID, // 907
   SPV_OPERAND_TYPE_ID, // 908
-  SPV_OPERAND_TYPE_VARIABLE_ID, // 909
+  SPV_OPERAND_TYPE_ID, // 909
   SPV_OPERAND_TYPE_ID, // 910
   SPV_OPERAND_TYPE_ID, // 911
   SPV_OPERAND_TYPE_ID, // 912
   SPV_OPERAND_TYPE_ID, // 913
   SPV_OPERAND_TYPE_ID, // 914
-  SPV_OPERAND_TYPE_ID, // 915
+  SPV_OPERAND_TYPE_OPTIONAL_ID, // 915
   SPV_OPERAND_TYPE_ID, // 916
   SPV_OPERAND_TYPE_ID, // 917
   SPV_OPERAND_TYPE_ID, // 918
-  SPV_OPERAND_TYPE_OPTIONAL_ID, // 919
-  SPV_OPERAND_TYPE_ID, // 920
+  SPV_OPERAND_TYPE_ID, // 919
+  SPV_OPERAND_TYPE_VARIABLE_ID, // 920
   SPV_OPERAND_TYPE_ID, // 921
-  SPV_OPERAND_TYPE_OPTIONAL_ID, // 922
+  SPV_OPERAND_TYPE_ID, // 922
   SPV_OPERAND_TYPE_ID, // 923
   SPV_OPERAND_TYPE_ID, // 924
   SPV_OPERAND_TYPE_ID, // 925
@@ -9882,19 +9885,19 @@ static const spv_operand_type_t kOperandSpans[] = {
   SPV_OPERAND_TYPE_OPTIONAL_ID, // 930
   SPV_OPERAND_TYPE_ID, // 931
   SPV_OPERAND_TYPE_ID, // 932
-  SPV_OPERAND_TYPE_ID, // 933
-  SPV_OPERAND_TYPE_VARIABLE_ID, // 934
+  SPV_OPERAND_TYPE_OPTIONAL_ID, // 933
+  SPV_OPERAND_TYPE_ID, // 934
   SPV_OPERAND_TYPE_ID, // 935
   SPV_OPERAND_TYPE_ID, // 936
   SPV_OPERAND_TYPE_ID, // 937
   SPV_OPERAND_TYPE_ID, // 938
   SPV_OPERAND_TYPE_ID, // 939
   SPV_OPERAND_TYPE_ID, // 940
-  SPV_OPERAND_TYPE_ID, // 941
+  SPV_OPERAND_TYPE_OPTIONAL_ID, // 941
   SPV_OPERAND_TYPE_ID, // 942
   SPV_OPERAND_TYPE_ID, // 943
   SPV_OPERAND_TYPE_ID, // 944
-  SPV_OPERAND_TYPE_ID, // 945
+  SPV_OPERAND_TYPE_VARIABLE_ID, // 945
   SPV_OPERAND_TYPE_ID, // 946
   SPV_OPERAND_TYPE_ID, // 947
   SPV_OPERAND_TYPE_ID, // 948
@@ -9951,104 +9954,115 @@ static const spv_operand_type_t kOperandSpans[] = {
   SPV_OPERAND_TYPE_ID, // 999
   SPV_OPERAND_TYPE_ID, // 1000
   SPV_OPERAND_TYPE_ID, // 1001
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1002
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1003
+  SPV_OPERAND_TYPE_ID, // 1002
+  SPV_OPERAND_TYPE_ID, // 1003
   SPV_OPERAND_TYPE_ID, // 1004
-  SPV_OPERAND_TYPE_SOURCE_LANGUAGE, // 1005
+  SPV_OPERAND_TYPE_ID, // 1005
   SPV_OPERAND_TYPE_ID, // 1006
   SPV_OPERAND_TYPE_ID, // 1007
-  SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_BASE_TYPE_ATTRIBUTE_ENCODING, // 1008
+  SPV_OPERAND_TYPE_ID, // 1008
   SPV_OPERAND_TYPE_ID, // 1009
-  SPV_OPERAND_TYPE_STORAGE_CLASS, // 1010
-  SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_INFO_FLAGS, // 1011
+  SPV_OPERAND_TYPE_ID, // 1010
+  SPV_OPERAND_TYPE_ID, // 1011
   SPV_OPERAND_TYPE_ID, // 1012
-  SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_TYPE_QUALIFIER, // 1013
-  SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_INFO_FLAGS, // 1014
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1013
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1014
   SPV_OPERAND_TYPE_ID, // 1015
-  SPV_OPERAND_TYPE_VARIABLE_ID, // 1016
+  SPV_OPERAND_TYPE_SOURCE_LANGUAGE, // 1016
   SPV_OPERAND_TYPE_ID, // 1017
   SPV_OPERAND_TYPE_ID, // 1018
-  SPV_OPERAND_TYPE_ID, // 1019
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1020
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1021
-  SPV_OPERAND_TYPE_ID, // 1022
+  SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_BASE_TYPE_ATTRIBUTE_ENCODING, // 1019
+  SPV_OPERAND_TYPE_ID, // 1020
+  SPV_OPERAND_TYPE_STORAGE_CLASS, // 1021
+  SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_INFO_FLAGS, // 1022
   SPV_OPERAND_TYPE_ID, // 1023
-  SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_INFO_FLAGS, // 1024
-  SPV_OPERAND_TYPE_VARIABLE_ID, // 1025
+  SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_TYPE_QUALIFIER, // 1024
+  SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_INFO_FLAGS, // 1025
   SPV_OPERAND_TYPE_ID, // 1026
-  SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_COMPOSITE_TYPE, // 1027
+  SPV_OPERAND_TYPE_VARIABLE_ID, // 1027
   SPV_OPERAND_TYPE_ID, // 1028
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1029
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1030
-  SPV_OPERAND_TYPE_ID, // 1031
-  SPV_OPERAND_TYPE_ID, // 1032
+  SPV_OPERAND_TYPE_ID, // 1029
+  SPV_OPERAND_TYPE_ID, // 1030
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1031
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1032
   SPV_OPERAND_TYPE_ID, // 1033
-  SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_INFO_FLAGS, // 1034
-  SPV_OPERAND_TYPE_VARIABLE_ID, // 1035
-  SPV_OPERAND_TYPE_ID, // 1036
+  SPV_OPERAND_TYPE_ID, // 1034
+  SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_INFO_FLAGS, // 1035
+  SPV_OPERAND_TYPE_VARIABLE_ID, // 1036
   SPV_OPERAND_TYPE_ID, // 1037
-  SPV_OPERAND_TYPE_ID, // 1038
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1039
+  SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_COMPOSITE_TYPE, // 1038
+  SPV_OPERAND_TYPE_ID, // 1039
   SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1040
-  SPV_OPERAND_TYPE_ID, // 1041
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1041
   SPV_OPERAND_TYPE_ID, // 1042
   SPV_OPERAND_TYPE_ID, // 1043
-  SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_INFO_FLAGS, // 1044
-  SPV_OPERAND_TYPE_OPTIONAL_ID, // 1045
-  SPV_OPERAND_TYPE_ID, // 1046
+  SPV_OPERAND_TYPE_ID, // 1044
+  SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_INFO_FLAGS, // 1045
+  SPV_OPERAND_TYPE_VARIABLE_ID, // 1046
   SPV_OPERAND_TYPE_ID, // 1047
   SPV_OPERAND_TYPE_ID, // 1048
   SPV_OPERAND_TYPE_ID, // 1049
-  SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_INFO_FLAGS, // 1050
-  SPV_OPERAND_TYPE_ID, // 1051
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1050
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1051
   SPV_OPERAND_TYPE_ID, // 1052
   SPV_OPERAND_TYPE_ID, // 1053
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1054
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1055
-  SPV_OPERAND_TYPE_ID, // 1056
+  SPV_OPERAND_TYPE_ID, // 1054
+  SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_INFO_FLAGS, // 1055
+  SPV_OPERAND_TYPE_OPTIONAL_ID, // 1056
   SPV_OPERAND_TYPE_ID, // 1057
-  SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_INFO_FLAGS, // 1058
+  SPV_OPERAND_TYPE_ID, // 1058
   SPV_OPERAND_TYPE_ID, // 1059
   SPV_OPERAND_TYPE_ID, // 1060
-  SPV_OPERAND_TYPE_ID, // 1061
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1062
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1063
+  SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_INFO_FLAGS, // 1061
+  SPV_OPERAND_TYPE_ID, // 1062
+  SPV_OPERAND_TYPE_ID, // 1063
   SPV_OPERAND_TYPE_ID, // 1064
-  SPV_OPERAND_TYPE_ID, // 1065
-  SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_INFO_FLAGS, // 1066
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1067
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1065
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1066
+  SPV_OPERAND_TYPE_ID, // 1067
   SPV_OPERAND_TYPE_ID, // 1068
-  SPV_OPERAND_TYPE_OPTIONAL_ID, // 1069
+  SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_INFO_FLAGS, // 1069
   SPV_OPERAND_TYPE_ID, // 1070
   SPV_OPERAND_TYPE_ID, // 1071
   SPV_OPERAND_TYPE_ID, // 1072
   SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1073
   SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1074
   SPV_OPERAND_TYPE_ID, // 1075
-  SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_INFO_FLAGS, // 1076
-  SPV_OPERAND_TYPE_OPTIONAL_LITERAL_INTEGER, // 1077
-  SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_OPERATION, // 1078
-  SPV_OPERAND_TYPE_VARIABLE_LITERAL_INTEGER, // 1079
-  SPV_OPERAND_TYPE_ID, // 1080
-  SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_IMPORTED_ENTITY, // 1081
+  SPV_OPERAND_TYPE_ID, // 1076
+  SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_INFO_FLAGS, // 1077
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1078
+  SPV_OPERAND_TYPE_ID, // 1079
+  SPV_OPERAND_TYPE_OPTIONAL_ID, // 1080
+  SPV_OPERAND_TYPE_ID, // 1081
   SPV_OPERAND_TYPE_ID, // 1082
   SPV_OPERAND_TYPE_ID, // 1083
   SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1084
   SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1085
   SPV_OPERAND_TYPE_ID, // 1086
-  SPV_OPERAND_TYPE_ID, // 1087
-  SPV_OPERAND_TYPE_ID, // 1088
-  SPV_OPERAND_TYPE_ID, // 1089
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1090
+  SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_INFO_FLAGS, // 1087
+  SPV_OPERAND_TYPE_OPTIONAL_LITERAL_INTEGER, // 1088
+  SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_OPERATION, // 1089
+  SPV_OPERAND_TYPE_VARIABLE_LITERAL_INTEGER, // 1090
   SPV_OPERAND_TYPE_ID, // 1091
-  SPV_OPERAND_TYPE_ID, // 1092
+  SPV_OPERAND_TYPE_CLDEBUG100_DEBUG_IMPORTED_ENTITY, // 1092
   SPV_OPERAND_TYPE_ID, // 1093
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1094
-  SPV_OPERAND_TYPE_ID, // 1095
-  SPV_OPERAND_TYPE_ID, // 1096
-  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1097
+  SPV_OPERAND_TYPE_ID, // 1094
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1095
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1096
+  SPV_OPERAND_TYPE_ID, // 1097
   SPV_OPERAND_TYPE_ID, // 1098
   SPV_OPERAND_TYPE_ID, // 1099
   SPV_OPERAND_TYPE_ID, // 1100
-  SPV_OPERAND_TYPE_FP_ROUNDING_MODE, // 1101
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1101
+  SPV_OPERAND_TYPE_ID, // 1102
+  SPV_OPERAND_TYPE_ID, // 1103
+  SPV_OPERAND_TYPE_ID, // 1104
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1105
+  SPV_OPERAND_TYPE_ID, // 1106
+  SPV_OPERAND_TYPE_ID, // 1107
+  SPV_OPERAND_TYPE_LITERAL_INTEGER, // 1108
+  SPV_OPERAND_TYPE_ID, // 1109
+  SPV_OPERAND_TYPE_ID, // 1110
+  SPV_OPERAND_TYPE_ID, // 1111
+  SPV_OPERAND_TYPE_FP_ROUNDING_MODE, // 1112
 };
