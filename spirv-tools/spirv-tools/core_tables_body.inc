@@ -1091,33 +1091,33 @@ static const std::array<OperandDesc, 1187> kOperandsByValue{{
   {5102,IR(36, 2),IR(19538, 20)/* SharesInputWithAMDX */,IR(0, 0),IR(43, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
   {5269,IR(0, 0),IR(19558, 15)/* OutputLinesEXT */,IR(58, 1),IR(122, 2),IR(155, 2),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
   {5270,IR(0, 1),IR(19587, 20)/* OutputPrimitivesEXT */,IR(59, 1),IR(122, 2),IR(155, 2),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
-  {5289,IR(0, 0),IR(19626, 24)/* DerivativeGroupQuadsKHR */,IR(60, 1),IR(163, 2),IR(73, 2),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
-  {5290,IR(0, 0),IR(19673, 25)/* DerivativeGroupLinearKHR */,IR(61, 1),IR(165, 2),IR(73, 2),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
+  {5289,IR(0, 0),IR(19626, 24)/* DerivativeGroupQuadsKHR */,IR(60, 1),IR(163, 1),IR(73, 2),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
+  {5290,IR(0, 0),IR(19673, 25)/* DerivativeGroupLinearKHR */,IR(61, 1),IR(164, 1),IR(73, 2),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
   {5298,IR(0, 0),IR(19722, 19)/* OutputTrianglesEXT */,IR(62, 1),IR(122, 2),IR(155, 2),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
-  {5366,IR(0, 0),IR(19759, 25)/* PixelInterlockOrderedEXT */,IR(0, 0),IR(167, 1),IR(80, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
-  {5367,IR(0, 0),IR(19784, 27)/* PixelInterlockUnorderedEXT */,IR(0, 0),IR(167, 1),IR(80, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
-  {5368,IR(0, 0),IR(19811, 26)/* SampleInterlockOrderedEXT */,IR(0, 0),IR(168, 1),IR(80, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
-  {5369,IR(0, 0),IR(19837, 28)/* SampleInterlockUnorderedEXT */,IR(0, 0),IR(168, 1),IR(80, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
-  {5370,IR(0, 0),IR(19865, 31)/* ShadingRateInterlockOrderedEXT */,IR(0, 0),IR(169, 1),IR(80, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
-  {5371,IR(0, 0),IR(19896, 33)/* ShadingRateInterlockUnorderedEXT */,IR(0, 0),IR(169, 1),IR(80, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
+  {5366,IR(0, 0),IR(19759, 25)/* PixelInterlockOrderedEXT */,IR(0, 0),IR(165, 1),IR(80, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
+  {5367,IR(0, 0),IR(19784, 27)/* PixelInterlockUnorderedEXT */,IR(0, 0),IR(165, 1),IR(80, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
+  {5368,IR(0, 0),IR(19811, 26)/* SampleInterlockOrderedEXT */,IR(0, 0),IR(166, 1),IR(80, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
+  {5369,IR(0, 0),IR(19837, 28)/* SampleInterlockUnorderedEXT */,IR(0, 0),IR(166, 1),IR(80, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
+  {5370,IR(0, 0),IR(19865, 31)/* ShadingRateInterlockOrderedEXT */,IR(0, 0),IR(167, 1),IR(80, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
+  {5371,IR(0, 0),IR(19896, 33)/* ShadingRateInterlockUnorderedEXT */,IR(0, 0),IR(167, 1),IR(80, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
   {5618,IR(0, 1),IR(19929, 27)/* SharedLocalMemorySizeINTEL */,IR(0, 0),IR(126, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
-  {5620,IR(0, 1),IR(19956, 21)/* RoundingModeRTPINTEL */,IR(0, 0),IR(170, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
-  {5621,IR(0, 1),IR(19977, 21)/* RoundingModeRTNINTEL */,IR(0, 0),IR(170, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
-  {5622,IR(0, 1),IR(19998, 26)/* FloatingPointModeALTINTEL */,IR(0, 0),IR(170, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
-  {5623,IR(0, 1),IR(20024, 27)/* FloatingPointModeIEEEINTEL */,IR(0, 0),IR(170, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
-  {5893,IR(22, 3),IR(20051, 22)/* MaxWorkgroupSizeINTEL */,IR(0, 0),IR(171, 1),IR(108, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
-  {5894,IR(0, 1),IR(20073, 16)/* MaxWorkDimINTEL */,IR(0, 0),IR(171, 1),IR(108, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
-  {5895,IR(0, 0),IR(20089, 20)/* NoGlobalOffsetINTEL */,IR(0, 0),IR(171, 1),IR(108, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
+  {5620,IR(0, 1),IR(19956, 21)/* RoundingModeRTPINTEL */,IR(0, 0),IR(168, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
+  {5621,IR(0, 1),IR(19977, 21)/* RoundingModeRTNINTEL */,IR(0, 0),IR(168, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
+  {5622,IR(0, 1),IR(19998, 26)/* FloatingPointModeALTINTEL */,IR(0, 0),IR(168, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
+  {5623,IR(0, 1),IR(20024, 27)/* FloatingPointModeIEEEINTEL */,IR(0, 0),IR(168, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
+  {5893,IR(22, 3),IR(20051, 22)/* MaxWorkgroupSizeINTEL */,IR(0, 0),IR(169, 1),IR(108, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
+  {5894,IR(0, 1),IR(20073, 16)/* MaxWorkDimINTEL */,IR(0, 0),IR(169, 1),IR(108, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
+  {5895,IR(0, 0),IR(20089, 20)/* NoGlobalOffsetINTEL */,IR(0, 0),IR(169, 1),IR(108, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
   {5896,IR(0, 1),IR(20109, 22)/* NumSIMDWorkitemsINTEL */,IR(0, 0),IR(107, 1),IR(108, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
   {5903,IR(0, 1),IR(20131, 28)/* SchedulerTargetFmaxMhzINTEL */,IR(0, 0),IR(107, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
   {6023,IR(0, 0),IR(20159, 24)/* MaximallyReconvergesKHR */,IR(0, 0),IR(3, 1),IR(163, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
-  {6028,IR(36, 2),IR(20183, 18)/* FPFastMathDefault */,IR(0, 0),IR(172, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
+  {6028,IR(36, 2),IR(20183, 18)/* FPFastMathDefault */,IR(0, 0),IR(170, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
   {6154,IR(0, 1),IR(20201, 24)/* StreamingInterfaceINTEL */,IR(0, 0),IR(107, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
-  {6160,IR(0, 1),IR(20225, 26)/* RegisterMapInterfaceINTEL */,IR(0, 0),IR(173, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
+  {6160,IR(0, 1),IR(20225, 26)/* RegisterMapInterfaceINTEL */,IR(0, 0),IR(171, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
   {6417,IR(0, 1),IR(20251, 23)/* NamedBarrierCountINTEL */,IR(0, 0),IR(126, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
-  {6461,IR(0, 1),IR(20274, 22)/* MaximumRegistersINTEL */,IR(0, 0),IR(174, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
-  {6462,IR(10, 1),IR(20296, 24)/* MaximumRegistersIdINTEL */,IR(0, 0),IR(174, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
-  {6463,IR(38, 1),IR(20371, 27)/* NamedMaximumRegistersINTEL */,IR(0, 0),IR(174, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
+  {6461,IR(0, 1),IR(20274, 22)/* MaximumRegistersINTEL */,IR(0, 0),IR(172, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
+  {6462,IR(10, 1),IR(20296, 24)/* MaximumRegistersIdINTEL */,IR(0, 0),IR(172, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
+  {6463,IR(38, 1),IR(20371, 27)/* NamedMaximumRegistersINTEL */,IR(0, 0),IR(172, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODE
   {0,IR(0, 0),IR(20398, 7)/* Vertex */,IR(0, 0),IR(3, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODEL
   {1,IR(0, 0),IR(20405, 20)/* TessellationControl */,IR(0, 0),IR(24, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODEL
   {2,IR(0, 0),IR(20425, 23)/* TessellationEvaluation */,IR(0, 0),IR(24, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_EXECUTION_MODEL
@@ -1148,9 +1148,9 @@ static const std::array<OperandDesc, 1187> kOperandsByValue{{
   {4,IR(0, 0),IR(20720, 4)/* NSZ */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_FP_FAST_MATH_MODE
   {8,IR(0, 0),IR(20724, 11)/* AllowRecip */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_FP_FAST_MATH_MODE
   {16,IR(0, 0),IR(20735, 5)/* Fast */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_FP_FAST_MATH_MODE
-  {65536,IR(0, 0),IR(20740, 14)/* AllowContract */,IR(69, 1),IR(175, 2),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_FP_FAST_MATH_MODE
-  {131072,IR(0, 0),IR(20777, 13)/* AllowReassoc */,IR(70, 1),IR(175, 2),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_FP_FAST_MATH_MODE
-  {262144,IR(0, 0),IR(20808, 15)/* AllowTransform */,IR(0, 0),IR(172, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_FP_FAST_MATH_MODE
+  {65536,IR(0, 0),IR(20740, 14)/* AllowContract */,IR(69, 1),IR(173, 2),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_FP_FAST_MATH_MODE
+  {131072,IR(0, 0),IR(20777, 13)/* AllowReassoc */,IR(70, 1),IR(173, 2),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_FP_FAST_MATH_MODE
+  {262144,IR(0, 0),IR(20808, 15)/* AllowTransform */,IR(0, 0),IR(170, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_FP_FAST_MATH_MODE
   {0,IR(0, 0),IR(20823, 4)/* RTE */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_FP_ROUNDING_MODE
   {1,IR(0, 0),IR(20827, 4)/* RTZ */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_FP_ROUNDING_MODE
   {2,IR(0, 0),IR(20831, 4)/* RTP */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_FP_ROUNDING_MODE
@@ -1164,7 +1164,7 @@ static const std::array<OperandDesc, 1187> kOperandsByValue{{
   {2,IR(0, 0),IR(20914, 11)/* DontInline */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_FUNCTION_CONTROL
   {4,IR(0, 0),IR(20925, 5)/* Pure */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_FUNCTION_CONTROL
   {8,IR(0, 0),IR(20930, 6)/* Const */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_FUNCTION_CONTROL
-  {65536,IR(0, 0),IR(13350, 11)/* OptNoneEXT */,IR(50, 1),IR(177, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_FUNCTION_CONTROL
+  {65536,IR(0, 0),IR(13350, 11)/* OptNoneEXT */,IR(50, 1),IR(175, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_FUNCTION_CONTROL
   {0,IR(0, 0),IR(20936, 5)/* Zext */,IR(0, 0),IR(0, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_FUNCTION_PARAMETER_ATTRIBUTE
   {1,IR(0, 0),IR(20941, 5)/* Sext */,IR(0, 0),IR(0, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_FUNCTION_PARAMETER_ATTRIBUTE
   {2,IR(0, 0),IR(20946, 6)/* ByVal */,IR(0, 0),IR(0, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_FUNCTION_PARAMETER_ATTRIBUTE
@@ -1173,14 +1173,14 @@ static const std::array<OperandDesc, 1187> kOperandsByValue{{
   {5,IR(0, 0),IR(20965, 10)/* NoCapture */,IR(0, 0),IR(0, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_FUNCTION_PARAMETER_ATTRIBUTE
   {6,IR(0, 0),IR(20975, 8)/* NoWrite */,IR(0, 0),IR(0, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_FUNCTION_PARAMETER_ATTRIBUTE
   {7,IR(0, 0),IR(20983, 12)/* NoReadWrite */,IR(0, 0),IR(0, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_FUNCTION_PARAMETER_ATTRIBUTE
-  {5940,IR(0, 0),IR(20995, 20)/* RuntimeAlignedINTEL */,IR(0, 0),IR(178, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_FUNCTION_PARAMETER_ATTRIBUTE
-  {0,IR(0, 0),IR(21015, 7)/* Reduce */,IR(0, 0),IR(179, 3),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_GROUP_OPERATION
-  {1,IR(0, 0),IR(21022, 14)/* InclusiveScan */,IR(0, 0),IR(179, 3),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_GROUP_OPERATION
-  {2,IR(0, 0),IR(21036, 14)/* ExclusiveScan */,IR(0, 0),IR(179, 3),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_GROUP_OPERATION
-  {3,IR(0, 0),IR(21050, 16)/* ClusteredReduce */,IR(0, 0),IR(182, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,3),0xffffffffu}, // SPV_OPERAND_TYPE_GROUP_OPERATION
-  {6,IR(0, 0),IR(21066, 20)/* PartitionedReduceNV */,IR(0, 0),IR(183, 1),IR(75, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_GROUP_OPERATION
-  {7,IR(0, 0),IR(21086, 27)/* PartitionedInclusiveScanNV */,IR(0, 0),IR(183, 1),IR(75, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_GROUP_OPERATION
-  {8,IR(0, 0),IR(21113, 27)/* PartitionedExclusiveScanNV */,IR(0, 0),IR(183, 1),IR(75, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_GROUP_OPERATION
+  {5940,IR(0, 0),IR(20995, 20)/* RuntimeAlignedINTEL */,IR(0, 0),IR(176, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_FUNCTION_PARAMETER_ATTRIBUTE
+  {0,IR(0, 0),IR(21015, 7)/* Reduce */,IR(0, 0),IR(177, 3),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_GROUP_OPERATION
+  {1,IR(0, 0),IR(21022, 14)/* InclusiveScan */,IR(0, 0),IR(177, 3),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_GROUP_OPERATION
+  {2,IR(0, 0),IR(21036, 14)/* ExclusiveScan */,IR(0, 0),IR(177, 3),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_GROUP_OPERATION
+  {3,IR(0, 0),IR(21050, 16)/* ClusteredReduce */,IR(0, 0),IR(180, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,3),0xffffffffu}, // SPV_OPERAND_TYPE_GROUP_OPERATION
+  {6,IR(0, 0),IR(21066, 20)/* PartitionedReduceNV */,IR(0, 0),IR(181, 1),IR(75, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_GROUP_OPERATION
+  {7,IR(0, 0),IR(21086, 27)/* PartitionedInclusiveScanNV */,IR(0, 0),IR(181, 1),IR(75, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_GROUP_OPERATION
+  {8,IR(0, 0),IR(21113, 27)/* PartitionedExclusiveScanNV */,IR(0, 0),IR(181, 1),IR(75, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_GROUP_OPERATION
   {0,IR(0, 0),IR(21140, 10)/* NoneINTEL */,IR(0, 0),IR(142, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_HOST_ACCESS_QUALIFIER
   {1,IR(0, 0),IR(21150, 10)/* ReadINTEL */,IR(0, 0),IR(142, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_HOST_ACCESS_QUALIFIER
   {2,IR(0, 0),IR(21160, 11)/* WriteINTEL */,IR(0, 0),IR(142, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_HOST_ACCESS_QUALIFIER
@@ -1190,14 +1190,14 @@ static const std::array<OperandDesc, 1187> kOperandsByValue{{
   {2,IR(10, 1),IR(21191, 4)/* Lod */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_IMAGE
   {4,IR(36, 2),IR(21195, 5)/* Grad */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_IMAGE
   {8,IR(10, 1),IR(21200, 12)/* ConstOffset */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_IMAGE
-  {16,IR(10, 1),IR(15579, 7)/* Offset */,IR(0, 0),IR(184, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_IMAGE
-  {32,IR(10, 1),IR(21212, 13)/* ConstOffsets */,IR(0, 0),IR(184, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_IMAGE
+  {16,IR(10, 1),IR(15579, 7)/* Offset */,IR(0, 0),IR(182, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_IMAGE
+  {32,IR(10, 1),IR(21212, 13)/* ConstOffsets */,IR(0, 0),IR(182, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_IMAGE
   {64,IR(10, 1),IR(15376, 7)/* Sample */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_IMAGE
-  {128,IR(10, 1),IR(8414, 7)/* MinLod */,IR(0, 0),IR(185, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_IMAGE
-  {256,IR(4, 1),IR(21225, 19)/* MakeTexelAvailable */,IR(71, 1),IR(186, 1),IR(78, 1),SPV_SPIRV_VERSION_WORD(1,5),0xffffffffu}, // SPV_OPERAND_TYPE_IMAGE
-  {512,IR(4, 1),IR(21266, 17)/* MakeTexelVisible */,IR(72, 1),IR(186, 1),IR(78, 1),SPV_SPIRV_VERSION_WORD(1,5),0xffffffffu}, // SPV_OPERAND_TYPE_IMAGE
-  {1024,IR(0, 0),IR(21303, 16)/* NonPrivateTexel */,IR(73, 1),IR(186, 1),IR(78, 1),SPV_SPIRV_VERSION_WORD(1,5),0xffffffffu}, // SPV_OPERAND_TYPE_IMAGE
-  {2048,IR(0, 0),IR(21338, 14)/* VolatileTexel */,IR(74, 1),IR(186, 1),IR(78, 1),SPV_SPIRV_VERSION_WORD(1,5),0xffffffffu}, // SPV_OPERAND_TYPE_IMAGE
+  {128,IR(10, 1),IR(8414, 7)/* MinLod */,IR(0, 0),IR(183, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_IMAGE
+  {256,IR(4, 1),IR(21225, 19)/* MakeTexelAvailable */,IR(71, 1),IR(184, 1),IR(78, 1),SPV_SPIRV_VERSION_WORD(1,5),0xffffffffu}, // SPV_OPERAND_TYPE_IMAGE
+  {512,IR(4, 1),IR(21266, 17)/* MakeTexelVisible */,IR(72, 1),IR(184, 1),IR(78, 1),SPV_SPIRV_VERSION_WORD(1,5),0xffffffffu}, // SPV_OPERAND_TYPE_IMAGE
+  {1024,IR(0, 0),IR(21303, 16)/* NonPrivateTexel */,IR(73, 1),IR(184, 1),IR(78, 1),SPV_SPIRV_VERSION_WORD(1,5),0xffffffffu}, // SPV_OPERAND_TYPE_IMAGE
+  {2048,IR(0, 0),IR(21338, 14)/* VolatileTexel */,IR(74, 1),IR(184, 1),IR(78, 1),SPV_SPIRV_VERSION_WORD(1,5),0xffffffffu}, // SPV_OPERAND_TYPE_IMAGE
   {4096,IR(0, 0),IR(21369, 11)/* SignExtend */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,4),0xffffffffu}, // SPV_OPERAND_TYPE_IMAGE
   {8192,IR(0, 0),IR(21380, 11)/* ZeroExtend */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,4),0xffffffffu}, // SPV_OPERAND_TYPE_IMAGE
   {16384,IR(0, 0),IR(21391, 12)/* Nontemporal */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,6),0xffffffffu}, // SPV_OPERAND_TYPE_IMAGE
@@ -1275,16 +1275,16 @@ static const std::array<OperandDesc, 1187> kOperandsByValue{{
   {64,IR(0, 1),IR(22181, 18)/* IterationMultiple */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,4),0xffffffffu}, // SPV_OPERAND_TYPE_LOOP_CONTROL
   {128,IR(0, 1),IR(22199, 10)/* PeelCount */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,4),0xffffffffu}, // SPV_OPERAND_TYPE_LOOP_CONTROL
   {256,IR(0, 1),IR(22209, 13)/* PartialCount */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,4),0xffffffffu}, // SPV_OPERAND_TYPE_LOOP_CONTROL
-  {65536,IR(0, 1),IR(17446, 24)/* InitiationIntervalINTEL */,IR(0, 0),IR(187, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_LOOP_CONTROL
-  {131072,IR(0, 1),IR(17470, 20)/* MaxConcurrencyINTEL */,IR(0, 0),IR(187, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_LOOP_CONTROL
-  {262144,IR(0, 1),IR(22222, 21)/* DependencyArrayINTEL */,IR(0, 0),IR(187, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_LOOP_CONTROL
-  {524288,IR(0, 1),IR(17490, 20)/* PipelineEnableINTEL */,IR(0, 0),IR(187, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_LOOP_CONTROL
-  {1048576,IR(0, 1),IR(22243, 18)/* LoopCoalesceINTEL */,IR(0, 0),IR(187, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_LOOP_CONTROL
-  {2097152,IR(0, 1),IR(22261, 21)/* MaxInterleavingINTEL */,IR(0, 0),IR(187, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_LOOP_CONTROL
-  {4194304,IR(0, 1),IR(22282, 26)/* SpeculatedIterationsINTEL */,IR(0, 0),IR(187, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_LOOP_CONTROL
-  {8388608,IR(0, 0),IR(22308, 14)/* NoFusionINTEL */,IR(0, 0),IR(187, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_LOOP_CONTROL
-  {16777216,IR(0, 1),IR(22322, 15)/* LoopCountINTEL */,IR(0, 0),IR(187, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_LOOP_CONTROL
-  {33554432,IR(0, 1),IR(22337, 26)/* MaxReinvocationDelayINTEL */,IR(0, 0),IR(187, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_LOOP_CONTROL
+  {65536,IR(0, 1),IR(17446, 24)/* InitiationIntervalINTEL */,IR(0, 0),IR(185, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_LOOP_CONTROL
+  {131072,IR(0, 1),IR(17470, 20)/* MaxConcurrencyINTEL */,IR(0, 0),IR(185, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_LOOP_CONTROL
+  {262144,IR(0, 1),IR(22222, 21)/* DependencyArrayINTEL */,IR(0, 0),IR(185, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_LOOP_CONTROL
+  {524288,IR(0, 1),IR(17490, 20)/* PipelineEnableINTEL */,IR(0, 0),IR(185, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_LOOP_CONTROL
+  {1048576,IR(0, 1),IR(22243, 18)/* LoopCoalesceINTEL */,IR(0, 0),IR(185, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_LOOP_CONTROL
+  {2097152,IR(0, 1),IR(22261, 21)/* MaxInterleavingINTEL */,IR(0, 0),IR(185, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_LOOP_CONTROL
+  {4194304,IR(0, 1),IR(22282, 26)/* SpeculatedIterationsINTEL */,IR(0, 0),IR(185, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_LOOP_CONTROL
+  {8388608,IR(0, 0),IR(22308, 14)/* NoFusionINTEL */,IR(0, 0),IR(185, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_LOOP_CONTROL
+  {16777216,IR(0, 1),IR(22322, 15)/* LoopCountINTEL */,IR(0, 0),IR(185, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_LOOP_CONTROL
+  {33554432,IR(0, 1),IR(22337, 26)/* MaxReinvocationDelayINTEL */,IR(0, 0),IR(185, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_LOOP_CONTROL
   {0,IR(0, 0),IR(14172, 5)/* None */,IR(0, 0),IR(1, 0),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_MATRIX_MULTIPLY_ACCUMULATE_OPERANDS
   {1,IR(0, 0),IR(22363, 29)/* MatrixASignedComponentsINTEL */,IR(0, 0),IR(1, 0),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_MATRIX_MULTIPLY_ACCUMULATE_OPERANDS
   {2,IR(0, 0),IR(22392, 29)/* MatrixBSignedComponentsINTEL */,IR(0, 0),IR(1, 0),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_MATRIX_MULTIPLY_ACCUMULATE_OPERANDS
@@ -1304,15 +1304,15 @@ static const std::array<OperandDesc, 1187> kOperandsByValue{{
   {1,IR(0, 0),IR(15410, 9)/* Volatile */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_ACCESS
   {2,IR(0, 1),IR(22700, 8)/* Aligned */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_ACCESS
   {4,IR(0, 0),IR(21391, 12)/* Nontemporal */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_ACCESS
-  {8,IR(4, 1),IR(22708, 21)/* MakePointerAvailable */,IR(75, 1),IR(186, 1),IR(78, 1),SPV_SPIRV_VERSION_WORD(1,5),0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_ACCESS
-  {16,IR(4, 1),IR(22753, 19)/* MakePointerVisible */,IR(76, 1),IR(186, 1),IR(78, 1),SPV_SPIRV_VERSION_WORD(1,5),0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_ACCESS
-  {32,IR(0, 0),IR(22794, 18)/* NonPrivatePointer */,IR(77, 1),IR(186, 1),IR(78, 1),SPV_SPIRV_VERSION_WORD(1,5),0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_ACCESS
+  {8,IR(4, 1),IR(22708, 21)/* MakePointerAvailable */,IR(75, 1),IR(184, 1),IR(78, 1),SPV_SPIRV_VERSION_WORD(1,5),0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_ACCESS
+  {16,IR(4, 1),IR(22753, 19)/* MakePointerVisible */,IR(76, 1),IR(184, 1),IR(78, 1),SPV_SPIRV_VERSION_WORD(1,5),0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_ACCESS
+  {32,IR(0, 0),IR(22794, 18)/* NonPrivatePointer */,IR(77, 1),IR(184, 1),IR(78, 1),SPV_SPIRV_VERSION_WORD(1,5),0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_ACCESS
   {65536,IR(10, 1),IR(22833, 20)/* AliasScopeINTELMask */,IR(0, 0),IR(134, 1),IR(113, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_ACCESS
   {131072,IR(10, 1),IR(22853, 17)/* NoAliasINTELMask */,IR(0, 0),IR(134, 1),IR(113, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_ACCESS
   {0,IR(0, 0),IR(22870, 7)/* Simple */,IR(0, 0),IR(3, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_MODEL
   {1,IR(0, 0),IR(22877, 8)/* GLSL450 */,IR(0, 0),IR(3, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_MODEL
   {2,IR(0, 0),IR(22885, 7)/* OpenCL */,IR(0, 0),IR(0, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_MODEL
-  {3,IR(0, 0),IR(22892, 7)/* Vulkan */,IR(78, 1),IR(186, 1),IR(78, 1),SPV_SPIRV_VERSION_WORD(1,5),0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_MODEL
+  {3,IR(0, 0),IR(22892, 7)/* Vulkan */,IR(78, 1),IR(184, 1),IR(78, 1),SPV_SPIRV_VERSION_WORD(1,5),0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_MODEL
   {0,IR(0, 0),IR(22909, 8)/* Relaxed */,IR(79, 1),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_SEMANTICS_ID
   {2,IR(0, 0),IR(22917, 8)/* Acquire */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_SEMANTICS_ID
   {4,IR(0, 0),IR(22925, 8)/* Release */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_SEMANTICS_ID
@@ -1324,27 +1324,27 @@ static const std::array<OperandDesc, 1187> kOperandsByValue{{
   {512,IR(0, 0),IR(23016, 21)/* CrossWorkgroupMemory */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_SEMANTICS_ID
   {1024,IR(0, 0),IR(23037, 20)/* AtomicCounterMemory */,IR(0, 0),IR(82, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_SEMANTICS_ID
   {2048,IR(0, 0),IR(23057, 12)/* ImageMemory */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_SEMANTICS_ID
-  {4096,IR(0, 0),IR(23069, 13)/* OutputMemory */,IR(80, 1),IR(186, 1),IR(78, 1),SPV_SPIRV_VERSION_WORD(1,5),0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_SEMANTICS_ID
-  {8192,IR(0, 0),IR(23098, 14)/* MakeAvailable */,IR(81, 1),IR(186, 1),IR(78, 1),SPV_SPIRV_VERSION_WORD(1,5),0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_SEMANTICS_ID
-  {16384,IR(0, 0),IR(23129, 12)/* MakeVisible */,IR(82, 1),IR(186, 1),IR(78, 1),SPV_SPIRV_VERSION_WORD(1,5),0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_SEMANTICS_ID
-  {32768,IR(0, 0),IR(15410, 9)/* Volatile */,IR(0, 0),IR(186, 1),IR(78, 1),SPV_SPIRV_VERSION_WORD(1,5),0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_SEMANTICS_ID
-  {0,IR(0, 0),IR(23156, 10)/* AutoINTEL */,IR(0, 0),IR(174, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_NAMED_MAXIMUM_NUMBER_OF_REGISTERS
-  {0,IR(0, 0),IR(23166, 5)/* WRAP */,IR(0, 0),IR(188, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_OVERFLOW_MODES
-  {1,IR(0, 0),IR(23171, 4)/* SAT */,IR(0, 0),IR(188, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_OVERFLOW_MODES
-  {2,IR(0, 0),IR(23175, 9)/* SAT_ZERO */,IR(0, 0),IR(188, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_OVERFLOW_MODES
-  {3,IR(0, 0),IR(23184, 8)/* SAT_SYM */,IR(0, 0),IR(188, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_OVERFLOW_MODES
+  {4096,IR(0, 0),IR(23069, 13)/* OutputMemory */,IR(80, 1),IR(184, 1),IR(78, 1),SPV_SPIRV_VERSION_WORD(1,5),0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_SEMANTICS_ID
+  {8192,IR(0, 0),IR(23098, 14)/* MakeAvailable */,IR(81, 1),IR(184, 1),IR(78, 1),SPV_SPIRV_VERSION_WORD(1,5),0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_SEMANTICS_ID
+  {16384,IR(0, 0),IR(23129, 12)/* MakeVisible */,IR(82, 1),IR(184, 1),IR(78, 1),SPV_SPIRV_VERSION_WORD(1,5),0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_SEMANTICS_ID
+  {32768,IR(0, 0),IR(15410, 9)/* Volatile */,IR(0, 0),IR(184, 1),IR(78, 1),SPV_SPIRV_VERSION_WORD(1,5),0xffffffffu}, // SPV_OPERAND_TYPE_MEMORY_SEMANTICS_ID
+  {0,IR(0, 0),IR(23156, 10)/* AutoINTEL */,IR(0, 0),IR(172, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_NAMED_MAXIMUM_NUMBER_OF_REGISTERS
+  {0,IR(0, 0),IR(23166, 5)/* WRAP */,IR(0, 0),IR(186, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_OVERFLOW_MODES
+  {1,IR(0, 0),IR(23171, 4)/* SAT */,IR(0, 0),IR(186, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_OVERFLOW_MODES
+  {2,IR(0, 0),IR(23175, 9)/* SAT_ZERO */,IR(0, 0),IR(186, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_OVERFLOW_MODES
+  {3,IR(0, 0),IR(23184, 8)/* SAT_SYM */,IR(0, 0),IR(186, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_OVERFLOW_MODES
   {0,IR(0, 0),IR(23192, 25)/* PackedVectorFormat4x8Bit */,IR(83, 1),IR(1, 0),IR(122, 1),SPV_SPIRV_VERSION_WORD(1,6),0xffffffffu}, // SPV_OPERAND_TYPE_PACKED_VECTOR_FORMAT
-  {0,IR(0, 0),IR(23245, 4)/* TRN */,IR(0, 0),IR(188, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_QUANTIZATION_MODES
-  {1,IR(0, 0),IR(23249, 9)/* TRN_ZERO */,IR(0, 0),IR(188, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_QUANTIZATION_MODES
-  {2,IR(0, 0),IR(23258, 4)/* RND */,IR(0, 0),IR(188, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_QUANTIZATION_MODES
-  {3,IR(0, 0),IR(23262, 9)/* RND_ZERO */,IR(0, 0),IR(188, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_QUANTIZATION_MODES
-  {4,IR(0, 0),IR(23271, 8)/* RND_INF */,IR(0, 0),IR(188, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_QUANTIZATION_MODES
-  {5,IR(0, 0),IR(23279, 12)/* RND_MIN_INF */,IR(0, 0),IR(188, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_QUANTIZATION_MODES
-  {6,IR(0, 0),IR(23291, 9)/* RND_CONV */,IR(0, 0),IR(188, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_QUANTIZATION_MODES
-  {7,IR(0, 0),IR(23300, 13)/* RND_CONV_ODD */,IR(0, 0),IR(188, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_QUANTIZATION_MODES
+  {0,IR(0, 0),IR(23245, 4)/* TRN */,IR(0, 0),IR(186, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_QUANTIZATION_MODES
+  {1,IR(0, 0),IR(23249, 9)/* TRN_ZERO */,IR(0, 0),IR(186, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_QUANTIZATION_MODES
+  {2,IR(0, 0),IR(23258, 4)/* RND */,IR(0, 0),IR(186, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_QUANTIZATION_MODES
+  {3,IR(0, 0),IR(23262, 9)/* RND_ZERO */,IR(0, 0),IR(186, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_QUANTIZATION_MODES
+  {4,IR(0, 0),IR(23271, 8)/* RND_INF */,IR(0, 0),IR(186, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_QUANTIZATION_MODES
+  {5,IR(0, 0),IR(23279, 12)/* RND_MIN_INF */,IR(0, 0),IR(186, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_QUANTIZATION_MODES
+  {6,IR(0, 0),IR(23291, 9)/* RND_CONV */,IR(0, 0),IR(186, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_QUANTIZATION_MODES
+  {7,IR(0, 0),IR(23300, 13)/* RND_CONV_ODD */,IR(0, 0),IR(186, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_QUANTIZATION_MODES
   {0,IR(0, 0),IR(14172, 5)/* None */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1, 0),0xffffffffu}, // SPV_OPERAND_TYPE_RAW_ACCESS_CHAIN_OPERANDS
-  {1,IR(0, 0),IR(23313, 25)/* RobustnessPerComponentNV */,IR(0, 0),IR(189, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAW_ACCESS_CHAIN_OPERANDS
-  {2,IR(0, 0),IR(23338, 23)/* RobustnessPerElementNV */,IR(0, 0),IR(189, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAW_ACCESS_CHAIN_OPERANDS
+  {1,IR(0, 0),IR(23313, 25)/* RobustnessPerComponentNV */,IR(0, 0),IR(187, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAW_ACCESS_CHAIN_OPERANDS
+  {2,IR(0, 0),IR(23338, 23)/* RobustnessPerElementNV */,IR(0, 0),IR(187, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAW_ACCESS_CHAIN_OPERANDS
   {0,IR(0, 0),IR(14924, 8)/* NoneKHR */,IR(0, 0),IR(84, 2),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAY_FLAGS
   {1,IR(0, 0),IR(23361, 10)/* OpaqueKHR */,IR(0, 0),IR(84, 2),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAY_FLAGS
   {2,IR(0, 0),IR(23371, 12)/* NoOpaqueKHR */,IR(0, 0),IR(84, 2),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAY_FLAGS
@@ -1354,16 +1354,16 @@ static const std::array<OperandDesc, 1187> kOperandsByValue{{
   {32,IR(0, 0),IR(23457, 28)/* CullFrontFacingTrianglesKHR */,IR(0, 0),IR(84, 2),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAY_FLAGS
   {64,IR(0, 0),IR(23485, 14)/* CullOpaqueKHR */,IR(0, 0),IR(84, 2),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAY_FLAGS
   {128,IR(0, 0),IR(23499, 16)/* CullNoOpaqueKHR */,IR(0, 0),IR(84, 2),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAY_FLAGS
-  {256,IR(0, 0),IR(23515, 17)/* SkipTrianglesKHR */,IR(84, 1),IR(190, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAY_FLAGS
-  {512,IR(0, 0),IR(23556, 13)/* SkipAABBsKHR */,IR(0, 0),IR(190, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAY_FLAGS
-  {1024,IR(0, 0),IR(23569, 30)/* ForceOpacityMicromap2StateEXT */,IR(0, 0),IR(191, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAY_FLAGS
-  {0,IR(0, 0),IR(23599, 41)/* RayQueryCandidateIntersectionTriangleKHR */,IR(0, 0),IR(192, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAY_QUERY_CANDIDATE_INTERSECTION_TYPE
-  {1,IR(0, 0),IR(23640, 37)/* RayQueryCandidateIntersectionAABBKHR */,IR(0, 0),IR(192, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAY_QUERY_CANDIDATE_INTERSECTION_TYPE
-  {0,IR(0, 0),IR(23677, 37)/* RayQueryCommittedIntersectionNoneKHR */,IR(0, 0),IR(192, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAY_QUERY_COMMITTED_INTERSECTION_TYPE
-  {1,IR(0, 0),IR(23714, 41)/* RayQueryCommittedIntersectionTriangleKHR */,IR(0, 0),IR(192, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAY_QUERY_COMMITTED_INTERSECTION_TYPE
-  {2,IR(0, 0),IR(23755, 42)/* RayQueryCommittedIntersectionGeneratedKHR */,IR(0, 0),IR(192, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAY_QUERY_COMMITTED_INTERSECTION_TYPE
-  {0,IR(0, 0),IR(23797, 33)/* RayQueryCandidateIntersectionKHR */,IR(0, 0),IR(192, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAY_QUERY_INTERSECTION
-  {1,IR(0, 0),IR(23830, 33)/* RayQueryCommittedIntersectionKHR */,IR(0, 0),IR(192, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAY_QUERY_INTERSECTION
+  {256,IR(0, 0),IR(23515, 17)/* SkipTrianglesKHR */,IR(84, 1),IR(188, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAY_FLAGS
+  {512,IR(0, 0),IR(23556, 13)/* SkipAABBsKHR */,IR(0, 0),IR(188, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAY_FLAGS
+  {1024,IR(0, 0),IR(23569, 30)/* ForceOpacityMicromap2StateEXT */,IR(0, 0),IR(189, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAY_FLAGS
+  {0,IR(0, 0),IR(23599, 41)/* RayQueryCandidateIntersectionTriangleKHR */,IR(0, 0),IR(190, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAY_QUERY_CANDIDATE_INTERSECTION_TYPE
+  {1,IR(0, 0),IR(23640, 37)/* RayQueryCandidateIntersectionAABBKHR */,IR(0, 0),IR(190, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAY_QUERY_CANDIDATE_INTERSECTION_TYPE
+  {0,IR(0, 0),IR(23677, 37)/* RayQueryCommittedIntersectionNoneKHR */,IR(0, 0),IR(190, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAY_QUERY_COMMITTED_INTERSECTION_TYPE
+  {1,IR(0, 0),IR(23714, 41)/* RayQueryCommittedIntersectionTriangleKHR */,IR(0, 0),IR(190, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAY_QUERY_COMMITTED_INTERSECTION_TYPE
+  {2,IR(0, 0),IR(23755, 42)/* RayQueryCommittedIntersectionGeneratedKHR */,IR(0, 0),IR(190, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAY_QUERY_COMMITTED_INTERSECTION_TYPE
+  {0,IR(0, 0),IR(23797, 33)/* RayQueryCandidateIntersectionKHR */,IR(0, 0),IR(190, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAY_QUERY_INTERSECTION
+  {1,IR(0, 0),IR(23830, 33)/* RayQueryCommittedIntersectionKHR */,IR(0, 0),IR(190, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_RAY_QUERY_INTERSECTION
   {0,IR(0, 0),IR(14172, 5)/* None */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_ADDRESSING_MODE
   {1,IR(0, 0),IR(23863, 12)/* ClampToEdge */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_ADDRESSING_MODE
   {2,IR(0, 0),IR(23875, 6)/* Clamp */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_ADDRESSING_MODE
@@ -1377,48 +1377,48 @@ static const std::array<OperandDesc, 1187> kOperandsByValue{{
   {3,IR(0, 0),IR(23942, 5)/* R32f */,IR(0, 0),IR(3, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
   {4,IR(0, 0),IR(23947, 6)/* Rgba8 */,IR(0, 0),IR(3, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
   {5,IR(0, 0),IR(23953, 11)/* Rgba8Snorm */,IR(0, 0),IR(3, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
-  {6,IR(0, 0),IR(23964, 6)/* Rg32f */,IR(0, 0),IR(193, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
-  {7,IR(0, 0),IR(23970, 6)/* Rg16f */,IR(0, 0),IR(193, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
-  {8,IR(0, 0),IR(23976, 13)/* R11fG11fB10f */,IR(0, 0),IR(193, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
-  {9,IR(0, 0),IR(23989, 5)/* R16f */,IR(0, 0),IR(193, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
-  {10,IR(0, 0),IR(23994, 7)/* Rgba16 */,IR(0, 0),IR(193, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
-  {11,IR(0, 0),IR(24001, 8)/* Rgb10A2 */,IR(0, 0),IR(193, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
-  {12,IR(0, 0),IR(24009, 5)/* Rg16 */,IR(0, 0),IR(193, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
-  {13,IR(0, 0),IR(24014, 4)/* Rg8 */,IR(0, 0),IR(193, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
-  {14,IR(0, 0),IR(24018, 4)/* R16 */,IR(0, 0),IR(193, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
-  {15,IR(0, 0),IR(24022, 3)/* R8 */,IR(0, 0),IR(193, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
-  {16,IR(0, 0),IR(24025, 12)/* Rgba16Snorm */,IR(0, 0),IR(193, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
-  {17,IR(0, 0),IR(24037, 10)/* Rg16Snorm */,IR(0, 0),IR(193, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
-  {18,IR(0, 0),IR(24047, 9)/* Rg8Snorm */,IR(0, 0),IR(193, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
-  {19,IR(0, 0),IR(24056, 9)/* R16Snorm */,IR(0, 0),IR(193, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
-  {20,IR(0, 0),IR(24065, 8)/* R8Snorm */,IR(0, 0),IR(193, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
+  {6,IR(0, 0),IR(23964, 6)/* Rg32f */,IR(0, 0),IR(191, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
+  {7,IR(0, 0),IR(23970, 6)/* Rg16f */,IR(0, 0),IR(191, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
+  {8,IR(0, 0),IR(23976, 13)/* R11fG11fB10f */,IR(0, 0),IR(191, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
+  {9,IR(0, 0),IR(23989, 5)/* R16f */,IR(0, 0),IR(191, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
+  {10,IR(0, 0),IR(23994, 7)/* Rgba16 */,IR(0, 0),IR(191, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
+  {11,IR(0, 0),IR(24001, 8)/* Rgb10A2 */,IR(0, 0),IR(191, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
+  {12,IR(0, 0),IR(24009, 5)/* Rg16 */,IR(0, 0),IR(191, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
+  {13,IR(0, 0),IR(24014, 4)/* Rg8 */,IR(0, 0),IR(191, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
+  {14,IR(0, 0),IR(24018, 4)/* R16 */,IR(0, 0),IR(191, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
+  {15,IR(0, 0),IR(24022, 3)/* R8 */,IR(0, 0),IR(191, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
+  {16,IR(0, 0),IR(24025, 12)/* Rgba16Snorm */,IR(0, 0),IR(191, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
+  {17,IR(0, 0),IR(24037, 10)/* Rg16Snorm */,IR(0, 0),IR(191, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
+  {18,IR(0, 0),IR(24047, 9)/* Rg8Snorm */,IR(0, 0),IR(191, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
+  {19,IR(0, 0),IR(24056, 9)/* R16Snorm */,IR(0, 0),IR(191, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
+  {20,IR(0, 0),IR(24065, 8)/* R8Snorm */,IR(0, 0),IR(191, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
   {21,IR(0, 0),IR(24073, 8)/* Rgba32i */,IR(0, 0),IR(3, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
   {22,IR(0, 0),IR(24081, 8)/* Rgba16i */,IR(0, 0),IR(3, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
   {23,IR(0, 0),IR(24089, 7)/* Rgba8i */,IR(0, 0),IR(3, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
   {24,IR(0, 0),IR(24096, 5)/* R32i */,IR(0, 0),IR(3, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
-  {25,IR(0, 0),IR(24101, 6)/* Rg32i */,IR(0, 0),IR(193, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
-  {26,IR(0, 0),IR(24107, 6)/* Rg16i */,IR(0, 0),IR(193, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
-  {27,IR(0, 0),IR(24113, 5)/* Rg8i */,IR(0, 0),IR(193, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
-  {28,IR(0, 0),IR(24118, 5)/* R16i */,IR(0, 0),IR(193, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
-  {29,IR(0, 0),IR(24123, 4)/* R8i */,IR(0, 0),IR(193, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
+  {25,IR(0, 0),IR(24101, 6)/* Rg32i */,IR(0, 0),IR(191, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
+  {26,IR(0, 0),IR(24107, 6)/* Rg16i */,IR(0, 0),IR(191, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
+  {27,IR(0, 0),IR(24113, 5)/* Rg8i */,IR(0, 0),IR(191, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
+  {28,IR(0, 0),IR(24118, 5)/* R16i */,IR(0, 0),IR(191, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
+  {29,IR(0, 0),IR(24123, 4)/* R8i */,IR(0, 0),IR(191, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
   {30,IR(0, 0),IR(24127, 9)/* Rgba32ui */,IR(0, 0),IR(3, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
   {31,IR(0, 0),IR(24136, 9)/* Rgba16ui */,IR(0, 0),IR(3, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
   {32,IR(0, 0),IR(24145, 8)/* Rgba8ui */,IR(0, 0),IR(3, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
   {33,IR(0, 0),IR(24153, 6)/* R32ui */,IR(0, 0),IR(3, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
-  {34,IR(0, 0),IR(24159, 10)/* Rgb10a2ui */,IR(0, 0),IR(193, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
-  {35,IR(0, 0),IR(24169, 7)/* Rg32ui */,IR(0, 0),IR(193, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
-  {36,IR(0, 0),IR(24176, 7)/* Rg16ui */,IR(0, 0),IR(193, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
-  {37,IR(0, 0),IR(24183, 6)/* Rg8ui */,IR(0, 0),IR(193, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
-  {38,IR(0, 0),IR(24189, 6)/* R16ui */,IR(0, 0),IR(193, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
-  {39,IR(0, 0),IR(24195, 5)/* R8ui */,IR(0, 0),IR(193, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
-  {40,IR(0, 0),IR(24200, 6)/* R64ui */,IR(0, 0),IR(194, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
-  {41,IR(0, 0),IR(24206, 5)/* R64i */,IR(0, 0),IR(194, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
+  {34,IR(0, 0),IR(24159, 10)/* Rgb10a2ui */,IR(0, 0),IR(191, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
+  {35,IR(0, 0),IR(24169, 7)/* Rg32ui */,IR(0, 0),IR(191, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
+  {36,IR(0, 0),IR(24176, 7)/* Rg16ui */,IR(0, 0),IR(191, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
+  {37,IR(0, 0),IR(24183, 6)/* Rg8ui */,IR(0, 0),IR(191, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
+  {38,IR(0, 0),IR(24189, 6)/* R16ui */,IR(0, 0),IR(191, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
+  {39,IR(0, 0),IR(24195, 5)/* R8ui */,IR(0, 0),IR(191, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
+  {40,IR(0, 0),IR(24200, 6)/* R64ui */,IR(0, 0),IR(192, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
+  {41,IR(0, 0),IR(24206, 5)/* R64i */,IR(0, 0),IR(192, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SAMPLER_IMAGE_FORMAT
   {0,IR(0, 0),IR(24211, 12)/* CrossDevice */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SCOPE_ID
   {1,IR(0, 0),IR(24223, 7)/* Device */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SCOPE_ID
   {2,IR(0, 0),IR(24230, 10)/* Workgroup */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SCOPE_ID
   {3,IR(0, 0),IR(24240, 9)/* Subgroup */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SCOPE_ID
   {4,IR(0, 0),IR(24249, 11)/* Invocation */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SCOPE_ID
-  {5,IR(0, 0),IR(24260, 12)/* QueueFamily */,IR(85, 1),IR(186, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,5),0xffffffffu}, // SPV_OPERAND_TYPE_SCOPE_ID
+  {5,IR(0, 0),IR(24260, 12)/* QueueFamily */,IR(85, 1),IR(184, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,5),0xffffffffu}, // SPV_OPERAND_TYPE_SCOPE_ID
   {6,IR(0, 0),IR(24287, 14)/* ShaderCallKHR */,IR(0, 0),IR(60, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_SCOPE_ID
   {0,IR(0, 0),IR(14172, 5)/* None */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SELECTION_CONTROL
   {1,IR(0, 0),IR(24301, 8)/* Flatten */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_SELECTION_CONTROL
@@ -1491,9 +1491,9 @@ static const std::array<OperandDesc, 1187> kOperandsByValue{{
   {3,IR(0, 0),IR(24485, 7)/* Output */,IR(0, 0),IR(3, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_STORAGE_CLASS
   {4,IR(0, 0),IR(24230, 10)/* Workgroup */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_STORAGE_CLASS
   {5,IR(0, 0),IR(24492, 15)/* CrossWorkgroup */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_STORAGE_CLASS
-  {6,IR(0, 0),IR(24507, 8)/* Private */,IR(0, 0),IR(195, 2),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_STORAGE_CLASS
+  {6,IR(0, 0),IR(24507, 8)/* Private */,IR(0, 0),IR(193, 2),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_STORAGE_CLASS
   {7,IR(0, 0),IR(24515, 9)/* Function */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_STORAGE_CLASS
-  {8,IR(0, 0),IR(24524, 8)/* Generic */,IR(0, 0),IR(197, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_STORAGE_CLASS
+  {8,IR(0, 0),IR(24524, 8)/* Generic */,IR(0, 0),IR(195, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_STORAGE_CLASS
   {9,IR(0, 0),IR(24532, 13)/* PushConstant */,IR(0, 0),IR(3, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_STORAGE_CLASS
   {10,IR(0, 0),IR(24545, 14)/* AtomicCounter */,IR(0, 0),IR(82, 1),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_STORAGE_CLASS
   {11,IR(0, 0),IR(24559, 6)/* Image */,IR(0, 0),IR(1, 0),IR(0, 0),SPV_SPIRV_VERSION_WORD(1,0),0xffffffffu}, // SPV_OPERAND_TYPE_STORAGE_CLASS
@@ -1510,27 +1510,27 @@ static const std::array<OperandDesc, 1187> kOperandsByValue{{
   {5349,IR(0, 0),IR(24849, 22)/* PhysicalStorageBuffer */,IR(92, 1),IR(2, 1),IR(0, 2),SPV_SPIRV_VERSION_WORD(1,5),0xffffffffu}, // SPV_OPERAND_TYPE_STORAGE_CLASS
   {5385,IR(0, 0),IR(24896, 21)/* HitObjectAttributeNV */,IR(0, 0),IR(124, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_STORAGE_CLASS
   {5402,IR(0, 0),IR(24917, 24)/* TaskPayloadWorkgroupEXT */,IR(0, 0),IR(53, 1),IR(23, 1),SPV_SPIRV_VERSION_WORD(1,4),0xffffffffu}, // SPV_OPERAND_TYPE_STORAGE_CLASS
-  {5605,IR(0, 0),IR(24941, 17)/* CodeSectionINTEL */,IR(0, 0),IR(198, 1),IR(95, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_STORAGE_CLASS
-  {5936,IR(0, 0),IR(24958, 16)/* DeviceOnlyINTEL */,IR(0, 0),IR(199, 1),IR(117, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_STORAGE_CLASS
-  {5937,IR(0, 0),IR(24974, 14)/* HostOnlyINTEL */,IR(0, 0),IR(199, 1),IR(117, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_STORAGE_CLASS
+  {5605,IR(0, 0),IR(24941, 17)/* CodeSectionINTEL */,IR(0, 0),IR(196, 1),IR(95, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_STORAGE_CLASS
+  {5936,IR(0, 0),IR(24958, 16)/* DeviceOnlyINTEL */,IR(0, 0),IR(197, 1),IR(117, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_STORAGE_CLASS
+  {5937,IR(0, 0),IR(24974, 14)/* HostOnlyINTEL */,IR(0, 0),IR(197, 1),IR(117, 1),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_STORAGE_CLASS
   {0,IR(0, 0),IR(22016, 14)/* UncachedINTEL */,IR(0, 0),IR(144, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_STORE_CACHE_CONTROL
   {1,IR(0, 0),IR(24988, 18)/* WriteThroughINTEL */,IR(0, 0),IR(144, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_STORE_CACHE_CONTROL
   {2,IR(0, 0),IR(25006, 15)/* WriteBackINTEL */,IR(0, 0),IR(144, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_STORE_CACHE_CONTROL
   {3,IR(0, 0),IR(22042, 15)/* StreamingINTEL */,IR(0, 0),IR(144, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_STORE_CACHE_CONTROL
   {0,IR(0, 0),IR(14172, 5)/* None */,IR(0, 0),IR(1, 0),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_TENSOR_ADDRESSING_OPERANDS
-  {1,IR(10, 1),IR(25021, 11)/* TensorView */,IR(0, 0),IR(200, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_TENSOR_ADDRESSING_OPERANDS
-  {2,IR(10, 1),IR(25032, 11)/* DecodeFunc */,IR(0, 0),IR(201, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_TENSOR_ADDRESSING_OPERANDS
+  {1,IR(10, 1),IR(25021, 11)/* TensorView */,IR(0, 0),IR(198, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_TENSOR_ADDRESSING_OPERANDS
+  {2,IR(10, 1),IR(25032, 11)/* DecodeFunc */,IR(0, 0),IR(199, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_TENSOR_ADDRESSING_OPERANDS
   {0,IR(0, 0),IR(25043, 10)/* Undefined */,IR(0, 0),IR(1, 0),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_TENSOR_CLAMP_MODE
   {1,IR(0, 0),IR(15419, 9)/* Constant */,IR(0, 0),IR(1, 0),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_TENSOR_CLAMP_MODE
   {2,IR(0, 0),IR(23863, 12)/* ClampToEdge */,IR(0, 0),IR(1, 0),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_TENSOR_CLAMP_MODE
   {3,IR(0, 0),IR(23881, 7)/* Repeat */,IR(0, 0),IR(1, 0),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_TENSOR_CLAMP_MODE
   {4,IR(0, 0),IR(23888, 15)/* RepeatMirrored */,IR(0, 0),IR(1, 0),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_TENSOR_CLAMP_MODE
-  {0,IR(0, 0),IR(25053, 8)/* NoneARM */,IR(0, 0),IR(202, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_TENSOR_OPERANDS
-  {1,IR(0, 0),IR(25061, 15)/* NontemporalARM */,IR(0, 0),IR(202, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_TENSOR_OPERANDS
-  {2,IR(10, 1),IR(25076, 20)/* OutOfBoundsValueARM */,IR(0, 0),IR(202, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_TENSOR_OPERANDS
-  {4,IR(10, 1),IR(25096, 24)/* MakeElementAvailableARM */,IR(0, 0),IR(202, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_TENSOR_OPERANDS
-  {8,IR(10, 1),IR(25120, 22)/* MakeElementVisibleARM */,IR(0, 0),IR(202, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_TENSOR_OPERANDS
-  {16,IR(0, 0),IR(25142, 21)/* NonPrivateElementARM */,IR(0, 0),IR(202, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_TENSOR_OPERANDS
+  {0,IR(0, 0),IR(25053, 8)/* NoneARM */,IR(0, 0),IR(200, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_TENSOR_OPERANDS
+  {1,IR(0, 0),IR(25061, 15)/* NontemporalARM */,IR(0, 0),IR(200, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_TENSOR_OPERANDS
+  {2,IR(10, 1),IR(25076, 20)/* OutOfBoundsValueARM */,IR(0, 0),IR(200, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_TENSOR_OPERANDS
+  {4,IR(10, 1),IR(25096, 24)/* MakeElementAvailableARM */,IR(0, 0),IR(200, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_TENSOR_OPERANDS
+  {8,IR(10, 1),IR(25120, 22)/* MakeElementVisibleARM */,IR(0, 0),IR(200, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_TENSOR_OPERANDS
+  {16,IR(0, 0),IR(25142, 21)/* NonPrivateElementARM */,IR(0, 0),IR(200, 1),IR(0, 0),0xffffffffu,0xffffffffu}, // SPV_OPERAND_TYPE_TENSOR_OPERANDS
 }};
 
 // Maps an operand kind to possible operands for that kind.
@@ -3061,12 +3061,12 @@ static const std::array<InstructionDesc, 820> kInstructionDesc{{
   {spv::Op::OpTypeReserveId, true, false, IR(68, 1), IR(26085, 14), IR(0, 0), IR(75, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kType_Declaration},
   {spv::Op::OpTypeQueue, true, false, IR(68, 1), IR(26099, 10), IR(0, 0), IR(74, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kType_Declaration},
   {spv::Op::OpTypePipe, true, false, IR(100, 2), IR(26109, 9), IR(0, 0), IR(75, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kType_Declaration},
-  {spv::Op::OpTypeForwardPointer, false, false, IR(102, 2), IR(26118, 19), IR(0, 0), IR(203, 2), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kType_Declaration},
+  {spv::Op::OpTypeForwardPointer, false, false, IR(102, 2), IR(26118, 19), IR(0, 0), IR(201, 2), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kType_Declaration},
   {spv::Op::OpConstantTrue, true, true, IR(39, 2), IR(26137, 13), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConstant_Creation},
   {spv::Op::OpConstantFalse, true, true, IR(39, 2), IR(26150, 14), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConstant_Creation},
   {spv::Op::OpConstant, true, true, IR(104, 3), IR(15419, 9), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConstant_Creation},
   {spv::Op::OpConstantComposite, true, true, IR(107, 3), IR(26202, 18), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConstant_Creation},
-  {spv::Op::OpConstantSampler, true, true, IR(110, 5), IR(26298, 16), IR(0, 0), IR(205, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConstant_Creation},
+  {spv::Op::OpConstantSampler, true, true, IR(110, 5), IR(26298, 16), IR(0, 0), IR(203, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConstant_Creation},
   {spv::Op::OpConstantNull, true, true, IR(39, 2), IR(26314, 13), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConstant_Creation},
   {spv::Op::OpSpecConstantTrue, true, true, IR(39, 2), IR(26327, 17), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConstant_Creation},
   {spv::Op::OpSpecConstantFalse, true, true, IR(39, 2), IR(26344, 18), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConstant_Creation},
@@ -3082,10 +3082,10 @@ static const std::array<InstructionDesc, 820> kInstructionDesc{{
   {spv::Op::OpLoad, true, true, IR(135, 4), IR(26597, 5), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kMemory},
   {spv::Op::OpStore, false, false, IR(139, 3), IR(26602, 6), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kMemory},
   {spv::Op::OpCopyMemory, false, false, IR(142, 4), IR(26608, 11), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kMemory},
-  {spv::Op::OpCopyMemorySized, false, false, IR(146, 5), IR(26619, 16), IR(0, 0), IR(206, 2), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kMemory},
+  {spv::Op::OpCopyMemorySized, false, false, IR(146, 5), IR(26619, 16), IR(0, 0), IR(204, 2), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kMemory},
   {spv::Op::OpAccessChain, true, true, IR(122, 4), IR(26635, 12), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kMemory},
   {spv::Op::OpInBoundsAccessChain, true, true, IR(122, 4), IR(26647, 20), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kMemory},
-  {spv::Op::OpPtrAccessChain, true, true, IR(151, 5), IR(26667, 15), IR(0, 0), IR(208, 4), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kMemory},
+  {spv::Op::OpPtrAccessChain, true, true, IR(151, 5), IR(26667, 15), IR(0, 0), IR(206, 4), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kMemory},
   {spv::Op::OpArrayLength, true, true, IR(156, 4), IR(26682, 12), IR(0, 0), IR(3, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kMemory},
   {spv::Op::OpGenericPtrMemSemantics, true, true, IR(160, 3), IR(26694, 23), IR(0, 0), IR(0, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kMemory},
   {spv::Op::OpInBoundsPtrAccessChain, true, true, IR(151, 5), IR(26717, 23), IR(0, 0), IR(1, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kMemory},
@@ -3119,11 +3119,11 @@ static const std::array<InstructionDesc, 820> kInstructionDesc{{
   {spv::Op::OpImage, true, true, IR(160, 3), IR(24559, 6), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
   {spv::Op::OpImageQueryFormat, true, true, IR(160, 3), IR(27359, 17), IR(0, 0), IR(0, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
   {spv::Op::OpImageQueryOrder, true, true, IR(160, 3), IR(27376, 16), IR(0, 0), IR(0, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpImageQuerySizeLod, true, true, IR(172, 4), IR(27392, 18), IR(0, 0), IR(212, 2), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpImageQuerySize, true, true, IR(160, 3), IR(27410, 15), IR(0, 0), IR(212, 2), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpImageQueryLod, true, true, IR(172, 4), IR(27425, 14), IR(0, 0), IR(214, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpImageQueryLevels, true, true, IR(160, 3), IR(27439, 17), IR(0, 0), IR(212, 2), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpImageQuerySamples, true, true, IR(160, 3), IR(27456, 18), IR(0, 0), IR(212, 2), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageQuerySizeLod, true, true, IR(172, 4), IR(27392, 18), IR(0, 0), IR(210, 2), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageQuerySize, true, true, IR(160, 3), IR(27410, 15), IR(0, 0), IR(210, 2), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageQueryLod, true, true, IR(172, 4), IR(27425, 14), IR(0, 0), IR(212, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageQueryLevels, true, true, IR(160, 3), IR(27439, 17), IR(0, 0), IR(210, 2), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageQuerySamples, true, true, IR(160, 3), IR(27456, 18), IR(0, 0), IR(210, 2), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
   {spv::Op::OpConvertFToU, true, true, IR(160, 3), IR(27474, 12), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConversion},
   {spv::Op::OpConvertFToS, true, true, IR(160, 3), IR(27486, 12), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConversion},
   {spv::Op::OpConvertSToF, true, true, IR(160, 3), IR(27498, 12), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConversion},
@@ -3132,10 +3132,10 @@ static const std::array<InstructionDesc, 820> kInstructionDesc{{
   {spv::Op::OpSConvert, true, true, IR(160, 3), IR(27531, 9), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConversion},
   {spv::Op::OpFConvert, true, true, IR(160, 3), IR(27540, 9), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConversion},
   {spv::Op::OpQuantizeToF16, true, true, IR(160, 3), IR(27549, 14), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConversion},
-  {spv::Op::OpConvertPtrToU, true, true, IR(160, 3), IR(27563, 14), IR(0, 0), IR(203, 2), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConversion},
+  {spv::Op::OpConvertPtrToU, true, true, IR(160, 3), IR(27563, 14), IR(0, 0), IR(201, 2), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConversion},
   {spv::Op::OpSatConvertSToU, true, true, IR(160, 3), IR(27577, 15), IR(0, 0), IR(0, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConversion},
   {spv::Op::OpSatConvertUToS, true, true, IR(160, 3), IR(27592, 15), IR(0, 0), IR(0, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConversion},
-  {spv::Op::OpConvertUToPtr, true, true, IR(160, 3), IR(27607, 14), IR(0, 0), IR(203, 2), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConversion},
+  {spv::Op::OpConvertUToPtr, true, true, IR(160, 3), IR(27607, 14), IR(0, 0), IR(201, 2), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConversion},
   {spv::Op::OpPtrCastToGeneric, true, true, IR(160, 3), IR(27621, 17), IR(0, 0), IR(0, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConversion},
   {spv::Op::OpGenericCastToPtr, true, true, IR(160, 3), IR(27638, 17), IR(0, 0), IR(0, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConversion},
   {spv::Op::OpGenericCastToPtrExplicit, true, true, IR(211, 4), IR(27655, 25), IR(0, 0), IR(0, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConversion},
@@ -3212,20 +3212,20 @@ static const std::array<InstructionDesc, 820> kInstructionDesc{{
   {spv::Op::OpBitwiseXor, true, true, IR(172, 4), IR(28466, 11), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kBit},
   {spv::Op::OpBitwiseAnd, true, true, IR(172, 4), IR(28477, 11), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kBit},
   {spv::Op::OpNot, true, true, IR(160, 3), IR(28488, 4), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kBit},
-  {spv::Op::OpBitFieldInsert, true, true, IR(215, 6), IR(28492, 15), IR(0, 0), IR(215, 2), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kBit},
-  {spv::Op::OpBitFieldSExtract, true, true, IR(130, 5), IR(28507, 17), IR(0, 0), IR(215, 2), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kBit},
-  {spv::Op::OpBitFieldUExtract, true, true, IR(130, 5), IR(28524, 17), IR(0, 0), IR(215, 2), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kBit},
-  {spv::Op::OpBitReverse, true, true, IR(160, 3), IR(28541, 11), IR(0, 0), IR(215, 2), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kBit},
+  {spv::Op::OpBitFieldInsert, true, true, IR(215, 6), IR(28492, 15), IR(0, 0), IR(213, 2), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kBit},
+  {spv::Op::OpBitFieldSExtract, true, true, IR(130, 5), IR(28507, 17), IR(0, 0), IR(213, 2), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kBit},
+  {spv::Op::OpBitFieldUExtract, true, true, IR(130, 5), IR(28524, 17), IR(0, 0), IR(213, 2), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kBit},
+  {spv::Op::OpBitReverse, true, true, IR(160, 3), IR(28541, 11), IR(0, 0), IR(213, 2), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kBit},
   {spv::Op::OpBitCount, true, true, IR(160, 3), IR(28552, 9), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kBit},
   {spv::Op::OpDPdx, true, true, IR(160, 3), IR(28561, 5), IR(0, 0), IR(3, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kDerivative},
   {spv::Op::OpDPdy, true, true, IR(160, 3), IR(28566, 5), IR(0, 0), IR(3, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kDerivative},
   {spv::Op::OpFwidth, true, true, IR(160, 3), IR(28571, 7), IR(0, 0), IR(3, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kDerivative},
-  {spv::Op::OpDPdxFine, true, true, IR(160, 3), IR(28578, 9), IR(0, 0), IR(217, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kDerivative},
-  {spv::Op::OpDPdyFine, true, true, IR(160, 3), IR(28587, 9), IR(0, 0), IR(217, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kDerivative},
-  {spv::Op::OpFwidthFine, true, true, IR(160, 3), IR(28596, 11), IR(0, 0), IR(217, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kDerivative},
-  {spv::Op::OpDPdxCoarse, true, true, IR(160, 3), IR(28607, 11), IR(0, 0), IR(217, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kDerivative},
-  {spv::Op::OpDPdyCoarse, true, true, IR(160, 3), IR(28618, 11), IR(0, 0), IR(217, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kDerivative},
-  {spv::Op::OpFwidthCoarse, true, true, IR(160, 3), IR(28629, 13), IR(0, 0), IR(217, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kDerivative},
+  {spv::Op::OpDPdxFine, true, true, IR(160, 3), IR(28578, 9), IR(0, 0), IR(215, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kDerivative},
+  {spv::Op::OpDPdyFine, true, true, IR(160, 3), IR(28587, 9), IR(0, 0), IR(215, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kDerivative},
+  {spv::Op::OpFwidthFine, true, true, IR(160, 3), IR(28596, 11), IR(0, 0), IR(215, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kDerivative},
+  {spv::Op::OpDPdxCoarse, true, true, IR(160, 3), IR(28607, 11), IR(0, 0), IR(215, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kDerivative},
+  {spv::Op::OpDPdyCoarse, true, true, IR(160, 3), IR(28618, 11), IR(0, 0), IR(215, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kDerivative},
+  {spv::Op::OpFwidthCoarse, true, true, IR(160, 3), IR(28629, 13), IR(0, 0), IR(215, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kDerivative},
   {spv::Op::OpEmitVertex, false, false, IR(0, 0), IR(28642, 11), IR(0, 0), IR(69, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kPrimitive},
   {spv::Op::OpEndPrimitive, false, false, IR(0, 0), IR(28653, 13), IR(0, 0), IR(69, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kPrimitive},
   {spv::Op::OpEmitStreamVertex, false, false, IR(10, 1), IR(28666, 17), IR(0, 0), IR(114, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kPrimitive},
@@ -3263,17 +3263,17 @@ static const std::array<InstructionDesc, 820> kInstructionDesc{{
   {spv::Op::OpLifetimeStop, false, false, IR(261, 2), IR(29210, 13), IR(0, 0), IR(0, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kControl_Flow},
   {spv::Op::OpGroupAsyncCopy, true, true, IR(263, 8), IR(29223, 15), IR(0, 0), IR(0, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kGroup},
   {spv::Op::OpGroupWaitEvents, false, false, IR(271, 3), IR(29238, 16), IR(0, 0), IR(0, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupAll, true, true, IR(274, 4), IR(29254, 9), IR(0, 0), IR(218, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupAny, true, true, IR(274, 4), IR(29263, 9), IR(0, 0), IR(218, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupBroadcast, true, true, IR(278, 5), IR(29272, 15), IR(0, 0), IR(218, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupIAdd, true, true, IR(283, 5), IR(29320, 10), IR(0, 0), IR(218, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupFAdd, true, true, IR(283, 5), IR(29330, 10), IR(0, 0), IR(218, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupFMin, true, true, IR(283, 5), IR(29340, 10), IR(0, 0), IR(218, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupUMin, true, true, IR(283, 5), IR(29350, 10), IR(0, 0), IR(218, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupSMin, true, true, IR(283, 5), IR(29360, 10), IR(0, 0), IR(218, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupFMax, true, true, IR(283, 5), IR(29370, 10), IR(0, 0), IR(218, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupUMax, true, true, IR(283, 5), IR(29380, 10), IR(0, 0), IR(218, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupSMax, true, true, IR(283, 5), IR(29390, 10), IR(0, 0), IR(218, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupAll, true, true, IR(274, 4), IR(29254, 9), IR(0, 0), IR(216, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupAny, true, true, IR(274, 4), IR(29263, 9), IR(0, 0), IR(216, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupBroadcast, true, true, IR(278, 5), IR(29272, 15), IR(0, 0), IR(216, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupIAdd, true, true, IR(283, 5), IR(29320, 10), IR(0, 0), IR(216, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupFAdd, true, true, IR(283, 5), IR(29330, 10), IR(0, 0), IR(216, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupFMin, true, true, IR(283, 5), IR(29340, 10), IR(0, 0), IR(216, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupUMin, true, true, IR(283, 5), IR(29350, 10), IR(0, 0), IR(216, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupSMin, true, true, IR(283, 5), IR(29360, 10), IR(0, 0), IR(216, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupFMax, true, true, IR(283, 5), IR(29370, 10), IR(0, 0), IR(216, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupUMax, true, true, IR(283, 5), IR(29380, 10), IR(0, 0), IR(216, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupSMax, true, true, IR(283, 5), IR(29390, 10), IR(0, 0), IR(216, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kGroup},
   {spv::Op::OpReadPipe, true, true, IR(215, 6), IR(29400, 9), IR(0, 0), IR(75, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kPipe},
   {spv::Op::OpWritePipe, true, true, IR(215, 6), IR(29409, 10), IR(0, 0), IR(75, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kPipe},
   {spv::Op::OpReservedReadPipe, true, true, IR(288, 8), IR(29419, 17), IR(0, 0), IR(75, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kPipe},
@@ -3303,153 +3303,153 @@ static const std::array<InstructionDesc, 820> kInstructionDesc{{
   {spv::Op::OpCaptureEventProfilingInfo, false, false, IR(33, 3), IR(29909, 26), IR(0, 0), IR(74, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kDevice_Side_Enqueue},
   {spv::Op::OpGetDefaultQueue, true, true, IR(39, 2), IR(29935, 16), IR(0, 0), IR(74, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kDevice_Side_Enqueue},
   {spv::Op::OpBuildNDRange, true, true, IR(130, 5), IR(29951, 13), IR(0, 0), IR(74, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kDevice_Side_Enqueue},
-  {spv::Op::OpImageSparseSampleImplicitLod, true, true, IR(185, 5), IR(29964, 29), IR(0, 0), IR(219, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpImageSparseSampleExplicitLod, true, true, IR(190, 5), IR(29993, 29), IR(0, 0), IR(219, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpImageSparseSampleDrefImplicitLod, true, true, IR(195, 6), IR(30022, 33), IR(0, 0), IR(219, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpImageSparseSampleDrefExplicitLod, true, true, IR(201, 6), IR(30055, 33), IR(0, 0), IR(219, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpImageSparseSampleProjImplicitLod, true, true, IR(185, 5), IR(30088, 33), IR(0, 0), IR(219, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpImageSparseSampleProjExplicitLod, true, true, IR(190, 5), IR(30121, 33), IR(0, 0), IR(219, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpImageSparseSampleProjDrefImplicitLod, true, true, IR(195, 6), IR(30154, 37), IR(0, 0), IR(219, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpImageSparseSampleProjDrefExplicitLod, true, true, IR(201, 6), IR(30191, 37), IR(0, 0), IR(219, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpImageSparseFetch, true, true, IR(185, 5), IR(30228, 17), IR(0, 0), IR(219, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpImageSparseGather, true, true, IR(195, 6), IR(30245, 18), IR(0, 0), IR(219, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpImageSparseDrefGather, true, true, IR(195, 6), IR(30263, 22), IR(0, 0), IR(219, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpImageSparseTexelsResident, true, true, IR(160, 3), IR(30285, 26), IR(0, 0), IR(219, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageSparseSampleImplicitLod, true, true, IR(185, 5), IR(29964, 29), IR(0, 0), IR(217, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageSparseSampleExplicitLod, true, true, IR(190, 5), IR(29993, 29), IR(0, 0), IR(217, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageSparseSampleDrefImplicitLod, true, true, IR(195, 6), IR(30022, 33), IR(0, 0), IR(217, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageSparseSampleDrefExplicitLod, true, true, IR(201, 6), IR(30055, 33), IR(0, 0), IR(217, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageSparseSampleProjImplicitLod, true, true, IR(185, 5), IR(30088, 33), IR(0, 0), IR(217, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageSparseSampleProjExplicitLod, true, true, IR(190, 5), IR(30121, 33), IR(0, 0), IR(217, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageSparseSampleProjDrefImplicitLod, true, true, IR(195, 6), IR(30154, 37), IR(0, 0), IR(217, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageSparseSampleProjDrefExplicitLod, true, true, IR(201, 6), IR(30191, 37), IR(0, 0), IR(217, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageSparseFetch, true, true, IR(185, 5), IR(30228, 17), IR(0, 0), IR(217, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageSparseGather, true, true, IR(195, 6), IR(30245, 18), IR(0, 0), IR(217, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageSparseDrefGather, true, true, IR(195, 6), IR(30263, 22), IR(0, 0), IR(217, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageSparseTexelsResident, true, true, IR(160, 3), IR(30285, 26), IR(0, 0), IR(217, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
   {spv::Op::OpNoLine, false, false, IR(0, 0), IR(30311, 7), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kDebug},
   {spv::Op::OpAtomicFlagTestAndSet, true, true, IR(226, 5), IR(30318, 21), IR(0, 0), IR(0, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kAtomic},
   {spv::Op::OpAtomicFlagClear, false, false, IR(332, 3), IR(30339, 16), IR(0, 0), IR(0, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kAtomic},
-  {spv::Op::OpImageSparseRead, true, true, IR(185, 5), IR(30355, 16), IR(0, 0), IR(219, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageSparseRead, true, true, IR(185, 5), IR(30355, 16), IR(0, 0), IR(217, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kImage},
   {spv::Op::OpSizeOf, true, true, IR(160, 3), IR(30371, 7), IR(0, 0), IR(1, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,1), 0xffffffffu, PrintingClass::kMiscellaneous},
-  {spv::Op::OpTypePipeStorage, true, false, IR(68, 1), IR(30378, 16), IR(0, 0), IR(220, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,1), 0xffffffffu, PrintingClass::kType_Declaration},
-  {spv::Op::OpConstantPipeStorage, true, true, IR(335, 5), IR(30394, 20), IR(0, 0), IR(220, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,1), 0xffffffffu, PrintingClass::kPipe},
-  {spv::Op::OpCreatePipeFromPipeStorage, true, true, IR(160, 3), IR(30414, 26), IR(0, 0), IR(220, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,1), 0xffffffffu, PrintingClass::kPipe},
+  {spv::Op::OpTypePipeStorage, true, false, IR(68, 1), IR(30378, 16), IR(0, 0), IR(218, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,1), 0xffffffffu, PrintingClass::kType_Declaration},
+  {spv::Op::OpConstantPipeStorage, true, true, IR(335, 5), IR(30394, 20), IR(0, 0), IR(218, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,1), 0xffffffffu, PrintingClass::kPipe},
+  {spv::Op::OpCreatePipeFromPipeStorage, true, true, IR(160, 3), IR(30414, 26), IR(0, 0), IR(218, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,1), 0xffffffffu, PrintingClass::kPipe},
   {spv::Op::OpGetKernelLocalSizeForSubgroupCount, true, true, IR(325, 7), IR(30440, 35), IR(0, 0), IR(153, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,1), 0xffffffffu, PrintingClass::kDevice_Side_Enqueue},
   {spv::Op::OpGetKernelMaxNumSubgroups, true, true, IR(215, 6), IR(30475, 25), IR(0, 0), IR(153, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,1), 0xffffffffu, PrintingClass::kDevice_Side_Enqueue},
-  {spv::Op::OpTypeNamedBarrier, true, false, IR(68, 1), IR(30500, 17), IR(0, 0), IR(221, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,1), 0xffffffffu, PrintingClass::kType_Declaration},
-  {spv::Op::OpNamedBarrierInitialize, true, true, IR(160, 3), IR(30517, 23), IR(0, 0), IR(221, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,1), 0xffffffffu, PrintingClass::kBarrier},
-  {spv::Op::OpMemoryNamedBarrier, false, false, IR(332, 3), IR(30540, 19), IR(0, 0), IR(221, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,1), 0xffffffffu, PrintingClass::kBarrier},
+  {spv::Op::OpTypeNamedBarrier, true, false, IR(68, 1), IR(30500, 17), IR(0, 0), IR(219, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,1), 0xffffffffu, PrintingClass::kType_Declaration},
+  {spv::Op::OpNamedBarrierInitialize, true, true, IR(160, 3), IR(30517, 23), IR(0, 0), IR(219, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,1), 0xffffffffu, PrintingClass::kBarrier},
+  {spv::Op::OpMemoryNamedBarrier, false, false, IR(332, 3), IR(30540, 19), IR(0, 0), IR(219, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,1), 0xffffffffu, PrintingClass::kBarrier},
   {spv::Op::OpModuleProcessed, false, false, IR(11, 1), IR(30559, 16), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,1), 0xffffffffu, PrintingClass::kDebug},
   {spv::Op::OpExecutionModeId, false, false, IR(65, 2), IR(30575, 16), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,2), 0xffffffffu, PrintingClass::kMode_Setting},
   {spv::Op::OpDecorateId, false, false, IR(163, 2), IR(30591, 11), IR(0, 0), IR(1, 0), IR(157, 1), SPV_SPIRV_VERSION_WORD(1,2), 0xffffffffu, PrintingClass::kAnnotation},
   {spv::Op::OpGroupNonUniformElect, true, true, IR(340, 3), IR(30602, 21), IR(0, 0), IR(76, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformAll, true, true, IR(274, 4), IR(30623, 19), IR(0, 0), IR(222, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformAny, true, true, IR(274, 4), IR(30642, 19), IR(0, 0), IR(222, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformAllEqual, true, true, IR(274, 4), IR(30661, 24), IR(0, 0), IR(222, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformBroadcast, true, true, IR(278, 5), IR(30685, 25), IR(0, 0), IR(223, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformBroadcastFirst, true, true, IR(274, 4), IR(30710, 30), IR(0, 0), IR(223, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformBallot, true, true, IR(274, 4), IR(5650, 22), IR(0, 0), IR(223, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformInverseBallot, true, true, IR(274, 4), IR(30740, 29), IR(0, 0), IR(223, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformBallotBitExtract, true, true, IR(278, 5), IR(30769, 32), IR(0, 0), IR(223, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformBallotBitCount, true, true, IR(283, 5), IR(30801, 30), IR(0, 0), IR(223, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformBallotFindLSB, true, true, IR(274, 4), IR(30831, 29), IR(0, 0), IR(223, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformBallotFindMSB, true, true, IR(274, 4), IR(30860, 29), IR(0, 0), IR(223, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformShuffle, true, true, IR(278, 5), IR(8740, 23), IR(0, 0), IR(224, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformShuffleXor, true, true, IR(278, 5), IR(30889, 26), IR(0, 0), IR(224, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformShuffleUp, true, true, IR(278, 5), IR(30915, 25), IR(0, 0), IR(225, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformShuffleDown, true, true, IR(278, 5), IR(30940, 27), IR(0, 0), IR(225, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformIAdd, true, true, IR(343, 6), IR(30967, 20), IR(0, 0), IR(226, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformFAdd, true, true, IR(343, 6), IR(30987, 20), IR(0, 0), IR(226, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformIMul, true, true, IR(343, 6), IR(31007, 20), IR(0, 0), IR(226, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformFMul, true, true, IR(343, 6), IR(31027, 20), IR(0, 0), IR(226, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformSMin, true, true, IR(343, 6), IR(31047, 20), IR(0, 0), IR(226, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformUMin, true, true, IR(343, 6), IR(31067, 20), IR(0, 0), IR(226, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformFMin, true, true, IR(343, 6), IR(31087, 20), IR(0, 0), IR(226, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformSMax, true, true, IR(343, 6), IR(31107, 20), IR(0, 0), IR(226, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformUMax, true, true, IR(343, 6), IR(31127, 20), IR(0, 0), IR(226, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformFMax, true, true, IR(343, 6), IR(31147, 20), IR(0, 0), IR(226, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformBitwiseAnd, true, true, IR(343, 6), IR(31167, 26), IR(0, 0), IR(226, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformBitwiseOr, true, true, IR(343, 6), IR(31193, 25), IR(0, 0), IR(226, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformBitwiseXor, true, true, IR(343, 6), IR(31218, 26), IR(0, 0), IR(226, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformLogicalAnd, true, true, IR(343, 6), IR(31244, 26), IR(0, 0), IR(226, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformLogicalOr, true, true, IR(343, 6), IR(31270, 25), IR(0, 0), IR(226, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformLogicalXor, true, true, IR(343, 6), IR(31295, 26), IR(0, 0), IR(226, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformQuadBroadcast, true, true, IR(278, 5), IR(31321, 29), IR(0, 0), IR(229, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpGroupNonUniformQuadSwap, true, true, IR(278, 5), IR(31350, 24), IR(0, 0), IR(229, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformAll, true, true, IR(274, 4), IR(30623, 19), IR(0, 0), IR(220, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformAny, true, true, IR(274, 4), IR(30642, 19), IR(0, 0), IR(220, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformAllEqual, true, true, IR(274, 4), IR(30661, 24), IR(0, 0), IR(220, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformBroadcast, true, true, IR(278, 5), IR(30685, 25), IR(0, 0), IR(221, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformBroadcastFirst, true, true, IR(274, 4), IR(30710, 30), IR(0, 0), IR(221, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformBallot, true, true, IR(274, 4), IR(5650, 22), IR(0, 0), IR(221, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformInverseBallot, true, true, IR(274, 4), IR(30740, 29), IR(0, 0), IR(221, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformBallotBitExtract, true, true, IR(278, 5), IR(30769, 32), IR(0, 0), IR(221, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformBallotBitCount, true, true, IR(283, 5), IR(30801, 30), IR(0, 0), IR(221, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformBallotFindLSB, true, true, IR(274, 4), IR(30831, 29), IR(0, 0), IR(221, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformBallotFindMSB, true, true, IR(274, 4), IR(30860, 29), IR(0, 0), IR(221, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformShuffle, true, true, IR(278, 5), IR(8740, 23), IR(0, 0), IR(222, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformShuffleXor, true, true, IR(278, 5), IR(30889, 26), IR(0, 0), IR(222, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformShuffleUp, true, true, IR(278, 5), IR(30915, 25), IR(0, 0), IR(223, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformShuffleDown, true, true, IR(278, 5), IR(30940, 27), IR(0, 0), IR(223, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformIAdd, true, true, IR(343, 6), IR(30967, 20), IR(0, 0), IR(224, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformFAdd, true, true, IR(343, 6), IR(30987, 20), IR(0, 0), IR(224, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformIMul, true, true, IR(343, 6), IR(31007, 20), IR(0, 0), IR(224, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformFMul, true, true, IR(343, 6), IR(31027, 20), IR(0, 0), IR(224, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformSMin, true, true, IR(343, 6), IR(31047, 20), IR(0, 0), IR(224, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformUMin, true, true, IR(343, 6), IR(31067, 20), IR(0, 0), IR(224, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformFMin, true, true, IR(343, 6), IR(31087, 20), IR(0, 0), IR(224, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformSMax, true, true, IR(343, 6), IR(31107, 20), IR(0, 0), IR(224, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformUMax, true, true, IR(343, 6), IR(31127, 20), IR(0, 0), IR(224, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformFMax, true, true, IR(343, 6), IR(31147, 20), IR(0, 0), IR(224, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformBitwiseAnd, true, true, IR(343, 6), IR(31167, 26), IR(0, 0), IR(224, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformBitwiseOr, true, true, IR(343, 6), IR(31193, 25), IR(0, 0), IR(224, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformBitwiseXor, true, true, IR(343, 6), IR(31218, 26), IR(0, 0), IR(224, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformLogicalAnd, true, true, IR(343, 6), IR(31244, 26), IR(0, 0), IR(224, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformLogicalOr, true, true, IR(343, 6), IR(31270, 25), IR(0, 0), IR(224, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformLogicalXor, true, true, IR(343, 6), IR(31295, 26), IR(0, 0), IR(224, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformQuadBroadcast, true, true, IR(278, 5), IR(31321, 29), IR(0, 0), IR(227, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformQuadSwap, true, true, IR(278, 5), IR(31350, 24), IR(0, 0), IR(227, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,3), 0xffffffffu, PrintingClass::kNon_Uniform},
   {spv::Op::OpCopyLogical, true, true, IR(160, 3), IR(31374, 12), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,4), 0xffffffffu, PrintingClass::kComposite},
   {spv::Op::OpPtrEqual, true, true, IR(172, 4), IR(31386, 9), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,4), 0xffffffffu, PrintingClass::kMemory},
   {spv::Op::OpPtrNotEqual, true, true, IR(172, 4), IR(31395, 12), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,4), 0xffffffffu, PrintingClass::kMemory},
-  {spv::Op::OpPtrDiff, true, true, IR(172, 4), IR(31407, 8), IR(0, 0), IR(230, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,4), 0xffffffffu, PrintingClass::kMemory},
+  {spv::Op::OpPtrDiff, true, true, IR(172, 4), IR(31407, 8), IR(0, 0), IR(228, 3), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,4), 0xffffffffu, PrintingClass::kMemory},
   {spv::Op::OpColorAttachmentReadEXT, true, true, IR(349, 4), IR(31415, 23), IR(0, 0), IR(145, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
   {spv::Op::OpDepthAttachmentReadEXT, true, true, IR(353, 3), IR(31438, 23), IR(0, 0), IR(154, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
   {spv::Op::OpStencilAttachmentReadEXT, true, true, IR(353, 3), IR(31461, 25), IR(0, 0), IR(155, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpTypeTensorARM, true, false, IR(356, 4), IR(31486, 14), IR(0, 0), IR(202, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
-  {spv::Op::OpTensorReadARM, true, true, IR(360, 5), IR(31542, 14), IR(0, 0), IR(202, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kTensor},
-  {spv::Op::OpTensorWriteARM, false, false, IR(365, 4), IR(31556, 15), IR(0, 0), IR(202, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kTensor},
-  {spv::Op::OpTensorQuerySizeARM, true, true, IR(172, 4), IR(31571, 19), IR(0, 0), IR(202, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kTensor},
-  {spv::Op::OpGraphConstantARM, true, true, IR(369, 3), IR(31590, 17), IR(0, 0), IR(233, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGraph},
-  {spv::Op::OpGraphEntryPointARM, false, false, IR(372, 3), IR(31607, 19), IR(0, 0), IR(233, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGraph},
-  {spv::Op::OpGraphARM, true, true, IR(39, 2), IR(9031, 9), IR(0, 0), IR(233, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGraph},
-  {spv::Op::OpGraphInputARM, true, true, IR(122, 4), IR(31626, 14), IR(0, 0), IR(233, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGraph},
-  {spv::Op::OpGraphSetOutputARM, false, false, IR(375, 3), IR(31640, 18), IR(0, 0), IR(233, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGraph},
-  {spv::Op::OpGraphEndARM, false, false, IR(0, 0), IR(31658, 12), IR(0, 0), IR(233, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGraph},
-  {spv::Op::OpTypeGraphARM, true, false, IR(378, 3), IR(31670, 13), IR(0, 0), IR(233, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
+  {spv::Op::OpTypeTensorARM, true, false, IR(356, 4), IR(31486, 14), IR(0, 0), IR(200, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
+  {spv::Op::OpTensorReadARM, true, true, IR(360, 5), IR(31542, 14), IR(0, 0), IR(200, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kTensor},
+  {spv::Op::OpTensorWriteARM, false, false, IR(365, 4), IR(31556, 15), IR(0, 0), IR(200, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kTensor},
+  {spv::Op::OpTensorQuerySizeARM, true, true, IR(172, 4), IR(31571, 19), IR(0, 0), IR(200, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kTensor},
+  {spv::Op::OpGraphConstantARM, true, true, IR(369, 3), IR(31590, 17), IR(0, 0), IR(231, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGraph},
+  {spv::Op::OpGraphEntryPointARM, false, false, IR(372, 3), IR(31607, 19), IR(0, 0), IR(231, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGraph},
+  {spv::Op::OpGraphARM, true, true, IR(39, 2), IR(9031, 9), IR(0, 0), IR(231, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGraph},
+  {spv::Op::OpGraphInputARM, true, true, IR(122, 4), IR(31626, 14), IR(0, 0), IR(231, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGraph},
+  {spv::Op::OpGraphSetOutputARM, false, false, IR(375, 3), IR(31640, 18), IR(0, 0), IR(231, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGraph},
+  {spv::Op::OpGraphEndARM, false, false, IR(0, 0), IR(31658, 12), IR(0, 0), IR(231, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGraph},
+  {spv::Op::OpTypeGraphARM, true, false, IR(378, 3), IR(31670, 13), IR(0, 0), IR(231, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
   {spv::Op::OpTerminateInvocation, false, false, IR(0, 0), IR(31683, 20), IR(0, 0), IR(3, 1), IR(167, 1), SPV_SPIRV_VERSION_WORD(1,6), 0xffffffffu, PrintingClass::kControl_Flow},
-  {spv::Op::OpTypeUntypedPointerKHR, true, false, IR(381, 2), IR(31703, 22), IR(0, 0), IR(234, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
-  {spv::Op::OpUntypedVariableKHR, true, true, IR(383, 5), IR(31725, 19), IR(0, 0), IR(234, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
-  {spv::Op::OpUntypedAccessChainKHR, true, true, IR(151, 5), IR(31744, 22), IR(0, 0), IR(234, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
-  {spv::Op::OpUntypedInBoundsAccessChainKHR, true, true, IR(151, 5), IR(31766, 30), IR(0, 0), IR(234, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
-  {spv::Op::OpSubgroupBallotKHR, true, true, IR(160, 3), IR(5411, 18), IR(0, 0), IR(235, 1), IR(2, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroupFirstInvocationKHR, true, true, IR(160, 3), IR(31796, 27), IR(0, 0), IR(235, 1), IR(2, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpUntypedPtrAccessChainKHR, true, true, IR(388, 6), IR(31823, 25), IR(0, 0), IR(234, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
-  {spv::Op::OpUntypedInBoundsPtrAccessChainKHR, true, true, IR(388, 6), IR(31848, 33), IR(0, 0), IR(234, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
-  {spv::Op::OpUntypedArrayLengthKHR, true, true, IR(394, 5), IR(31881, 22), IR(0, 0), IR(234, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
-  {spv::Op::OpUntypedPrefetchKHR, false, false, IR(399, 5), IR(31903, 19), IR(0, 0), IR(234, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
-  {spv::Op::OpSubgroupAllKHR, true, true, IR(160, 3), IR(31922, 15), IR(0, 0), IR(236, 1), IR(41, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroupAnyKHR, true, true, IR(160, 3), IR(31937, 15), IR(0, 0), IR(236, 1), IR(41, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroupAllEqualKHR, true, true, IR(160, 3), IR(31952, 20), IR(0, 0), IR(236, 1), IR(41, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupNonUniformRotateKHR, true, true, IR(404, 6), IR(13250, 25), IR(0, 0), IR(237, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroupReadInvocationKHR, true, true, IR(172, 4), IR(31972, 26), IR(0, 0), IR(235, 1), IR(2, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpTypeUntypedPointerKHR, true, false, IR(381, 2), IR(31703, 22), IR(0, 0), IR(232, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
+  {spv::Op::OpUntypedVariableKHR, true, true, IR(383, 5), IR(31725, 19), IR(0, 0), IR(232, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
+  {spv::Op::OpUntypedAccessChainKHR, true, true, IR(151, 5), IR(31744, 22), IR(0, 0), IR(232, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
+  {spv::Op::OpUntypedInBoundsAccessChainKHR, true, true, IR(151, 5), IR(31766, 30), IR(0, 0), IR(232, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
+  {spv::Op::OpSubgroupBallotKHR, true, true, IR(160, 3), IR(5411, 18), IR(0, 0), IR(233, 1), IR(2, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroupFirstInvocationKHR, true, true, IR(160, 3), IR(31796, 27), IR(0, 0), IR(233, 1), IR(2, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpUntypedPtrAccessChainKHR, true, true, IR(388, 6), IR(31823, 25), IR(0, 0), IR(232, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
+  {spv::Op::OpUntypedInBoundsPtrAccessChainKHR, true, true, IR(388, 6), IR(31848, 33), IR(0, 0), IR(232, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
+  {spv::Op::OpUntypedArrayLengthKHR, true, true, IR(394, 5), IR(31881, 22), IR(0, 0), IR(232, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
+  {spv::Op::OpUntypedPrefetchKHR, false, false, IR(399, 5), IR(31903, 19), IR(0, 0), IR(232, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
+  {spv::Op::OpSubgroupAllKHR, true, true, IR(160, 3), IR(31922, 15), IR(0, 0), IR(234, 1), IR(41, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroupAnyKHR, true, true, IR(160, 3), IR(31937, 15), IR(0, 0), IR(234, 1), IR(41, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroupAllEqualKHR, true, true, IR(160, 3), IR(31952, 20), IR(0, 0), IR(234, 1), IR(41, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupNonUniformRotateKHR, true, true, IR(404, 6), IR(13250, 25), IR(0, 0), IR(235, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroupReadInvocationKHR, true, true, IR(172, 4), IR(31972, 26), IR(0, 0), IR(233, 1), IR(2, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
   {spv::Op::OpExtInstWithForwardRefsKHR, true, true, IR(410, 5), IR(31998, 26), IR(0, 0), IR(1, 0), IR(168, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kExtension},
-  {spv::Op::OpUntypedGroupAsyncCopyKHR, true, true, IR(415, 11), IR(32024, 25), IR(0, 0), IR(234, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpUntypedGroupAsyncCopyKHR, true, true, IR(415, 11), IR(32024, 25), IR(0, 0), IR(232, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
   {spv::Op::OpTraceRayKHR, false, false, IR(426, 11), IR(32049, 12), IR(0, 0), IR(60, 1), IR(28, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpExecuteCallableKHR, false, false, IR(36, 2), IR(32061, 19), IR(0, 0), IR(60, 1), IR(28, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpConvertUToAccelerationStructureKHR, true, true, IR(160, 3), IR(32080, 35), IR(0, 0), IR(238, 2), IR(169, 2), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpConvertUToAccelerationStructureKHR, true, true, IR(160, 3), IR(32080, 35), IR(0, 0), IR(236, 2), IR(169, 2), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpIgnoreIntersectionKHR, false, false, IR(0, 0), IR(32115, 22), IR(0, 0), IR(60, 1), IR(28, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpTerminateRayKHR, false, false, IR(0, 0), IR(32137, 16), IR(0, 0), IR(60, 1), IR(28, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpSDot, true, true, IR(437, 5), IR(32200, 5), IR(93, 1), IR(240, 1), IR(122, 1), SPV_SPIRV_VERSION_WORD(1,6), 0xffffffffu, PrintingClass::kArithmetic},
-  {spv::Op::OpUDot, true, true, IR(437, 5), IR(32213, 5), IR(94, 1), IR(240, 1), IR(122, 1), SPV_SPIRV_VERSION_WORD(1,6), 0xffffffffu, PrintingClass::kArithmetic},
-  {spv::Op::OpSUDot, true, true, IR(437, 5), IR(32226, 6), IR(95, 1), IR(240, 1), IR(122, 1), SPV_SPIRV_VERSION_WORD(1,6), 0xffffffffu, PrintingClass::kArithmetic},
-  {spv::Op::OpSDotAccSat, true, true, IR(442, 6), IR(32241, 11), IR(96, 1), IR(240, 1), IR(122, 1), SPV_SPIRV_VERSION_WORD(1,6), 0xffffffffu, PrintingClass::kArithmetic},
-  {spv::Op::OpUDotAccSat, true, true, IR(442, 6), IR(32266, 11), IR(97, 1), IR(240, 1), IR(122, 1), SPV_SPIRV_VERSION_WORD(1,6), 0xffffffffu, PrintingClass::kArithmetic},
-  {spv::Op::OpSUDotAccSat, true, true, IR(442, 6), IR(32291, 12), IR(98, 1), IR(240, 1), IR(122, 1), SPV_SPIRV_VERSION_WORD(1,6), 0xffffffffu, PrintingClass::kArithmetic},
+  {spv::Op::OpSDot, true, true, IR(437, 5), IR(32200, 5), IR(93, 1), IR(238, 1), IR(122, 1), SPV_SPIRV_VERSION_WORD(1,6), 0xffffffffu, PrintingClass::kArithmetic},
+  {spv::Op::OpUDot, true, true, IR(437, 5), IR(32213, 5), IR(94, 1), IR(238, 1), IR(122, 1), SPV_SPIRV_VERSION_WORD(1,6), 0xffffffffu, PrintingClass::kArithmetic},
+  {spv::Op::OpSUDot, true, true, IR(437, 5), IR(32226, 6), IR(95, 1), IR(238, 1), IR(122, 1), SPV_SPIRV_VERSION_WORD(1,6), 0xffffffffu, PrintingClass::kArithmetic},
+  {spv::Op::OpSDotAccSat, true, true, IR(442, 6), IR(32241, 11), IR(96, 1), IR(238, 1), IR(122, 1), SPV_SPIRV_VERSION_WORD(1,6), 0xffffffffu, PrintingClass::kArithmetic},
+  {spv::Op::OpUDotAccSat, true, true, IR(442, 6), IR(32266, 11), IR(97, 1), IR(238, 1), IR(122, 1), SPV_SPIRV_VERSION_WORD(1,6), 0xffffffffu, PrintingClass::kArithmetic},
+  {spv::Op::OpSUDotAccSat, true, true, IR(442, 6), IR(32291, 12), IR(98, 1), IR(238, 1), IR(122, 1), SPV_SPIRV_VERSION_WORD(1,6), 0xffffffffu, PrintingClass::kArithmetic},
   {spv::Op::OpTypeCooperativeMatrixKHR, true, false, IR(448, 6), IR(32318, 25), IR(0, 0), IR(86, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
   {spv::Op::OpCooperativeMatrixLoadKHR, true, true, IR(454, 6), IR(32343, 25), IR(0, 0), IR(86, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
   {spv::Op::OpCooperativeMatrixStoreKHR, false, false, IR(460, 5), IR(32368, 26), IR(0, 0), IR(86, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
   {spv::Op::OpCooperativeMatrixMulAddKHR, true, true, IR(465, 6), IR(32448, 27), IR(0, 0), IR(86, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kArithmetic},
   {spv::Op::OpCooperativeMatrixLengthKHR, true, true, IR(160, 3), IR(32475, 27), IR(0, 0), IR(86, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMiscellaneous},
-  {spv::Op::OpConstantCompositeReplicateEXT, true, true, IR(160, 3), IR(32502, 30), IR(0, 0), IR(241, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
-  {spv::Op::OpSpecConstantCompositeReplicateEXT, true, true, IR(160, 3), IR(32532, 34), IR(0, 0), IR(241, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
-  {spv::Op::OpCompositeConstructReplicateEXT, true, true, IR(160, 3), IR(32566, 31), IR(0, 0), IR(241, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kComposite},
-  {spv::Op::OpTypeRayQueryKHR, true, false, IR(68, 1), IR(32597, 16), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
-  {spv::Op::OpRayQueryInitializeKHR, false, false, IR(471, 8), IR(32613, 22), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryTerminateKHR, false, false, IR(10, 1), IR(32635, 21), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGenerateIntersectionKHR, false, false, IR(36, 2), IR(32656, 32), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryConfirmIntersectionKHR, false, false, IR(10, 1), IR(32688, 31), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryProceedKHR, true, true, IR(160, 3), IR(32719, 19), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionTypeKHR, true, true, IR(172, 4), IR(32738, 31), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpImageSampleWeightedQCOM, true, true, IR(130, 5), IR(32769, 24), IR(0, 0), IR(242, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpImageBoxFilterQCOM, true, true, IR(130, 5), IR(32793, 19), IR(0, 0), IR(243, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpImageBlockMatchSSDQCOM, true, true, IR(325, 7), IR(32812, 23), IR(0, 0), IR(244, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpImageBlockMatchSADQCOM, true, true, IR(325, 7), IR(32835, 23), IR(0, 0), IR(244, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpBitCastArrayQCOM, true, true, IR(160, 3), IR(32858, 17), IR(0, 0), IR(245, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConversion},
-  {spv::Op::OpImageBlockMatchWindowSSDQCOM, true, true, IR(325, 7), IR(32875, 29), IR(0, 0), IR(246, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpImageBlockMatchWindowSADQCOM, true, true, IR(325, 7), IR(32904, 29), IR(0, 0), IR(246, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpImageBlockMatchGatherSSDQCOM, true, true, IR(325, 7), IR(32933, 29), IR(0, 0), IR(246, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpImageBlockMatchGatherSADQCOM, true, true, IR(325, 7), IR(32962, 29), IR(0, 0), IR(246, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpCompositeConstructCoopMatQCOM, true, true, IR(160, 3), IR(32991, 30), IR(0, 0), IR(245, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kComposite},
-  {spv::Op::OpCompositeExtractCoopMatQCOM, true, true, IR(160, 3), IR(33021, 28), IR(0, 0), IR(245, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kComposite},
-  {spv::Op::OpExtractSubArrayQCOM, true, true, IR(172, 4), IR(33049, 20), IR(0, 0), IR(245, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kComposite},
-  {spv::Op::OpGroupIAddNonUniformAMD, true, true, IR(283, 5), IR(33069, 23), IR(0, 0), IR(218, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupFAddNonUniformAMD, true, true, IR(283, 5), IR(33092, 23), IR(0, 0), IR(218, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupFMinNonUniformAMD, true, true, IR(283, 5), IR(33115, 23), IR(0, 0), IR(218, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupUMinNonUniformAMD, true, true, IR(283, 5), IR(33138, 23), IR(0, 0), IR(218, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupSMinNonUniformAMD, true, true, IR(283, 5), IR(33161, 23), IR(0, 0), IR(218, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupFMaxNonUniformAMD, true, true, IR(283, 5), IR(33184, 23), IR(0, 0), IR(218, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupUMaxNonUniformAMD, true, true, IR(283, 5), IR(33207, 23), IR(0, 0), IR(218, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupSMaxNonUniformAMD, true, true, IR(283, 5), IR(33230, 23), IR(0, 0), IR(218, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpFragmentMaskFetchAMD, true, true, IR(172, 4), IR(33253, 21), IR(0, 0), IR(247, 1), IR(58, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpFragmentFetchAMD, true, true, IR(130, 5), IR(33274, 17), IR(0, 0), IR(247, 1), IR(58, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpReadClockKHR, true, true, IR(340, 3), IR(33291, 13), IR(0, 0), IR(248, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpConstantCompositeReplicateEXT, true, true, IR(160, 3), IR(32502, 30), IR(0, 0), IR(239, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
+  {spv::Op::OpSpecConstantCompositeReplicateEXT, true, true, IR(160, 3), IR(32532, 34), IR(0, 0), IR(239, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
+  {spv::Op::OpCompositeConstructReplicateEXT, true, true, IR(160, 3), IR(32566, 31), IR(0, 0), IR(239, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kComposite},
+  {spv::Op::OpTypeRayQueryKHR, true, false, IR(68, 1), IR(32597, 16), IR(0, 0), IR(190, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
+  {spv::Op::OpRayQueryInitializeKHR, false, false, IR(471, 8), IR(32613, 22), IR(0, 0), IR(190, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryTerminateKHR, false, false, IR(10, 1), IR(32635, 21), IR(0, 0), IR(190, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGenerateIntersectionKHR, false, false, IR(36, 2), IR(32656, 32), IR(0, 0), IR(190, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryConfirmIntersectionKHR, false, false, IR(10, 1), IR(32688, 31), IR(0, 0), IR(190, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryProceedKHR, true, true, IR(160, 3), IR(32719, 19), IR(0, 0), IR(190, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionTypeKHR, true, true, IR(172, 4), IR(32738, 31), IR(0, 0), IR(190, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpImageSampleWeightedQCOM, true, true, IR(130, 5), IR(32769, 24), IR(0, 0), IR(240, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageBoxFilterQCOM, true, true, IR(130, 5), IR(32793, 19), IR(0, 0), IR(241, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageBlockMatchSSDQCOM, true, true, IR(325, 7), IR(32812, 23), IR(0, 0), IR(242, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageBlockMatchSADQCOM, true, true, IR(325, 7), IR(32835, 23), IR(0, 0), IR(242, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpBitCastArrayQCOM, true, true, IR(160, 3), IR(32858, 17), IR(0, 0), IR(243, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConversion},
+  {spv::Op::OpImageBlockMatchWindowSSDQCOM, true, true, IR(325, 7), IR(32875, 29), IR(0, 0), IR(244, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageBlockMatchWindowSADQCOM, true, true, IR(325, 7), IR(32904, 29), IR(0, 0), IR(244, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageBlockMatchGatherSSDQCOM, true, true, IR(325, 7), IR(32933, 29), IR(0, 0), IR(244, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpImageBlockMatchGatherSADQCOM, true, true, IR(325, 7), IR(32962, 29), IR(0, 0), IR(244, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpCompositeConstructCoopMatQCOM, true, true, IR(160, 3), IR(32991, 30), IR(0, 0), IR(243, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kComposite},
+  {spv::Op::OpCompositeExtractCoopMatQCOM, true, true, IR(160, 3), IR(33021, 28), IR(0, 0), IR(243, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kComposite},
+  {spv::Op::OpExtractSubArrayQCOM, true, true, IR(172, 4), IR(33049, 20), IR(0, 0), IR(243, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kComposite},
+  {spv::Op::OpGroupIAddNonUniformAMD, true, true, IR(283, 5), IR(33069, 23), IR(0, 0), IR(216, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupFAddNonUniformAMD, true, true, IR(283, 5), IR(33092, 23), IR(0, 0), IR(216, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupFMinNonUniformAMD, true, true, IR(283, 5), IR(33115, 23), IR(0, 0), IR(216, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupUMinNonUniformAMD, true, true, IR(283, 5), IR(33138, 23), IR(0, 0), IR(216, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupSMinNonUniformAMD, true, true, IR(283, 5), IR(33161, 23), IR(0, 0), IR(216, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupFMaxNonUniformAMD, true, true, IR(283, 5), IR(33184, 23), IR(0, 0), IR(216, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupUMaxNonUniformAMD, true, true, IR(283, 5), IR(33207, 23), IR(0, 0), IR(216, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupSMaxNonUniformAMD, true, true, IR(283, 5), IR(33230, 23), IR(0, 0), IR(216, 1), IR(33, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpFragmentMaskFetchAMD, true, true, IR(172, 4), IR(33253, 21), IR(0, 0), IR(245, 1), IR(58, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpFragmentFetchAMD, true, true, IR(130, 5), IR(33274, 17), IR(0, 0), IR(245, 1), IR(58, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpReadClockKHR, true, true, IR(340, 3), IR(33291, 13), IR(0, 0), IR(246, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpAllocateNodePayloadsAMDX, true, true, IR(278, 5), IR(33304, 25), IR(0, 0), IR(43, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpEnqueueNodePayloadsAMDX, false, false, IR(10, 1), IR(33329, 24), IR(0, 0), IR(43, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpTypeNodePayloadArrayAMDX, true, false, IR(87, 2), IR(33353, 25), IR(0, 0), IR(43, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
@@ -3460,14 +3460,14 @@ static const std::array<InstructionDesc, 820> kInstructionDesc{{
   {spv::Op::OpSpecConstantStringAMDX, true, false, IR(50, 2), IR(33476, 23), IR(0, 0), IR(43, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpGroupNonUniformQuadAllKHR, true, true, IR(160, 3), IR(33499, 26), IR(0, 0), IR(162, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kNon_Uniform},
   {spv::Op::OpGroupNonUniformQuadAnyKHR, true, true, IR(160, 3), IR(33525, 26), IR(0, 0), IR(162, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kNon_Uniform},
-  {spv::Op::OpHitObjectRecordHitMotionNV, false, false, IR(479, 14), IR(33551, 27), IR(0, 0), IR(249, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectRecordHitWithIndexMotionNV, false, false, IR(493, 13), IR(33578, 36), IR(0, 0), IR(249, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectRecordMissMotionNV, false, false, IR(506, 7), IR(33614, 28), IR(0, 0), IR(249, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectRecordHitMotionNV, false, false, IR(479, 14), IR(33551, 27), IR(0, 0), IR(247, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectRecordHitWithIndexMotionNV, false, false, IR(493, 13), IR(33578, 36), IR(0, 0), IR(247, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectRecordMissMotionNV, false, false, IR(506, 7), IR(33614, 28), IR(0, 0), IR(247, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpHitObjectGetWorldToObjectNV, true, true, IR(160, 3), IR(33642, 28), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpHitObjectGetObjectToWorldNV, true, true, IR(160, 3), IR(33670, 28), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpHitObjectGetObjectRayDirectionNV, true, true, IR(160, 3), IR(33698, 33), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpHitObjectGetObjectRayOriginNV, true, true, IR(160, 3), IR(33731, 30), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpHitObjectTraceRayMotionNV, false, false, IR(493, 13), IR(33761, 26), IR(0, 0), IR(249, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpHitObjectTraceRayMotionNV, false, false, IR(493, 13), IR(33761, 26), IR(0, 0), IR(247, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpHitObjectGetShaderRecordBufferHandleNV, true, true, IR(160, 3), IR(33787, 39), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpHitObjectGetShaderBindingTableRecordIndexNV, true, true, IR(160, 3), IR(33826, 44), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpHitObjectRecordEmptyNV, false, false, IR(10, 1), IR(33870, 23), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
@@ -3493,58 +3493,58 @@ static const std::array<InstructionDesc, 820> kInstructionDesc{{
   {spv::Op::OpReorderThreadWithHitObjectNV, false, false, IR(531, 3), IR(34359, 29), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpReorderThreadWithHintNV, false, false, IR(36, 2), IR(34388, 24), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpTypeHitObjectNV, true, false, IR(68, 1), IR(34412, 16), IR(0, 0), IR(124, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
-  {spv::Op::OpImageSampleFootprintNV, true, true, IR(534, 7), IR(34428, 23), IR(0, 0), IR(251, 1), IR(72, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpTypeCooperativeVectorNV, true, false, IR(89, 3), IR(34451, 24), IR(0, 0), IR(252, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
-  {spv::Op::OpCooperativeVectorMatrixMulNV, true, true, IR(541, 13), IR(34475, 29), IR(0, 0), IR(252, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpCooperativeVectorOuterProductAccumulateNV, false, false, IR(554, 7), IR(34504, 42), IR(0, 0), IR(253, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpCooperativeVectorReduceSumAccumulateNV, false, false, IR(33, 3), IR(34546, 39), IR(0, 0), IR(253, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpCooperativeVectorMatrixMulAddNV, true, true, IR(561, 16), IR(34585, 32), IR(0, 0), IR(252, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpCooperativeMatrixConvertNV, true, true, IR(160, 3), IR(34617, 27), IR(0, 0), IR(254, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConversion},
+  {spv::Op::OpImageSampleFootprintNV, true, true, IR(534, 7), IR(34428, 23), IR(0, 0), IR(249, 1), IR(72, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpTypeCooperativeVectorNV, true, false, IR(89, 3), IR(34451, 24), IR(0, 0), IR(250, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
+  {spv::Op::OpCooperativeVectorMatrixMulNV, true, true, IR(541, 13), IR(34475, 29), IR(0, 0), IR(250, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpCooperativeVectorOuterProductAccumulateNV, false, false, IR(554, 7), IR(34504, 42), IR(0, 0), IR(251, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpCooperativeVectorReduceSumAccumulateNV, false, false, IR(33, 3), IR(34546, 39), IR(0, 0), IR(251, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpCooperativeVectorMatrixMulAddNV, true, true, IR(561, 16), IR(34585, 32), IR(0, 0), IR(250, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpCooperativeMatrixConvertNV, true, true, IR(160, 3), IR(34617, 27), IR(0, 0), IR(252, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConversion},
   {spv::Op::OpEmitMeshTasksEXT, false, false, IR(577, 4), IR(34644, 17), IR(0, 0), IR(53, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpSetMeshOutputsEXT, false, false, IR(36, 2), IR(34661, 18), IR(0, 0), IR(53, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpGroupNonUniformPartitionNV, true, true, IR(160, 3), IR(34679, 27), IR(0, 0), IR(183, 1), IR(75, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kNon_Uniform},
+  {spv::Op::OpGroupNonUniformPartitionNV, true, true, IR(160, 3), IR(34679, 27), IR(0, 0), IR(181, 1), IR(75, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kNon_Uniform},
   {spv::Op::OpWritePackedPrimitiveIndices4x8NV, false, false, IR(36, 2), IR(34706, 33), IR(0, 0), IR(50, 1), IR(18, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpFetchMicroTriangleVertexPositionNV, true, true, IR(325, 7), IR(34739, 35), IR(0, 0), IR(255, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpFetchMicroTriangleVertexBarycentricNV, true, true, IR(325, 7), IR(34774, 38), IR(0, 0), IR(255, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpCooperativeVectorLoadNV, true, true, IR(581, 5), IR(34812, 24), IR(0, 0), IR(252, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
-  {spv::Op::OpCooperativeVectorStoreNV, false, false, IR(586, 4), IR(34836, 25), IR(0, 0), IR(252, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
+  {spv::Op::OpFetchMicroTriangleVertexPositionNV, true, true, IR(325, 7), IR(34739, 35), IR(0, 0), IR(253, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpFetchMicroTriangleVertexBarycentricNV, true, true, IR(325, 7), IR(34774, 38), IR(0, 0), IR(253, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpCooperativeVectorLoadNV, true, true, IR(581, 5), IR(34812, 24), IR(0, 0), IR(250, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
+  {spv::Op::OpCooperativeVectorStoreNV, false, false, IR(586, 4), IR(34836, 25), IR(0, 0), IR(250, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
   {spv::Op::OpReportIntersectionKHR, true, true, IR(172, 4), IR(34861, 22), IR(99, 1), IR(54, 2), IR(24, 2), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpIgnoreIntersectionNV, false, false, IR(0, 0), IR(34904, 21), IR(0, 0), IR(56, 1), IR(26, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpTerminateRayNV, false, false, IR(0, 0), IR(34925, 15), IR(0, 0), IR(56, 1), IR(26, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpTraceNV, false, false, IR(426, 11), IR(34940, 8), IR(0, 0), IR(56, 1), IR(26, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpTraceMotionNV, false, false, IR(513, 12), IR(34948, 14), IR(0, 0), IR(57, 1), IR(27, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpTraceRayMotionNV, false, false, IR(513, 12), IR(34962, 17), IR(0, 0), IR(57, 1), IR(27, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionTriangleVertexPositionsKHR, true, true, IR(172, 4), IR(34979, 50), IR(0, 0), IR(256, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTypeAccelerationStructureKHR, true, false, IR(68, 1), IR(35029, 29), IR(100, 1), IR(257, 4), IR(171, 4), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
+  {spv::Op::OpRayQueryGetIntersectionTriangleVertexPositionsKHR, true, true, IR(172, 4), IR(34979, 50), IR(0, 0), IR(254, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTypeAccelerationStructureKHR, true, false, IR(68, 1), IR(35029, 29), IR(100, 1), IR(255, 4), IR(171, 4), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
   {spv::Op::OpExecuteCallableNV, false, false, IR(36, 2), IR(35086, 18), IR(0, 0), IR(56, 1), IR(26, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpRayQueryGetClusterIdNV, true, true, IR(172, 4), IR(35104, 23), IR(0, 0), IR(64, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpHitObjectGetClusterIdNV, true, true, IR(160, 3), IR(35127, 24), IR(0, 0), IR(64, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTypeCooperativeMatrixNV, true, false, IR(590, 5), IR(35151, 24), IR(0, 0), IR(261, 1), IR(79, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
-  {spv::Op::OpCooperativeMatrixLoadNV, true, true, IR(595, 6), IR(35175, 24), IR(0, 0), IR(261, 1), IR(79, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpCooperativeMatrixStoreNV, false, false, IR(601, 5), IR(35199, 25), IR(0, 0), IR(261, 1), IR(79, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpCooperativeMatrixMulAddNV, true, true, IR(130, 5), IR(35224, 26), IR(0, 0), IR(261, 1), IR(79, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpCooperativeMatrixLengthNV, true, true, IR(160, 3), IR(35250, 26), IR(0, 0), IR(261, 1), IR(79, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpBeginInvocationInterlockEXT, false, false, IR(0, 0), IR(35276, 28), IR(0, 0), IR(262, 3), IR(80, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpEndInvocationInterlockEXT, false, false, IR(0, 0), IR(35304, 26), IR(0, 0), IR(262, 3), IR(80, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpCooperativeMatrixReduceNV, true, true, IR(606, 5), IR(35373, 26), IR(0, 0), IR(265, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kArithmetic},
-  {spv::Op::OpCooperativeMatrixLoadTensorNV, true, true, IR(611, 7), IR(35474, 30), IR(0, 0), IR(200, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
-  {spv::Op::OpCooperativeMatrixStoreTensorNV, false, false, IR(618, 5), IR(35504, 31), IR(0, 0), IR(200, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
-  {spv::Op::OpCooperativeMatrixPerElementOpNV, true, true, IR(151, 5), IR(35535, 32), IR(0, 0), IR(266, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kFunction},
-  {spv::Op::OpTypeTensorLayoutNV, true, false, IR(89, 3), IR(35567, 19), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
-  {spv::Op::OpTypeTensorViewNV, true, false, IR(623, 4), IR(35586, 17), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
-  {spv::Op::OpCreateTensorLayoutNV, true, true, IR(39, 2), IR(35603, 21), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTensorLayoutSetDimensionNV, true, true, IR(122, 4), IR(35624, 27), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTensorLayoutSetStrideNV, true, true, IR(122, 4), IR(35651, 24), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTensorLayoutSliceNV, true, true, IR(122, 4), IR(35675, 20), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTensorLayoutSetClampValueNV, true, true, IR(172, 4), IR(35695, 28), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpCreateTensorViewNV, true, true, IR(39, 2), IR(35723, 19), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTensorViewSetDimensionNV, true, true, IR(122, 4), IR(35742, 25), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTensorViewSetStrideNV, true, true, IR(122, 4), IR(35767, 22), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpDemoteToHelperInvocation, false, false, IR(0, 0), IR(11562, 25), IR(45, 1), IR(268, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,6), 0xffffffffu, PrintingClass::kControl_Flow},
-  {spv::Op::OpIsHelperInvocationEXT, true, true, IR(39, 2), IR(35789, 22), IR(0, 0), IR(268, 1), IR(81, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTensorViewSetClipNV, true, true, IR(325, 7), IR(35811, 20), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTensorLayoutSetBlockSizeNV, true, true, IR(122, 4), IR(35831, 27), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpCooperativeMatrixTransposeNV, true, true, IR(160, 3), IR(35858, 29), IR(0, 0), IR(254, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConversion},
+  {spv::Op::OpTypeCooperativeMatrixNV, true, false, IR(590, 5), IR(35151, 24), IR(0, 0), IR(259, 1), IR(79, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
+  {spv::Op::OpCooperativeMatrixLoadNV, true, true, IR(595, 6), IR(35175, 24), IR(0, 0), IR(259, 1), IR(79, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpCooperativeMatrixStoreNV, false, false, IR(601, 5), IR(35199, 25), IR(0, 0), IR(259, 1), IR(79, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpCooperativeMatrixMulAddNV, true, true, IR(130, 5), IR(35224, 26), IR(0, 0), IR(259, 1), IR(79, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpCooperativeMatrixLengthNV, true, true, IR(160, 3), IR(35250, 26), IR(0, 0), IR(259, 1), IR(79, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpBeginInvocationInterlockEXT, false, false, IR(0, 0), IR(35276, 28), IR(0, 0), IR(260, 3), IR(80, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpEndInvocationInterlockEXT, false, false, IR(0, 0), IR(35304, 26), IR(0, 0), IR(260, 3), IR(80, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpCooperativeMatrixReduceNV, true, true, IR(606, 5), IR(35373, 26), IR(0, 0), IR(263, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kArithmetic},
+  {spv::Op::OpCooperativeMatrixLoadTensorNV, true, true, IR(611, 7), IR(35474, 30), IR(0, 0), IR(198, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
+  {spv::Op::OpCooperativeMatrixStoreTensorNV, false, false, IR(618, 5), IR(35504, 31), IR(0, 0), IR(198, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
+  {spv::Op::OpCooperativeMatrixPerElementOpNV, true, true, IR(151, 5), IR(35535, 32), IR(0, 0), IR(264, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kFunction},
+  {spv::Op::OpTypeTensorLayoutNV, true, false, IR(89, 3), IR(35567, 19), IR(0, 0), IR(265, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
+  {spv::Op::OpTypeTensorViewNV, true, false, IR(623, 4), IR(35586, 17), IR(0, 0), IR(265, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
+  {spv::Op::OpCreateTensorLayoutNV, true, true, IR(39, 2), IR(35603, 21), IR(0, 0), IR(265, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTensorLayoutSetDimensionNV, true, true, IR(122, 4), IR(35624, 27), IR(0, 0), IR(265, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTensorLayoutSetStrideNV, true, true, IR(122, 4), IR(35651, 24), IR(0, 0), IR(265, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTensorLayoutSliceNV, true, true, IR(122, 4), IR(35675, 20), IR(0, 0), IR(265, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTensorLayoutSetClampValueNV, true, true, IR(172, 4), IR(35695, 28), IR(0, 0), IR(265, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpCreateTensorViewNV, true, true, IR(39, 2), IR(35723, 19), IR(0, 0), IR(265, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTensorViewSetDimensionNV, true, true, IR(122, 4), IR(35742, 25), IR(0, 0), IR(265, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTensorViewSetStrideNV, true, true, IR(122, 4), IR(35767, 22), IR(0, 0), IR(265, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpDemoteToHelperInvocation, false, false, IR(0, 0), IR(11562, 25), IR(45, 1), IR(266, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,6), 0xffffffffu, PrintingClass::kControl_Flow},
+  {spv::Op::OpIsHelperInvocationEXT, true, true, IR(39, 2), IR(35789, 22), IR(0, 0), IR(266, 1), IR(81, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTensorViewSetClipNV, true, true, IR(325, 7), IR(35811, 20), IR(0, 0), IR(265, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTensorLayoutSetBlockSizeNV, true, true, IR(122, 4), IR(35831, 27), IR(0, 0), IR(265, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpCooperativeMatrixTransposeNV, true, true, IR(160, 3), IR(35858, 29), IR(0, 0), IR(252, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConversion},
   {spv::Op::OpConvertUToImageNV, true, true, IR(160, 3), IR(35887, 18), IR(0, 0), IR(125, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpConvertUToSamplerNV, true, true, IR(160, 3), IR(35905, 20), IR(0, 0), IR(125, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpConvertImageToUNV, true, true, IR(160, 3), IR(35925, 18), IR(0, 0), IR(125, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
@@ -3552,7 +3552,7 @@ static const std::array<InstructionDesc, 820> kInstructionDesc{{
   {spv::Op::OpConvertUToSampledImageNV, true, true, IR(160, 3), IR(35963, 25), IR(0, 0), IR(125, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpConvertSampledImageToUNV, true, true, IR(160, 3), IR(35988, 25), IR(0, 0), IR(125, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpSamplerImageAddressingModeNV, false, false, IR(0, 1), IR(36013, 29), IR(0, 0), IR(125, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRawAccessChainNV, true, true, IR(627, 7), IR(36094, 17), IR(0, 0), IR(189, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
+  {spv::Op::OpRawAccessChainNV, true, true, IR(627, 7), IR(36094, 17), IR(0, 0), IR(187, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
   {spv::Op::OpRayQueryGetIntersectionSpherePositionNV, true, true, IR(172, 4), IR(36111, 40), IR(0, 0), IR(61, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpRayQueryGetIntersectionSphereRadiusNV, true, true, IR(172, 4), IR(36151, 38), IR(0, 0), IR(61, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpRayQueryGetIntersectionLSSPositionsNV, true, true, IR(172, 4), IR(36189, 38), IR(0, 0), IR(62, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
@@ -3566,285 +3566,285 @@ static const std::array<InstructionDesc, 820> kInstructionDesc{{
   {spv::Op::OpHitObjectIsLSSHitNV, true, true, IR(160, 3), IR(36427, 20), IR(0, 0), IR(62, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpRayQueryIsSphereHitNV, true, true, IR(172, 4), IR(36447, 22), IR(0, 0), IR(61, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpRayQueryIsLSSHitNV, true, true, IR(172, 4), IR(36469, 19), IR(0, 0), IR(62, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpSubgroupShuffleINTEL, true, true, IR(172, 4), IR(12010, 21), IR(0, 0), IR(269, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroupShuffleDownINTEL, true, true, IR(130, 5), IR(36488, 25), IR(0, 0), IR(269, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroupShuffleUpINTEL, true, true, IR(130, 5), IR(36513, 23), IR(0, 0), IR(269, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroupShuffleXorINTEL, true, true, IR(172, 4), IR(36536, 24), IR(0, 0), IR(269, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroupBlockReadINTEL, true, true, IR(160, 3), IR(36560, 23), IR(0, 0), IR(270, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroupBlockWriteINTEL, false, false, IR(36, 2), IR(36583, 24), IR(0, 0), IR(270, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroupImageBlockReadINTEL, true, true, IR(172, 4), IR(36607, 28), IR(0, 0), IR(271, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroupImageBlockWriteINTEL, false, false, IR(33, 3), IR(36635, 29), IR(0, 0), IR(271, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroupImageMediaBlockReadINTEL, true, true, IR(215, 6), IR(36664, 33), IR(0, 0), IR(272, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroupImageMediaBlockWriteINTEL, false, false, IR(634, 5), IR(36697, 34), IR(0, 0), IR(272, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpUCountLeadingZerosINTEL, true, true, IR(160, 3), IR(36731, 24), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpUCountTrailingZerosINTEL, true, true, IR(160, 3), IR(36755, 25), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpAbsISubINTEL, true, true, IR(172, 4), IR(36780, 13), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpAbsUSubINTEL, true, true, IR(172, 4), IR(36793, 13), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpIAddSatINTEL, true, true, IR(172, 4), IR(36806, 13), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpUAddSatINTEL, true, true, IR(172, 4), IR(36819, 13), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpIAverageINTEL, true, true, IR(172, 4), IR(36832, 14), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpUAverageINTEL, true, true, IR(172, 4), IR(36846, 14), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpIAverageRoundedINTEL, true, true, IR(172, 4), IR(36860, 21), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpUAverageRoundedINTEL, true, true, IR(172, 4), IR(36881, 21), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpISubSatINTEL, true, true, IR(172, 4), IR(36902, 13), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpUSubSatINTEL, true, true, IR(172, 4), IR(36915, 13), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpIMul32x16INTEL, true, true, IR(172, 4), IR(36928, 15), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpUMul32x16INTEL, true, true, IR(172, 4), IR(36943, 15), IR(0, 0), IR(273, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpConstantFunctionPointerINTEL, true, true, IR(160, 3), IR(36958, 29), IR(0, 0), IR(198, 1), IR(95, 1), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpFunctionPointerCallINTEL, true, true, IR(107, 3), IR(36987, 25), IR(0, 0), IR(198, 1), IR(95, 1), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupShuffleINTEL, true, true, IR(172, 4), IR(12010, 21), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroupShuffleDownINTEL, true, true, IR(130, 5), IR(36488, 25), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroupShuffleUpINTEL, true, true, IR(130, 5), IR(36513, 23), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroupShuffleXorINTEL, true, true, IR(172, 4), IR(36536, 24), IR(0, 0), IR(267, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroupBlockReadINTEL, true, true, IR(160, 3), IR(36560, 23), IR(0, 0), IR(268, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroupBlockWriteINTEL, false, false, IR(36, 2), IR(36583, 24), IR(0, 0), IR(268, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroupImageBlockReadINTEL, true, true, IR(172, 4), IR(36607, 28), IR(0, 0), IR(269, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroupImageBlockWriteINTEL, false, false, IR(33, 3), IR(36635, 29), IR(0, 0), IR(269, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroupImageMediaBlockReadINTEL, true, true, IR(215, 6), IR(36664, 33), IR(0, 0), IR(270, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroupImageMediaBlockWriteINTEL, false, false, IR(634, 5), IR(36697, 34), IR(0, 0), IR(270, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpUCountLeadingZerosINTEL, true, true, IR(160, 3), IR(36731, 24), IR(0, 0), IR(271, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpUCountTrailingZerosINTEL, true, true, IR(160, 3), IR(36755, 25), IR(0, 0), IR(271, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpAbsISubINTEL, true, true, IR(172, 4), IR(36780, 13), IR(0, 0), IR(271, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpAbsUSubINTEL, true, true, IR(172, 4), IR(36793, 13), IR(0, 0), IR(271, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpIAddSatINTEL, true, true, IR(172, 4), IR(36806, 13), IR(0, 0), IR(271, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpUAddSatINTEL, true, true, IR(172, 4), IR(36819, 13), IR(0, 0), IR(271, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpIAverageINTEL, true, true, IR(172, 4), IR(36832, 14), IR(0, 0), IR(271, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpUAverageINTEL, true, true, IR(172, 4), IR(36846, 14), IR(0, 0), IR(271, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpIAverageRoundedINTEL, true, true, IR(172, 4), IR(36860, 21), IR(0, 0), IR(271, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpUAverageRoundedINTEL, true, true, IR(172, 4), IR(36881, 21), IR(0, 0), IR(271, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpISubSatINTEL, true, true, IR(172, 4), IR(36902, 13), IR(0, 0), IR(271, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpUSubSatINTEL, true, true, IR(172, 4), IR(36915, 13), IR(0, 0), IR(271, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpIMul32x16INTEL, true, true, IR(172, 4), IR(36928, 15), IR(0, 0), IR(271, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpUMul32x16INTEL, true, true, IR(172, 4), IR(36943, 15), IR(0, 0), IR(271, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpConstantFunctionPointerINTEL, true, true, IR(160, 3), IR(36958, 29), IR(0, 0), IR(196, 1), IR(95, 1), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpFunctionPointerCallINTEL, true, true, IR(107, 3), IR(36987, 25), IR(0, 0), IR(196, 1), IR(95, 1), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
   {spv::Op::OpAsmTargetINTEL, true, false, IR(50, 2), IR(37012, 15), IR(0, 0), IR(128, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
   {spv::Op::OpAsmINTEL, true, true, IR(639, 6), IR(12228, 9), IR(0, 0), IR(128, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
   {spv::Op::OpAsmCallINTEL, true, true, IR(122, 4), IR(37027, 13), IR(0, 0), IR(128, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpAtomicFMinEXT, true, true, IR(235, 6), IR(37040, 14), IR(0, 0), IR(274, 4), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kAtomic},
-  {spv::Op::OpAtomicFMaxEXT, true, true, IR(235, 6), IR(37054, 14), IR(0, 0), IR(274, 4), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kAtomic},
-  {spv::Op::OpAssumeTrueKHR, false, false, IR(10, 1), IR(37068, 14), IR(0, 0), IR(278, 1), IR(99, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kMiscellaneous},
-  {spv::Op::OpExpectKHR, true, true, IR(172, 4), IR(37082, 10), IR(0, 0), IR(278, 1), IR(99, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kMiscellaneous},
+  {spv::Op::OpAtomicFMinEXT, true, true, IR(235, 6), IR(37040, 14), IR(0, 0), IR(272, 4), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kAtomic},
+  {spv::Op::OpAtomicFMaxEXT, true, true, IR(235, 6), IR(37054, 14), IR(0, 0), IR(272, 4), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kAtomic},
+  {spv::Op::OpAssumeTrueKHR, false, false, IR(10, 1), IR(37068, 14), IR(0, 0), IR(276, 1), IR(99, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kMiscellaneous},
+  {spv::Op::OpExpectKHR, true, true, IR(172, 4), IR(37082, 10), IR(0, 0), IR(276, 1), IR(99, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kMiscellaneous},
   {spv::Op::OpDecorateString, false, false, IR(163, 2), IR(37092, 15), IR(101, 1), IR(1, 0), IR(175, 2), SPV_SPIRV_VERSION_WORD(1,4), 0xffffffffu, PrintingClass::kAnnotation},
   {spv::Op::OpMemberDecorateString, false, false, IR(165, 3), IR(37128, 21), IR(102, 1), IR(1, 0), IR(175, 2), SPV_SPIRV_VERSION_WORD(1,4), 0xffffffffu, PrintingClass::kAnnotation},
-  {spv::Op::OpVmeImageINTEL, true, true, IR(172, 4), IR(37176, 14), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpTypeVmeImageINTEL, true, false, IR(87, 2), IR(37190, 18), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpTypeAvcImePayloadINTEL, true, false, IR(68, 1), IR(37208, 23), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpTypeAvcRefPayloadINTEL, true, false, IR(68, 1), IR(37231, 23), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpTypeAvcSicPayloadINTEL, true, false, IR(68, 1), IR(37254, 23), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpTypeAvcMcePayloadINTEL, true, false, IR(68, 1), IR(37277, 23), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpTypeAvcMceResultINTEL, true, false, IR(68, 1), IR(37300, 22), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpTypeAvcImeResultINTEL, true, false, IR(68, 1), IR(37322, 22), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpTypeAvcImeResultSingleReferenceStreamoutINTEL, true, false, IR(68, 1), IR(37344, 46), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpTypeAvcImeResultDualReferenceStreamoutINTEL, true, false, IR(68, 1), IR(37390, 44), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpTypeAvcImeSingleReferenceStreaminINTEL, true, false, IR(68, 1), IR(37434, 39), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpTypeAvcImeDualReferenceStreaminINTEL, true, false, IR(68, 1), IR(37473, 37), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpTypeAvcRefResultINTEL, true, false, IR(68, 1), IR(37510, 22), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpTypeAvcSicResultINTEL, true, false, IR(68, 1), IR(37532, 22), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetDefaultInterBaseMultiReferencePenaltyINTEL, true, true, IR(172, 4), IR(37554, 60), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceSetInterBaseMultiReferencePenaltyINTEL, true, true, IR(172, 4), IR(37614, 53), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetDefaultInterShapePenaltyINTEL, true, true, IR(172, 4), IR(37667, 47), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceSetInterShapePenaltyINTEL, true, true, IR(172, 4), IR(37714, 40), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetDefaultInterDirectionPenaltyINTEL, true, true, IR(172, 4), IR(37754, 51), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceSetInterDirectionPenaltyINTEL, true, true, IR(172, 4), IR(37805, 44), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetDefaultIntraLumaShapePenaltyINTEL, true, true, IR(172, 4), IR(37849, 51), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetDefaultInterMotionVectorCostTableINTEL, true, true, IR(172, 4), IR(37900, 56), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetDefaultHighPenaltyCostTableINTEL, true, true, IR(39, 2), IR(37956, 50), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetDefaultMediumPenaltyCostTableINTEL, true, true, IR(39, 2), IR(38006, 52), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetDefaultLowPenaltyCostTableINTEL, true, true, IR(39, 2), IR(38058, 49), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceSetMotionVectorCostFunctionINTEL, true, true, IR(215, 6), IR(38107, 47), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetDefaultIntraLumaModePenaltyINTEL, true, true, IR(172, 4), IR(38154, 50), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetDefaultNonDcLumaIntraPenaltyINTEL, true, true, IR(39, 2), IR(38204, 51), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetDefaultIntraChromaModeBasePenaltyINTEL, true, true, IR(39, 2), IR(38255, 56), IR(0, 0), IR(282, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceSetAcOnlyHaarINTEL, true, true, IR(160, 3), IR(38311, 33), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceSetSourceInterlacedFieldPolarityINTEL, true, true, IR(172, 4), IR(38344, 52), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceSetSingleReferenceInterlacedFieldPolarityINTEL, true, true, IR(172, 4), IR(38396, 61), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceSetDualReferenceInterlacedFieldPolaritiesINTEL, true, true, IR(130, 5), IR(38457, 61), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceConvertToImePayloadINTEL, true, true, IR(160, 3), IR(38518, 39), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceConvertToImeResultINTEL, true, true, IR(160, 3), IR(38557, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceConvertToRefPayloadINTEL, true, true, IR(160, 3), IR(38595, 39), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceConvertToRefResultINTEL, true, true, IR(160, 3), IR(38634, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceConvertToSicPayloadINTEL, true, true, IR(160, 3), IR(38672, 39), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceConvertToSicResultINTEL, true, true, IR(160, 3), IR(38711, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetMotionVectorsINTEL, true, true, IR(160, 3), IR(38749, 36), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetInterDistortionsINTEL, true, true, IR(160, 3), IR(38785, 39), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetBestInterDistortionsINTEL, true, true, IR(160, 3), IR(38824, 43), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetInterMajorShapeINTEL, true, true, IR(160, 3), IR(38867, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetInterMinorShapeINTEL, true, true, IR(160, 3), IR(38905, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetInterDirectionsINTEL, true, true, IR(160, 3), IR(38943, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetInterMotionVectorCountINTEL, true, true, IR(160, 3), IR(38981, 45), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetInterReferenceIdsINTEL, true, true, IR(160, 3), IR(39026, 40), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcMceGetInterReferenceInterlacedFieldPolaritiesINTEL, true, true, IR(130, 5), IR(39066, 62), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeInitializeINTEL, true, true, IR(130, 5), IR(39128, 30), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeSetSingleReferenceINTEL, true, true, IR(130, 5), IR(39158, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeSetDualReferenceINTEL, true, true, IR(215, 6), IR(39196, 36), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeRefWindowSizeINTEL, true, true, IR(172, 4), IR(39232, 33), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeAdjustRefOffsetINTEL, true, true, IR(215, 6), IR(39265, 35), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeConvertToMcePayloadINTEL, true, true, IR(160, 3), IR(39300, 39), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeSetMaxMotionVectorCountINTEL, true, true, IR(172, 4), IR(39339, 43), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeSetUnidirectionalMixDisableINTEL, true, true, IR(160, 3), IR(39382, 47), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeSetEarlySearchTerminationThresholdINTEL, true, true, IR(172, 4), IR(39429, 54), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeSetWeightedSadINTEL, true, true, IR(172, 4), IR(39483, 34), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeEvaluateWithSingleReferenceINTEL, true, true, IR(130, 5), IR(39517, 47), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeEvaluateWithDualReferenceINTEL, true, true, IR(215, 6), IR(39564, 45), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeEvaluateWithSingleReferenceStreaminINTEL, true, true, IR(215, 6), IR(39609, 55), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeEvaluateWithDualReferenceStreaminINTEL, true, true, IR(325, 7), IR(39664, 53), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeEvaluateWithSingleReferenceStreamoutINTEL, true, true, IR(130, 5), IR(39717, 56), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeEvaluateWithDualReferenceStreamoutINTEL, true, true, IR(215, 6), IR(39773, 54), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeEvaluateWithSingleReferenceStreaminoutINTEL, true, true, IR(215, 6), IR(39827, 58), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeEvaluateWithDualReferenceStreaminoutINTEL, true, true, IR(325, 7), IR(39885, 56), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeConvertToMceResultINTEL, true, true, IR(160, 3), IR(39941, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeGetSingleReferenceStreaminINTEL, true, true, IR(160, 3), IR(39979, 46), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeGetDualReferenceStreaminINTEL, true, true, IR(160, 3), IR(40025, 44), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeStripSingleReferenceStreamoutINTEL, true, true, IR(160, 3), IR(40069, 49), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeStripDualReferenceStreamoutINTEL, true, true, IR(160, 3), IR(40118, 47), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeGetStreamoutSingleReferenceMajorShapeMotionVectorsINTEL, true, true, IR(172, 4), IR(40165, 70), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeGetStreamoutSingleReferenceMajorShapeDistortionsINTEL, true, true, IR(172, 4), IR(40235, 68), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeGetStreamoutSingleReferenceMajorShapeReferenceIdsINTEL, true, true, IR(172, 4), IR(40303, 69), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeGetStreamoutDualReferenceMajorShapeMotionVectorsINTEL, true, true, IR(130, 5), IR(40372, 68), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeGetStreamoutDualReferenceMajorShapeDistortionsINTEL, true, true, IR(130, 5), IR(40440, 66), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeGetStreamoutDualReferenceMajorShapeReferenceIdsINTEL, true, true, IR(130, 5), IR(40506, 67), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeGetBorderReachedINTEL, true, true, IR(172, 4), IR(40573, 36), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeGetTruncatedSearchIndicationINTEL, true, true, IR(160, 3), IR(40609, 48), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeGetUnidirectionalEarlySearchTerminationINTEL, true, true, IR(160, 3), IR(40657, 59), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeGetWeightingPatternMinimumMotionVectorINTEL, true, true, IR(160, 3), IR(40716, 58), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcImeGetWeightingPatternMinimumDistortionINTEL, true, true, IR(160, 3), IR(40774, 56), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcFmeInitializeINTEL, true, true, IR(645, 9), IR(40830, 30), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcBmeInitializeINTEL, true, true, IR(654, 10), IR(40860, 30), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcRefConvertToMcePayloadINTEL, true, true, IR(160, 3), IR(40890, 39), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcRefSetBidirectionalMixDisableINTEL, true, true, IR(160, 3), IR(40929, 46), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcRefSetBilinearFilterEnableINTEL, true, true, IR(160, 3), IR(40975, 43), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcRefEvaluateWithSingleReferenceINTEL, true, true, IR(130, 5), IR(41018, 47), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcRefEvaluateWithDualReferenceINTEL, true, true, IR(215, 6), IR(41065, 45), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcRefEvaluateWithMultiReferenceINTEL, true, true, IR(130, 5), IR(41110, 46), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcRefEvaluateWithMultiReferenceInterlacedINTEL, true, true, IR(215, 6), IR(41156, 56), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcRefConvertToMceResultINTEL, true, true, IR(160, 3), IR(41212, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicInitializeINTEL, true, true, IR(160, 3), IR(41250, 30), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicConfigureSkcINTEL, true, true, IR(288, 8), IR(41280, 32), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicConfigureIpeLumaINTEL, true, true, IR(654, 10), IR(41312, 36), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicConfigureIpeLumaChromaINTEL, true, true, IR(664, 13), IR(41348, 42), IR(0, 0), IR(282, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicGetMotionVectorMaskINTEL, true, true, IR(172, 4), IR(41390, 39), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicConvertToMcePayloadINTEL, true, true, IR(160, 3), IR(41429, 39), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicSetIntraLumaShapePenaltyINTEL, true, true, IR(172, 4), IR(41468, 44), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicSetIntraLumaModeCostFunctionINTEL, true, true, IR(215, 6), IR(41512, 48), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicSetIntraChromaModeCostFunctionINTEL, true, true, IR(172, 4), IR(41560, 50), IR(0, 0), IR(282, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicSetBilinearFilterEnableINTEL, true, true, IR(160, 3), IR(41610, 43), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicSetSkcForwardTransformEnableINTEL, true, true, IR(172, 4), IR(41653, 48), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicSetBlockBasedRawSkipSadINTEL, true, true, IR(172, 4), IR(41701, 43), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicEvaluateIpeINTEL, true, true, IR(172, 4), IR(41744, 31), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicEvaluateWithSingleReferenceINTEL, true, true, IR(130, 5), IR(41775, 47), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicEvaluateWithDualReferenceINTEL, true, true, IR(215, 6), IR(41822, 45), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicEvaluateWithMultiReferenceINTEL, true, true, IR(130, 5), IR(41867, 46), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicEvaluateWithMultiReferenceInterlacedINTEL, true, true, IR(215, 6), IR(41913, 56), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicConvertToMceResultINTEL, true, true, IR(160, 3), IR(41969, 38), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicGetIpeLumaShapeINTEL, true, true, IR(160, 3), IR(42007, 35), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicGetBestIpeLumaDistortionINTEL, true, true, IR(160, 3), IR(42042, 44), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicGetBestIpeChromaDistortionINTEL, true, true, IR(160, 3), IR(42086, 46), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicGetPackedIpeLumaModesINTEL, true, true, IR(160, 3), IR(42132, 41), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicGetIpeChromaModeINTEL, true, true, IR(160, 3), IR(42173, 36), IR(0, 0), IR(282, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicGetPackedSkcLumaCountThresholdINTEL, true, true, IR(160, 3), IR(42209, 50), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicGetPackedSkcLumaSumThresholdINTEL, true, true, IR(160, 3), IR(42259, 48), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSubgroupAvcSicGetInterRawSadsINTEL, true, true, IR(160, 3), IR(42307, 35), IR(0, 0), IR(279, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpVariableLengthArrayINTEL, true, true, IR(160, 3), IR(12466, 25), IR(0, 0), IR(284, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpSaveMemoryINTEL, true, true, IR(39, 2), IR(42342, 16), IR(0, 0), IR(284, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpRestoreMemoryINTEL, false, false, IR(10, 1), IR(42358, 19), IR(0, 0), IR(284, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatSinCosPiINTEL, true, true, IR(677, 8), IR(42377, 28), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatCastINTEL, true, true, IR(677, 8), IR(42405, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatCastFromIntINTEL, true, true, IR(677, 8), IR(42429, 31), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatCastToIntINTEL, true, true, IR(677, 8), IR(42460, 29), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatAddINTEL, true, true, IR(685, 10), IR(42489, 23), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatSubINTEL, true, true, IR(685, 10), IR(42512, 23), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatMulINTEL, true, true, IR(685, 10), IR(42535, 23), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatDivINTEL, true, true, IR(685, 10), IR(42558, 23), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatGTINTEL, true, true, IR(695, 6), IR(42581, 22), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatGEINTEL, true, true, IR(695, 6), IR(42603, 22), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatLTINTEL, true, true, IR(695, 6), IR(42625, 22), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatLEINTEL, true, true, IR(695, 6), IR(42647, 22), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatEQINTEL, true, true, IR(695, 6), IR(42669, 22), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatRecipINTEL, true, true, IR(677, 8), IR(42691, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatRSqrtINTEL, true, true, IR(677, 8), IR(42716, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatCbrtINTEL, true, true, IR(677, 8), IR(42741, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatHypotINTEL, true, true, IR(685, 10), IR(42765, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatSqrtINTEL, true, true, IR(677, 8), IR(42790, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatLogINTEL, true, true, IR(677, 8), IR(42814, 23), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatLog2INTEL, true, true, IR(677, 8), IR(42837, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatLog10INTEL, true, true, IR(677, 8), IR(42861, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatLog1pINTEL, true, true, IR(677, 8), IR(42886, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatExpINTEL, true, true, IR(677, 8), IR(42911, 23), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatExp2INTEL, true, true, IR(677, 8), IR(42934, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatExp10INTEL, true, true, IR(677, 8), IR(42958, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatExpm1INTEL, true, true, IR(677, 8), IR(42983, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatSinINTEL, true, true, IR(677, 8), IR(43008, 23), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatCosINTEL, true, true, IR(677, 8), IR(43031, 23), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatSinCosINTEL, true, true, IR(677, 8), IR(43054, 26), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatSinPiINTEL, true, true, IR(677, 8), IR(43080, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatCosPiINTEL, true, true, IR(677, 8), IR(43105, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatASinINTEL, true, true, IR(677, 8), IR(43130, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatASinPiINTEL, true, true, IR(677, 8), IR(43154, 26), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatACosINTEL, true, true, IR(677, 8), IR(43180, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatACosPiINTEL, true, true, IR(677, 8), IR(43204, 26), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatATanINTEL, true, true, IR(677, 8), IR(43230, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatATanPiINTEL, true, true, IR(677, 8), IR(43254, 26), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatATan2INTEL, true, true, IR(685, 10), IR(43280, 25), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatPowINTEL, true, true, IR(685, 10), IR(43305, 23), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatPowRINTEL, true, true, IR(685, 10), IR(43328, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpArbitraryFloatPowNINTEL, true, true, IR(685, 10), IR(43352, 24), IR(0, 0), IR(285, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpLoopControlINTEL, false, false, IR(18, 1), IR(43376, 17), IR(0, 0), IR(286, 1), IR(106, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpVmeImageINTEL, true, true, IR(172, 4), IR(37176, 14), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpTypeVmeImageINTEL, true, false, IR(87, 2), IR(37190, 18), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpTypeAvcImePayloadINTEL, true, false, IR(68, 1), IR(37208, 23), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpTypeAvcRefPayloadINTEL, true, false, IR(68, 1), IR(37231, 23), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpTypeAvcSicPayloadINTEL, true, false, IR(68, 1), IR(37254, 23), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpTypeAvcMcePayloadINTEL, true, false, IR(68, 1), IR(37277, 23), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpTypeAvcMceResultINTEL, true, false, IR(68, 1), IR(37300, 22), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpTypeAvcImeResultINTEL, true, false, IR(68, 1), IR(37322, 22), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpTypeAvcImeResultSingleReferenceStreamoutINTEL, true, false, IR(68, 1), IR(37344, 46), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpTypeAvcImeResultDualReferenceStreamoutINTEL, true, false, IR(68, 1), IR(37390, 44), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpTypeAvcImeSingleReferenceStreaminINTEL, true, false, IR(68, 1), IR(37434, 39), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpTypeAvcImeDualReferenceStreaminINTEL, true, false, IR(68, 1), IR(37473, 37), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpTypeAvcRefResultINTEL, true, false, IR(68, 1), IR(37510, 22), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpTypeAvcSicResultINTEL, true, false, IR(68, 1), IR(37532, 22), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetDefaultInterBaseMultiReferencePenaltyINTEL, true, true, IR(172, 4), IR(37554, 60), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceSetInterBaseMultiReferencePenaltyINTEL, true, true, IR(172, 4), IR(37614, 53), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetDefaultInterShapePenaltyINTEL, true, true, IR(172, 4), IR(37667, 47), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceSetInterShapePenaltyINTEL, true, true, IR(172, 4), IR(37714, 40), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetDefaultInterDirectionPenaltyINTEL, true, true, IR(172, 4), IR(37754, 51), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceSetInterDirectionPenaltyINTEL, true, true, IR(172, 4), IR(37805, 44), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetDefaultIntraLumaShapePenaltyINTEL, true, true, IR(172, 4), IR(37849, 51), IR(0, 0), IR(278, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetDefaultInterMotionVectorCostTableINTEL, true, true, IR(172, 4), IR(37900, 56), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetDefaultHighPenaltyCostTableINTEL, true, true, IR(39, 2), IR(37956, 50), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetDefaultMediumPenaltyCostTableINTEL, true, true, IR(39, 2), IR(38006, 52), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetDefaultLowPenaltyCostTableINTEL, true, true, IR(39, 2), IR(38058, 49), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceSetMotionVectorCostFunctionINTEL, true, true, IR(215, 6), IR(38107, 47), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetDefaultIntraLumaModePenaltyINTEL, true, true, IR(172, 4), IR(38154, 50), IR(0, 0), IR(278, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetDefaultNonDcLumaIntraPenaltyINTEL, true, true, IR(39, 2), IR(38204, 51), IR(0, 0), IR(278, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetDefaultIntraChromaModeBasePenaltyINTEL, true, true, IR(39, 2), IR(38255, 56), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceSetAcOnlyHaarINTEL, true, true, IR(160, 3), IR(38311, 33), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceSetSourceInterlacedFieldPolarityINTEL, true, true, IR(172, 4), IR(38344, 52), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceSetSingleReferenceInterlacedFieldPolarityINTEL, true, true, IR(172, 4), IR(38396, 61), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceSetDualReferenceInterlacedFieldPolaritiesINTEL, true, true, IR(130, 5), IR(38457, 61), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceConvertToImePayloadINTEL, true, true, IR(160, 3), IR(38518, 39), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceConvertToImeResultINTEL, true, true, IR(160, 3), IR(38557, 38), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceConvertToRefPayloadINTEL, true, true, IR(160, 3), IR(38595, 39), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceConvertToRefResultINTEL, true, true, IR(160, 3), IR(38634, 38), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceConvertToSicPayloadINTEL, true, true, IR(160, 3), IR(38672, 39), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceConvertToSicResultINTEL, true, true, IR(160, 3), IR(38711, 38), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetMotionVectorsINTEL, true, true, IR(160, 3), IR(38749, 36), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetInterDistortionsINTEL, true, true, IR(160, 3), IR(38785, 39), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetBestInterDistortionsINTEL, true, true, IR(160, 3), IR(38824, 43), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetInterMajorShapeINTEL, true, true, IR(160, 3), IR(38867, 38), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetInterMinorShapeINTEL, true, true, IR(160, 3), IR(38905, 38), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetInterDirectionsINTEL, true, true, IR(160, 3), IR(38943, 38), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetInterMotionVectorCountINTEL, true, true, IR(160, 3), IR(38981, 45), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetInterReferenceIdsINTEL, true, true, IR(160, 3), IR(39026, 40), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcMceGetInterReferenceInterlacedFieldPolaritiesINTEL, true, true, IR(130, 5), IR(39066, 62), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeInitializeINTEL, true, true, IR(130, 5), IR(39128, 30), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeSetSingleReferenceINTEL, true, true, IR(130, 5), IR(39158, 38), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeSetDualReferenceINTEL, true, true, IR(215, 6), IR(39196, 36), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeRefWindowSizeINTEL, true, true, IR(172, 4), IR(39232, 33), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeAdjustRefOffsetINTEL, true, true, IR(215, 6), IR(39265, 35), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeConvertToMcePayloadINTEL, true, true, IR(160, 3), IR(39300, 39), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeSetMaxMotionVectorCountINTEL, true, true, IR(172, 4), IR(39339, 43), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeSetUnidirectionalMixDisableINTEL, true, true, IR(160, 3), IR(39382, 47), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeSetEarlySearchTerminationThresholdINTEL, true, true, IR(172, 4), IR(39429, 54), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeSetWeightedSadINTEL, true, true, IR(172, 4), IR(39483, 34), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeEvaluateWithSingleReferenceINTEL, true, true, IR(130, 5), IR(39517, 47), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeEvaluateWithDualReferenceINTEL, true, true, IR(215, 6), IR(39564, 45), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeEvaluateWithSingleReferenceStreaminINTEL, true, true, IR(215, 6), IR(39609, 55), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeEvaluateWithDualReferenceStreaminINTEL, true, true, IR(325, 7), IR(39664, 53), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeEvaluateWithSingleReferenceStreamoutINTEL, true, true, IR(130, 5), IR(39717, 56), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeEvaluateWithDualReferenceStreamoutINTEL, true, true, IR(215, 6), IR(39773, 54), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeEvaluateWithSingleReferenceStreaminoutINTEL, true, true, IR(215, 6), IR(39827, 58), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeEvaluateWithDualReferenceStreaminoutINTEL, true, true, IR(325, 7), IR(39885, 56), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeConvertToMceResultINTEL, true, true, IR(160, 3), IR(39941, 38), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeGetSingleReferenceStreaminINTEL, true, true, IR(160, 3), IR(39979, 46), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeGetDualReferenceStreaminINTEL, true, true, IR(160, 3), IR(40025, 44), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeStripSingleReferenceStreamoutINTEL, true, true, IR(160, 3), IR(40069, 49), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeStripDualReferenceStreamoutINTEL, true, true, IR(160, 3), IR(40118, 47), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeGetStreamoutSingleReferenceMajorShapeMotionVectorsINTEL, true, true, IR(172, 4), IR(40165, 70), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeGetStreamoutSingleReferenceMajorShapeDistortionsINTEL, true, true, IR(172, 4), IR(40235, 68), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeGetStreamoutSingleReferenceMajorShapeReferenceIdsINTEL, true, true, IR(172, 4), IR(40303, 69), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeGetStreamoutDualReferenceMajorShapeMotionVectorsINTEL, true, true, IR(130, 5), IR(40372, 68), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeGetStreamoutDualReferenceMajorShapeDistortionsINTEL, true, true, IR(130, 5), IR(40440, 66), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeGetStreamoutDualReferenceMajorShapeReferenceIdsINTEL, true, true, IR(130, 5), IR(40506, 67), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeGetBorderReachedINTEL, true, true, IR(172, 4), IR(40573, 36), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeGetTruncatedSearchIndicationINTEL, true, true, IR(160, 3), IR(40609, 48), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeGetUnidirectionalEarlySearchTerminationINTEL, true, true, IR(160, 3), IR(40657, 59), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeGetWeightingPatternMinimumMotionVectorINTEL, true, true, IR(160, 3), IR(40716, 58), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcImeGetWeightingPatternMinimumDistortionINTEL, true, true, IR(160, 3), IR(40774, 56), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcFmeInitializeINTEL, true, true, IR(645, 9), IR(40830, 30), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcBmeInitializeINTEL, true, true, IR(654, 10), IR(40860, 30), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcRefConvertToMcePayloadINTEL, true, true, IR(160, 3), IR(40890, 39), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcRefSetBidirectionalMixDisableINTEL, true, true, IR(160, 3), IR(40929, 46), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcRefSetBilinearFilterEnableINTEL, true, true, IR(160, 3), IR(40975, 43), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcRefEvaluateWithSingleReferenceINTEL, true, true, IR(130, 5), IR(41018, 47), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcRefEvaluateWithDualReferenceINTEL, true, true, IR(215, 6), IR(41065, 45), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcRefEvaluateWithMultiReferenceINTEL, true, true, IR(130, 5), IR(41110, 46), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcRefEvaluateWithMultiReferenceInterlacedINTEL, true, true, IR(215, 6), IR(41156, 56), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcRefConvertToMceResultINTEL, true, true, IR(160, 3), IR(41212, 38), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicInitializeINTEL, true, true, IR(160, 3), IR(41250, 30), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicConfigureSkcINTEL, true, true, IR(288, 8), IR(41280, 32), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicConfigureIpeLumaINTEL, true, true, IR(654, 10), IR(41312, 36), IR(0, 0), IR(278, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicConfigureIpeLumaChromaINTEL, true, true, IR(664, 13), IR(41348, 42), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicGetMotionVectorMaskINTEL, true, true, IR(172, 4), IR(41390, 39), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicConvertToMcePayloadINTEL, true, true, IR(160, 3), IR(41429, 39), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicSetIntraLumaShapePenaltyINTEL, true, true, IR(172, 4), IR(41468, 44), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicSetIntraLumaModeCostFunctionINTEL, true, true, IR(215, 6), IR(41512, 48), IR(0, 0), IR(278, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicSetIntraChromaModeCostFunctionINTEL, true, true, IR(172, 4), IR(41560, 50), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicSetBilinearFilterEnableINTEL, true, true, IR(160, 3), IR(41610, 43), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicSetSkcForwardTransformEnableINTEL, true, true, IR(172, 4), IR(41653, 48), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicSetBlockBasedRawSkipSadINTEL, true, true, IR(172, 4), IR(41701, 43), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicEvaluateIpeINTEL, true, true, IR(172, 4), IR(41744, 31), IR(0, 0), IR(278, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicEvaluateWithSingleReferenceINTEL, true, true, IR(130, 5), IR(41775, 47), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicEvaluateWithDualReferenceINTEL, true, true, IR(215, 6), IR(41822, 45), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicEvaluateWithMultiReferenceINTEL, true, true, IR(130, 5), IR(41867, 46), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicEvaluateWithMultiReferenceInterlacedINTEL, true, true, IR(215, 6), IR(41913, 56), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicConvertToMceResultINTEL, true, true, IR(160, 3), IR(41969, 38), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicGetIpeLumaShapeINTEL, true, true, IR(160, 3), IR(42007, 35), IR(0, 0), IR(278, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicGetBestIpeLumaDistortionINTEL, true, true, IR(160, 3), IR(42042, 44), IR(0, 0), IR(278, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicGetBestIpeChromaDistortionINTEL, true, true, IR(160, 3), IR(42086, 46), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicGetPackedIpeLumaModesINTEL, true, true, IR(160, 3), IR(42132, 41), IR(0, 0), IR(278, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicGetIpeChromaModeINTEL, true, true, IR(160, 3), IR(42173, 36), IR(0, 0), IR(280, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicGetPackedSkcLumaCountThresholdINTEL, true, true, IR(160, 3), IR(42209, 50), IR(0, 0), IR(278, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicGetPackedSkcLumaSumThresholdINTEL, true, true, IR(160, 3), IR(42259, 48), IR(0, 0), IR(278, 2), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSubgroupAvcSicGetInterRawSadsINTEL, true, true, IR(160, 3), IR(42307, 35), IR(0, 0), IR(277, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpVariableLengthArrayINTEL, true, true, IR(160, 3), IR(12466, 25), IR(0, 0), IR(282, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpSaveMemoryINTEL, true, true, IR(39, 2), IR(42342, 16), IR(0, 0), IR(282, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpRestoreMemoryINTEL, false, false, IR(10, 1), IR(42358, 19), IR(0, 0), IR(282, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatSinCosPiINTEL, true, true, IR(677, 8), IR(42377, 28), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatCastINTEL, true, true, IR(677, 8), IR(42405, 24), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatCastFromIntINTEL, true, true, IR(677, 8), IR(42429, 31), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatCastToIntINTEL, true, true, IR(677, 8), IR(42460, 29), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatAddINTEL, true, true, IR(685, 10), IR(42489, 23), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatSubINTEL, true, true, IR(685, 10), IR(42512, 23), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatMulINTEL, true, true, IR(685, 10), IR(42535, 23), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatDivINTEL, true, true, IR(685, 10), IR(42558, 23), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatGTINTEL, true, true, IR(695, 6), IR(42581, 22), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatGEINTEL, true, true, IR(695, 6), IR(42603, 22), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatLTINTEL, true, true, IR(695, 6), IR(42625, 22), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatLEINTEL, true, true, IR(695, 6), IR(42647, 22), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatEQINTEL, true, true, IR(695, 6), IR(42669, 22), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatRecipINTEL, true, true, IR(677, 8), IR(42691, 25), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatRSqrtINTEL, true, true, IR(677, 8), IR(42716, 25), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatCbrtINTEL, true, true, IR(677, 8), IR(42741, 24), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatHypotINTEL, true, true, IR(685, 10), IR(42765, 25), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatSqrtINTEL, true, true, IR(677, 8), IR(42790, 24), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatLogINTEL, true, true, IR(677, 8), IR(42814, 23), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatLog2INTEL, true, true, IR(677, 8), IR(42837, 24), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatLog10INTEL, true, true, IR(677, 8), IR(42861, 25), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatLog1pINTEL, true, true, IR(677, 8), IR(42886, 25), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatExpINTEL, true, true, IR(677, 8), IR(42911, 23), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatExp2INTEL, true, true, IR(677, 8), IR(42934, 24), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatExp10INTEL, true, true, IR(677, 8), IR(42958, 25), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatExpm1INTEL, true, true, IR(677, 8), IR(42983, 25), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatSinINTEL, true, true, IR(677, 8), IR(43008, 23), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatCosINTEL, true, true, IR(677, 8), IR(43031, 23), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatSinCosINTEL, true, true, IR(677, 8), IR(43054, 26), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatSinPiINTEL, true, true, IR(677, 8), IR(43080, 25), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatCosPiINTEL, true, true, IR(677, 8), IR(43105, 25), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatASinINTEL, true, true, IR(677, 8), IR(43130, 24), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatASinPiINTEL, true, true, IR(677, 8), IR(43154, 26), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatACosINTEL, true, true, IR(677, 8), IR(43180, 24), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatACosPiINTEL, true, true, IR(677, 8), IR(43204, 26), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatATanINTEL, true, true, IR(677, 8), IR(43230, 24), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatATanPiINTEL, true, true, IR(677, 8), IR(43254, 26), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatATan2INTEL, true, true, IR(685, 10), IR(43280, 25), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatPowINTEL, true, true, IR(685, 10), IR(43305, 23), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatPowRINTEL, true, true, IR(685, 10), IR(43328, 24), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpArbitraryFloatPowNINTEL, true, true, IR(685, 10), IR(43352, 24), IR(0, 0), IR(283, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpLoopControlINTEL, false, false, IR(18, 1), IR(43376, 17), IR(0, 0), IR(284, 1), IR(106, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
   {spv::Op::OpAliasDomainDeclINTEL, true, false, IR(701, 2), IR(43393, 21), IR(0, 0), IR(134, 1), IR(113, 1), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
   {spv::Op::OpAliasScopeDeclINTEL, true, false, IR(703, 3), IR(43414, 20), IR(0, 0), IR(134, 1), IR(113, 1), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
   {spv::Op::OpAliasScopeListDeclINTEL, true, false, IR(92, 2), IR(43434, 24), IR(0, 0), IR(134, 1), IR(113, 1), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpFixedSqrtINTEL, true, true, IR(677, 8), IR(43458, 15), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpFixedRecipINTEL, true, true, IR(677, 8), IR(43473, 16), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpFixedRsqrtINTEL, true, true, IR(677, 8), IR(43489, 16), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpFixedSinINTEL, true, true, IR(677, 8), IR(43505, 14), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpFixedCosINTEL, true, true, IR(677, 8), IR(43519, 14), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpFixedSinCosINTEL, true, true, IR(677, 8), IR(43533, 17), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpFixedSinPiINTEL, true, true, IR(677, 8), IR(43550, 16), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpFixedCosPiINTEL, true, true, IR(677, 8), IR(43566, 16), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpFixedSinCosPiINTEL, true, true, IR(677, 8), IR(43582, 19), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpFixedLogINTEL, true, true, IR(677, 8), IR(43601, 14), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpFixedExpINTEL, true, true, IR(677, 8), IR(43615, 14), IR(0, 0), IR(188, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpPtrCastToCrossWorkgroupINTEL, true, true, IR(160, 3), IR(43629, 29), IR(0, 0), IR(199, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpCrossWorkgroupCastToPtrINTEL, true, true, IR(160, 3), IR(43658, 29), IR(0, 0), IR(199, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
-  {spv::Op::OpReadPipeBlockingINTEL, true, true, IR(172, 4), IR(43687, 22), IR(0, 0), IR(287, 1), IR(120, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kPipe},
-  {spv::Op::OpWritePipeBlockingINTEL, true, true, IR(172, 4), IR(43709, 23), IR(0, 0), IR(287, 1), IR(120, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kPipe},
-  {spv::Op::OpFPGARegINTEL, true, true, IR(160, 3), IR(13025, 13), IR(0, 0), IR(288, 1), IR(121, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetRayTMinKHR, true, true, IR(160, 3), IR(43732, 22), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetRayFlagsKHR, true, true, IR(160, 3), IR(43754, 23), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionTKHR, true, true, IR(172, 4), IR(43777, 28), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionInstanceCustomIndexKHR, true, true, IR(172, 4), IR(43805, 46), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionInstanceIdKHR, true, true, IR(172, 4), IR(43851, 37), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionInstanceShaderBindingTableRecordOffsetKHR, true, true, IR(172, 4), IR(43888, 65), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionGeometryIndexKHR, true, true, IR(172, 4), IR(43953, 40), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionPrimitiveIndexKHR, true, true, IR(172, 4), IR(43993, 41), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionBarycentricsKHR, true, true, IR(172, 4), IR(44034, 39), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionFrontFaceKHR, true, true, IR(172, 4), IR(44073, 36), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionCandidateAABBOpaqueKHR, true, true, IR(160, 3), IR(44109, 46), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionObjectRayDirectionKHR, true, true, IR(172, 4), IR(44155, 45), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionObjectRayOriginKHR, true, true, IR(172, 4), IR(44200, 42), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetWorldRayDirectionKHR, true, true, IR(160, 3), IR(44242, 32), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetWorldRayOriginKHR, true, true, IR(160, 3), IR(44274, 29), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionObjectToWorldKHR, true, true, IR(172, 4), IR(44303, 40), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpRayQueryGetIntersectionWorldToObjectKHR, true, true, IR(172, 4), IR(44343, 40), IR(0, 0), IR(192, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpAtomicFAddEXT, true, true, IR(235, 6), IR(44383, 14), IR(0, 0), IR(289, 4), IR(128, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kAtomic},
+  {spv::Op::OpFixedSqrtINTEL, true, true, IR(677, 8), IR(43458, 15), IR(0, 0), IR(186, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpFixedRecipINTEL, true, true, IR(677, 8), IR(43473, 16), IR(0, 0), IR(186, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpFixedRsqrtINTEL, true, true, IR(677, 8), IR(43489, 16), IR(0, 0), IR(186, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpFixedSinINTEL, true, true, IR(677, 8), IR(43505, 14), IR(0, 0), IR(186, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpFixedCosINTEL, true, true, IR(677, 8), IR(43519, 14), IR(0, 0), IR(186, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpFixedSinCosINTEL, true, true, IR(677, 8), IR(43533, 17), IR(0, 0), IR(186, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpFixedSinPiINTEL, true, true, IR(677, 8), IR(43550, 16), IR(0, 0), IR(186, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpFixedCosPiINTEL, true, true, IR(677, 8), IR(43566, 16), IR(0, 0), IR(186, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpFixedSinCosPiINTEL, true, true, IR(677, 8), IR(43582, 19), IR(0, 0), IR(186, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpFixedLogINTEL, true, true, IR(677, 8), IR(43601, 14), IR(0, 0), IR(186, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpFixedExpINTEL, true, true, IR(677, 8), IR(43615, 14), IR(0, 0), IR(186, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpPtrCastToCrossWorkgroupINTEL, true, true, IR(160, 3), IR(43629, 29), IR(0, 0), IR(197, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpCrossWorkgroupCastToPtrINTEL, true, true, IR(160, 3), IR(43658, 29), IR(0, 0), IR(197, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::k_exclude},
+  {spv::Op::OpReadPipeBlockingINTEL, true, true, IR(172, 4), IR(43687, 22), IR(0, 0), IR(285, 1), IR(120, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kPipe},
+  {spv::Op::OpWritePipeBlockingINTEL, true, true, IR(172, 4), IR(43709, 23), IR(0, 0), IR(285, 1), IR(120, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kPipe},
+  {spv::Op::OpFPGARegINTEL, true, true, IR(160, 3), IR(13025, 13), IR(0, 0), IR(286, 1), IR(121, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetRayTMinKHR, true, true, IR(160, 3), IR(43732, 22), IR(0, 0), IR(190, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetRayFlagsKHR, true, true, IR(160, 3), IR(43754, 23), IR(0, 0), IR(190, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionTKHR, true, true, IR(172, 4), IR(43777, 28), IR(0, 0), IR(190, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionInstanceCustomIndexKHR, true, true, IR(172, 4), IR(43805, 46), IR(0, 0), IR(190, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionInstanceIdKHR, true, true, IR(172, 4), IR(43851, 37), IR(0, 0), IR(190, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionInstanceShaderBindingTableRecordOffsetKHR, true, true, IR(172, 4), IR(43888, 65), IR(0, 0), IR(190, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionGeometryIndexKHR, true, true, IR(172, 4), IR(43953, 40), IR(0, 0), IR(190, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionPrimitiveIndexKHR, true, true, IR(172, 4), IR(43993, 41), IR(0, 0), IR(190, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionBarycentricsKHR, true, true, IR(172, 4), IR(44034, 39), IR(0, 0), IR(190, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionFrontFaceKHR, true, true, IR(172, 4), IR(44073, 36), IR(0, 0), IR(190, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionCandidateAABBOpaqueKHR, true, true, IR(160, 3), IR(44109, 46), IR(0, 0), IR(190, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionObjectRayDirectionKHR, true, true, IR(172, 4), IR(44155, 45), IR(0, 0), IR(190, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionObjectRayOriginKHR, true, true, IR(172, 4), IR(44200, 42), IR(0, 0), IR(190, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetWorldRayDirectionKHR, true, true, IR(160, 3), IR(44242, 32), IR(0, 0), IR(190, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetWorldRayOriginKHR, true, true, IR(160, 3), IR(44274, 29), IR(0, 0), IR(190, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionObjectToWorldKHR, true, true, IR(172, 4), IR(44303, 40), IR(0, 0), IR(190, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpRayQueryGetIntersectionWorldToObjectKHR, true, true, IR(172, 4), IR(44343, 40), IR(0, 0), IR(190, 1), IR(48, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpAtomicFAddEXT, true, true, IR(235, 6), IR(44383, 14), IR(0, 0), IR(287, 4), IR(128, 1), 0xffffffffu, 0xffffffffu, PrintingClass::kAtomic},
   {spv::Op::OpTypeBufferSurfaceINTEL, true, false, IR(100, 2), IR(44397, 23), IR(0, 0), IR(126, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
-  {spv::Op::OpTypeStructContinuedINTEL, false, false, IR(706, 1), IR(44420, 25), IR(0, 0), IR(293, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
-  {spv::Op::OpConstantCompositeContinuedINTEL, false, false, IR(706, 1), IR(44445, 32), IR(0, 0), IR(293, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
-  {spv::Op::OpSpecConstantCompositeContinuedINTEL, false, false, IR(706, 1), IR(44477, 36), IR(0, 0), IR(293, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
-  {spv::Op::OpCompositeConstructContinuedINTEL, true, true, IR(107, 3), IR(44513, 33), IR(0, 0), IR(293, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kComposite},
-  {spv::Op::OpConvertFToBF16INTEL, true, true, IR(160, 3), IR(44546, 20), IR(0, 0), IR(294, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConversion},
-  {spv::Op::OpConvertBF16ToFINTEL, true, true, IR(160, 3), IR(44566, 20), IR(0, 0), IR(294, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConversion},
-  {spv::Op::OpControlBarrierArriveINTEL, false, false, IR(221, 3), IR(44586, 26), IR(0, 0), IR(295, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kBarrier},
-  {spv::Op::OpControlBarrierWaitINTEL, false, false, IR(221, 3), IR(44612, 24), IR(0, 0), IR(295, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kBarrier},
-  {spv::Op::OpArithmeticFenceEXT, true, true, IR(160, 3), IR(13457, 19), IR(0, 0), IR(296, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMiscellaneous},
-  {spv::Op::OpTaskSequenceCreateINTEL, true, true, IR(707, 7), IR(44636, 24), IR(0, 0), IR(297, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTaskSequenceAsyncINTEL, false, false, IR(168, 2), IR(44660, 23), IR(0, 0), IR(297, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTaskSequenceGetINTEL, true, true, IR(160, 3), IR(44683, 21), IR(0, 0), IR(297, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTaskSequenceReleaseINTEL, false, false, IR(10, 1), IR(44704, 25), IR(0, 0), IR(297, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
-  {spv::Op::OpTypeTaskSequenceINTEL, true, false, IR(68, 1), IR(44729, 22), IR(0, 0), IR(297, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
-  {spv::Op::OpSubgroupBlockPrefetchINTEL, false, false, IR(139, 3), IR(44751, 27), IR(0, 0), IR(298, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpTypeStructContinuedINTEL, false, false, IR(706, 1), IR(44420, 25), IR(0, 0), IR(291, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
+  {spv::Op::OpConstantCompositeContinuedINTEL, false, false, IR(706, 1), IR(44445, 32), IR(0, 0), IR(291, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
+  {spv::Op::OpSpecConstantCompositeContinuedINTEL, false, false, IR(706, 1), IR(44477, 36), IR(0, 0), IR(291, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
+  {spv::Op::OpCompositeConstructContinuedINTEL, true, true, IR(107, 3), IR(44513, 33), IR(0, 0), IR(291, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kComposite},
+  {spv::Op::OpConvertFToBF16INTEL, true, true, IR(160, 3), IR(44546, 20), IR(0, 0), IR(292, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConversion},
+  {spv::Op::OpConvertBF16ToFINTEL, true, true, IR(160, 3), IR(44566, 20), IR(0, 0), IR(292, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConversion},
+  {spv::Op::OpControlBarrierArriveINTEL, false, false, IR(221, 3), IR(44586, 26), IR(0, 0), IR(293, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kBarrier},
+  {spv::Op::OpControlBarrierWaitINTEL, false, false, IR(221, 3), IR(44612, 24), IR(0, 0), IR(293, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kBarrier},
+  {spv::Op::OpArithmeticFenceEXT, true, true, IR(160, 3), IR(13457, 19), IR(0, 0), IR(294, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMiscellaneous},
+  {spv::Op::OpTaskSequenceCreateINTEL, true, true, IR(707, 7), IR(44636, 24), IR(0, 0), IR(295, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTaskSequenceAsyncINTEL, false, false, IR(168, 2), IR(44660, 23), IR(0, 0), IR(295, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTaskSequenceGetINTEL, true, true, IR(160, 3), IR(44683, 21), IR(0, 0), IR(295, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTaskSequenceReleaseINTEL, false, false, IR(10, 1), IR(44704, 25), IR(0, 0), IR(295, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kReserved},
+  {spv::Op::OpTypeTaskSequenceINTEL, true, false, IR(68, 1), IR(44729, 22), IR(0, 0), IR(295, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
+  {spv::Op::OpSubgroupBlockPrefetchINTEL, false, false, IR(139, 3), IR(44751, 27), IR(0, 0), IR(296, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
   {spv::Op::OpSubgroup2DBlockLoadINTEL, false, false, IR(714, 10), IR(44778, 25), IR(0, 0), IR(108, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroup2DBlockLoadTransformINTEL, false, false, IR(714, 10), IR(44803, 34), IR(0, 0), IR(299, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroup2DBlockLoadTransposeINTEL, false, false, IR(714, 10), IR(44837, 34), IR(0, 0), IR(300, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroup2DBlockLoadTransformINTEL, false, false, IR(714, 10), IR(44803, 34), IR(0, 0), IR(297, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpSubgroup2DBlockLoadTransposeINTEL, false, false, IR(714, 10), IR(44837, 34), IR(0, 0), IR(298, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
   {spv::Op::OpSubgroup2DBlockPrefetchINTEL, false, false, IR(724, 9), IR(44871, 29), IR(0, 0), IR(108, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
   {spv::Op::OpSubgroup2DBlockStoreINTEL, false, false, IR(714, 10), IR(44900, 26), IR(0, 0), IR(108, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpSubgroupMatrixMultiplyAccumulateINTEL, true, true, IR(733, 7), IR(13795, 38), IR(0, 0), IR(301, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpBitwiseFunctionINTEL, true, true, IR(215, 6), IR(44988, 21), IR(0, 0), IR(302, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kBit},
+  {spv::Op::OpSubgroupMatrixMultiplyAccumulateINTEL, true, true, IR(733, 7), IR(13795, 38), IR(0, 0), IR(299, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpBitwiseFunctionINTEL, true, true, IR(215, 6), IR(44988, 21), IR(0, 0), IR(300, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kBit},
   {spv::Op::OpConditionalExtensionINTEL, false, false, IR(45, 2), IR(45009, 26), IR(0, 0), IR(109, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kExtension},
   {spv::Op::OpConditionalEntryPointINTEL, false, false, IR(740, 5), IR(45035, 27), IR(0, 0), IR(109, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMode_Setting},
   {spv::Op::OpConditionalCapabilityINTEL, false, false, IR(745, 2), IR(45062, 27), IR(0, 0), IR(109, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMode_Setting},
-  {spv::Op::OpSpecConstantTargetINTEL, true, true, IR(747, 4), IR(45089, 24), IR(0, 0), IR(303, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
-  {spv::Op::OpSpecConstantArchitectureINTEL, true, true, IR(751, 6), IR(45113, 30), IR(0, 0), IR(303, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
-  {spv::Op::OpSpecConstantCapabilitiesINTEL, true, true, IR(757, 3), IR(45180, 30), IR(0, 0), IR(303, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
+  {spv::Op::OpSpecConstantTargetINTEL, true, true, IR(747, 4), IR(45089, 24), IR(0, 0), IR(301, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
+  {spv::Op::OpSpecConstantArchitectureINTEL, true, true, IR(751, 6), IR(45113, 30), IR(0, 0), IR(301, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
+  {spv::Op::OpSpecConstantCapabilitiesINTEL, true, true, IR(757, 3), IR(45180, 30), IR(0, 0), IR(301, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
   {spv::Op::OpConditionalCopyObjectINTEL, true, true, IR(107, 3), IR(45210, 27), IR(0, 0), IR(109, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kComposite},
-  {spv::Op::OpGroupIMulKHR, true, true, IR(283, 5), IR(45237, 13), IR(0, 0), IR(304, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupFMulKHR, true, true, IR(283, 5), IR(45250, 13), IR(0, 0), IR(304, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupBitwiseAndKHR, true, true, IR(283, 5), IR(45263, 19), IR(0, 0), IR(304, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupBitwiseOrKHR, true, true, IR(283, 5), IR(45282, 18), IR(0, 0), IR(304, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupBitwiseXorKHR, true, true, IR(283, 5), IR(45300, 19), IR(0, 0), IR(304, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupLogicalAndKHR, true, true, IR(283, 5), IR(45319, 19), IR(0, 0), IR(304, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupLogicalOrKHR, true, true, IR(283, 5), IR(45338, 18), IR(0, 0), IR(304, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpGroupLogicalXorKHR, true, true, IR(283, 5), IR(45356, 19), IR(0, 0), IR(304, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
-  {spv::Op::OpRoundFToTF32INTEL, true, true, IR(160, 3), IR(45375, 18), IR(0, 0), IR(305, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConversion},
-  {spv::Op::OpMaskedGatherINTEL, true, true, IR(760, 6), IR(45393, 18), IR(0, 0), IR(306, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
-  {spv::Op::OpMaskedScatterINTEL, false, false, IR(766, 4), IR(45411, 19), IR(0, 0), IR(306, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
-  {spv::Op::OpConvertHandleToImageINTEL, true, true, IR(160, 3), IR(45430, 26), IR(0, 0), IR(307, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpConvertHandleToSamplerINTEL, true, true, IR(160, 3), IR(45456, 28), IR(0, 0), IR(307, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
-  {spv::Op::OpConvertHandleToSampledImageINTEL, true, true, IR(160, 3), IR(45484, 33), IR(0, 0), IR(307, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpGroupIMulKHR, true, true, IR(283, 5), IR(45237, 13), IR(0, 0), IR(302, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupFMulKHR, true, true, IR(283, 5), IR(45250, 13), IR(0, 0), IR(302, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupBitwiseAndKHR, true, true, IR(283, 5), IR(45263, 19), IR(0, 0), IR(302, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupBitwiseOrKHR, true, true, IR(283, 5), IR(45282, 18), IR(0, 0), IR(302, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupBitwiseXorKHR, true, true, IR(283, 5), IR(45300, 19), IR(0, 0), IR(302, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupLogicalAndKHR, true, true, IR(283, 5), IR(45319, 19), IR(0, 0), IR(302, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupLogicalOrKHR, true, true, IR(283, 5), IR(45338, 18), IR(0, 0), IR(302, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpGroupLogicalXorKHR, true, true, IR(283, 5), IR(45356, 19), IR(0, 0), IR(302, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kGroup},
+  {spv::Op::OpRoundFToTF32INTEL, true, true, IR(160, 3), IR(45375, 18), IR(0, 0), IR(303, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConversion},
+  {spv::Op::OpMaskedGatherINTEL, true, true, IR(760, 6), IR(45393, 18), IR(0, 0), IR(304, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
+  {spv::Op::OpMaskedScatterINTEL, false, false, IR(766, 4), IR(45411, 19), IR(0, 0), IR(304, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kMemory},
+  {spv::Op::OpConvertHandleToImageINTEL, true, true, IR(160, 3), IR(45430, 26), IR(0, 0), IR(305, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpConvertHandleToSamplerINTEL, true, true, IR(160, 3), IR(45456, 28), IR(0, 0), IR(305, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
+  {spv::Op::OpConvertHandleToSampledImageINTEL, true, true, IR(160, 3), IR(45484, 33), IR(0, 0), IR(305, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kImage},
 }};
 
 // Opcode strings (without the 'Op' prefix) and opcode values, ordered by name.
@@ -4784,13 +4784,13 @@ static const std::array<ExtInstDesc, 491> kExtInstByValue{{
     {56,IR(10, 1),IR(46731, 14),IR(1, 0)}, // PackSnorm2x16 in glsl_std_450
     {57,IR(10, 1),IR(46745, 14),IR(1, 0)}, // PackUnorm2x16 in glsl_std_450
     {58,IR(10, 1),IR(46759, 13),IR(1, 0)}, // PackHalf2x16 in glsl_std_450
-    {59,IR(10, 1),IR(46772, 15),IR(308, 1)}, // PackDouble2x32 in glsl_std_450
+    {59,IR(10, 1),IR(46772, 15),IR(306, 1)}, // PackDouble2x32 in glsl_std_450
     {60,IR(10, 1),IR(46787, 16),IR(1, 0)}, // UnpackSnorm2x16 in glsl_std_450
     {61,IR(10, 1),IR(46803, 16),IR(1, 0)}, // UnpackUnorm2x16 in glsl_std_450
     {62,IR(10, 1),IR(46819, 15),IR(1, 0)}, // UnpackHalf2x16 in glsl_std_450
     {63,IR(10, 1),IR(46834, 15),IR(1, 0)}, // UnpackSnorm4x8 in glsl_std_450
     {64,IR(10, 1),IR(46849, 15),IR(1, 0)}, // UnpackUnorm4x8 in glsl_std_450
-    {65,IR(10, 1),IR(46864, 17),IR(308, 1)}, // UnpackDouble2x32 in glsl_std_450
+    {65,IR(10, 1),IR(46864, 17),IR(306, 1)}, // UnpackDouble2x32 in glsl_std_450
     {66,IR(10, 1),IR(46881, 7),IR(1, 0)}, // Length in glsl_std_450
     {67,IR(36, 2),IR(46888, 9),IR(1, 0)}, // Distance in glsl_std_450
     {68,IR(36, 2),IR(46897, 6),IR(1, 0)}, // Cross in glsl_std_450
@@ -4801,9 +4801,9 @@ static const std::array<ExtInstDesc, 491> kExtInstByValue{{
     {73,IR(10, 1),IR(46941, 9),IR(1, 0)}, // FindILsb in glsl_std_450
     {74,IR(10, 1),IR(46950, 9),IR(1, 0)}, // FindSMsb in glsl_std_450
     {75,IR(10, 1),IR(46959, 9),IR(1, 0)}, // FindUMsb in glsl_std_450
-    {76,IR(10, 1),IR(46968, 22),IR(309, 1)}, // InterpolateAtCentroid in glsl_std_450
-    {77,IR(36, 2),IR(46990, 20),IR(309, 1)}, // InterpolateAtSample in glsl_std_450
-    {78,IR(36, 2),IR(47010, 20),IR(309, 1)}, // InterpolateAtOffset in glsl_std_450
+    {76,IR(10, 1),IR(46968, 22),IR(307, 1)}, // InterpolateAtCentroid in glsl_std_450
+    {77,IR(36, 2),IR(46990, 20),IR(307, 1)}, // InterpolateAtSample in glsl_std_450
+    {78,IR(36, 2),IR(47010, 20),IR(307, 1)}, // InterpolateAtOffset in glsl_std_450
     {79,IR(36, 2),IR(47030, 5),IR(1, 0)}, // NMin in glsl_std_450
     {80,IR(36, 2),IR(47035, 5),IR(1, 0)}, // NMax in glsl_std_450
     {81,IR(33, 3),IR(47040, 7),IR(1, 0)}, // NClamp in glsl_std_450
@@ -8618,153 +8618,151 @@ static const spv::Capability kCapabilitySpans[] = {
   spv::Capability::RoundingModeRTE, // 160
   spv::Capability::RoundingModeRTZ, // 161
   spv::Capability::QuadControlKHR, // 162
-  spv::Capability::ComputeDerivativeGroupQuadsNV, // 163
-  spv::Capability::ComputeDerivativeGroupQuadsKHR, // 164
-  spv::Capability::ComputeDerivativeGroupLinearNV, // 165
-  spv::Capability::ComputeDerivativeGroupLinearKHR, // 166
-  spv::Capability::FragmentShaderPixelInterlockEXT, // 167
-  spv::Capability::FragmentShaderSampleInterlockEXT, // 168
-  spv::Capability::FragmentShaderShadingRateInterlockEXT, // 169
-  spv::Capability::RoundToInfinityINTEL, // 170
-  spv::Capability::KernelAttributesINTEL, // 171
-  spv::Capability::FloatControls2, // 172
-  spv::Capability::FPGAKernelAttributesv2INTEL, // 173
-  spv::Capability::RegisterLimitsINTEL, // 174
-  spv::Capability::FloatControls2, // 175
-  spv::Capability::FPFastMathModeINTEL, // 176
-  spv::Capability::OptNoneEXT, // 177
-  spv::Capability::RuntimeAlignedAttributeINTEL, // 178
-  spv::Capability::Kernel, // 179
-  spv::Capability::GroupNonUniformArithmetic, // 180
-  spv::Capability::GroupNonUniformBallot, // 181
-  spv::Capability::GroupNonUniformClustered, // 182
-  spv::Capability::GroupNonUniformPartitionedNV, // 183
-  spv::Capability::ImageGatherExtended, // 184
-  spv::Capability::MinLod, // 185
-  spv::Capability::VulkanMemoryModel, // 186
-  spv::Capability::FPGALoopControlsINTEL, // 187
-  spv::Capability::ArbitraryPrecisionFixedPointINTEL, // 188
-  spv::Capability::RawAccessChainsNV, // 189
-  spv::Capability::RayTraversalPrimitiveCullingKHR, // 190
-  spv::Capability::RayTracingOpacityMicromapEXT, // 191
-  spv::Capability::RayQueryKHR, // 192
-  spv::Capability::StorageImageExtendedFormats, // 193
-  spv::Capability::Int64ImageEXT, // 194
-  spv::Capability::Shader, // 195
-  spv::Capability::VectorComputeINTEL, // 196
-  spv::Capability::GenericPointer, // 197
-  spv::Capability::FunctionPointersINTEL, // 198
-  spv::Capability::USMStorageClassesINTEL, // 199
-  spv::Capability::CooperativeMatrixTensorAddressingNV, // 200
-  spv::Capability::CooperativeMatrixBlockLoadsNV, // 201
-  spv::Capability::TensorsARM, // 202
-  spv::Capability::Addresses, // 203
-  spv::Capability::PhysicalStorageBufferAddresses, // 204
-  spv::Capability::LiteralSampler, // 205
+  spv::Capability::ComputeDerivativeGroupQuadsKHR, // 163
+  spv::Capability::ComputeDerivativeGroupLinearKHR, // 164
+  spv::Capability::FragmentShaderPixelInterlockEXT, // 165
+  spv::Capability::FragmentShaderSampleInterlockEXT, // 166
+  spv::Capability::FragmentShaderShadingRateInterlockEXT, // 167
+  spv::Capability::RoundToInfinityINTEL, // 168
+  spv::Capability::KernelAttributesINTEL, // 169
+  spv::Capability::FloatControls2, // 170
+  spv::Capability::FPGAKernelAttributesv2INTEL, // 171
+  spv::Capability::RegisterLimitsINTEL, // 172
+  spv::Capability::FloatControls2, // 173
+  spv::Capability::FPFastMathModeINTEL, // 174
+  spv::Capability::OptNoneEXT, // 175
+  spv::Capability::RuntimeAlignedAttributeINTEL, // 176
+  spv::Capability::Kernel, // 177
+  spv::Capability::GroupNonUniformArithmetic, // 178
+  spv::Capability::GroupNonUniformBallot, // 179
+  spv::Capability::GroupNonUniformClustered, // 180
+  spv::Capability::GroupNonUniformPartitionedNV, // 181
+  spv::Capability::ImageGatherExtended, // 182
+  spv::Capability::MinLod, // 183
+  spv::Capability::VulkanMemoryModel, // 184
+  spv::Capability::FPGALoopControlsINTEL, // 185
+  spv::Capability::ArbitraryPrecisionFixedPointINTEL, // 186
+  spv::Capability::RawAccessChainsNV, // 187
+  spv::Capability::RayTraversalPrimitiveCullingKHR, // 188
+  spv::Capability::RayTracingOpacityMicromapEXT, // 189
+  spv::Capability::RayQueryKHR, // 190
+  spv::Capability::StorageImageExtendedFormats, // 191
+  spv::Capability::Int64ImageEXT, // 192
+  spv::Capability::Shader, // 193
+  spv::Capability::VectorComputeINTEL, // 194
+  spv::Capability::GenericPointer, // 195
+  spv::Capability::FunctionPointersINTEL, // 196
+  spv::Capability::USMStorageClassesINTEL, // 197
+  spv::Capability::CooperativeMatrixTensorAddressingNV, // 198
+  spv::Capability::CooperativeMatrixBlockLoadsNV, // 199
+  spv::Capability::TensorsARM, // 200
+  spv::Capability::Addresses, // 201
+  spv::Capability::PhysicalStorageBufferAddresses, // 202
+  spv::Capability::LiteralSampler, // 203
+  spv::Capability::Addresses, // 204
+  spv::Capability::UntypedPointersKHR, // 205
   spv::Capability::Addresses, // 206
-  spv::Capability::UntypedPointersKHR, // 207
-  spv::Capability::Addresses, // 208
-  spv::Capability::VariablePointers, // 209
-  spv::Capability::VariablePointersStorageBuffer, // 210
-  spv::Capability::PhysicalStorageBufferAddresses, // 211
-  spv::Capability::Kernel, // 212
-  spv::Capability::ImageQuery, // 213
-  spv::Capability::ImageQuery, // 214
-  spv::Capability::Shader, // 215
-  spv::Capability::BitInstructions, // 216
-  spv::Capability::DerivativeControl, // 217
-  spv::Capability::Groups, // 218
-  spv::Capability::SparseResidency, // 219
-  spv::Capability::PipeStorage, // 220
-  spv::Capability::NamedBarrier, // 221
-  spv::Capability::GroupNonUniformVote, // 222
-  spv::Capability::GroupNonUniformBallot, // 223
-  spv::Capability::GroupNonUniformShuffle, // 224
-  spv::Capability::GroupNonUniformShuffleRelative, // 225
-  spv::Capability::GroupNonUniformArithmetic, // 226
-  spv::Capability::GroupNonUniformClustered, // 227
-  spv::Capability::GroupNonUniformPartitionedNV, // 228
-  spv::Capability::GroupNonUniformQuad, // 229
-  spv::Capability::Addresses, // 230
-  spv::Capability::VariablePointers, // 231
-  spv::Capability::VariablePointersStorageBuffer, // 232
-  spv::Capability::GraphARM, // 233
-  spv::Capability::UntypedPointersKHR, // 234
-  spv::Capability::SubgroupBallotKHR, // 235
-  spv::Capability::SubgroupVoteKHR, // 236
-  spv::Capability::GroupNonUniformRotateKHR, // 237
-  spv::Capability::RayTracingKHR, // 238
-  spv::Capability::RayQueryKHR, // 239
-  spv::Capability::DotProduct, // 240
-  spv::Capability::ReplicatedCompositesEXT, // 241
-  spv::Capability::TextureSampleWeightedQCOM, // 242
-  spv::Capability::TextureBoxFilterQCOM, // 243
-  spv::Capability::TextureBlockMatchQCOM, // 244
-  spv::Capability::CooperativeMatrixConversionQCOM, // 245
-  spv::Capability::TextureBlockMatch2QCOM, // 246
-  spv::Capability::FragmentMaskAMD, // 247
-  spv::Capability::ShaderClockKHR, // 248
-  spv::Capability::ShaderInvocationReorderNV, // 249
-  spv::Capability::RayTracingMotionBlurNV, // 250
-  spv::Capability::ImageFootprintNV, // 251
-  spv::Capability::CooperativeVectorNV, // 252
-  spv::Capability::CooperativeVectorTrainingNV, // 253
-  spv::Capability::CooperativeMatrixConversionsNV, // 254
-  spv::Capability::DisplacementMicromapNV, // 255
-  spv::Capability::RayQueryPositionFetchKHR, // 256
-  spv::Capability::RayTracingNV, // 257
-  spv::Capability::RayTracingKHR, // 258
-  spv::Capability::RayQueryKHR, // 259
-  spv::Capability::DisplacementMicromapNV, // 260
-  spv::Capability::CooperativeMatrixNV, // 261
-  spv::Capability::FragmentShaderSampleInterlockEXT, // 262
-  spv::Capability::FragmentShaderPixelInterlockEXT, // 263
-  spv::Capability::FragmentShaderShadingRateInterlockEXT, // 264
-  spv::Capability::CooperativeMatrixReductionsNV, // 265
-  spv::Capability::CooperativeMatrixPerElementOperationsNV, // 266
-  spv::Capability::TensorAddressingNV, // 267
-  spv::Capability::DemoteToHelperInvocation, // 268
-  spv::Capability::SubgroupShuffleINTEL, // 269
-  spv::Capability::SubgroupBufferBlockIOINTEL, // 270
-  spv::Capability::SubgroupImageBlockIOINTEL, // 271
-  spv::Capability::SubgroupImageMediaBlockIOINTEL, // 272
-  spv::Capability::IntegerFunctions2INTEL, // 273
-  spv::Capability::AtomicFloat16MinMaxEXT, // 274
-  spv::Capability::AtomicFloat32MinMaxEXT, // 275
-  spv::Capability::AtomicFloat64MinMaxEXT, // 276
-  spv::Capability::AtomicFloat16VectorNV, // 277
-  spv::Capability::ExpectAssumeKHR, // 278
-  spv::Capability::SubgroupAvcMotionEstimationINTEL, // 279
+  spv::Capability::VariablePointers, // 207
+  spv::Capability::VariablePointersStorageBuffer, // 208
+  spv::Capability::PhysicalStorageBufferAddresses, // 209
+  spv::Capability::Kernel, // 210
+  spv::Capability::ImageQuery, // 211
+  spv::Capability::ImageQuery, // 212
+  spv::Capability::Shader, // 213
+  spv::Capability::BitInstructions, // 214
+  spv::Capability::DerivativeControl, // 215
+  spv::Capability::Groups, // 216
+  spv::Capability::SparseResidency, // 217
+  spv::Capability::PipeStorage, // 218
+  spv::Capability::NamedBarrier, // 219
+  spv::Capability::GroupNonUniformVote, // 220
+  spv::Capability::GroupNonUniformBallot, // 221
+  spv::Capability::GroupNonUniformShuffle, // 222
+  spv::Capability::GroupNonUniformShuffleRelative, // 223
+  spv::Capability::GroupNonUniformArithmetic, // 224
+  spv::Capability::GroupNonUniformClustered, // 225
+  spv::Capability::GroupNonUniformPartitionedNV, // 226
+  spv::Capability::GroupNonUniformQuad, // 227
+  spv::Capability::Addresses, // 228
+  spv::Capability::VariablePointers, // 229
+  spv::Capability::VariablePointersStorageBuffer, // 230
+  spv::Capability::GraphARM, // 231
+  spv::Capability::UntypedPointersKHR, // 232
+  spv::Capability::SubgroupBallotKHR, // 233
+  spv::Capability::SubgroupVoteKHR, // 234
+  spv::Capability::GroupNonUniformRotateKHR, // 235
+  spv::Capability::RayTracingKHR, // 236
+  spv::Capability::RayQueryKHR, // 237
+  spv::Capability::DotProduct, // 238
+  spv::Capability::ReplicatedCompositesEXT, // 239
+  spv::Capability::TextureSampleWeightedQCOM, // 240
+  spv::Capability::TextureBoxFilterQCOM, // 241
+  spv::Capability::TextureBlockMatchQCOM, // 242
+  spv::Capability::CooperativeMatrixConversionQCOM, // 243
+  spv::Capability::TextureBlockMatch2QCOM, // 244
+  spv::Capability::FragmentMaskAMD, // 245
+  spv::Capability::ShaderClockKHR, // 246
+  spv::Capability::ShaderInvocationReorderNV, // 247
+  spv::Capability::RayTracingMotionBlurNV, // 248
+  spv::Capability::ImageFootprintNV, // 249
+  spv::Capability::CooperativeVectorNV, // 250
+  spv::Capability::CooperativeVectorTrainingNV, // 251
+  spv::Capability::CooperativeMatrixConversionsNV, // 252
+  spv::Capability::DisplacementMicromapNV, // 253
+  spv::Capability::RayQueryPositionFetchKHR, // 254
+  spv::Capability::RayTracingNV, // 255
+  spv::Capability::RayTracingKHR, // 256
+  spv::Capability::RayQueryKHR, // 257
+  spv::Capability::DisplacementMicromapNV, // 258
+  spv::Capability::CooperativeMatrixNV, // 259
+  spv::Capability::FragmentShaderSampleInterlockEXT, // 260
+  spv::Capability::FragmentShaderPixelInterlockEXT, // 261
+  spv::Capability::FragmentShaderShadingRateInterlockEXT, // 262
+  spv::Capability::CooperativeMatrixReductionsNV, // 263
+  spv::Capability::CooperativeMatrixPerElementOperationsNV, // 264
+  spv::Capability::TensorAddressingNV, // 265
+  spv::Capability::DemoteToHelperInvocation, // 266
+  spv::Capability::SubgroupShuffleINTEL, // 267
+  spv::Capability::SubgroupBufferBlockIOINTEL, // 268
+  spv::Capability::SubgroupImageBlockIOINTEL, // 269
+  spv::Capability::SubgroupImageMediaBlockIOINTEL, // 270
+  spv::Capability::IntegerFunctions2INTEL, // 271
+  spv::Capability::AtomicFloat16MinMaxEXT, // 272
+  spv::Capability::AtomicFloat32MinMaxEXT, // 273
+  spv::Capability::AtomicFloat64MinMaxEXT, // 274
+  spv::Capability::AtomicFloat16VectorNV, // 275
+  spv::Capability::ExpectAssumeKHR, // 276
+  spv::Capability::SubgroupAvcMotionEstimationINTEL, // 277
+  spv::Capability::SubgroupAvcMotionEstimationINTEL, // 278
+  spv::Capability::SubgroupAvcMotionEstimationIntraINTEL, // 279
   spv::Capability::SubgroupAvcMotionEstimationINTEL, // 280
-  spv::Capability::SubgroupAvcMotionEstimationIntraINTEL, // 281
-  spv::Capability::SubgroupAvcMotionEstimationINTEL, // 282
-  spv::Capability::SubgroupAvcMotionEstimationChromaINTEL, // 283
-  spv::Capability::VariableLengthArrayINTEL, // 284
-  spv::Capability::ArbitraryPrecisionFloatingPointINTEL, // 285
-  spv::Capability::UnstructuredLoopControlsINTEL, // 286
-  spv::Capability::BlockingPipesINTEL, // 287
-  spv::Capability::FPGARegINTEL, // 288
-  spv::Capability::AtomicFloat16AddEXT, // 289
-  spv::Capability::AtomicFloat32AddEXT, // 290
-  spv::Capability::AtomicFloat64AddEXT, // 291
-  spv::Capability::AtomicFloat16VectorNV, // 292
-  spv::Capability::LongCompositesINTEL, // 293
-  spv::Capability::BFloat16ConversionINTEL, // 294
-  spv::Capability::SplitBarrierINTEL, // 295
-  spv::Capability::ArithmeticFenceEXT, // 296
-  spv::Capability::TaskSequenceINTEL, // 297
-  spv::Capability::SubgroupBufferPrefetchINTEL, // 298
-  spv::Capability::Subgroup2DBlockTransformINTEL, // 299
-  spv::Capability::Subgroup2DBlockTransposeINTEL, // 300
-  spv::Capability::SubgroupMatrixMultiplyAccumulateINTEL, // 301
-  spv::Capability::TernaryBitwiseFunctionINTEL, // 302
-  spv::Capability::FunctionVariantsINTEL, // 303
-  spv::Capability::GroupUniformArithmeticKHR, // 304
-  spv::Capability::TensorFloat32RoundingINTEL, // 305
-  spv::Capability::MaskedGatherScatterINTEL, // 306
-  spv::Capability::BindlessImagesINTEL, // 307
-  spv::Capability::Float64, // 308
-  spv::Capability::InterpolationFunction, // 309
+  spv::Capability::SubgroupAvcMotionEstimationChromaINTEL, // 281
+  spv::Capability::VariableLengthArrayINTEL, // 282
+  spv::Capability::ArbitraryPrecisionFloatingPointINTEL, // 283
+  spv::Capability::UnstructuredLoopControlsINTEL, // 284
+  spv::Capability::BlockingPipesINTEL, // 285
+  spv::Capability::FPGARegINTEL, // 286
+  spv::Capability::AtomicFloat16AddEXT, // 287
+  spv::Capability::AtomicFloat32AddEXT, // 288
+  spv::Capability::AtomicFloat64AddEXT, // 289
+  spv::Capability::AtomicFloat16VectorNV, // 290
+  spv::Capability::LongCompositesINTEL, // 291
+  spv::Capability::BFloat16ConversionINTEL, // 292
+  spv::Capability::SplitBarrierINTEL, // 293
+  spv::Capability::ArithmeticFenceEXT, // 294
+  spv::Capability::TaskSequenceINTEL, // 295
+  spv::Capability::SubgroupBufferPrefetchINTEL, // 296
+  spv::Capability::Subgroup2DBlockTransformINTEL, // 297
+  spv::Capability::Subgroup2DBlockTransposeINTEL, // 298
+  spv::Capability::SubgroupMatrixMultiplyAccumulateINTEL, // 299
+  spv::Capability::TernaryBitwiseFunctionINTEL, // 300
+  spv::Capability::FunctionVariantsINTEL, // 301
+  spv::Capability::GroupUniformArithmeticKHR, // 302
+  spv::Capability::TensorFloat32RoundingINTEL, // 303
+  spv::Capability::MaskedGatherScatterINTEL, // 304
+  spv::Capability::BindlessImagesINTEL, // 305
+  spv::Capability::Float64, // 306
+  spv::Capability::InterpolationFunction, // 307
 };
 
 // Array of extensions, referenced by IndexRanges elsewhere.
