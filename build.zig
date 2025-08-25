@@ -239,7 +239,7 @@ fn update_sources(toolbox: *Toolbox, path: *const Paths) !void {
 }
 
 fn wait_20_secs() void {
-    std.time.sleep(std.time.ns_per_s * 20);
+    std.Thread.sleep(std.time.ns_per_s * 20);
 }
 
 fn update_generated(toolbox: *Toolbox, path: *const Paths) !void {
