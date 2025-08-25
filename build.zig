@@ -239,7 +239,7 @@ fn update_sources(toolbox: *Toolbox, path: *const Paths) !void {
 }
 
 fn wait_20_secs() void {
-    std.time.sleep(std.time.ns_per_s * 20);
+    std.Thread.sleep(std.time.ns_per_s * 20);
 }
 
 fn update_generated(toolbox: *Toolbox, path: *const Paths) !void {
@@ -387,11 +387,13 @@ pub fn build(builder: *std.Build) !void {
 
     if (toolbox.getUpdate()) try update(&toolbox, &path);
 
-    const lib = builder.addStaticLibrary(.{
+    const lib = builder.addLibrary(.{
         .name = "spirv",
-        .root_source_file = builder.addWriteFiles().add("empty.c", ""),
-        .target = target,
-        .optimize = optimize,
+        .root_module = std.Build.Module.create(builder, .{
+            .root_source_file = builder.addWriteFiles().add("empty.zig", ""),
+            .target = target,
+            .optimize = optimize,
+        }),
     });
 
     for ([_][]const u8{
