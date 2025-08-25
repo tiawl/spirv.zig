@@ -1104,6 +1104,7 @@ enum Capability {
     CapabilityTextureBoxFilterQCOM = 4485,
     CapabilityTextureBlockMatchQCOM = 4486,
     CapabilityTileShadingQCOM = 4495,
+    CapabilityCooperativeMatrixConversionQCOM = 4496,
     CapabilityTextureBlockMatch2QCOM = 4498,
     CapabilityFloat16ImageAMD = 5008,
     CapabilityImageGatherBiasLodAMD = 5009,
@@ -1975,6 +1976,7 @@ enum Op {
     OpGroupNonUniformRotateKHR = 4431,
     OpSubgroupReadInvocationKHR = 4432,
     OpExtInstWithForwardRefsKHR = 4433,
+    OpUntypedGroupAsyncCopyKHR = 4434,
     OpTraceRayKHR = 4445,
     OpExecuteCallableKHR = 4446,
     OpConvertUToAccelerationStructureKHR = 4447,
@@ -2011,10 +2013,14 @@ enum Op {
     OpImageBoxFilterQCOM = 4481,
     OpImageBlockMatchSSDQCOM = 4482,
     OpImageBlockMatchSADQCOM = 4483,
+    OpBitCastArrayQCOM = 4497,
     OpImageBlockMatchWindowSSDQCOM = 4500,
     OpImageBlockMatchWindowSADQCOM = 4501,
     OpImageBlockMatchGatherSSDQCOM = 4502,
     OpImageBlockMatchGatherSADQCOM = 4503,
+    OpCompositeConstructCoopMatQCOM = 4540,
+    OpCompositeExtractCoopMatQCOM = 4541,
+    OpExtractSubArrayQCOM = 4542,
     OpGroupIAddNonUniformAMD = 5000,
     OpGroupFAddNonUniformAMD = 5001,
     OpGroupFMinNonUniformAMD = 5002,
@@ -2812,6 +2818,7 @@ inline void HasResultAndType(Op opcode, bool *hasResult, bool *hasResultType) {
     case OpGroupNonUniformRotateKHR: *hasResult = true; *hasResultType = true; break;
     case OpSubgroupReadInvocationKHR: *hasResult = true; *hasResultType = true; break;
     case OpExtInstWithForwardRefsKHR: *hasResult = true; *hasResultType = true; break;
+    case OpUntypedGroupAsyncCopyKHR: *hasResult = true; *hasResultType = true; break;
     case OpTraceRayKHR: *hasResult = false; *hasResultType = false; break;
     case OpExecuteCallableKHR: *hasResult = false; *hasResultType = false; break;
     case OpConvertUToAccelerationStructureKHR: *hasResult = true; *hasResultType = true; break;
@@ -2842,10 +2849,14 @@ inline void HasResultAndType(Op opcode, bool *hasResult, bool *hasResultType) {
     case OpImageBoxFilterQCOM: *hasResult = true; *hasResultType = true; break;
     case OpImageBlockMatchSSDQCOM: *hasResult = true; *hasResultType = true; break;
     case OpImageBlockMatchSADQCOM: *hasResult = true; *hasResultType = true; break;
+    case OpBitCastArrayQCOM: *hasResult = true; *hasResultType = true; break;
     case OpImageBlockMatchWindowSSDQCOM: *hasResult = true; *hasResultType = true; break;
     case OpImageBlockMatchWindowSADQCOM: *hasResult = true; *hasResultType = true; break;
     case OpImageBlockMatchGatherSSDQCOM: *hasResult = true; *hasResultType = true; break;
     case OpImageBlockMatchGatherSADQCOM: *hasResult = true; *hasResultType = true; break;
+    case OpCompositeConstructCoopMatQCOM: *hasResult = true; *hasResultType = true; break;
+    case OpCompositeExtractCoopMatQCOM: *hasResult = true; *hasResultType = true; break;
+    case OpExtractSubArrayQCOM: *hasResult = true; *hasResultType = true; break;
     case OpGroupIAddNonUniformAMD: *hasResult = true; *hasResultType = true; break;
     case OpGroupFAddNonUniformAMD: *hasResult = true; *hasResultType = true; break;
     case OpGroupFMinNonUniformAMD: *hasResult = true; *hasResultType = true; break;
@@ -4069,6 +4080,7 @@ inline const char* CapabilityToString(Capability value) {
     case CapabilityTextureBoxFilterQCOM: return "TextureBoxFilterQCOM";
     case CapabilityTextureBlockMatchQCOM: return "TextureBlockMatchQCOM";
     case CapabilityTileShadingQCOM: return "TileShadingQCOM";
+    case CapabilityCooperativeMatrixConversionQCOM: return "CooperativeMatrixConversionQCOM";
     case CapabilityTextureBlockMatch2QCOM: return "TextureBlockMatch2QCOM";
     case CapabilityFloat16ImageAMD: return "Float16ImageAMD";
     case CapabilityImageGatherBiasLodAMD: return "ImageGatherBiasLodAMD";
@@ -4795,6 +4807,7 @@ inline const char* OpToString(Op value) {
     case OpGroupNonUniformRotateKHR: return "OpGroupNonUniformRotateKHR";
     case OpSubgroupReadInvocationKHR: return "OpSubgroupReadInvocationKHR";
     case OpExtInstWithForwardRefsKHR: return "OpExtInstWithForwardRefsKHR";
+    case OpUntypedGroupAsyncCopyKHR: return "OpUntypedGroupAsyncCopyKHR";
     case OpTraceRayKHR: return "OpTraceRayKHR";
     case OpExecuteCallableKHR: return "OpExecuteCallableKHR";
     case OpConvertUToAccelerationStructureKHR: return "OpConvertUToAccelerationStructureKHR";
@@ -4825,10 +4838,14 @@ inline const char* OpToString(Op value) {
     case OpImageBoxFilterQCOM: return "OpImageBoxFilterQCOM";
     case OpImageBlockMatchSSDQCOM: return "OpImageBlockMatchSSDQCOM";
     case OpImageBlockMatchSADQCOM: return "OpImageBlockMatchSADQCOM";
+    case OpBitCastArrayQCOM: return "OpBitCastArrayQCOM";
     case OpImageBlockMatchWindowSSDQCOM: return "OpImageBlockMatchWindowSSDQCOM";
     case OpImageBlockMatchWindowSADQCOM: return "OpImageBlockMatchWindowSADQCOM";
     case OpImageBlockMatchGatherSSDQCOM: return "OpImageBlockMatchGatherSSDQCOM";
     case OpImageBlockMatchGatherSADQCOM: return "OpImageBlockMatchGatherSADQCOM";
+    case OpCompositeConstructCoopMatQCOM: return "OpCompositeConstructCoopMatQCOM";
+    case OpCompositeExtractCoopMatQCOM: return "OpCompositeExtractCoopMatQCOM";
+    case OpExtractSubArrayQCOM: return "OpExtractSubArrayQCOM";
     case OpGroupIAddNonUniformAMD: return "OpGroupIAddNonUniformAMD";
     case OpGroupFAddNonUniformAMD: return "OpGroupFAddNonUniformAMD";
     case OpGroupFMinNonUniformAMD: return "OpGroupFMinNonUniformAMD";
