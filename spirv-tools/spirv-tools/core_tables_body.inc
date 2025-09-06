@@ -3133,7 +3133,7 @@ static const std::array<InstructionDesc, 821> kInstructionDesc{{
   {spv::Op::OpUConvert, true, true, IR(160, 3), IR(27554, 9), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConversion},
   {spv::Op::OpSConvert, true, true, IR(160, 3), IR(27563, 9), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConversion},
   {spv::Op::OpFConvert, true, true, IR(160, 3), IR(27572, 9), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConversion},
-  {spv::Op::OpQuantizeToF16, true, true, IR(160, 3), IR(27581, 14), IR(0, 0), IR(1, 0), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConversion},
+  {spv::Op::OpQuantizeToF16, true, true, IR(160, 3), IR(27581, 14), IR(0, 0), IR(3, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConversion},
   {spv::Op::OpConvertPtrToU, true, true, IR(160, 3), IR(27595, 14), IR(0, 0), IR(203, 2), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConversion},
   {spv::Op::OpSatConvertSToU, true, true, IR(160, 3), IR(27609, 15), IR(0, 0), IR(0, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConversion},
   {spv::Op::OpSatConvertUToS, true, true, IR(160, 3), IR(27624, 15), IR(0, 0), IR(0, 1), IR(0, 0), SPV_SPIRV_VERSION_WORD(1,0), 0xffffffffu, PrintingClass::kConversion},
