@@ -15,6 +15,7 @@
 // limitations under the License.
 
 #include <algorithm>
+#include <cstdint>
 #include <string>
 #include <vector>
 
@@ -1119,6 +1120,29 @@ spv_result_t ValidateLoad(ValidationState_t& _, const Instruction* inst) {
     }
   }
 
+  // Skip checking if there is zero chance for this having a mesh shader
+  // entrypoint
+  if (_.HasCapability(spv::Capability::MeshShadingEXT) &&
+      pointer_type->GetOperandAs<spv::StorageClass>(1) ==
+          spv::StorageClass::Output) {
+    std::string errorVUID = _.VkErrorID(7107);
+    _.function(inst->function()->id())
+        ->RegisterExecutionModelLimitation(
+            [errorVUID](spv::ExecutionModel model, std::string* message) {
+              // Seems the NV Mesh extension was less strict and allowed
+              // writting to outputs
+              if (model == spv::ExecutionModel::MeshEXT) {
+                if (message) {
+                  *message = errorVUID +
+                             "The Output Storage Class in a Mesh Execution "
+                             "Model must not be read from";
+                }
+                return false;
+              }
+              return true;
+            });
+  }
+
   _.RegisterQCOMImageProcessingTextureConsumer(pointer_id, inst, nullptr);
 
   return SPV_SUCCESS;
@@ -1823,13 +1847,19 @@ spv_result_t ValidateAccessChain(ValidationState_t& _,
     // At this point, we have fully walked down from the base using the indeces.
     // The type being pointed to should be the same as the result type.
     if (type_pointee->id() != result_type_pointee->id()) {
+      bool same_type = result_type_pointee->opcode() == type_pointee->opcode();
       return _.diag(SPV_ERROR_INVALID_ID, inst)
-             << "Op" << spvOpcodeString(opcode) << " result type (Op"
+             << "Op" << spvOpcodeString(opcode) << " result type <id> "
+             << _.getIdName(result_type_pointee->id()) << " (Op"
              << spvOpcodeString(result_type_pointee->opcode())
              << ") does not match the type that results from indexing into the "
                 "base "
-                "<id> (Op"
-             << spvOpcodeString(type_pointee->opcode()) << ").";
+                "<id> "
+             << _.getIdName(type_pointee->id()) << " (Op"
+             << spvOpcodeString(type_pointee->opcode()) << ")."
+             << (same_type ? " (The types must be the exact same Id, so the "
+                             "two types referenced are slighlty different)"
+                           : "");
     }
   }
 
