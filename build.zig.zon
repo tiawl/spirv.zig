@@ -2,12 +2,24 @@
     .name = .spirv_zig,
     .version = "1.0.0",
     .dependencies = .{
+        .mimalloc = .{
+            .url = "git+https://github.com/microsoft/mimalloc#8ff03b636192e25db17eaaff29e6f75acc9a662b",
+            .hash = "N-V-__8AAMxXUgCohwq1PWoiLicmoaGOLCS9Cs1tNgd8cv73",
+        },
+        .@"SPIRV-Tools" = .{
+            .url = "git+https://github.com/KhronosGroup/SPIRV-Tools#cb38b2342beedde25bcff582dc3528a135cf6e67",
+            .hash = "N-V-__8AAGvDhwFLpX3aJwjmh0kTGsPQZPoDDhO7mffanFvz",
+        },
+        .@"SPIRV-Headers" = .{
+            .url = "git+https://github.com/KhronosGroup/SPIRV-Headers#f31ca173eff866369e54d35e53375fadbabd58f4",
+            .hash = "N-V-__8AAKLXPADN3D5sy8L3WxURvf9ZUk0HIZSObDuBg4MJ",
+        },
         .toolbox = .{
-            .url = "git+https://github.com/tiawl/toolbox?ref=1.12.6#79c1dffe608a9c4a7dcf11f98f1dc88b9b46e9f5",
-            .hash = "toolbox-1.12.6-kRAu4BJbAAAGPWPltdn1vwY83xau2Zh9015JTQ0MZjyM",
+            .url = "git+https://github.com/tiawl/toolbox#c40e214efcaf902c455dc9ba3dc1ddf64bb3bf25",
+            .hash = "toolbox-2.0.0-kRAu4Cp6AAAOOwydlP8GG2SVXq82AhgeA_C6ABUpDZhH",
         },
     },
-    .minimum_zig_version = "0.15.1",
+    .minimum_zig_version = "0.15.2",
     .fingerprint = 0xc01cda876afcbb,
     .paths = .{
         "build.zig",
