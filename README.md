@@ -4,42 +4,26 @@ This is a fork of [hexops/spirv-tools][1] which itself is a fork of [KhronosGrou
 
 ## Why this forkception ?
 
-The intention under this fork is the same as [hexops][7] had when they forked [KhronosGroup/SPIRV-Tools][2]: package the headers for [Zig][4]. So:
+The intention under this fork is the same as [hexops][5] had when they forked [KhronosGroup/SPIRV-Tools][2]: package the headers for [Zig][4]. So:
 * Unnecessary files have been deleted,
 * The build system has been replaced with `build.zig`.
 
 However this repository has subtle differences for maintainability tasks:
 * No shell scripting,
-* A cron runs every day to check [KhronosGroup/SPIRV-Tools][2] and [KhronosGroup/SPIRV-Headers][3]. Then it updates this repository if a new release is available.
-
-## How to use it
-
-The current usage of this repository is centered around [tiawl/shaderc.zig][3] compilation. But you could use it for your own projects. Headers are here and there are no planned evolution to modify them. See [tiawl/shaderc.zig][3] to see how you can use it. Maybe for your own need, some headers are missing. If it happens, open an issue: this repository is open to potential usage evolution.
+* A cron runs every day to check [KhronosGroup/SPIRV-Tools][2], [KhronosGroup/SPIRV-Headers][3] and other dependencies. Then it updates this repository if a new release is available.
 
 ## Dependencies
 
 The [Zig][4] part of this package is relying on the latest [Zig][4] release (0.15.2) and will only be updated for the next one.
+It you use a more recent [Zig][4] version, please consider the `zig-nightly` branch and `*-nightly` tags.
 
-Here the repositories' version used by this fork:
-* [KhronosGroup/SPIRV-Tools](https://github.com/tiawl/spirv.zig/blob/trunk/.references/spirv-tools)
-* [KhronosGroup/SPIRV-Headers](https://github.com/tiawl/spirv.zig/blob/trunk/.references/spirv)
-
-## CICD reminder
-
-These repositories are automatically updated when a new release is available:
-* [tiawl/shaderc.zig][5]
-
-This repository is automatically updated when a new release is available from these repositories:
-* [KhronosGroup/SPIRV-Tools][2]
-* [KhronosGroup/SPIRV-Headers][3]
-* [microsoft/mimalloc][8]
-* [tiawl/toolbox][6]
+For other dependencies see [the build.zig.zon](https://github.com/tiawl/spirv.zig/blob/zig-stable/build.zig.zon)
 
 ## `zig build` options
 
-These additional options have been implemented for maintainability tasks:
+These additional options have mainly been implemented for maintainability tasks but they maybe could be useful for edge usecases:
 ```
-  -Dfetch   Update .references folder and build.zig.zon then stop execution
+  -Dfetch   Update build.zig.zon then stop execution
   -Dupdate  Update binding
 ```
 
@@ -54,8 +38,5 @@ The parts of this repository originated from this repository are dedicated to th
 [1]:https://github.com/hexops/spirv-tools
 [2]:https://github.com/KhronosGroup/SPIRV-Tools
 [3]:https://github.com/KhronosGroup/SPIRV-Headers
-[4]:https://github.com/ziglang/zig
-[5]:https://github.com/tiawl/shaderc.zig
-[6]:https://github.com/tiawl/toolbox
-[7]:https://github.com/hexops
-[8]:https://github.com/microsoft/mimalloc
+[4]:https://codeberg.org/ziglang/zig
+[5]:https://github.com/hexops
