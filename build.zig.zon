@@ -7,15 +7,15 @@
             .hash = "N-V-__8AAD9bUgB7S2aB-eZtAxFNTYbImrfvO8IFhUJehDN8",
         },
         .@"SPIRV-Tools" = .{
-            .url = "git+https://github.com/KhronosGroup/SPIRV-Tools#a52828d672ab1622c308d0a6fc99630b79561609",
-            .hash = "N-V-__8AAJqgigGQopd3-AoiSeaFqm9BLCdPF5NXruAk7zqE",
+            .url = "git+https://github.com/KhronosGroup/SPIRV-Tools#31f2d2e644d0432b6749262b9d58bb0b5e00b300",
+            .hash = "N-V-__8AAIWkigHJmOfztmKc9c1rKMEl6txdp26Yi-x4Hyry",
         },
         .@"SPIRV-Headers" = .{
             .url = "git+https://github.com/KhronosGroup/SPIRV-Headers#869266ad9e6050197d87cf0a22aab59abf7ad008",
             .hash = "N-V-__8AALuAPQA61J1u9MMpjic4tWzLCJ19KXet3pdZygSD",
         },
         .toolbox = .{
-            .url = "git+https://github.com/tiawl/toolbox#4e53db5c19ca6980fa34d9a7d6df514757381520",
+            .url = "git+https://github.com/tiawl/toolbox?ref=2.0.1-nightly#77eed4c48c2d0590f618854a1ea2723db7564e50",
             .hash = "toolbox-2.0.1-kRAu4DeDAAAuGdsJQqTDrGKN2CyNt9Xrxc8_qateuv50",
             .branch = "zig-nightly",
         },
