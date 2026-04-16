@@ -3,16 +3,16 @@
     .version = "1.0.0",
     .dependencies = .{
         .mimalloc = .{
-            .url = "git+https://github.com/microsoft/mimalloc#75d69f4ab736ad9f56cdd76c7eb883f60ac48869",
-            .hash = "N-V-__8AAD9bUgB7S2aB-eZtAxFNTYbImrfvO8IFhUJehDN8",
+            .url = "git+https://github.com/microsoft/mimalloc#ef1d67e51d98ceba1eefc5b4cd65255cbd5b7eff",
+            .hash = "N-V-__8AAMA5VAASmuKXpyar8f-XdWe1F4yhxXFYQH7xck_i",
         },
         .@"SPIRV-Tools" = .{
-            .url = "git+https://github.com/KhronosGroup/SPIRV-Tools#4b3bd66f3806ee0b67d9fe7c591d8f29ca535ccd",
-            .hash = "N-V-__8AAKNGiwH0PtsGeDD0XOBS8158isLUBk7zfSvuLbXN",
+            .url = "git+https://github.com/KhronosGroup/SPIRV-Tools#8d245e02504488aaa51ab561cfd8725b7916c91d",
+            .hash = "N-V-__8AANpIiwFWQlNFL16JcRTYwCXCbC0A0a8sDHc-vCA_",
         },
         .@"SPIRV-Headers" = .{
-            .url = "git+https://github.com/KhronosGroup/SPIRV-Headers#869266ad9e6050197d87cf0a22aab59abf7ad008",
-            .hash = "N-V-__8AALuAPQA61J1u9MMpjic4tWzLCJ19KXet3pdZygSD",
+            .url = "git+https://github.com/KhronosGroup/SPIRV-Headers#ad9184e76a66b1001c29db9b0a3e87f646c64de0",
+            .hash = "N-V-__8AAOWAPQDTQrudoJ1kyAzjkh3mLopx0pq3uHSy2LDi",
         },
         .toolbox = .{
             .url = "git+https://github.com/tiawl/toolbox?ref=zig-0.16.0#7d7d056c47e1bc9a66c4ab4d53928c86f1cbb954",
