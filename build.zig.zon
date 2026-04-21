@@ -3,12 +3,12 @@
     .version = "1.0.0",
     .dependencies = .{
         .mimalloc = .{
-            .url = "git+https://github.com/microsoft/mimalloc#ef1d67e51d98ceba1eefc5b4cd65255cbd5b7eff",
-            .hash = "N-V-__8AAMA5VAASmuKXpyar8f-XdWe1F4yhxXFYQH7xck_i",
+            .url = "git+https://github.com/microsoft/mimalloc#b1963961a5cdb1996c9ad2e356014089b7a94ea3",
+            .hash = "N-V-__8AAFBuVACNNEYgYaDUg8wG4Y5VLsAgqDE35mYiOJjC",
         },
         .@"SPIRV-Tools" = .{
-            .url = "git+https://github.com/KhronosGroup/SPIRV-Tools#5278681115c9099ca33183cbf91f3726ee962616",
-            .hash = "N-V-__8AAKiwiwFiO1fekI92PMQGy6IYGowQMlewyd2ZmT0o",
+            .url = "git+https://github.com/KhronosGroup/SPIRV-Tools#706f1dc8558316213eac02b0611f9cde6fd3d9c5",
+            .hash = "N-V-__8AAJy3iwGHjZkEJ0eRF6Ac6YP5yvK_uH16gKoN8u_8",
         },
         .@"SPIRV-Headers" = .{
             .url = "git+https://github.com/KhronosGroup/SPIRV-Headers#ad9184e76a66b1001c29db9b0a3e87f646c64de0",
