@@ -743,6 +743,7 @@ typedef enum SpvBuiltIn_ {
     SpvBuiltInSubgroupLocalInvocationId = 41,
     SpvBuiltInVertexIndex = 42,
     SpvBuiltInInstanceIndex = 43,
+    SpvBuiltInFragmentCoverageMaskMESA = 4096,
     SpvBuiltInCoreIDARM = 4160,
     SpvBuiltInCoreCountARM = 4161,
     SpvBuiltInCoreMaxIDARM = 4162,
@@ -1139,6 +1140,7 @@ typedef enum SpvCapability_ {
     SpvCapabilityShaderLayer = 69,
     SpvCapabilityShaderViewportIndex = 70,
     SpvCapabilityUniformDecoration = 71,
+    SpvCapabilityFragmentCoverageMESA = 4097,
     SpvCapabilityCoreBuiltinsARM = 4165,
     SpvCapabilityTileImageColorReadAccessEXT = 4166,
     SpvCapabilityTileImageDepthReadAccessEXT = 4167,
@@ -1396,6 +1398,8 @@ typedef enum SpvCapability_ {
     SpvCapabilityUntypedVariableLengthArrayINTEL = 6243,
     SpvCapabilitySpecConditionalINTEL = 6245,
     SpvCapabilityFunctionVariantsINTEL = 6246,
+    SpvCapabilityPredicatedIOINTEL = 6257,
+    SpvCapabilityRoundedDivideSqrtINTEL = 6265,
     SpvCapabilityGroupUniformArithmeticKHR = 6400,
     SpvCapabilityTensorFloat32RoundingINTEL = 6425,
     SpvCapabilityMaskedGatherScatterINTEL = 6427,
@@ -2628,6 +2632,8 @@ typedef enum SpvOp_ {
     SpvOpSpecConstantArchitectureINTEL = 6252,
     SpvOpSpecConstantCapabilitiesINTEL = 6253,
     SpvOpConditionalCopyObjectINTEL = 6254,
+    SpvOpPredicatedLoadINTEL = 6258,
+    SpvOpPredicatedStoreINTEL = 6259,
     SpvOpGroupIMulKHR = 6401,
     SpvOpGroupFMulKHR = 6402,
     SpvOpGroupBitwiseAndKHR = 6403,
@@ -3510,6 +3516,8 @@ inline void SpvHasResultAndType(SpvOp opcode, bool *hasResult, bool *hasResultTy
     case SpvOpSpecConstantArchitectureINTEL: *hasResult = true; *hasResultType = true; break;
     case SpvOpSpecConstantCapabilitiesINTEL: *hasResult = true; *hasResultType = true; break;
     case SpvOpConditionalCopyObjectINTEL: *hasResult = true; *hasResultType = true; break;
+    case SpvOpPredicatedLoadINTEL: *hasResult = true; *hasResultType = true; break;
+    case SpvOpPredicatedStoreINTEL: *hasResult = false; *hasResultType = false; break;
     case SpvOpGroupIMulKHR: *hasResult = true; *hasResultType = true; break;
     case SpvOpGroupFMulKHR: *hasResult = true; *hasResultType = true; break;
     case SpvOpGroupBitwiseAndKHR: *hasResult = true; *hasResultType = true; break;
@@ -4112,6 +4120,7 @@ inline const char* SpvBuiltInToString(SpvBuiltIn value) {
     case SpvBuiltInSubgroupLocalInvocationId: return "SubgroupLocalInvocationId";
     case SpvBuiltInVertexIndex: return "VertexIndex";
     case SpvBuiltInInstanceIndex: return "InstanceIndex";
+    case SpvBuiltInFragmentCoverageMaskMESA: return "FragmentCoverageMaskMESA";
     case SpvBuiltInCoreIDARM: return "CoreIDARM";
     case SpvBuiltInCoreCountARM: return "CoreCountARM";
     case SpvBuiltInCoreMaxIDARM: return "CoreMaxIDARM";
@@ -4310,6 +4319,7 @@ inline const char* SpvCapabilityToString(SpvCapability value) {
     case SpvCapabilityShaderLayer: return "ShaderLayer";
     case SpvCapabilityShaderViewportIndex: return "ShaderViewportIndex";
     case SpvCapabilityUniformDecoration: return "UniformDecoration";
+    case SpvCapabilityFragmentCoverageMESA: return "FragmentCoverageMESA";
     case SpvCapabilityCoreBuiltinsARM: return "CoreBuiltinsARM";
     case SpvCapabilityTileImageColorReadAccessEXT: return "TileImageColorReadAccessEXT";
     case SpvCapabilityTileImageDepthReadAccessEXT: return "TileImageDepthReadAccessEXT";
@@ -4517,6 +4527,8 @@ inline const char* SpvCapabilityToString(SpvCapability value) {
     case SpvCapabilityUntypedVariableLengthArrayINTEL: return "UntypedVariableLengthArrayINTEL";
     case SpvCapabilitySpecConditionalINTEL: return "SpecConditionalINTEL";
     case SpvCapabilityFunctionVariantsINTEL: return "FunctionVariantsINTEL";
+    case SpvCapabilityPredicatedIOINTEL: return "PredicatedIOINTEL";
+    case SpvCapabilityRoundedDivideSqrtINTEL: return "RoundedDivideSqrtINTEL";
     case SpvCapabilityGroupUniformArithmeticKHR: return "GroupUniformArithmeticKHR";
     case SpvCapabilityTensorFloat32RoundingINTEL: return "TensorFloat32RoundingINTEL";
     case SpvCapabilityMaskedGatherScatterINTEL: return "MaskedGatherScatterINTEL";
@@ -5575,6 +5587,8 @@ inline const char* SpvOpToString(SpvOp value) {
     case SpvOpSpecConstantArchitectureINTEL: return "OpSpecConstantArchitectureINTEL";
     case SpvOpSpecConstantCapabilitiesINTEL: return "OpSpecConstantCapabilitiesINTEL";
     case SpvOpConditionalCopyObjectINTEL: return "OpConditionalCopyObjectINTEL";
+    case SpvOpPredicatedLoadINTEL: return "OpPredicatedLoadINTEL";
+    case SpvOpPredicatedStoreINTEL: return "OpPredicatedStoreINTEL";
     case SpvOpGroupIMulKHR: return "OpGroupIMulKHR";
     case SpvOpGroupFMulKHR: return "OpGroupFMulKHR";
     case SpvOpGroupBitwiseAndKHR: return "OpGroupBitwiseAndKHR";
