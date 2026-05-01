@@ -739,6 +739,7 @@ enum BuiltIn {
     BuiltInSubgroupLocalInvocationId = 41,
     BuiltInVertexIndex = 42,
     BuiltInInstanceIndex = 43,
+    BuiltInFragmentCoverageMaskMESA = 4096,
     BuiltInCoreIDARM = 4160,
     BuiltInCoreCountARM = 4161,
     BuiltInCoreMaxIDARM = 4162,
@@ -1135,6 +1136,7 @@ enum Capability {
     CapabilityShaderLayer = 69,
     CapabilityShaderViewportIndex = 70,
     CapabilityUniformDecoration = 71,
+    CapabilityFragmentCoverageMESA = 4097,
     CapabilityCoreBuiltinsARM = 4165,
     CapabilityTileImageColorReadAccessEXT = 4166,
     CapabilityTileImageDepthReadAccessEXT = 4167,
@@ -1392,6 +1394,8 @@ enum Capability {
     CapabilityUntypedVariableLengthArrayINTEL = 6243,
     CapabilitySpecConditionalINTEL = 6245,
     CapabilityFunctionVariantsINTEL = 6246,
+    CapabilityPredicatedIOINTEL = 6257,
+    CapabilityRoundedDivideSqrtINTEL = 6265,
     CapabilityGroupUniformArithmeticKHR = 6400,
     CapabilityTensorFloat32RoundingINTEL = 6425,
     CapabilityMaskedGatherScatterINTEL = 6427,
@@ -2624,6 +2628,8 @@ enum Op {
     OpSpecConstantArchitectureINTEL = 6252,
     OpSpecConstantCapabilitiesINTEL = 6253,
     OpConditionalCopyObjectINTEL = 6254,
+    OpPredicatedLoadINTEL = 6258,
+    OpPredicatedStoreINTEL = 6259,
     OpGroupIMulKHR = 6401,
     OpGroupFMulKHR = 6402,
     OpGroupBitwiseAndKHR = 6403,
@@ -3479,7 +3485,7 @@ inline void HasResultAndType(Op opcode, bool *hasResult, bool *hasResultType) {
     case OpTypeStructContinuedINTEL: *hasResult = false; *hasResultType = false; break;
     case OpConstantCompositeContinuedINTEL: *hasResult = false; *hasResultType = false; break;
     case OpSpecConstantCompositeContinuedINTEL: *hasResult = false; *hasResultType = false; break;
-    case OpCompositeConstructContinuedINTEL: *hasResult = true; *hasResultType = true; break;
+    case OpCompositeConstructContinuedINTEL: *hasResult = false; *hasResultType = false; break;
     case OpConvertFToBF16INTEL: *hasResult = true; *hasResultType = true; break;
     case OpConvertBF16ToFINTEL: *hasResult = true; *hasResultType = true; break;
     case OpControlBarrierArriveINTEL: *hasResult = false; *hasResultType = false; break;
@@ -3506,6 +3512,8 @@ inline void HasResultAndType(Op opcode, bool *hasResult, bool *hasResultType) {
     case OpSpecConstantArchitectureINTEL: *hasResult = true; *hasResultType = true; break;
     case OpSpecConstantCapabilitiesINTEL: *hasResult = true; *hasResultType = true; break;
     case OpConditionalCopyObjectINTEL: *hasResult = true; *hasResultType = true; break;
+    case OpPredicatedLoadINTEL: *hasResult = true; *hasResultType = true; break;
+    case OpPredicatedStoreINTEL: *hasResult = false; *hasResultType = false; break;
     case OpGroupIMulKHR: *hasResult = true; *hasResultType = true; break;
     case OpGroupFMulKHR: *hasResult = true; *hasResultType = true; break;
     case OpGroupBitwiseAndKHR: *hasResult = true; *hasResultType = true; break;
@@ -4108,6 +4116,7 @@ inline const char* BuiltInToString(BuiltIn value) {
     case BuiltInSubgroupLocalInvocationId: return "SubgroupLocalInvocationId";
     case BuiltInVertexIndex: return "VertexIndex";
     case BuiltInInstanceIndex: return "InstanceIndex";
+    case BuiltInFragmentCoverageMaskMESA: return "FragmentCoverageMaskMESA";
     case BuiltInCoreIDARM: return "CoreIDARM";
     case BuiltInCoreCountARM: return "CoreCountARM";
     case BuiltInCoreMaxIDARM: return "CoreMaxIDARM";
@@ -4306,6 +4315,7 @@ inline const char* CapabilityToString(Capability value) {
     case CapabilityShaderLayer: return "ShaderLayer";
     case CapabilityShaderViewportIndex: return "ShaderViewportIndex";
     case CapabilityUniformDecoration: return "UniformDecoration";
+    case CapabilityFragmentCoverageMESA: return "FragmentCoverageMESA";
     case CapabilityCoreBuiltinsARM: return "CoreBuiltinsARM";
     case CapabilityTileImageColorReadAccessEXT: return "TileImageColorReadAccessEXT";
     case CapabilityTileImageDepthReadAccessEXT: return "TileImageDepthReadAccessEXT";
@@ -4513,6 +4523,8 @@ inline const char* CapabilityToString(Capability value) {
     case CapabilityUntypedVariableLengthArrayINTEL: return "UntypedVariableLengthArrayINTEL";
     case CapabilitySpecConditionalINTEL: return "SpecConditionalINTEL";
     case CapabilityFunctionVariantsINTEL: return "FunctionVariantsINTEL";
+    case CapabilityPredicatedIOINTEL: return "PredicatedIOINTEL";
+    case CapabilityRoundedDivideSqrtINTEL: return "RoundedDivideSqrtINTEL";
     case CapabilityGroupUniformArithmeticKHR: return "GroupUniformArithmeticKHR";
     case CapabilityTensorFloat32RoundingINTEL: return "TensorFloat32RoundingINTEL";
     case CapabilityMaskedGatherScatterINTEL: return "MaskedGatherScatterINTEL";
@@ -5571,6 +5583,8 @@ inline const char* OpToString(Op value) {
     case OpSpecConstantArchitectureINTEL: return "OpSpecConstantArchitectureINTEL";
     case OpSpecConstantCapabilitiesINTEL: return "OpSpecConstantCapabilitiesINTEL";
     case OpConditionalCopyObjectINTEL: return "OpConditionalCopyObjectINTEL";
+    case OpPredicatedLoadINTEL: return "OpPredicatedLoadINTEL";
+    case OpPredicatedStoreINTEL: return "OpPredicatedStoreINTEL";
     case OpGroupIMulKHR: return "OpGroupIMulKHR";
     case OpGroupFMulKHR: return "OpGroupFMulKHR";
     case OpGroupBitwiseAndKHR: return "OpGroupBitwiseAndKHR";
