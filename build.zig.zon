@@ -11,8 +11,8 @@
             .hash = "N-V-__8AAIW-jAFQLcy6seUL_jCD4ZpgMy6k_ve2vwDPkH3W",
         },
         .@"SPIRV-Headers" = .{
-            .url = "git+https://github.com/KhronosGroup/SPIRV-Headers#1f2dd1627ae782fa999b6ed86514c6a905438e3c",
-            .hash = "N-V-__8AABqYPQBkfQJ_4oSfp4ktEkpL9BoUiOzbsmXBrjug",
+            .url = "git+https://github.com/KhronosGroup/SPIRV-Headers#58006c901d1d5c37dece6b6610e9af87fa951375",
+            .hash = "N-V-__8AAISYPQCBgGS9iMdUR5NG1nItCQgJoa4Dcbo_1-zC",
         },
         .toolbox = .{
             .url = "git+https://github.com/tiawl/toolbox?ref=2.0.2#6eff672e76e867c277183aee1b8c5c1b70ff4915",
