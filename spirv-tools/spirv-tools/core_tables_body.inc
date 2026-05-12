@@ -4059,7 +4059,7 @@ static const std::array<InstructionDesc, 873> kInstructionDesc{{
   {spv::Op::OpTypeStructContinuedINTEL, false, false, IR(747, 1), IR(49820, 25), IR(0, 0), IR(308, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kType_Declaration},
   {spv::Op::OpConstantCompositeContinuedINTEL, false, false, IR(747, 1), IR(49845, 32), IR(0, 0), IR(308, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
   {spv::Op::OpSpecConstantCompositeContinuedINTEL, false, false, IR(747, 1), IR(49877, 36), IR(0, 0), IR(308, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConstant_Creation},
-  {spv::Op::OpCompositeConstructContinuedINTEL, true, true, IR(107, 3), IR(49913, 33), IR(0, 0), IR(308, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kComposite},
+  {spv::Op::OpCompositeConstructContinuedINTEL, false, false, IR(747, 1), IR(49913, 33), IR(0, 0), IR(308, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kComposite},
   {spv::Op::OpConvertFToBF16INTEL, true, true, IR(160, 3), IR(49946, 20), IR(0, 0), IR(309, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConversion},
   {spv::Op::OpConvertBF16ToFINTEL, true, true, IR(160, 3), IR(49966, 20), IR(0, 0), IR(309, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kConversion},
   {spv::Op::OpControlBarrierArriveINTEL, false, false, IR(221, 3), IR(49986, 26), IR(0, 0), IR(310, 1), IR(0, 0), 0xffffffffu, 0xffffffffu, PrintingClass::kBarrier},
