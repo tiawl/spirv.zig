@@ -209,6 +209,7 @@ typedef enum SpvExecutionMode_ {
     SpvExecutionModeSchedulerTargetFmaxMhzINTEL = 5903,
     SpvExecutionModeMaximallyReconvergesKHR = 6023,
     SpvExecutionModeFPFastMathDefault = 6028,
+    SpvExecutionModeOpacityMicromapIdKHR = 6031,
     SpvExecutionModeStreamingInterfaceINTEL = 6154,
     SpvExecutionModeRegisterMapInterfaceINTEL = 6160,
     SpvExecutionModeNamedBarrierCountINTEL = 6417,
@@ -475,6 +476,7 @@ typedef enum SpvLinkageType_ {
     SpvLinkageTypeExport = 0,
     SpvLinkageTypeImport = 1,
     SpvLinkageTypeLinkOnceODR = 2,
+    SpvLinkageTypeWeakAMD = 3,
     SpvLinkageTypeMax = 0x7fffffff,
 } SpvLinkageType;
 
@@ -743,7 +745,6 @@ typedef enum SpvBuiltIn_ {
     SpvBuiltInSubgroupLocalInvocationId = 41,
     SpvBuiltInVertexIndex = 42,
     SpvBuiltInInstanceIndex = 43,
-    SpvBuiltInFragmentCoverageMaskMESA = 4096,
     SpvBuiltInCoreIDARM = 4160,
     SpvBuiltInCoreCountARM = 4161,
     SpvBuiltInCoreMaxIDARM = 4162,
@@ -1140,7 +1141,6 @@ typedef enum SpvCapability_ {
     SpvCapabilityShaderLayer = 69,
     SpvCapabilityShaderViewportIndex = 70,
     SpvCapabilityUniformDecoration = 71,
-    SpvCapabilityFragmentCoverageMESA = 4097,
     SpvCapabilityCoreBuiltinsARM = 4165,
     SpvCapabilityTileImageColorReadAccessEXT = 4166,
     SpvCapabilityTileImageDepthReadAccessEXT = 4167,
@@ -1208,6 +1208,7 @@ typedef enum SpvCapability_ {
     SpvCapabilityDescriptorHeapEXT = 5128,
     SpvCapabilityConstantDataKHR = 5146,
     SpvCapabilityPoisonFreezeKHR = 5156,
+    SpvCapabilityWeakLinkageAMD = 5181,
     SpvCapabilitySampleMaskOverrideCoverageNV = 5249,
     SpvCapabilityGeometryShaderPassthroughNV = 5251,
     SpvCapabilityShaderViewportIndexLayerEXT = 5254,
@@ -1272,6 +1273,7 @@ typedef enum SpvCapability_ {
     SpvCapabilityDemoteToHelperInvocationEXT = 5379,
     SpvCapabilityDisplacementMicromapNV = 5380,
     SpvCapabilityRayTracingOpacityMicromapEXT = 5381,
+    SpvCapabilityRayTracingOpacityMicromapKHR = 5381,
     SpvCapabilityShaderInvocationReorderNV = 5383,
     SpvCapabilityShaderInvocationReorderEXT = 5388,
     SpvCapabilityBindlessTextureNV = 5390,
@@ -1366,6 +1368,7 @@ typedef enum SpvCapability_ {
     SpvCapabilityGroupNonUniformRotateKHR = 6026,
     SpvCapabilityFloatControls2 = 6029,
     SpvCapabilityFMAKHR = 6030,
+    SpvCapabilityRayTracingOpacityMicromapExecutionModeKHR = 6032,
     SpvCapabilityAtomicFloat32AddEXT = 6033,
     SpvCapabilityAtomicFloat64AddEXT = 6034,
     SpvCapabilityLongCompositesINTEL = 6089,
@@ -1426,6 +1429,7 @@ typedef enum SpvRayFlagsShift_ {
     SpvRayFlagsSkipTrianglesKHRShift = 8,
     SpvRayFlagsSkipAABBsKHRShift = 9,
     SpvRayFlagsForceOpacityMicromap2StateEXTShift = 10,
+    SpvRayFlagsForceOpacityMicromap2StateKHRShift = 10,
     SpvRayFlagsMax = 0x7fffffff,
 } SpvRayFlagsShift;
 
@@ -1443,6 +1447,7 @@ typedef enum SpvRayFlagsMask_ {
     SpvRayFlagsSkipTrianglesKHRMask = 0x00000100,
     SpvRayFlagsSkipAABBsKHRMask = 0x00000200,
     SpvRayFlagsForceOpacityMicromap2StateEXTMask = 0x00000400,
+    SpvRayFlagsForceOpacityMicromap2StateKHRMask = 0x00000400,
 } SpvRayFlagsMask;
 
 typedef enum SpvRayQueryIntersection_ {
@@ -3694,6 +3699,7 @@ inline const char* SpvExecutionModeToString(SpvExecutionMode value) {
     case SpvExecutionModeSchedulerTargetFmaxMhzINTEL: return "SchedulerTargetFmaxMhzINTEL";
     case SpvExecutionModeMaximallyReconvergesKHR: return "MaximallyReconvergesKHR";
     case SpvExecutionModeFPFastMathDefault: return "FPFastMathDefault";
+    case SpvExecutionModeOpacityMicromapIdKHR: return "OpacityMicromapIdKHR";
     case SpvExecutionModeStreamingInterfaceINTEL: return "StreamingInterfaceINTEL";
     case SpvExecutionModeRegisterMapInterfaceINTEL: return "RegisterMapInterfaceINTEL";
     case SpvExecutionModeNamedBarrierCountINTEL: return "NamedBarrierCountINTEL";
@@ -3893,6 +3899,7 @@ inline const char* SpvLinkageTypeToString(SpvLinkageType value) {
     case SpvLinkageTypeExport: return "Export";
     case SpvLinkageTypeImport: return "Import";
     case SpvLinkageTypeLinkOnceODR: return "LinkOnceODR";
+    case SpvLinkageTypeWeakAMD: return "WeakAMD";
     default: return "Unknown";
     }
 }
@@ -4120,7 +4127,6 @@ inline const char* SpvBuiltInToString(SpvBuiltIn value) {
     case SpvBuiltInSubgroupLocalInvocationId: return "SubgroupLocalInvocationId";
     case SpvBuiltInVertexIndex: return "VertexIndex";
     case SpvBuiltInInstanceIndex: return "InstanceIndex";
-    case SpvBuiltInFragmentCoverageMaskMESA: return "FragmentCoverageMaskMESA";
     case SpvBuiltInCoreIDARM: return "CoreIDARM";
     case SpvBuiltInCoreCountARM: return "CoreCountARM";
     case SpvBuiltInCoreMaxIDARM: return "CoreMaxIDARM";
@@ -4319,7 +4325,6 @@ inline const char* SpvCapabilityToString(SpvCapability value) {
     case SpvCapabilityShaderLayer: return "ShaderLayer";
     case SpvCapabilityShaderViewportIndex: return "ShaderViewportIndex";
     case SpvCapabilityUniformDecoration: return "UniformDecoration";
-    case SpvCapabilityFragmentCoverageMESA: return "FragmentCoverageMESA";
     case SpvCapabilityCoreBuiltinsARM: return "CoreBuiltinsARM";
     case SpvCapabilityTileImageColorReadAccessEXT: return "TileImageColorReadAccessEXT";
     case SpvCapabilityTileImageDepthReadAccessEXT: return "TileImageDepthReadAccessEXT";
@@ -4385,6 +4390,7 @@ inline const char* SpvCapabilityToString(SpvCapability value) {
     case SpvCapabilityDescriptorHeapEXT: return "DescriptorHeapEXT";
     case SpvCapabilityConstantDataKHR: return "ConstantDataKHR";
     case SpvCapabilityPoisonFreezeKHR: return "PoisonFreezeKHR";
+    case SpvCapabilityWeakLinkageAMD: return "WeakLinkageAMD";
     case SpvCapabilitySampleMaskOverrideCoverageNV: return "SampleMaskOverrideCoverageNV";
     case SpvCapabilityGeometryShaderPassthroughNV: return "GeometryShaderPassthroughNV";
     case SpvCapabilityShaderViewportIndexLayerEXT: return "ShaderViewportIndexLayerEXT";
@@ -4501,6 +4507,7 @@ inline const char* SpvCapabilityToString(SpvCapability value) {
     case SpvCapabilityGroupNonUniformRotateKHR: return "GroupNonUniformRotateKHR";
     case SpvCapabilityFloatControls2: return "FloatControls2";
     case SpvCapabilityFMAKHR: return "FMAKHR";
+    case SpvCapabilityRayTracingOpacityMicromapExecutionModeKHR: return "RayTracingOpacityMicromapExecutionModeKHR";
     case SpvCapabilityAtomicFloat32AddEXT: return "AtomicFloat32AddEXT";
     case SpvCapabilityAtomicFloat64AddEXT: return "AtomicFloat64AddEXT";
     case SpvCapabilityLongCompositesINTEL: return "LongCompositesINTEL";
