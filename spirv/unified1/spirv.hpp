@@ -205,6 +205,7 @@ enum ExecutionMode {
     ExecutionModeSchedulerTargetFmaxMhzINTEL = 5903,
     ExecutionModeMaximallyReconvergesKHR = 6023,
     ExecutionModeFPFastMathDefault = 6028,
+    ExecutionModeOpacityMicromapIdKHR = 6031,
     ExecutionModeStreamingInterfaceINTEL = 6154,
     ExecutionModeRegisterMapInterfaceINTEL = 6160,
     ExecutionModeNamedBarrierCountINTEL = 6417,
@@ -471,6 +472,7 @@ enum LinkageType {
     LinkageTypeExport = 0,
     LinkageTypeImport = 1,
     LinkageTypeLinkOnceODR = 2,
+    LinkageTypeWeakAMD = 3,
     LinkageTypeMax = 0x7fffffff,
 };
 
@@ -739,7 +741,6 @@ enum BuiltIn {
     BuiltInSubgroupLocalInvocationId = 41,
     BuiltInVertexIndex = 42,
     BuiltInInstanceIndex = 43,
-    BuiltInFragmentCoverageMaskMESA = 4096,
     BuiltInCoreIDARM = 4160,
     BuiltInCoreCountARM = 4161,
     BuiltInCoreMaxIDARM = 4162,
@@ -1136,7 +1137,6 @@ enum Capability {
     CapabilityShaderLayer = 69,
     CapabilityShaderViewportIndex = 70,
     CapabilityUniformDecoration = 71,
-    CapabilityFragmentCoverageMESA = 4097,
     CapabilityCoreBuiltinsARM = 4165,
     CapabilityTileImageColorReadAccessEXT = 4166,
     CapabilityTileImageDepthReadAccessEXT = 4167,
@@ -1204,6 +1204,7 @@ enum Capability {
     CapabilityDescriptorHeapEXT = 5128,
     CapabilityConstantDataKHR = 5146,
     CapabilityPoisonFreezeKHR = 5156,
+    CapabilityWeakLinkageAMD = 5181,
     CapabilitySampleMaskOverrideCoverageNV = 5249,
     CapabilityGeometryShaderPassthroughNV = 5251,
     CapabilityShaderViewportIndexLayerEXT = 5254,
@@ -1268,6 +1269,7 @@ enum Capability {
     CapabilityDemoteToHelperInvocationEXT = 5379,
     CapabilityDisplacementMicromapNV = 5380,
     CapabilityRayTracingOpacityMicromapEXT = 5381,
+    CapabilityRayTracingOpacityMicromapKHR = 5381,
     CapabilityShaderInvocationReorderNV = 5383,
     CapabilityShaderInvocationReorderEXT = 5388,
     CapabilityBindlessTextureNV = 5390,
@@ -1362,6 +1364,7 @@ enum Capability {
     CapabilityGroupNonUniformRotateKHR = 6026,
     CapabilityFloatControls2 = 6029,
     CapabilityFMAKHR = 6030,
+    CapabilityRayTracingOpacityMicromapExecutionModeKHR = 6032,
     CapabilityAtomicFloat32AddEXT = 6033,
     CapabilityAtomicFloat64AddEXT = 6034,
     CapabilityLongCompositesINTEL = 6089,
@@ -1422,6 +1425,7 @@ enum RayFlagsShift {
     RayFlagsSkipTrianglesKHRShift = 8,
     RayFlagsSkipAABBsKHRShift = 9,
     RayFlagsForceOpacityMicromap2StateEXTShift = 10,
+    RayFlagsForceOpacityMicromap2StateKHRShift = 10,
     RayFlagsMax = 0x7fffffff,
 };
 
@@ -1439,6 +1443,7 @@ enum RayFlagsMask {
     RayFlagsSkipTrianglesKHRMask = 0x00000100,
     RayFlagsSkipAABBsKHRMask = 0x00000200,
     RayFlagsForceOpacityMicromap2StateEXTMask = 0x00000400,
+    RayFlagsForceOpacityMicromap2StateKHRMask = 0x00000400,
 };
 
 enum RayQueryIntersection {
@@ -3690,6 +3695,7 @@ inline const char* ExecutionModeToString(ExecutionMode value) {
     case ExecutionModeSchedulerTargetFmaxMhzINTEL: return "SchedulerTargetFmaxMhzINTEL";
     case ExecutionModeMaximallyReconvergesKHR: return "MaximallyReconvergesKHR";
     case ExecutionModeFPFastMathDefault: return "FPFastMathDefault";
+    case ExecutionModeOpacityMicromapIdKHR: return "OpacityMicromapIdKHR";
     case ExecutionModeStreamingInterfaceINTEL: return "StreamingInterfaceINTEL";
     case ExecutionModeRegisterMapInterfaceINTEL: return "RegisterMapInterfaceINTEL";
     case ExecutionModeNamedBarrierCountINTEL: return "NamedBarrierCountINTEL";
@@ -3889,6 +3895,7 @@ inline const char* LinkageTypeToString(LinkageType value) {
     case LinkageTypeExport: return "Export";
     case LinkageTypeImport: return "Import";
     case LinkageTypeLinkOnceODR: return "LinkOnceODR";
+    case LinkageTypeWeakAMD: return "WeakAMD";
     default: return "Unknown";
     }
 }
@@ -4116,7 +4123,6 @@ inline const char* BuiltInToString(BuiltIn value) {
     case BuiltInSubgroupLocalInvocationId: return "SubgroupLocalInvocationId";
     case BuiltInVertexIndex: return "VertexIndex";
     case BuiltInInstanceIndex: return "InstanceIndex";
-    case BuiltInFragmentCoverageMaskMESA: return "FragmentCoverageMaskMESA";
     case BuiltInCoreIDARM: return "CoreIDARM";
     case BuiltInCoreCountARM: return "CoreCountARM";
     case BuiltInCoreMaxIDARM: return "CoreMaxIDARM";
@@ -4315,7 +4321,6 @@ inline const char* CapabilityToString(Capability value) {
     case CapabilityShaderLayer: return "ShaderLayer";
     case CapabilityShaderViewportIndex: return "ShaderViewportIndex";
     case CapabilityUniformDecoration: return "UniformDecoration";
-    case CapabilityFragmentCoverageMESA: return "FragmentCoverageMESA";
     case CapabilityCoreBuiltinsARM: return "CoreBuiltinsARM";
     case CapabilityTileImageColorReadAccessEXT: return "TileImageColorReadAccessEXT";
     case CapabilityTileImageDepthReadAccessEXT: return "TileImageDepthReadAccessEXT";
@@ -4381,6 +4386,7 @@ inline const char* CapabilityToString(Capability value) {
     case CapabilityDescriptorHeapEXT: return "DescriptorHeapEXT";
     case CapabilityConstantDataKHR: return "ConstantDataKHR";
     case CapabilityPoisonFreezeKHR: return "PoisonFreezeKHR";
+    case CapabilityWeakLinkageAMD: return "WeakLinkageAMD";
     case CapabilitySampleMaskOverrideCoverageNV: return "SampleMaskOverrideCoverageNV";
     case CapabilityGeometryShaderPassthroughNV: return "GeometryShaderPassthroughNV";
     case CapabilityShaderViewportIndexLayerEXT: return "ShaderViewportIndexLayerEXT";
@@ -4497,6 +4503,7 @@ inline const char* CapabilityToString(Capability value) {
     case CapabilityGroupNonUniformRotateKHR: return "GroupNonUniformRotateKHR";
     case CapabilityFloatControls2: return "FloatControls2";
     case CapabilityFMAKHR: return "FMAKHR";
+    case CapabilityRayTracingOpacityMicromapExecutionModeKHR: return "RayTracingOpacityMicromapExecutionModeKHR";
     case CapabilityAtomicFloat32AddEXT: return "AtomicFloat32AddEXT";
     case CapabilityAtomicFloat64AddEXT: return "AtomicFloat64AddEXT";
     case CapabilityLongCompositesINTEL: return "LongCompositesINTEL";
