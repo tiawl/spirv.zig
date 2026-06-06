@@ -7,8 +7,8 @@
             .hash = "N-V-__8AAOWTVACcagSNiPBJgyuynw0y5x5TmF6Ike7j1rFy",
         },
         .@"SPIRV-Tools" = .{
-            .url = "git+https://github.com/KhronosGroup/SPIRV-Tools#9b51d3d78717e29efd75adf1856cdbcc644eda7a",
-            .hash = "N-V-__8AABhjkAEgbms9GISg1gsQcbYqBgvl4cQtylhYP-53",
+            .url = "git+https://github.com/KhronosGroup/SPIRV-Tools#f3f1169512c713d979a7aa1bc0c6c0fd89f0a85f",
+            .hash = "N-V-__8AAG1ukAHApWEwzQArLfDGO-OYo5lfGs60LgEcu25D",
         },
         .@"SPIRV-Headers" = .{
             .url = "git+https://github.com/KhronosGroup/SPIRV-Headers#1e770e7de8373a8dd49f23416cf7ca4001d01040",
